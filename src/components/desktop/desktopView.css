@@ -1,0 +1,6287 @@
+/* ==========================================================================
+   MEDICARE SKIN — ULTRA-PREMIUM LIQUID GLASS DESKTOP UX/UI STYLES
+   Full Translucent Glassmorphism, Specular Highlights & Organic Depth
+   ========================================================================== */
+
+.desk-blueprint-home {
+  width: 100%;
+  background: transparent;
+  color: #2B1B4D;
+  font-family: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  z-index: 2;
+}
+
+.desk-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.desk-section {
+  padding: 76px 0;
+  position: relative;
+}
+
+/* ── Section Badge Utility ──────────────────────────────────────────────── */
+.desk-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(148, 40, 118, 0.22);
+  color: #8B096C;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 16px rgba(148, 40, 118, 0.06), inset 0 1px 1.5px rgba(255, 255, 255, 1);
+}
+
+.desk-section-badge.center {
+  margin: 0 auto 16px;
+}
+
+.desk-section-head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 36px;
+}
+
+.desk-section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: #2B1B4D;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.desk-section-sub {
+  font-size: 15.5px;
+  color: #5C5268;
+  margin: 0;
+  max-width: 640px;
+  line-height: 1.55;
+}
+
+.desk-link-btn {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(148, 40, 118, 0.2);
+  color: #8B096C;
+  font-size: 13.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(148, 40, 118, 0.06), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.desk-link-btn:hover {
+  background: #8B096C;
+  color: #FFFFFF;
+  border-color: #8B096C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(148, 40, 118, 0.25);
+}
+
+/* ── Screen 1: Desktop Hero ─────────────────────────────────────────────── */
+.desk-hero-section {
+  padding: 36px 0 54px;
+}
+
+.desk-hero-split {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr;
+  gap: 44px;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.desk-hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.desk-hero-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.desk-eyebrow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(148, 40, 118, 0.2);
+  color: #8B096C;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(148, 40, 118, 0.06), inset 0 1px 1.5px rgba(255, 255, 255, 1);
+}
+
+.desk-hero-rating-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #4A3E54;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.08), inset 0 1px 1.5px rgba(255, 255, 255, 1);
+}
+
+.desk-stars-mini {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.desk-hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #1E122A;
+  margin: 0 0 16px;
+  letter-spacing: -0.025em;
+}
+
+.desk-hero-title-accent {
+  background: linear-gradient(135deg, #8B096C 0%, #C8509B 60%, #5B2B70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.desk-hero-support {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #4A4056;
+  margin: 0 0 24px;
+  max-width: 550px;
+}
+
+.desk-hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.desk-btn-primary {
+  padding: 14px 28px;
+  background: #8B096C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(139, 9, 108, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.desk-btn-primary:hover {
+  background: #700756;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139, 9, 108, 0.35);
+}
+
+.desk-btn-secondary {
+  padding: 14px 24px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #2B1B4D;
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.03),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.desk-btn-secondary:hover {
+  background: #FFFFFF;
+  border-color: #8B096C;
+  color: #8B096C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(148, 40, 118, 0.12);
+}
+
+/* ── Interactive Direct Concern Booking Pills ─────────────────────────── */
+.desk-patient-concerns-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.desk-concerns-label {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #8C7C97;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.desk-concerns-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.desk-concern-pill {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(148, 40, 118, 0.16);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #2B1B4D;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.desk-concern-pill:hover {
+  background: #8B096C;
+  color: #FFFFFF;
+  border-color: #8B096C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(148, 40, 118, 0.22);
+}
+
+.desk-concern-icon {
+  font-size: 13px;
+}
+
+/* ── Interactive Patient Self-Service Strip ───────────────────────────── */
+.desk-hero-tools-dock {
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  padding: 14px 18px;
+  box-shadow:
+    0 10px 30px rgba(43, 27, 77, 0.05),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  max-width: 530px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.desk-tool-tile-btn {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(148, 40, 118, 0.12);
+  border-radius: 14px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.desk-tool-tile-btn:hover {
+  background: #FFFFFF;
+  border-color: #8B096C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(148, 40, 118, 0.12);
+}
+
+.desk-tool-tile-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(148, 40, 118, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #8B096C;
+}
+
+.desk-tool-tile-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.desk-tool-tile-title {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #2B1B4D;
+  line-height: 1.25;
+}
+
+.desk-tool-tile-sub {
+  font-size: 10.5px;
+  color: #756B82;
+  margin-top: 2px;
+}
+
+/* ── Sculpted Liquid Glass Hero Mosaic Stage ────────────────────────────── */
+.desk-hero-image-wrap {
+  width: 100%;
+  position: relative;
+}
+
+.desk-mosaic-stage {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(36px) saturate(200%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 28px 70px rgba(43, 27, 77, 0.14),
+    0 4px 16px rgba(0, 0, 0, 0.03),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  transform-style: preserve-3d;
+}
+
+.desk-mosaic-viewport {
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.desk-mosaic-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.desk-mosaic-viewport:hover .desk-mosaic-main-img {
+  transform: scale(1.04);
+}
+
+.desk-mosaic-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(27, 18, 45, 0.2) 0%,
+    transparent 30%,
+    rgba(27, 18, 45, 0.35) 60%,
+    rgba(27, 18, 45, 0.88) 100%
+  );
+  pointer-events: none;
+}
+
+.desk-mosaic-top-dock {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.desk-mosaic-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 4px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.desk-mosaic-tab {
+  background: transparent;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #5C5268;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.desk-mosaic-tab:hover {
+  color: #8B096C;
+}
+
+.desk-mosaic-tab.active {
+  background: #8B096C;
+  color: #FFFFFF;
+  font-weight: 800;
+  box-shadow: 0 2px 10px rgba(148, 40, 118, 0.3);
+}
+
+.desk-mosaic-bottom-card {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  padding: 16px 20px;
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.18),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  transition: transform 0.25s ease;
+}
+
+.desk-mosaic-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.desk-mosaic-card-tag {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8B096C;
+}
+
+.desk-mosaic-card-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(148, 40, 118, 0.08);
+  color: #8B096C;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.desk-mosaic-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #1E122A;
+  margin: 0 0 4px;
+  line-height: 1.25;
+}
+
+.desk-mosaic-card-sub {
+  font-size: 12.5px;
+  color: #5C5268;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.desk-mosaic-doctor-pill {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  z-index: 25;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 22px;
+  padding: 10px 16px 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow:
+    0 18px 45px rgba(43, 27, 77, 0.16),
+    0 4px 12px rgba(0, 0, 0, 0.04),
+    inset 0 1px 2px rgba(255, 255, 255, 1);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.desk-mosaic-doctor-pill:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 24px 55px rgba(148, 40, 118, 0.22);
+}
+
+.desk-doctor-pill-avatar-wrap {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+.desk-doctor-pill-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.desk-doctor-pill-pulse {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background: #10B981;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.35);
+}
+
+.desk-doctor-pill-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.desk-doctor-pill-name-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.desk-doctor-pill-name {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #1E122A;
+  line-height: 1.2;
+}
+
+.desk-doctor-pill-qual {
+  font-size: 11px;
+  font-weight: 700;
+  color: #8B096C;
+  margin-top: 1px;
+}
+
+.desk-doctor-pill-sub {
+  font-size: 10px;
+  color: #7A6F85;
+  margin-top: 1px;
+}
+
+.desk-mosaic-tech-badge {
+  position: absolute;
+  top: -14px;
+  right: 18px;
+  z-index: 25;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 1);
+  border-radius: 30px;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #2B1B4D;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.desk-hib-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 0 2.5px rgba(16, 185, 129, 0.25);
+  animation: pulseGreen 2s infinite ease-in-out;
+}
+
+@keyframes pulseGreen {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.75; }
+}
+
+/* ── 4-Cell Sculpted Liquid Glass Trust Ribbon ──────────────────────────── */
+.desk-trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 14px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow:
+    0 16px 40px rgba(43, 27, 77, 0.06),
+    0 2px 8px rgba(0, 0, 0, 0.02),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  overflow: hidden;
+}
+
+.desk-trust-col {
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-right: 1px solid rgba(148, 40, 118, 0.08);
+  background: transparent;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.desk-trust-col:last-child {
+  border-right: none;
+}
+
+.desk-trust-col:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+.desk-trust-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(148, 40, 118, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(148, 40, 118, 0.12);
+  transition: transform 0.25s ease;
+}
+
+.desk-trust-col:hover .desk-trust-icon-wrap {
+  transform: scale(1.08);
+}
+
+.desk-trust-icon-wrap.gold {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+.desk-trust-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.desk-trust-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #1E122A;
+  margin-bottom: 2px;
+  letter-spacing: -0.01em;
+}
+
+.desk-trust-sub {
+  font-size: 11.5px;
+  color: #6A5F75;
+  line-height: 1.35;
+}
+
+/* ── Interactive Clinical Concern Diagnostic Suite ──────────────────────── */
+.desk-diagnostic-section {
+  padding: 20px 0 60px;
+}
+
+.desk-diagnostic-card {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px) saturate(190%);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  border-radius: 32px;
+  padding: 38px 40px;
+  box-shadow:
+    0 24px 60px rgba(43, 27, 77, 0.08),
+    0 4px 16px rgba(0, 0, 0, 0.02),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1);
+}
+
+.desk-diag-tabs-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+
+.desk-diag-tab-btn {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(148, 40, 118, 0.15);
+  border-radius: 30px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2B1B4D;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.desk-diag-tab-btn:hover {
+  background: #FFFFFF;
+  border-color: #8B096C;
+  color: #8B096C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(148, 40, 118, 0.15);
+}
+
+.desk-diag-tab-btn.active {
+  background: linear-gradient(135deg, #8B096C 0%, #B83A8F 50%, #C8509B 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+  font-weight: 800;
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 25px rgba(148, 40, 118, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.desk-diag-tab-icon {
+  font-size: 15px;
+}
+
+.desk-diag-detail-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 36px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 26px;
+  padding: 32px 34px;
+  box-shadow: 0 10px 30px rgba(43, 27, 77, 0.04);
+}
+
+.desk-diag-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.desk-diag-rec-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #8B096C;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.desk-diag-rec-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #1E122A;
+  margin: 0 0 12px;
+  line-height: 1.25;
+}
+
+.desk-diag-rec-note {
+  font-size: 15px;
+  color: #5C5268;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.desk-diag-metrics-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.desk-diag-metric-cell {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(148, 40, 118, 0.12);
+  border-radius: 16px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.desk-diag-m-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #8C7C97;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.desk-diag-m-val {
+  font-size: 14px;
+  font-weight: 800;
+  color: #2B1B4D;
+}
+
+.desk-diag-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.desk-diag-visual-col {
+  width: 100%;
+}
+
+.desk-diag-img-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+}
+
+.desk-diag-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.desk-diag-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(27, 18, 45, 0.05) 0%,
+    transparent 50%,
+    rgba(27, 18, 45, 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+.desk-diag-doc-tag {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #2B1B4D;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Screen 2: Treatment Categories Grid (Liquid Glass) ──────────────────── */
+.desk-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.desk-category-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(26px) saturate(190%);
+  -webkit-backdrop-filter: blur(26px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+  box-shadow:
+    0 12px 32px rgba(148, 40, 118, 0.06),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.desk-category-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow:
+    0 20px 48px rgba(148, 40, 118, 0.14),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1);
+}
+
+.desk-cat-thumb-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #F4EEF5;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.desk-cat-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.desk-category-card:hover .desk-cat-thumb {
+  transform: scale(1.08);
+}
+
+.desk-cat-content {
+  flex-grow: 1;
+}
+
+.desk-cat-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #2B1B4D;
+  margin: 0 0 4px;
+  transition: color 0.2s ease;
+}
+
+.desk-category-card:hover .desk-cat-title {
+  color: #8B096C;
+}
+
+.desk-cat-desc {
+  font-size: 12.5px;
+  color: #6A5F75;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.desk-cat-arrow-wrap {
+  color: #8B096C;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.desk-category-card:hover .desk-cat-arrow-wrap {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+/* ── Screen 3: Signature Procedures Grid (Liquid Glass) ─────────────────── */
+.desk-signature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.desk-sig-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(26px) saturate(190%);
+  -webkit-backdrop-filter: blur(26px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow:
+    0 12px 32px rgba(148, 40, 118, 0.06),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.desk-sig-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow:
+    0 22px 50px rgba(148, 40, 118, 0.15),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1);
+}
+
+.desk-sig-thumb-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  position: relative;
+  background: #F4EEF5;
+  overflow: hidden;
+}
+
+.desk-sig-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.desk-sig-card:hover .desk-sig-thumb {
+  transform: scale(1.06);
+}
+
+.desk-sig-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  color: #8B096C;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.desk-sig-body {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.desk-sig-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #2B1B4D;
+  margin: 0 0 6px;
+  transition: color 0.2s ease;
+}
+
+.desk-sig-card:hover .desk-sig-name {
+  color: #8B096C;
+}
+
+.desk-sig-desc {
+  font-size: 13px;
+  color: #6A5F75;
+  margin: 0 0 14px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.desk-sig-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #8B096C;
+  font-size: 13px;
+  font-weight: 700;
+  transition: gap 0.2s ease;
+}
+
+.desk-sig-card:hover .desk-sig-action {
+  gap: 10px;
+}
+
+/* ── Screen 5: Doctor Profile Section in 3D Liquid Glass ─────────────────── */
+.desk-doctor-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  border-radius: 36px;
+  padding: 44px 48px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 48px;
+  align-items: center;
+  box-shadow:
+    0 24px 60px rgba(148, 40, 118, 0.12),
+    0 4px 14px rgba(0, 0, 0, 0.02),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.desk-doc-photo-frame {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  background: #FAF0F6;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 16px 40px rgba(148, 40, 118, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 1);
+}
+
+.desk-doc-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.desk-doc-floating-exp-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #8B096C;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.desk-doc-header {
+  margin-bottom: 22px;
+}
+
+.desk-doc-verified-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(148, 40, 118, 0.1);
+  border: 1px solid rgba(148, 40, 118, 0.2);
+  color: #8B096C;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.desk-doc-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #2B1B4D;
+  margin: 0 0 6px;
+}
+
+.desk-doc-degrees {
+  font-size: 16px;
+  font-weight: 800;
+  color: #8B096C;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.desk-doc-designation {
+  font-size: 14.5px;
+  color: #6A5F75;
+}
+
+.desk-doc-bullets-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  border-top: 1.5px solid rgba(148, 40, 118, 0.1);
+  padding-top: 22px;
+  margin-bottom: 24px;
+}
+
+.desk-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.desk-bullet-icon {
+  color: #8B096C;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.desk-bullet-item div strong {
+  display: block;
+  font-size: 14.5px;
+  color: #2B1B4D;
+  margin-bottom: 2px;
+}
+
+.desk-bullet-item div span {
+  display: block;
+  font-size: 12.5px;
+  color: #6A5F75;
+  line-height: 1.45;
+}
+
+.desk-doc-quote-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-left: 4px solid #8B096C;
+  padding: 18px 24px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(148, 40, 118, 0.05), inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+.desk-doc-quote-text {
+  font-size: 14.5px;
+  font-style: italic;
+  color: #3C3048;
+  margin: 0 0 6px;
+  line-height: 1.6;
+}
+
+.desk-doc-quote-author {
+  font-size: 12px;
+  font-weight: 800;
+  color: #8B096C;
+  text-align: right;
+}
+
+/* ── Screen 6: Patient Reviews (Liquid Glass) ────────────────────────────── */
+.desk-google-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 6px 20px rgba(148, 40, 118, 0.06), inset 0 1px 1.5px rgba(255, 255, 255, 1);
+}
+
+.desk-g-icon {
+  font-weight: 800;
+  font-size: 24px;
+  color: #4285F4;
+}
+
+.desk-g-score {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2B1B4D;
+}
+
+.desk-g-text {
+  font-size: 12px;
+  color: #6A5F75;
+}
+
+.desk-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.desk-review-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(26px) saturate(190%);
+  -webkit-backdrop-filter: blur(26px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 26px;
+  box-shadow:
+    0 12px 32px rgba(148, 40, 118, 0.06),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.desk-review-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 20px 48px rgba(148, 40, 118, 0.14);
+}
+
+.desk-rev-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.desk-rev-stars {
+  display: flex;
+  gap: 3px;
+}
+
+.desk-rev-treatment-badge {
+  background: rgba(148, 40, 118, 0.08);
+  border: 1px solid rgba(148, 40, 118, 0.18);
+  color: #8B096C;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.desk-rev-text {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #4A3E54;
+  margin: 0 0 22px;
+  flex-grow: 1;
+}
+
+.desk-rev-author-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(148, 40, 118, 0.1);
+  padding-top: 16px;
+}
+
+.desk-rev-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(148, 40, 118, 0.18) 0%, rgba(200, 80, 155, 0.28) 100%);
+  color: #8B096C;
+  font-weight: 800;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(148, 40, 118, 0.1);
+}
+
+.desk-rev-name {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #2B1B4D;
+}
+
+.desk-rev-badge {
+  font-size: 11.5px;
+  color: #6A5F75;
+}
+
+.desk-reviews-trust-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(26px) saturate(190%);
+  -webkit-backdrop-filter: blur(26px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 20px 28px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(148, 40, 118, 0.06), inset 0 1px 1.5px rgba(255, 255, 255, 1);
+}
+
+.desk-rts-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-right: 1px solid rgba(148, 40, 118, 0.12);
+}
+
+.desk-rts-item:last-child {
+  border-right: none;
+}
+
+.desk-rts-item strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: #8B096C;
+}
+
+.desk-rts-item span {
+  font-size: 12px;
+  color: #6A5F75;
+}
+
+/* ── Screen 7: Consultation Journey (Liquid Glass) ──────────────────────── */
+.desk-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 38px;
+}
+
+.desk-journey-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(26px) saturate(190%);
+  -webkit-backdrop-filter: blur(26px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 28px 22px;
+  text-align: center;
+  box-shadow:
+    0 12px 32px rgba(148, 40, 118, 0.06),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.desk-journey-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 20px 48px rgba(148, 40, 118, 0.14);
+}
+
+.desk-j-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(148, 40, 118, 0.15) 0%, rgba(200, 80, 155, 0.25) 100%);
+  border: 1px solid rgba(148, 40, 118, 0.2);
+  color: #8B096C;
+  font-weight: 800;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  box-shadow: 0 4px 14px rgba(148, 40, 118, 0.1), inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+.desk-j-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #2B1B4D;
+  margin: 0 0 8px;
+}
+
+.desk-j-desc {
+  font-size: 13.5px;
+  color: #6A5F75;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.desk-journey-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+/* ── Screen 8: Skin Journal (Liquid Glass) ──────────────────────────────── */
+.desk-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.desk-blog-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(26px) saturate(190%);
+  -webkit-backdrop-filter: blur(26px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow:
+    0 12px 32px rgba(148, 40, 118, 0.06),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.desk-blog-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 20px 48px rgba(148, 40, 118, 0.14);
+}
+
+.desk-blog-thumb-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  position: relative;
+  background: #F4EEF5;
+  overflow: hidden;
+}
+
+.desk-blog-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.desk-blog-card:hover .desk-blog-thumb {
+  transform: scale(1.06);
+}
+
+.desk-blog-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  color: #8B096C;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.desk-blog-body {
+  padding: 22px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.desk-blog-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #2B1B4D;
+  margin: 0 0 10px;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.desk-blog-card:hover .desk-blog-title {
+  color: #8B096C;
+}
+
+.desk-blog-meta {
+  font-size: 12.5px;
+  color: #8C8099;
+  margin-bottom: 12px;
+}
+
+.desk-blog-read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #8B096C;
+  margin-top: auto;
+}
+
+/* ── Screen 9: Clinic Location & Map (Liquid Glass) ──────────────────────── */
+.desk-location-split {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.desk-location-info-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow:
+    0 16px 40px rgba(148, 40, 118, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.desk-loc-facade-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #FAF0F6;
+  position: relative;
+  overflow: hidden;
+}
+
+.desk-loc-facade {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.desk-loc-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #8B096C;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.desk-loc-body {
+  padding: 26px 28px;
+  flex-grow: 1;
+}
+
+.desk-loc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #2B1B4D;
+  margin: 0 0 10px;
+}
+
+.desk-loc-address {
+  font-size: 14.5px;
+  color: #5C5268;
+  line-height: 1.55;
+  margin: 0 0 16px;
+}
+
+.desk-loc-timings {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #2B1B4D;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.desk-loc-contact-strip {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.desk-loc-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #8B096C;
+  text-decoration: none;
+}
+
+.desk-location-map-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow:
+    0 16px 40px rgba(148, 40, 118, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 1);
+}
+
+.desk-map-embed-frame {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  margin-bottom: 18px;
+}
+
+.desk-loc-benefits-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  text-align: center;
+}
+
+.desk-loc-ben {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 40, 118, 0.15);
+  border-radius: 16px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 12px rgba(148, 40, 118, 0.04);
+}
+
+.desk-loc-ben span {
+  font-size: 20px;
+}
+
+.desk-loc-ben strong {
+  font-size: 12px;
+  color: #2B1B4D;
+}
+
+/* ==========================================================================
+   MINISTRY OF SKIN (MOS) LUXURY DARK SLATE BLUEPRINT
+   Target Aesthetic: Deep Graphite Slate, Atmospheric 3D Porcelain Sculpture,
+   Rotating Award Seal, Funnel Display Typography & Modular Stacked Suites.
+   ========================================================================== */
+
+.mos-blueprint-home {
+  width: 100%;
+  background-color: transparent;
+  color: #1E122A;
+  font-family: 'Funnel Display', 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  z-index: 2;
+  overflow-x: hidden;
+}
+
+.mos-blueprint-home ::selection {
+  background: #8B096C;
+  color: #FFFFFF;
+}
+
+/* ── 1. Hero Section ──────────────────────────────────────────────────────── */
+.mos-hero-section {
+  position: relative;
+  min-height: 94vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+  background-image: url('/ministry-assets/hero-sculpture.jpg');
+  background-repeat: no-repeat;
+  background-position: calc(50% + 240px) 46%;
+  background-size: 920px auto;
+  overflow: hidden;
+}
+
+/* Atmospheric Luminous White Glass Scrim & Readability Fog */
+.mos-hero-scrim-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #F8F9FD 0%, rgba(248, 249, 253, 0.96) 38%, rgba(248, 249, 253, 0.62) 64%, rgba(248, 249, 253, 0.15) 84%, rgba(248, 249, 253, 0.65) 100%),
+    linear-gradient(180deg, rgba(248, 249, 253, 0.75) 0%, transparent 18%, transparent 78%, #F8F9FD 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mos-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 140px 32px 50px;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.mos-hero-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 56px;
+  align-items: flex-end;
+  width: 100%;
+}
+
+/* Left Hero Typography */
+.mos-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 12px;
+}
+
+.mos-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: 'Funnel Display', 'Outfit', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8B096C;
+  margin-bottom: 26px;
+  padding: 7px 18px;
+  background: rgba(148, 40, 118, 0.08);
+  border: 1.5px solid rgba(148, 40, 118, 0.2);
+  border-radius: 40px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 14px rgba(148, 40, 118, 0.06);
+}
+
+.mos-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #8B096C;
+  box-shadow: 0 0 10px #8B096C;
+  animation: mosPulseDot 2.4s infinite ease-in-out;
+}
+
+@keyframes mosPulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
+}
+
+.mos-hero-title {
+  font-family: 'Funnel Display', -apple-system, sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.08;
+  color: #1E122A;
+  letter-spacing: -0.025em;
+  margin-bottom: 20px;
+  max-width: 720px;
+  text-wrap: balance;
+}
+
+.mos-hero-dot {
+  color: #8B096C;
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.mos-hero-lead-text {
+  font-size: 17.5px;
+  line-height: 1.65;
+  color: #4A3E54;
+  margin-bottom: 34px;
+  max-width: 660px;
+  font-weight: 400;
+}
+
+.mos-hero-lead-text strong {
+  color: #1E122A;
+  font-weight: 700;
+}
+
+.mos-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mos-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  background: linear-gradient(135deg, rgba(148, 40, 118, 0.95) 0%, rgba(200, 80, 155, 0.92) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  color: #FFFFFF;
+  font-family: 'Funnel Display', 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  padding: 15px 32px;
+  border-radius: 40px;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 12px 30px rgba(148, 40, 118, 0.32),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+
+.mos-btn-primary:hover {
+  background: linear-gradient(135deg, rgba(175, 45, 140, 0.98) 0%, rgba(220, 95, 175, 0.95) 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 18px 42px rgba(148, 40, 118, 0.45),
+    inset 0 2px 3px rgba(255, 255, 255, 0.9);
+}
+
+/* Spacious, Un-congested Liquid Glass Call Card */
+.mos-hero-call-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1.5px solid rgba(148, 40, 118, 0.18);
+  padding: 10px 26px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 10px 28px rgba(148, 40, 118, 0.08),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.mos-hero-call-card:hover {
+  background: #FFFFFF;
+  border-color: #8B096C;
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 36px rgba(148, 40, 118, 0.16),
+    inset 0 2px 3px rgba(255, 255, 255, 1);
+}
+
+.mos-call-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(148, 40, 118, 0.15) 0%, rgba(148, 40, 118, 0.05) 100%);
+  border: 1.5px solid rgba(148, 40, 118, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8B096C;
+  box-shadow: 0 4px 12px rgba(148, 40, 118, 0.12);
+  flex-shrink: 0;
+}
+
+.mos-call-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.mos-call-sub {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8B096C;
+  line-height: 1;
+}
+
+.mos-call-num {
+  font-family: 'Funnel Display', 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2B1B4D;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.mos-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #2B1B4D;
+  border: 1.5px solid rgba(148, 40, 118, 0.2);
+  font-family: 'Funnel Display', 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 13px 28px;
+  border-radius: 40px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: all 0.28s ease;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(148, 40, 118, 0.08), inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+.mos-btn-outline:hover {
+  background: #FFFFFF;
+  border-color: #8B096C;
+  color: #8B096C;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(148, 40, 118, 0.15);
+}
+
+/* Right Hero Column: Authority Narrative & Trust Badges */
+.mos-hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 34px 36px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.98);
+  border-radius: 32px;
+  box-shadow:
+    0 20px 48px rgba(148, 40, 118, 0.08),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  position: relative;
+  max-width: 520px;
+}
+
+.mos-hero-right-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8B096C;
+  margin-bottom: 10px;
+}
+
+.mos-hero-right-heading {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1E122A;
+  margin: 0 0 12px;
+  letter-spacing: -0.015em;
+}
+
+.mos-hero-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #5C4D68;
+  max-width: 480px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.mos-hero-condition-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 22px;
+}
+
+.mos-hero-tag-pill {
+  display: inline-block;
+  padding: 5px 12px;
+  background: rgba(148, 40, 118, 0.06);
+  border: 1px solid rgba(148, 40, 118, 0.15);
+  border-radius: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2B1B4D;
+  transition: all 0.2s ease;
+}
+
+.mos-hero-tag-pill:hover {
+  background: rgba(148, 40, 118, 0.12);
+  border-color: #8B096C;
+  color: #8B096C;
+}
+
+.mos-hero-desc strong {
+  color: #2B1B4D;
+  font-weight: 700;
+}
+
+.mos-hero-sub-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mos-sub-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #2B1B4D;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(148, 40, 118, 0.16);
+  padding: 8px 16px;
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 14px rgba(148, 40, 118, 0.05), inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+/* Infinite Horizontal Marquee Ticker */
+.mos-marquee-bar {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  overflow: hidden;
+  padding: 16px 0;
+  background: rgba(255, 255, 255, 0.85);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(148, 40, 118, 0.1);
+  box-shadow: 0 8px 30px rgba(148, 40, 118, 0.05);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.mos-marquee-track {
+  display: flex;
+  gap: 48px;
+  width: max-content;
+  animation: mosTickerSlide 38s linear infinite;
+}
+
+@keyframes mosTickerSlide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.333%); }
+}
+
+.mos-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.mos-marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  white-space: nowrap;
+}
+
+.mos-marquee-text {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2B1B4D;
+}
+
+.mos-marquee-star {
+  color: #8B096C;
+  font-size: 16px;
+  opacity: 1;
+}
+
+/* ── Global Section Base for Ministry of Skin Style ───────────────────────── */
+.mos-section {
+  padding: 100px 0;
+  position: relative;
+  background-color: transparent;
+}
+
+.mos-pill-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #8B096C;
+  background: rgba(148, 40, 118, 0.08);
+  border: 1.5px solid rgba(148, 40, 118, 0.2);
+  margin-bottom: 18px;
+}
+
+.mos-section-header-center {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 60px;
+}
+
+.mos-section-title {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: #1E122A;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.mos-section-sub {
+  font-size: 16px;
+  color: #5C4D68;
+  line-height: 1.6;
+}
+
+/* ── 2. About Statement & 4 Impact Numbers ────────────────────────────────── */
+.mos-about-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(248, 244, 250, 0.85) 100%);
+  border-bottom: 1px solid rgba(148, 40, 118, 0.08);
+}
+
+.mos-about-center {
+  text-align: center;
+  max-width: 1040px;
+  margin: 0 auto 64px;
+}
+
+.mos-about-statement {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.44;
+  color: #1E122A;
+  letter-spacing: -0.015em;
+}
+
+.mos-speciality-statement-box {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1.5px solid rgba(148, 40, 118, 0.18);
+  border-radius: 28px;
+  padding: 34px 44px;
+  max-width: 1040px;
+  margin: 0 auto 56px;
+  box-shadow: 0 16px 40px rgba(148, 40, 118, 0.06), inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.mos-speciality-box-title {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #8B096C;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.mos-speciality-box-desc {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #4A3E54;
+  margin: 0;
+  font-weight: 400;
+}
+
+.mos-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.mos-stat-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  padding: 38px 24px;
+  text-align: center;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow:
+    0 16px 40px rgba(148, 40, 118, 0.08),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mos-stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(148, 40, 118, 0.35);
+  box-shadow:
+    0 24px 50px rgba(148, 40, 118, 0.14),
+    inset 0 2px 3px rgba(255, 255, 255, 1);
+}
+
+.mos-stat-card.highlight {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(253, 245, 251, 0.95) 100%);
+  border-color: rgba(148, 40, 118, 0.3);
+}
+
+.mos-stat-num {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 58px;
+  font-weight: 600;
+  color: #1E122A;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.mos-stat-num span {
+  color: #8B096C;
+  font-size: 42px;
+  font-weight: 400;
+}
+
+.mos-stat-label {
+  font-size: 13px;
+  color: #6E5D7A;
+  line-height: 1.45;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+/* ── 3. Stacked Treatment Cards (cardStacking) ────────────────────────────── */
+.mos-treatments-section {
+  background-color: transparent;
+}
+
+.mos-stacked-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.mos-stack-card {
+  position: sticky;
+  top: 96px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid rgba(255, 255, 255, 0.98);
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow:
+    0 24px 60px rgba(148, 40, 118, 0.1),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  transition: transform 0.3s ease;
+}
+
+.mos-stack-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  min-height: 440px;
+}
+
+.mos-stack-content {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mos-stack-number {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #8B096C;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.mos-stack-title {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  color: #1E122A;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.mos-stack-desc {
+  font-size: 15px;
+  color: #5C4D68;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.mos-stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.mos-stack-tag-pill {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2B1B4D;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(148, 40, 118, 0.15);
+  border-radius: 20px;
+  padding: 6px 14px;
+  box-shadow: 0 2px 8px rgba(148, 40, 118, 0.04);
+}
+
+.mos-stack-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.mos-stack-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #8B096C;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.mos-stack-link-btn:hover {
+  gap: 12px;
+  color: #7E1F64;
+}
+
+.mos-stack-book-btn {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(148, 40, 118, 0.95) 0%, rgba(200, 80, 155, 0.92) 100%);
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 20px rgba(148, 40, 118, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+.mos-stack-book-btn:hover {
+  background: linear-gradient(135deg, rgba(175, 45, 140, 0.98) 0%, rgba(220, 95, 175, 0.95) 100%);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(148, 40, 118, 0.38);
+}
+
+.mos-stack-media {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: 380px;
+}
+
+.mos-stack-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mos-stack-card:hover .mos-stack-img {
+  transform: scale(1.04);
+}
+
+.mos-stack-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.3) 30%, transparent 65%);
+  pointer-events: none;
+}
+
+/* ── 4. Specialist Doctor & Team ──────────────────────────────────────────── */
+.mos-team-section {
+  background: linear-gradient(180deg, rgba(248, 244, 250, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
+}
+
+.mos-team-head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.mos-team-head-sub {
+  max-width: 480px;
+  font-size: 15px;
+  color: #5C4D68;
+  line-height: 1.6;
+}
+
+.mos-team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 0.85fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.mos-doc-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+  min-height: 400px;
+  box-shadow: 0 18px 48px rgba(148, 40, 118, 0.08), inset 0 1.5px 2px rgba(255, 255, 255, 1);
+}
+
+.mos-doc-photo-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+
+.mos-doc-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.mos-doc-gradient-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(30, 18, 42, 0.88) 100%);
+}
+
+.mos-doc-badge-overlay {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mos-doc-name-tag {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.mos-doc-qual-tag {
+  font-size: 12.5px;
+  color: #F8D98C;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.mos-quote-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 32px;
+  padding: 44px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow: 0 18px 48px rgba(148, 40, 118, 0.08), inset 0 1.5px 2px rgba(255, 255, 255, 1);
+}
+
+.mos-quote-icon {
+  margin-bottom: 12px;
+}
+
+.mos-quote-text {
+  font-family: 'Funnel Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #1E122A;
+  font-style: italic;
+  margin: 18px 0;
+}
+
+.mos-quote-author-wrap {
+  border-top: 1px solid rgba(148, 40, 118, 0.12);
+  padding-top: 18px;
+}
+
+.mos-quote-author-name {
+  display: block;
+  font-size: 16px;
+  color: #1E122A;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.mos-quote-author-role {
+  display: block;
+  font-size: 13px;
+  color: #8B096C;
+  font-weight: 600;
+}
+
+.mos-quote-author-alumni {
+  display: block;
+  font-size: 12px;
+  color: #6E5D7A;
+  margin-top: 2px;
+}
+
+.mos-rating-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 32px;
+  padding: 44px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 18px 48px rgba(148, 40, 118, 0.08), inset 0 1.5px 2px rgba(255, 255, 255, 1);
+}
+
+.mos-rating-pill-label {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #8B096C;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.mos-rating-score-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.mos-rating-big-num {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 66px;
+  font-weight: 700;
+  color: #1E122A;
+  line-height: 1;
+}
+
+.mos-rating-denom {
+  font-size: 22px;
+  color: #6E5D7A;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.mos-rating-stars-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.mos-rating-subtext {
+  font-size: 13.5px;
+  color: #5C4D68;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.mos-google-verified-strip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(148, 40, 118, 0.05);
+  border: 1px solid rgba(148, 40, 118, 0.15);
+  border-radius: 20px;
+  padding: 7px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2B1B4D;
+}
+
+.mos-g-logo {
+  font-weight: 800;
+  color: #4285F4;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+/* ── 5. Awards & Accolades List ───────────────────────────────────────────── */
+.mos-awards-section {
+  background-color: transparent;
+}
+
+.mos-awards-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(148, 40, 118, 0.12);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mos-award-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 20px;
+  border-bottom: 1px solid rgba(148, 40, 118, 0.12);
+  transition: background 0.2s ease, padding-left 0.2s ease;
+  cursor: pointer;
+}
+
+.mos-award-row:hover {
+  background: rgba(255, 255, 255, 0.8);
+  padding-left: 28px;
+}
+
+.mos-award-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.mos-award-year {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #8B096C;
+  letter-spacing: 0.06em;
+  min-width: 60px;
+}
+
+.mos-award-title {
+  font-size: 17.5px;
+  font-weight: 600;
+  color: #1E122A;
+  margin-bottom: 4px;
+}
+
+.mos-award-cat {
+  font-size: 13px;
+  color: #6E5D7A;
+}
+
+.mos-award-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mos-award-status {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8B096C;
+  background: rgba(148, 40, 118, 0.08);
+  border: 1px solid rgba(148, 40, 118, 0.2);
+  border-radius: 20px;
+  padding: 6px 14px;
+}
+
+.mos-award-arrow {
+  color: #6E5D7A;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.mos-award-row:hover .mos-award-arrow {
+  transform: translateX(4px);
+  color: #8B096C;
+}
+
+/* ── 6. Clinical Approach 4 Pillars ───────────────────────────────────────── */
+.mos-approach-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(248, 244, 250, 0.8) 100%);
+}
+
+.mos-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.mos-approach-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  padding: 36px 26px;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow: 0 16px 40px rgba(148, 40, 118, 0.08), inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mos-approach-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(148, 40, 118, 0.35);
+  box-shadow: 0 24px 50px rgba(148, 40, 118, 0.14), inset 0 2px 3px rgba(255, 255, 255, 1);
+}
+
+.mos-approach-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(148, 40, 118, 0.14) 0%, rgba(148, 40, 118, 0.05) 100%);
+  border: 1.5px solid rgba(148, 40, 118, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  color: #8B096C;
+  box-shadow: 0 4px 12px rgba(148, 40, 118, 0.1);
+}
+
+.mos-approach-card-title {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1E122A;
+  margin-bottom: 12px;
+}
+
+.mos-approach-card-desc {
+  font-size: 14px;
+  color: #5C4D68;
+  line-height: 1.6;
+}
+
+/* ── 7. Testimonials Section (What Our Patients Say) ─────────────────────── */
+.mos-testimonials-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(248, 244, 250, 0.8) 100%);
+  border-bottom: 1px solid rgba(148, 40, 118, 0.08);
+}
+
+.mos-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.mos-testimonial-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  padding: 34px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow: 0 16px 40px rgba(148, 40, 118, 0.06), inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.mos-testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(148, 40, 118, 0.3);
+  box-shadow: 0 22px 48px rgba(148, 40, 118, 0.12), inset 0 2px 3px rgba(255, 255, 255, 1);
+}
+
+.mos-test-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.mos-test-verified-pill {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  color: #1a73e8;
+  background: rgba(26, 115, 232, 0.08);
+  border: 1px solid rgba(26, 115, 232, 0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.mos-test-quote {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #4A3E54;
+  margin: 0 0 24px;
+  flex-grow: 1;
+  font-style: italic;
+}
+
+.mos-test-author-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid rgba(148, 40, 118, 0.1);
+  padding-top: 16px;
+}
+
+.mos-test-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(148, 40, 118, 0.85) 0%, rgba(200, 80, 155, 0.85) 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(148, 40, 118, 0.2);
+}
+
+.mos-test-name {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1E122A;
+  line-height: 1.2;
+}
+
+.mos-test-tag {
+  display: block;
+  font-size: 12px;
+  color: #8B096C;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* ── 8. Contact Us, Consultation Station & Office Address ────────────────── */
+.mos-contact-split-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
+  align-items: stretch;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.mos-contact-info-panel,
+.mos-inquiry-form-panel {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid rgba(255, 255, 255, 0.98);
+  border-radius: 32px;
+  padding: 42px 38px;
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  box-shadow: 0 20px 50px rgba(148, 40, 118, 0.08), inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.mos-contact-panel-title,
+.mos-inquiry-form-title {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1E122A;
+  margin: 6px 0 10px;
+  letter-spacing: -0.015em;
+}
+
+.mos-inquiry-form-sub {
+  font-size: 14.5px;
+  color: #5C4D68;
+  line-height: 1.55;
+  margin: 0 0 24px;
+}
+
+/* Distinctive Office Address Highlight Box */
+.mos-address-highlight-box {
+  display: flex;
+  gap: 16px;
+  background: rgba(148, 40, 118, 0.05);
+  border: 1.5px solid rgba(148, 40, 118, 0.16);
+  border-radius: 20px;
+  padding: 18px 20px;
+  margin: 16px 0 22px;
+}
+
+.mos-address-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(148, 40, 118, 0.12);
+}
+
+.mos-address-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mos-address-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #8B096C;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.mos-address-text {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #2B1B4D;
+  margin: 0;
+  font-weight: 500;
+}
+
+.mos-contact-channels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.mos-contact-channel-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(148, 40, 118, 0.15);
+  border-radius: 18px;
+  text-decoration: none;
+  transition: all 0.24s ease;
+}
+
+.mos-contact-channel-card:hover {
+  background: #FFFFFF;
+  border-color: #8B096C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(148, 40, 118, 0.12);
+}
+
+.mos-ch-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(148, 40, 118, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mos-ch-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #7A6C82;
+  text-transform: uppercase;
+}
+
+.mos-ch-val {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #2B1B4D;
+}
+
+.mos-map-container-wrap {
+  margin-bottom: 24px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(148, 40, 118, 0.12);
+}
+
+.mos-contact-panel-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+/* ── Interactive Consultation Form Styles ────────────────────────────────── */
+.mos-inquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.mos-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mos-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.mos-form-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #2B1B4D;
+  letter-spacing: 0.02em;
+}
+
+.mos-form-input,
+.mos-form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid rgba(148, 40, 118, 0.18);
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #1E122A;
+  transition: all 0.22s ease;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+}
+
+.mos-form-input:focus,
+.mos-form-textarea:focus {
+  outline: none;
+  border-color: #8B096C;
+  box-shadow: 0 0 0 3px rgba(148, 40, 118, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.02);
+  background: #FFFFFF;
+}
+
+.mos-form-textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.mos-form-submit-btn {
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+  padding: 15px 24px;
+}
+
+/* Success Card */
+.mos-inquiry-success-card {
+  padding: 36px 24px;
+  text-align: center;
+  background: rgba(148, 40, 118, 0.04);
+  border: 1.5px solid rgba(148, 40, 118, 0.2);
+  border-radius: 24px;
+  margin-top: 10px;
+}
+
+.mos-success-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(148, 40, 118, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.mos-success-title {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1E122A;
+  margin: 0 0 10px;
+}
+
+.mos-success-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #5C4D68;
+  max-width: 440px;
+  margin: 0 auto 24px;
+}
+
+.mos-success-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Special WhatsApp Buttons */
+.mos-btn-whatsapp {
+  background: rgba(37, 211, 102, 0.12) !important;
+  border-color: rgba(37, 211, 102, 0.45) !important;
+  color: #0d7337 !important;
+  font-weight: 700 !important;
+}
+
+.mos-btn-whatsapp:hover {
+  background: #25D366 !important;
+  border-color: #25D366 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35) !important;
+}
+
+.mos-btn-whatsapp-solid {
+  background: linear-gradient(135deg, #25D366 0%, #1EBE5D 100%) !important;
+  border-color: #25D366 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35) !important;
+}
+
+.mos-btn-whatsapp-solid:hover {
+  background: linear-gradient(135deg, #1EBE5D 0%, #159b48 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.45) !important;
+}
+
+/* ── Responsive Adaptations for MOS Styles ───────────────────────────────── */
+@media (max-width: 1200px) {
+  .mos-hero-title {
+    font-size: 54px;
+  }
+  .mos-stats-grid,
+  .mos-approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mos-team-grid {
+    grid-template-columns: 1fr;
+  }
+  .mos-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mos-contact-split-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mos-hero-section {
+    background-position: right 60%;
+    background-size: 600px auto;
+  }
+  .mos-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mos-hero-title {
+    font-size: 44px;
+  }
+  .mos-stack-inner {
+    grid-template-columns: 1fr;
+  }
+  .mos-location-box {
+    grid-template-columns: 1fr;
+  }
+  .mos-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .mos-form-row,
+  .mos-contact-channels-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   MEDICARE SKIN — IMAGE 3 DESKTOP & LAPTOP UX/UI BLUEPRINT COMPLETE STYLES
+   ========================================================================== */
+
+/* ── Hero Split & Visual Col ── */
+.desk-hero-lead-text {
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: #4A3E54;
+  margin: 0 0 28px;
+  max-width: 620px;
+}
+
+.desk-dot {
+  color: #8B096C;
+  font-weight: 700;
+}
+
+.desk-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.desk-btn-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: #FFFFFF;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 8px;
+  color: #1B0344;
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.desk-btn-call:hover {
+  background: #FFFFFF;
+  border-color: #8B096C;
+  color: #8B096C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(139, 9, 108, 0.12);
+}
+
+.desk-hero-trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  background: #FFFFFF;
+  border: 1.5px solid #EAE6DF;
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-top: 24px;
+  box-sizing: border-box;
+}
+
+.desk-trust-col {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-right: 1px solid #EAE6DF;
+  padding-right: 12px;
+}
+
+.desk-trust-col:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.desk-trust-icon-box {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.desk-trust-title {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1B0344;
+  line-height: 1.25;
+}
+
+.desk-trust-sub {
+  display: block;
+  font-size: 11.5px;
+  color: #6B7280;
+  margin-top: 2px;
+  line-height: 1.2;
+}
+
+.desk-hero-visual-col {
+  position: relative;
+  width: 100%;
+}
+
+.desk-hero-img-frame {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(43, 27, 77, 0.12), inset 0 2px 3px rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+}
+
+.desk-hero-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.desk-hero-img-frame:hover .desk-hero-main-img {
+  transform: scale(1.03);
+}
+
+.desk-floating-card {
+  position: absolute;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(255, 255, 255, 1);
+}
+
+.desk-floating-card.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.desk-floating-card.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.desk-floating-card strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: #1E122A;
+}
+
+.desk-floating-card span {
+  display: block;
+  font-size: 11px;
+  color: #6A5F75;
+}
+
+/* ── Screen 3: Treatment Categories ── */
+.desk-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.desk-category-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 18px;
+  cursor: pointer;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 12px 32px rgba(148, 40, 118, 0.05), inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+.desk-category-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(148, 40, 118, 0.3);
+  box-shadow: 0 20px 48px rgba(148, 40, 118, 0.14);
+}
+
+.desk-cat-img-box {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #F4EEF5;
+}
+
+.desk-cat-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.desk-category-card:hover .desk-cat-img-box img {
+  transform: scale(1.06);
+}
+
+.desk-cat-arrow-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #8B096C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.desk-category-card:hover .desk-cat-arrow-btn {
+  background: #8B096C;
+  color: #FFFFFF;
+  transform: translateX(2px);
+}
+
+.desk-cat-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1E122A;
+  margin: 0 0 6px;
+}
+
+.desk-cat-desc {
+  font-size: 13px;
+  color: #5C5268;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.desk-cat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.desk-cat-tag-pill {
+  padding: 4px 10px;
+  background: rgba(148, 40, 118, 0.06);
+  border: 1px solid rgba(148, 40, 118, 0.14);
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #8B096C;
+}
+
+/* Authentic Specialisations Box */
+.desk-speciality-statement-box {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1.5px solid rgba(148, 40, 118, 0.18);
+  border-radius: 26px;
+  padding: 34px 44px;
+  box-shadow: 0 16px 40px rgba(148, 40, 118, 0.06), inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.desk-speciality-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #8B096C;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.desk-speciality-box-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1E122A;
+  margin: 0 0 14px;
+}
+
+.desk-speciality-box-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4A3E54;
+  margin: 0;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* ── Screen 4: Signature Treatments ── */
+.desk-signature-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.desk-signature-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.28s ease;
+  box-shadow: 0 10px 28px rgba(148, 40, 118, 0.05), inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+.desk-signature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(148, 40, 118, 0.3);
+  box-shadow: 0 18px 40px rgba(148, 40, 118, 0.14);
+}
+
+.desk-sig-thumb-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #F4EEF5;
+}
+
+.desk-sig-thumb-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.desk-signature-card:hover .desk-sig-thumb-frame img {
+  transform: scale(1.06);
+}
+
+.desk-sig-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1E122A;
+  margin: 0 0 6px;
+}
+
+.desk-sig-desc {
+  font-size: 12px;
+  color: #5C5268;
+  margin: 0 0 12px;
+  line-height: 1.45;
+  flex-grow: 1;
+}
+
+.desk-sig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #8B096C;
+}
+
+/* ── Screen 5: Doctor Profile ── */
+.desk-doc-portrait-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+  border: 3px solid #FFFFFF;
+}
+
+.desk-doc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.desk-doc-caption-strip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(27, 18, 45, 0.95) 0%, rgba(27, 18, 45, 0.5) 60%, transparent 100%);
+  padding: 24px 20px 16px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.desk-doc-caption-strip strong {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.desk-doc-caption-strip span {
+  font-size: 12px;
+  color: #E8D6E5;
+}
+
+.desk-doc-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #1E122A;
+  margin: 8px 0 4px;
+}
+
+.desk-doc-role {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #8B096C;
+  margin: 0 0 24px;
+}
+
+.desk-doc-credentials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.desk-cred-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(148, 40, 118, 0.14);
+  border-radius: 16px;
+}
+
+.desk-cred-item strong {
+  display: block;
+  font-size: 13.5px;
+  color: #1E122A;
+}
+
+.desk-cred-item span {
+  display: block;
+  font-size: 11.5px;
+  color: #6A5F75;
+}
+
+.desk-doc-quote-card {
+  background: rgba(148, 40, 118, 0.05);
+  border-left: 4px solid #8B096C;
+  padding: 16px 20px;
+  border-radius: 0 16px 16px 0;
+  margin-bottom: 26px;
+}
+
+.desk-doc-quote-text {
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.6;
+  color: #2B1B4D;
+  margin: 0 0 6px;
+}
+
+.desk-doc-quote-author {
+  font-size: 13px;
+  font-weight: 700;
+  color: #8B096C;
+}
+
+.desk-doc-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ── Screen 6: Patient Reviews ── */
+.desk-google-rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 8px 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.desk-stars-row {
+  display: flex;
+  gap: 2px;
+  margin-top: 3px;
+}
+
+.desk-rev-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.desk-rev-source {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1a73e8;
+  background: rgba(26, 115, 232, 0.08);
+  border: 1px solid rgba(26, 115, 232, 0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.desk-rev-quote {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #4A3E54;
+  margin: 0 0 20px;
+  flex-grow: 1;
+  font-style: italic;
+}
+
+.desk-rev-author-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(148, 40, 118, 0.1);
+  padding-top: 14px;
+}
+
+.desk-rev-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(148, 40, 118, 0.85) 0%, rgba(200, 80, 155, 0.85) 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.desk-rev-name {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #1E122A;
+}
+
+.desk-rev-status {
+  display: block;
+  font-size: 11.5px;
+  color: #8B096C;
+}
+
+.desk-trust-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  padding: 18px 24px;
+  box-shadow: 0 10px 30px rgba(148, 40, 118, 0.05);
+}
+
+.desk-strip-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.desk-strip-item strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1E122A;
+}
+
+.desk-strip-item span {
+  font-size: 12px;
+  color: #6A5F75;
+  margin-top: 2px;
+}
+
+.desk-strip-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(148, 40, 118, 0.12);
+}
+
+/* ── Screen 7: Consultation Journey ── */
+.desk-journey-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(248, 244, 250, 0.85) 100%);
+  border-radius: 36px;
+  padding: 70px 48px;
+  margin: 30px 0;
+  border: 1.5px solid rgba(148, 40, 118, 0.08);
+}
+
+.desk-journey-center {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+.desk-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.desk-journey-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid rgba(255, 255, 255, 0.98);
+  border-radius: 24px;
+  padding: 30px 24px;
+  box-shadow: 0 14px 36px rgba(148, 40, 118, 0.06);
+  position: relative;
+  transition: transform 0.28s ease;
+}
+
+.desk-journey-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(148, 40, 118, 0.12);
+}
+
+.desk-journey-number-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #8B096C 0%, #C8509B 100%);
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 18px rgba(148, 40, 118, 0.3);
+}
+
+.desk-journey-step-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1E122A;
+  margin: 0 0 8px;
+}
+
+.desk-journey-step-desc {
+  font-size: 13.5px;
+  color: #5C5268;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.desk-journey-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.desk-btn-call-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(148, 40, 118, 0.2);
+  border-radius: 30px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #2B1B4D;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.desk-btn-call-inline:hover {
+  background: #FFFFFF;
+  border-color: #8B096C;
+  color: #8B096C;
+}
+
+.desk-journey-trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.desk-j-trust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4A3E54;
+}
+
+/* ── Screen 8: Skin Journal ── */
+.desk-journal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.desk-journal-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 26px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.28s ease;
+  box-shadow: 0 16px 40px rgba(148, 40, 118, 0.06);
+}
+
+.desk-journal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px rgba(148, 40, 118, 0.14);
+}
+
+.desk-journal-img-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #F4EEF5;
+}
+
+.desk-journal-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.desk-journal-card:hover .desk-journal-img-frame img {
+  transform: scale(1.06);
+}
+
+.desk-journal-cat-pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  color: #8B096C;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.desk-journal-content {
+  padding: 22px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.desk-journal-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #8C7C97;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.desk-journal-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #1E122A;
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
+.desk-journal-excerpt {
+  font-size: 13.5px;
+  color: #5C5268;
+  line-height: 1.55;
+  margin: 0 0 18px;
+  flex-grow: 1;
+}
+
+.desk-journal-read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #8B096C;
+}
+
+/* ── Screen 9: Clinic Location & Map ── */
+.desk-location-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.desk-location-split-card {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid rgba(255, 255, 255, 0.98);
+  border-radius: 36px;
+  padding: 44px 40px;
+  box-shadow: 0 24px 60px rgba(148, 40, 118, 0.08);
+  backdrop-filter: blur(28px);
+}
+
+.desk-loc-badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #8B096C;
+  text-transform: uppercase;
+}
+
+.desk-loc-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1E122A;
+  margin: 6px 0 16px;
+}
+
+.desk-address-highlight-card {
+  display: flex;
+  gap: 14px;
+  background: rgba(148, 40, 118, 0.05);
+  border: 1.5px solid rgba(148, 40, 118, 0.16);
+  border-radius: 20px;
+  padding: 16px 20px;
+  margin: 16px 0 20px;
+}
+
+.desk-addr-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #8B096C;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.desk-addr-text {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #2B1B4D;
+  margin: 4px 0 0;
+}
+
+.desk-transit-chips-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.desk-transit-chip {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4A3E54;
+}
+
+.desk-contact-quick-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.desk-contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #2B1B4D;
+  text-decoration: none;
+}
+
+.desk-loc-actions-bar {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.desk-btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1.5px solid rgba(37, 211, 102, 0.45);
+  color: #0d7337;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.desk-btn-whatsapp:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+}
+
+.desk-map-frame {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid rgba(148, 40, 118, 0.12);
+  margin-bottom: 20px;
+}
+
+.desk-quick-inquiry-box {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid rgba(148, 40, 118, 0.16);
+  border-radius: 20px;
+  padding: 20px 24px;
+}
+
+.desk-inquiry-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1E122A;
+  margin: 0 0 4px;
+}
+
+.desk-inquiry-subtitle {
+  font-size: 12.5px;
+  color: #6A5F75;
+  margin: 0 0 14px;
+}
+
+.desk-inquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.desk-inquiry-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.desk-inquiry-input,
+.desk-inquiry-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(148, 40, 118, 0.18);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1E122A;
+  box-sizing: border-box;
+}
+
+.desk-inquiry-input:focus,
+.desk-inquiry-textarea:focus {
+  outline: none;
+  border-color: #8B096C;
+}
+
+.desk-btn-primary.full-width {
+  width: 100%;
+  justify-content: center;
+  padding: 12px;
+}
+
+.desk-inquiry-success {
+  text-align: center;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.desk-btn-whatsapp-solid {
+  background: #25D366;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* ── Screen 10: Final CTA Banner ── */
+.desk-final-cta-section {
+  padding: 30px 0 60px;
+}
+
+.desk-cta-banner-card {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 40px;
+  align-items: center;
+  background: linear-gradient(135deg, #8B096C 0%, #B83A8F 50%, #4A154B 100%);
+  border-radius: 36px;
+  padding: 50px 56px;
+  color: #FFFFFF;
+  box-shadow: 0 24px 60px rgba(148, 40, 118, 0.28);
+}
+
+.desk-cta-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+}
+
+.desk-cta-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin: 0 0 14px;
+}
+
+.desk-cta-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #F8EBF4;
+  margin: 0 0 28px;
+  max-width: 540px;
+}
+
+.desk-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.desk-btn-primary-white {
+  padding: 14px 28px;
+  background: #FFFFFF;
+  color: #8B096C;
+  border-radius: 30px;
+  font-size: 14.5px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+}
+
+.desk-btn-primary-white:hover {
+  background: #FFF5FB;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
+}
+
+.desk-btn-outline-white {
+  padding: 13px 24px;
+  background: transparent;
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.desk-btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #FFFFFF;
+}
+
+.desk-cta-features-strip {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-weight: 600;
+  color: #F5E8F3;
+}
+
+.desk-cta-image-col {
+  width: 100%;
+  height: 320px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.desk-cta-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive for Desk Blueprint */
+@media (max-width: 1200px) {
+  .desk-hero-split,
+  .desk-doctor-card,
+  .desk-location-split-card,
+  .desk-cta-banner-card {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .desk-signature-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .desk-journey-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .desk-reviews-grid,
+  .desk-categories-grid,
+  .desk-journal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .desk-signature-grid,
+  .desk-journey-grid,
+  .desk-reviews-grid,
+  .desk-categories-grid,
+  .desk-journal-grid {
+    grid-template-columns: 1fr;
+  }
+  .desk-hero-trust-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+  .desk-trust-strip {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .desk-strip-divider {
+    display: none;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   ADDITIONAL LIQUID GLASS LAYOUT & INTERACTIVE RULES
+────────────────────────────────────────────────────────────── */
+
+.desk-signature-grid.swipeable-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  scroll-behavior: smooth !important;
+  scroll-snap-type: x mandatory !important;
+  padding: 12px 6px 24px !important;
+  gap: 22px !important;
+}
+
+.desk-signature-grid.swipeable-track .desk-signature-card {
+  flex: 0 0 280px !important;
+  width: 280px !important;
+  min-width: 280px !important;
+  max-width: 280px !important;
+}
+
+.desk-reviews-grid.swipeable-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  scroll-behavior: smooth !important;
+  scroll-snap-type: x mandatory !important;
+  padding: 12px 6px 24px !important;
+  gap: 22px !important;
+}
+
+.desk-reviews-grid.swipeable-track .desk-review-card {
+  flex: 0 0 360px !important;
+  width: 360px !important;
+  min-width: 360px !important;
+  max-width: 360px !important;
+}
+
+/* Doctor Section Grid */
+.desk-doctor-card {
+  display: grid !important;
+  grid-template-columns: 340px 1fr !important;
+  gap: 44px !important;
+  align-items: center !important;
+}
+
+.desk-doc-portrait-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.desk-doc-glass-frame {
+  width: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  background: #FFF9ED !important;
+  border: 2px solid rgba(212, 175, 55, 0.45) !important;
+  box-shadow: 0 16px 36px rgba(139, 9, 108, 0.1) !important;
+}
+
+.desk-doc-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  display: block !important;
+}
+
+.desk-doc-caption-strip {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  border-radius: 14px !important;
+  padding: 10px 14px !important;
+  text-align: center !important;
+}
+
+.desk-doc-caption-strip strong {
+  display: block !important;
+  font-size: 14px !important;
+  color: #1B0344 !important;
+}
+
+.desk-doc-caption-strip span {
+  display: block !important;
+  font-size: 11px !important;
+  color: #8B096C !important;
+  margin-top: 2px !important;
+}
+
+.desk-doc-credentials-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 14px !important;
+  margin: 22px 0 !important;
+}
+
+.desk-cred-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  border-radius: 14px !important;
+  padding: 12px 16px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03) !important;
+}
+
+.desk-cred-item strong {
+  display: block !important;
+  font-size: 13.5px !important;
+  color: #1B0344 !important;
+}
+
+.desk-cred-item span {
+  display: block !important;
+  font-size: 11.5px !important;
+  color: #6A5F75 !important;
+}
+
+.desk-doc-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin-top: 24px !important;
+}
+
+/* Consultation Journey Step Highlights */
+.desk-journey-trust-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+  margin-top: 36px !important;
+}
+
+.desk-j-trust-chip {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(139, 9, 108, 0.15) !important;
+  border-radius: 20px !important;
+  padding: 6px 14px !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  color: #1B0344 !important;
+}
+
+/* Location Section */
+.desk-location-split-card {
+  display: grid !important;
+  grid-template-columns: 1.1fr 1fr !important;
+  gap: 36px !important;
+  padding: 36px !important;
+}
+
+.desk-address-highlight-card {
+  display: flex !important;
+  gap: 14px !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(139, 9, 108, 0.15) !important;
+  border-radius: 16px !important;
+  padding: 16px !important;
+  margin: 18px 0 !important;
+}
+
+.desk-addr-title {
+  display: block !important;
+  font-size: 13px !important;
+  color: #8B096C !important;
+  margin-bottom: 4px !important;
+}
+
+.desk-addr-text {
+  font-size: 13.5px !important;
+  line-height: 1.5 !important;
+  color: #3E324A !important;
+  margin: 0 !important;
+}
+
+.desk-transit-chips-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin-bottom: 20px !important;
+}
+
+.desk-transit-chip {
+  background: rgba(255, 249, 237, 0.9) !important;
+  border: 1px solid #EBD5A0 !important;
+  color: #8A641A !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+}
+
+.desk-contact-quick-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin-bottom: 24px !important;
+}
+
+.desk-contact-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  border-radius: 20px !important;
+  padding: 8px 14px !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  color: #1B0344 !important;
+  text-decoration: none !important;
+}
+
+.desk-loc-actions-bar {
+  display: flex !important;
+  gap: 14px !important;
+  flex-wrap: wrap !important;
+}
+
+.desk-btn-whatsapp {
+  background: #25D366 !important;
+  color: #FFFFFF !important;
+  border-radius: 30px !important;
+  padding: 12px 24px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3) !important;
+  transition: all 0.25s ease !important;
+}
+
+.desk-btn-whatsapp:hover {
+  background: #1EBE5D !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.4) !important;
+}
+
+.desk-btn-whatsapp-solid {
+  background: #25D366 !important;
+  color: #FFFFFF !important;
+  border-radius: 30px !important;
+  padding: 10px 20px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 12px !important;
+}
+
+.desk-quick-inquiry-box {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  border-radius: 20px !important;
+  padding: 20px 24px !important;
+  margin-top: 20px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04) !important;
+}
+
+.desk-inquiry-title {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #1B0344 !important;
+  margin: 0 0 4px !important;
+}
+
+.desk-inquiry-subtitle {
+  font-size: 12px !important;
+  color: #6A5F75 !important;
+  margin: 0 0 14px !important;
+}
+
+.desk-inquiry-fields-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.desk-inquiry-input,
+.desk-inquiry-textarea {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.35) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  font-size: 13px !important;
+  color: #1B0344 !important;
+  outline: none !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.desk-inquiry-input:focus,
+.desk-inquiry-textarea:focus {
+  border-color: #8B096C !important;
+}
+
+.desk-inquiry-textarea {
+  margin-bottom: 12px !important;
+  resize: vertical !important;
+}
+
+.desk-btn-primary.full-width {
+  width: 100% !important;
+}
+
+/* ==========================================================================
+   NEW HIGH-IMPACT CLINICAL FEATURES & LIQUID GLASS ELEMENTS
+   ========================================================================== */
+
+/* ── 1. Hero Live Status Pill ───────────────────────────────────────────── */
+.desk-hero-live-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(20px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
+  border: 1.5px solid rgba(46, 213, 115, 0.45) !important;
+  border-radius: 40px !important;
+  padding: 6px 16px !important;
+  cursor: pointer !important;
+  box-shadow:
+    0 8px 24px rgba(46, 213, 115, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.04),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  margin-left: 10px !important;
+}
+
+.desk-hero-live-pill:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: rgba(46, 213, 115, 0.75) !important;
+  box-shadow:
+    0 12px 28px rgba(46, 213, 115, 0.25),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+}
+
+.live-status-pulse {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #2ED573 !important;
+  box-shadow: 0 0 10px #2ED573 !important;
+  animation: liveStatusPulseAnim 1.8s infinite ease-in-out !important;
+}
+
+@keyframes liveStatusPulseAnim {
+  0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(46, 213, 115, 0.7); }
+  50% { transform: scale(1.15); opacity: 0.8; box-shadow: 0 0 0 6px rgba(46, 213, 115, 0); }
+}
+
+.live-status-text {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #1B0344 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.live-slot-badge {
+  background: rgba(139, 9, 108, 0.1) !important;
+  border: 1px solid rgba(139, 9, 108, 0.25) !important;
+  color: #8B096C !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  padding: 3px 10px !important;
+  border-radius: 20px !important;
+}
+
+/* ── 2. Interactive 60-Second Skin & Hair Concern Matcher ──────────────── */
+.desk-matcher-section {
+  padding: 40px 0 60px !important;
+}
+
+.desk-matcher-glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(253, 248, 255, 0.88) 100%) !important;
+  backdrop-filter: blur(32px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(210%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.98) !important;
+  border-radius: 36px !important;
+  padding: 44px 48px !important;
+  box-shadow:
+    0 24px 64px rgba(139, 9, 108, 0.08),
+    0 4px 16px rgba(0, 0, 0, 0.02),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+}
+
+.desk-matcher-top-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 24px !important;
+  margin-bottom: 28px !important;
+}
+
+.desk-matcher-heading {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  color: #1B0344 !important;
+  line-height: 1.2 !important;
+  margin: 10px 0 8px !important;
+  letter-spacing: -0.01em !important;
+}
+
+.desk-matcher-desc {
+  font-size: 15px !important;
+  color: #5C5268 !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  max-width: 780px !important;
+}
+
+.desk-matcher-selector-grid {
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr) !important;
+  gap: 12px !important;
+  margin-bottom: 30px !important;
+}
+
+.desk-matcher-choice-btn {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1.5px solid rgba(139, 9, 108, 0.12) !important;
+  border-radius: 20px !important;
+  padding: 14px 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-align: center !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
+}
+
+.desk-matcher-choice-btn:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(139, 9, 108, 0.35) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 24px rgba(139, 9, 108, 0.08) !important;
+}
+
+.desk-matcher-choice-btn.active {
+  background: linear-gradient(135deg, rgba(139, 9, 108, 0.12) 0%, rgba(212, 175, 55, 0.14) 100%) !important;
+  border: 2px solid #8B096C !important;
+  transform: translateY(-4px) !important;
+  box-shadow:
+    0 12px 30px rgba(139, 9, 108, 0.15),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+}
+
+.matcher-btn-icon {
+  font-size: 24px !important;
+  line-height: 1 !important;
+}
+
+.matcher-btn-label {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #2B1B4D !important;
+  line-height: 1.35 !important;
+}
+
+.desk-matcher-choice-btn.active .matcher-btn-label {
+  color: #8B096C !important;
+  font-weight: 800 !important;
+}
+
+/* Result Panel */
+.desk-matcher-result-panel {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(28px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.35) !important;
+  border-radius: 26px !important;
+  padding: 32px 38px !important;
+  box-shadow:
+    0 16px 44px rgba(139, 9, 108, 0.06),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+  animation: fadeInMatcher 0.35s ease-out !important;
+}
+
+@keyframes fadeInMatcher {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.desk-matcher-result-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 12px !important;
+}
+
+.desk-matcher-res-badge {
+  background: rgba(139, 9, 108, 0.1) !important;
+  border: 1px solid rgba(139, 9, 108, 0.25) !important;
+  color: #8B096C !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  padding: 5px 14px !important;
+  border-radius: 20px !important;
+  letter-spacing: 0.03em !important;
+}
+
+.desk-matcher-protocol-badge {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #2E7D32 !important;
+  background: rgba(46, 125, 50, 0.08) !important;
+  padding: 5px 14px !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(46, 125, 50, 0.2) !important;
+}
+
+.desk-matcher-res-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: #1B0344 !important;
+  margin: 0 0 20px !important;
+}
+
+.desk-matcher-details-grid {
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr 1fr !important;
+  gap: 20px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(139, 9, 108, 0.1) !important;
+  border-radius: 18px !important;
+  padding: 20px 24px !important;
+  margin-bottom: 22px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02) !important;
+}
+
+.desk-matcher-col {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.matcher-col-label {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #7A6F85 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+.matcher-col-val {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #1B0344 !important;
+}
+
+.matcher-col-val.highlight {
+  color: #8B096C !important;
+  font-size: 17px !important;
+}
+
+.desk-matcher-observation-box {
+  background: rgba(254, 250, 240, 0.75) !important;
+  border-left: 4px solid #D4AF37 !important;
+  border-radius: 0 16px 16px 0 !important;
+  padding: 16px 20px !important;
+  margin-bottom: 24px !important;
+}
+
+.obs-label {
+  display: block !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  color: #8A641A !important;
+  margin-bottom: 4px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+.obs-text {
+  font-size: 14.5px !important;
+  font-style: italic !important;
+  color: #3E324A !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.desk-matcher-actions-bar {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+}
+
+/* ── 3. Real Patient Transformations (Before & After Showcase) ──────────── */
+.desk-before-after-section {
+  padding: 50px 0 !important;
+}
+
+.desk-filter-tabs-bar {
+  display: flex !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 28px !important;
+}
+
+.desk-glass-tab-btn {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1.5px solid rgba(139, 9, 108, 0.15) !important;
+  border-radius: 30px !important;
+  padding: 10px 22px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #2B1B4D !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+}
+
+.desk-glass-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: #8B096C !important;
+  color: #8B096C !important;
+}
+
+.desk-glass-tab-btn.active {
+  background: #8B096C !important;
+  color: #FFFFFF !important;
+  border-color: #8B096C !important;
+  box-shadow: 0 8px 24px rgba(139, 9, 108, 0.3) !important;
+}
+
+.desk-ba-showcase-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(253, 248, 255, 0.85) 100%) !important;
+  backdrop-filter: blur(32px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(210%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.98) !important;
+  border-radius: 36px !important;
+  padding: 40px !important;
+  display: grid !important;
+  grid-template-columns: 500px 1fr !important;
+  gap: 44px !important;
+  align-items: center !important;
+  box-shadow:
+    0 24px 60px rgba(139, 9, 108, 0.08),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+}
+
+.desk-ba-visuals-col {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.desk-ba-img-pair {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  position: relative !important;
+}
+
+.desk-ba-img-box {
+  flex: 1 !important;
+  aspect-ratio: 4 / 4.2 !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  background: #FAF0F6 !important;
+  border: 2px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.desk-ba-img-box img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.4s ease !important;
+}
+
+.desk-ba-img-box:hover img {
+  transform: scale(1.05) !important;
+}
+
+.desk-ba-tag {
+  position: absolute !important;
+  top: 12px !important;
+  left: 12px !important;
+  z-index: 2 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  padding: 4px 12px !important;
+  border-radius: 14px !important;
+}
+
+.desk-ba-tag.before {
+  background: rgba(27, 3, 68, 0.85) !important;
+  color: #FFFFFF !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.desk-ba-tag.after {
+  background: rgba(139, 9, 108, 0.92) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 10px rgba(139, 9, 108, 0.4) !important;
+}
+
+.desk-ba-divider-pill {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.5) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+  color: #8B096C !important;
+  flex-shrink: 0 !important;
+}
+
+.desk-ba-sessions-chip {
+  align-self: center !important;
+  background: rgba(255, 249, 237, 0.95) !important;
+  border: 1px solid #EBD5A0 !important;
+  color: #8A641A !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  padding: 6px 18px !important;
+  border-radius: 30px !important;
+}
+
+.desk-ba-info-col {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.desk-ba-badge-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+}
+
+.desk-ba-cat-badge {
+  background: rgba(139, 9, 108, 0.1) !important;
+  color: #8B096C !important;
+  border: 1px solid rgba(139, 9, 108, 0.25) !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+}
+
+.desk-ba-verified-badge {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #2E7D32 !important;
+  background: rgba(46, 125, 50, 0.08) !important;
+  border: 1px solid rgba(46, 125, 50, 0.2) !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+}
+
+.desk-ba-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #1B0344 !important;
+  margin: 0 !important;
+}
+
+.desk-ba-metrics-box {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(139, 9, 108, 0.1) !important;
+  border-radius: 18px !important;
+  padding: 18px 22px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02) !important;
+}
+
+.ba-metric-item {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.metric-label {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: #7A6F85 !important;
+  text-transform: uppercase !important;
+}
+
+.metric-val {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #1B0344 !important;
+}
+
+.metric-val.gold-text {
+  color: #8B096C !important;
+}
+
+.desk-ba-quote-box {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-left: 3px solid #8B096C !important;
+  border-radius: 0 16px 16px 0 !important;
+  padding: 16px 20px !important;
+}
+
+.desk-ba-quote-box strong {
+  display: block !important;
+  font-size: 12px !important;
+  color: #8B096C !important;
+  margin-bottom: 4px !important;
+}
+
+.desk-ba-quote-box p {
+  font-size: 14px !important;
+  font-style: italic !important;
+  color: #3E324A !important;
+  line-height: 1.55 !important;
+  margin: 0 0 6px !important;
+}
+
+.desk-ba-quote-box span {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #7A6F85 !important;
+}
+
+.desk-ba-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin-top: 6px !important;
+}
+
+/* ── 4. Treatment Cost & Session Transparency Table ──────────────────────── */
+.desk-cost-section {
+  padding: 50px 0 !important;
+}
+
+.desk-cost-estimator-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(253, 248, 255, 0.88) 100%) !important;
+  backdrop-filter: blur(32px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(210%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.98) !important;
+  border-radius: 36px !important;
+  padding: 44px 48px !important;
+  box-shadow:
+    0 24px 64px rgba(139, 9, 108, 0.08),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+}
+
+.desk-cost-head {
+  text-align: center !important;
+  margin-bottom: 32px !important;
+}
+
+.desk-cost-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  color: #1B0344 !important;
+  margin: 10px 0 8px !important;
+}
+
+.desk-cost-sub {
+  font-size: 15px !important;
+  color: #5C5268 !important;
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  line-height: 1.6 !important;
+}
+
+.desk-cost-table {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  box-shadow: 0 12px 36px rgba(139, 9, 108, 0.05) !important;
+  margin-bottom: 26px !important;
+}
+
+.desk-cost-table-head {
+  display: grid !important;
+  grid-template-columns: 1.3fr 0.8fr 1fr 1.5fr !important;
+  background: linear-gradient(135deg, rgba(139, 9, 108, 0.08) 0%, rgba(212, 175, 55, 0.08) 100%) !important;
+  padding: 16px 24px !important;
+  border-bottom: 1.5px solid rgba(139, 9, 108, 0.12) !important;
+}
+
+.cost-th {
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  color: #1B0344 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+.desk-cost-table-row {
+  display: grid !important;
+  grid-template-columns: 1.3fr 0.8fr 1fr 1.5fr !important;
+  padding: 18px 24px !important;
+  border-bottom: 1px solid rgba(139, 9, 108, 0.08) !important;
+  align-items: center !important;
+  transition: background 0.2s ease !important;
+}
+
+.desk-cost-table-row:last-child {
+  border-bottom: none !important;
+}
+
+.desk-cost-table-row:hover {
+  background: rgba(139, 9, 108, 0.03) !important;
+}
+
+.cost-name-cell strong {
+  font-size: 15px !important;
+  color: #1B0344 !important;
+  font-weight: 700 !important;
+}
+
+.cost-badge {
+  display: inline-block !important;
+  background: rgba(139, 9, 108, 0.08) !important;
+  border: 1px solid rgba(139, 9, 108, 0.2) !important;
+  color: #8B096C !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+}
+
+.cost-price-cell .price-text {
+  font-size: 15.5px !important;
+  font-weight: 800 !important;
+  color: #8B096C !important;
+}
+
+.cost-inc-cell span {
+  font-size: 13.5px !important;
+  color: #5C5268 !important;
+  line-height: 1.45 !important;
+}
+
+.desk-cost-footer-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+  padding-top: 10px !important;
+}
+
+.cost-footer-trust {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  flex-wrap: wrap !important;
+}
+
+.cost-footer-trust span {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #1B0344 !important;
+}
+
+/* ── 5. Floating Translucent Liquid Glass WhatsApp Consultation Pill ────── */
+.desk-floating-whatsapp-pill {
+  position: fixed !important;
+  bottom: 28px !important;
+  right: 28px !important;
+  z-index: 9999 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(28px) saturate(220%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(220%) !important;
+  border: 1.5px solid rgba(37, 211, 102, 0.5) !important;
+  border-radius: 50px !important;
+  padding: 10px 20px 10px 16px !important;
+  text-decoration: none !important;
+  box-shadow:
+    0 16px 40px rgba(37, 211, 102, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+}
+
+.desk-floating-whatsapp-pill:hover {
+  transform: translateY(-4px) scale(1.03) !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: rgba(37, 211, 102, 0.8) !important;
+  box-shadow:
+    0 22px 50px rgba(37, 211, 102, 0.35),
+    0 6px 16px rgba(0, 0, 0, 0.08),
+    inset 0 2px 3px rgba(255, 255, 255, 1) !important;
+}
+
+.whatsapp-pulse-dot {
+  width: 9px !important;
+  height: 9px !important;
+  border-radius: 50% !important;
+  background: #25D366 !important;
+  box-shadow: 0 0 12px #25D366 !important;
+  animation: liveStatusPulseAnim 1.6s infinite ease-in-out !important;
+  flex-shrink: 0 !important;
+}
+
+.whatsapp-icon-emoji {
+  font-size: 20px !important;
+  line-height: 1 !important;
+}
+
+.whatsapp-text-block {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1px !important;
+}
+
+.whatsapp-text-block strong {
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  color: #1B0344 !important;
+  line-height: 1.2 !important;
+}
+
+.whatsapp-text-block span {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: #128C7E !important;
+  line-height: 1.2 !important;
+}
+
+/* ==========================================================================
+   FULL-WIDTH MAJESTIC HERO SLIDER (CAROUSEL) & ULTRA-LIQUID GLASS STYLES
+   ========================================================================== */
+
+.desk-hero-section {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.desk-hero-full-slider {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 580px !important;
+  height: calc(100vh - 84px) !important;
+  max-height: 820px !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  margin: 0 0 32px 0 !important;
+}
+
+.desk-hero-slide-pane {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transform: scale(1.02) !important;
+  z-index: 1 !important;
+}
+
+.desk-hero-slide-pane.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: scale(1) !important;
+  z-index: 2 !important;
+}
+
+.desk-hero-slide-bg-frame {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+}
+
+.desk-hero-bg-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+}
+
+.desk-hero-scrim-layer {
+  display: none !important;
+}
+
+.desk-hero-slide-container {
+  position: relative !important;
+  z-index: 3 !important;
+  max-width: 1320px !important;
+  height: 100% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 0 54px !important;
+}
+
+.desk-hero-slide-content,
+.desk-hero-slide-glass-box {
+  max-width: 450px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+  border-radius: 24px !important;
+  padding: 24px 28px !important;
+  box-shadow: 0 16px 44px rgba(43, 27, 77, 0.12), inset 0 1px 1.5px rgba(255, 255, 255, 0.9) !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.desk-slide-eyebrow-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-bottom: 12px !important;
+  flex-wrap: wrap !important;
+}
+
+.desk-eyebrow-badge {
+  background: rgba(148, 40, 118, 0.08) !important;
+  border: 1px solid rgba(148, 40, 118, 0.22) !important;
+  color: #942876 !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  padding: 4px 11px !important;
+  border-radius: 20px !important;
+  letter-spacing: 0.03em !important;
+  text-transform: uppercase !important;
+}
+
+.desk-slide-highlight-pill {
+  background: rgba(212, 175, 55, 0.12) !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  color: #8A641A !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  padding: 4px 11px !important;
+  border-radius: 20px !important;
+  letter-spacing: 0.02em !important;
+}
+
+.desk-hero-slide-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  color: #1B0344 !important;
+  margin: 0 0 12px !important;
+  letter-spacing: -0.02em !important;
+}
+
+.desk-hero-slide-sub {
+  font-size: 14.5px !important;
+  color: #3B2D46 !important;
+  line-height: 1.55 !important;
+  margin: 0 0 22px !important;
+}
+
+.desk-marquee-dot {
+  color: #D4AF37;
+  font-size: 14px;
+  margin: 0 12px;
+  display: inline-block;
+  opacity: 0.85;
+}
+
+.desk-hero-slide-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+}
+
+.desk-hero-slide-actions .desk-btn-primary,
+.desk-hero-slide-actions .desk-btn-call {
+  padding: 11px 20px !important;
+  font-size: 13.5px !important;
+  border-radius: 24px !important;
+}
+
+/* Slider Prev / Next Floating Arrows */
+.desk-hero-nav-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  color: #8B096C !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: 0 8px 24px rgba(139, 9, 108, 0.12) !important;
+  transition: all 0.25s ease !important;
+}
+
+.desk-hero-nav-arrow.prev {
+  left: 20px !important;
+}
+
+.desk-hero-nav-arrow.next {
+  right: 20px !important;
+}
+
+.desk-hero-nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.98) !important;
+  transform: translateY(-50%) scale(1.08) !important;
+  box-shadow: 0 12px 32px rgba(139, 9, 108, 0.22) !important;
+}
+
+/* Slider Pagination Dots */
+.desk-hero-dots-row {
+  position: absolute !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  padding: 6px 14px !important;
+  border-radius: 30px !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05) !important;
+}
+
+.desk-hero-dot-btn {
+  width: 22px !important;
+  height: 8px !important;
+  border-radius: 10px !important;
+  background: rgba(139, 9, 108, 0.2) !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.desk-hero-dot-btn:hover {
+  background: rgba(139, 9, 108, 0.4) !important;
+}
+
+.desk-hero-dot-btn.active {
+  width: 44px !important;
+  background: #8B096C !important;
+  box-shadow: 0 0 10px rgba(139, 9, 108, 0.4) !important;
+}
+
+/* ── Solid Luxury Vibrant Buttons (No Blurry Low-Opacity Backdrop) ─────────────────────────── */
+.desk-btn-primary,
+.header-book-pill,
+#hero-book-consult-btn,
+#doctor-book-btn,
+#journey-book-btn,
+#final-cta-book-btn {
+  background: linear-gradient(135deg, #8B096C 0%, #A61B84 100%) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid #8B096C !important;
+  box-shadow: 0 8px 24px rgba(139, 9, 108, 0.28) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+.desk-btn-call,
+.header-phone-pill,
+.desk-btn-secondary,
+.desk-btn-call-inline {
+  background: #FFFFFF !important;
+  border: 1.5px solid #D4AF37 !important;
+  color: #1B0344 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+/* ==========================================================================
+   COMPREHENSIVE MOBILE & TABLET RESPONSIVE SYSTEM (<= 850px & <= 480px)
+   Fluid layouts, touch-friendly targets, no horizontal overflows
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .desk-doctor-split {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .desk-doctor-photo-frame {
+    max-width: 340px !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 850px) {
+  /* Prevent horizontal scroll bleed on mobile viewports */
+  html, body, #root, .desk-blueprint-home {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  .desk-blueprint-home {
+    padding-bottom: 76px !important; /* Space above fixed bottom MobileActionBar */
+  }
+
+  .desk-container {
+    padding: 0 16px !important;
+  }
+
+  .desk-section {
+    padding: 44px 0 !important;
+  }
+
+  .desk-section-head-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .desk-section-title {
+    font-size: 26px !important;
+    line-height: 1.22 !important;
+  }
+
+  .desk-section-sub {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* ── 1. Hero Carousel on Mobile / Tablet ── */
+  /* Mobile Layout: Full clear image container at top, then text & CTA buttons AFTER image container */
+  .desk-hero-full-slider {
+    --hero-mobile-img-height: 480px;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    position: relative !important;
+    overflow: visible !important;
+    margin-bottom: 24px !important;
+    background: transparent !important;
+  }
+
+  .desk-hero-slide-pane {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: none !important;
+  }
+
+  .desk-hero-slide-pane.active {
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    z-index: 1 !important;
+  }
+
+  /* 1. Unobstructed Image Container on Mobile (Bigger & Taller - 480px) */
+  .desk-hero-slide-bg-frame {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: var(--hero-mobile-img-height, 480px) !important;
+    overflow: hidden !important;
+    border-radius: 0 0 24px 24px !important;
+    box-shadow: 0 12px 32px rgba(27, 3, 68, 0.12) !important;
+    background: #FAF7F2 !important;
+  }
+
+  .desk-hero-bg-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 20% !important;
+    display: block !important;
+  }
+
+  .desk-hero-scrim-layer {
+    display: none !important;
+  }
+
+  /* Floating Prev/Next Chevrons centered over the image container */
+  .desk-hero-nav-arrow {
+    position: absolute !important;
+    top: calc(var(--hero-mobile-img-height, 480px) / 2) !important;
+    transform: translateY(-50%) !important;
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 15 !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+    opacity: 1 !important;
+  }
+
+  .desk-hero-nav-arrow.prev {
+    left: 10px !important;
+  }
+
+  .desk-hero-nav-arrow.next {
+    right: 10px !important;
+  }
+
+  /* Dots row positioned at bottom of the image container */
+  .desk-hero-dots-row {
+    position: absolute !important;
+    top: calc(var(--hero-mobile-img-height, 480px) - 44px) !important;
+    bottom: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 15 !important;
+    background: rgba(27, 3, 68, 0.42) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.45) !important;
+    border-radius: 20px !important;
+    padding: 4px 12px !important;
+  }
+
+  .desk-hero-dot-btn {
+    width: 14px !important;
+    height: 5px !important;
+    background: rgba(255, 255, 255, 0.55) !important;
+  }
+
+  .desk-hero-dot-btn.active {
+    width: 24px !important;
+    background: #FFFFFF !important;
+  }
+
+  /* 2. Text and All Displayed AFTER the Image Container */
+  .desk-hero-slide-container {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 18px 16px 8px 16px !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+  }
+
+  .desk-hero-slide-content,
+  .desk-hero-slide-glass-box {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .desk-slide-eyebrow-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-bottom: 8px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .desk-eyebrow-badge {
+    background: rgba(139, 9, 108, 0.08) !important;
+    border: 1px solid rgba(139, 9, 108, 0.22) !important;
+    color: #8B096C !important;
+    font-size: 9.5px !important;
+    font-weight: 800 !important;
+    padding: 3px 8px !important;
+    border-radius: 12px !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+  }
+
+  .desk-slide-highlight-pill {
+    background: rgba(212, 175, 55, 0.14) !important;
+    border: 1px solid rgba(212, 175, 55, 0.38) !important;
+    color: #8A641A !important;
+    font-size: 9.5px !important;
+    font-weight: 800 !important;
+    padding: 3px 8px !important;
+    border-radius: 12px !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+  }
+
+  .desk-hero-slide-title {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: clamp(20px, 5.5vw, 24px) !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    color: #1B0344 !important;
+    margin: 0 0 8px 0 !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  .desk-hero-slide-sub {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    color: #4A3E54 !important;
+    margin: 0 0 16px 0 !important;
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    overflow: visible !important;
+  }
+
+  .desk-hero-slide-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 4px !important;
+  }
+
+  .desk-hero-slide-actions button,
+  .desk-hero-slide-actions a,
+  .desk-hero-slide-actions .desk-btn-primary,
+  .desk-hero-slide-actions .desk-btn-call {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    width: auto !important;
+    padding: 10px 5px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    border-radius: 24px !important;
+    min-height: 42px !important;
+    height: 42px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    gap: 4px !important;
+    box-sizing: border-box !important;
+  }
+
+  .desk-hero-slide-actions svg {
+    width: 13px !important;
+    height: 13px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .desk-hero-slide-actions span {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  /* ── 2. Treatment Category Tabs & Cards ── */
+  .desk-filter-tabs-bar {
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    padding-bottom: 10px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    justify-content: flex-start !important;
+  }
+
+  .desk-filter-tabs-bar::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .desk-glass-tab-btn {
+    flex-shrink: 0 !important;
+    font-size: 12.5px !important;
+    padding: 8px 16px !important;
+  }
+
+  .desk-categories-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* ── 3. Signature Treatments Carousel Track ── */
+  .desk-signature-scroll-controls {
+    display: none !important;
+  }
+
+  .desk-signature-grid.swipeable-track {
+    padding: 8px 4px 18px !important;
+    gap: 16px !important;
+  }
+
+  .desk-signature-grid.swipeable-track .desk-signature-card {
+    flex: 0 0 260px !important;
+    width: 260px !important;
+    min-width: 260px !important;
+  }
+
+  /* ── 4. Clinical Concern Matcher ── */
+  .desk-matcher-split {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .desk-concern-tabs-vertical {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    padding-bottom: 8px !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .desk-concern-tab-item {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    padding: 10px 14px !important;
+    font-size: 13px !important;
+  }
+
+  .desk-concern-tab-item.active {
+    border-left: 1px solid rgba(148, 40, 118, 0.2) !important;
+    border-bottom: 3px solid #8B096C !important;
+  }
+
+  .desk-matcher-card-body {
+    padding: 20px 16px !important;
+  }
+
+  .desk-matcher-meta-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* ── 5. Doctor Profile & Credentials ── */
+  .desk-doctor-split {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .desk-doctor-photo-frame {
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+
+  .desk-doctor-credentials-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .desk-cred-pill {
+    padding: 10px 12px !important;
+    font-size: 12px !important;
+  }
+
+  /* ── 6. Patient Reviews Carousel ── */
+  .desk-reviews-grid.swipeable-track {
+    padding: 8px 4px 18px !important;
+    gap: 16px !important;
+  }
+
+  .desk-reviews-grid.swipeable-track .desk-review-card {
+    flex: 0 0 290px !important;
+    width: 290px !important;
+    min-width: 290px !important;
+  }
+
+  /* ── 7. Facility Tour Swipe Track ── */
+  .desk-facility-scroll-track {
+    padding: 8px 4px 18px !important;
+    gap: 16px !important;
+  }
+
+  .desk-fac-slide-card {
+    flex: 0 0 270px !important;
+    width: 270px !important;
+    min-width: 270px !important;
+  }
+
+  /* ── 8. Consultation Journey Steps ── */
+  .desk-journey-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* ── 9. Blog Articles Grid ── */
+  .desk-journal-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  /* ── 10. Location Card & Map ── */
+  .desk-location-split-card {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 20px 16px !important;
+  }
+
+  .desk-map-embed-wrap iframe {
+    height: 260px !important;
+  }
+
+  /* ── 11. Inquiry Form ── */
+  .desk-inquiry-split {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .desk-inquiry-form-card {
+    padding: 22px 18px !important;
+  }
+
+  .desk-form-row-2col {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .desk-doctor-credentials-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .desk-hero-full-slider {
+    --hero-mobile-img-height: 420px;
+  }
+}
+
+
+

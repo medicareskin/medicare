@@ -73,13 +73,37 @@ const TAB_TO_PATH = {
 };
 
 import TreatmentDetailPage from './pages/TreatmentDetailPage';
-import { SKIN_CONDITIONS, HAIR_CONDITIONS, COSMETIC_TREATMENTS, LASER_TREATMENTS } from './data/clinicData';
+import TrustStrip from './components/TrustStrip';
+import SkinConcernNavigatorModal from './components/SkinConcernNavigatorModal';
+import TreatmentCostPlannerModal from './components/TreatmentCostPlannerModal';
+import MobileActionBar from './components/MobileActionBar';
+
+// Mobile Blueprint Components
+import './components/mobile/mobileView.css';
+import MobileHomeView from './components/mobile/MobileHomeView';
+import MobileSmartBookingModal from './components/mobile/MobileSmartBookingModal';
+import MobilePatientPortalModal from './components/mobile/MobilePatientPortalModal';
+import MobileViewDeviceSimulator from './components/mobile/MobileViewDeviceSimulator';
+
+// Desktop Blueprint View (Blueprint 1)
+import './components/desktop/desktopView.css';
+import DesktopHomeView from './components/desktop/DesktopHomeView';
+
+import {
+  SKIN_CONDITIONS,
+  HAIR_CONDITIONS,
+  COSMETIC_TREATMENTS,
+  LASER_TREATMENTS,
+  MEDICAL_DERMATOLOGY_TREATMENTS
+} from './data/clinicData';
+import { Sparkles, Calculator, Compass, ArrowRight } from 'lucide-react';
 
 const ALL_CLINIC_TREATMENTS = [
   ...SKIN_CONDITIONS,
   ...HAIR_CONDITIONS,
   ...COSMETIC_TREATMENTS,
-  ...LASER_TREATMENTS
+  ...LASER_TREATMENTS,
+  ...MEDICAL_DERMATOLOGY_TREATMENTS
 ];
 
 export default function App() {
@@ -101,8 +125,63 @@ export default function App() {
     return PATH_TO_TAB[path] || 'home';
   });
 
+  const [isMobileViewport, setIsMobileViewport] = useState(() => {
+    return typeof window !== 'undefined' ? window.innerWidth <= 850 : false;
+  });
+  const [isSimulatorOpen, setIsSimulatorOpen] = useState(false);
+  const [isPortalOpen, setIsPortalOpen] = useState(false);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [isNavigatorOpen, setIsNavigatorOpen] = useState(false);
+  const [isCostPlannerOpen, setIsCostPlannerOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
+
+  // Theme Management (Permanently Light Liquid Glass Design)
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  React.useEffect(() => {
+    document.documentElement.classList.remove('dark-theme');
+    try {
+      localStorage.setItem('medicare_theme', 'light');
+    } catch (_) {}
+  }, []);
+
+  const toggleTheme = () => {};
+
+
+  // Lock body scroll whenever any modal, simulator, or portal is open
+  React.useEffect(() => {
+    const isAnyModalOpen = isSimulatorOpen || isPortalOpen || isBookingModalOpen || isNavigatorOpen || isCostPlannerOpen;
+    if (isAnyModalOpen) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+  }, [isSimulatorOpen, isPortalOpen, isBookingModalOpen, isNavigatorOpen, isCostPlannerOpen]);
+
+  // Global ESC key listener to dismiss open modal
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setIsSimulatorOpen(false);
+        setIsPortalOpen(false);
+        setIsBookingModalOpen(false);
+        setIsNavigatorOpen(false);
+        setIsCostPlannerOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobileViewport(window.innerWidth <= 850);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const setCurrentTab = (tabId) => {
     setCurrentTabState(tabId);
@@ -151,13 +230,23 @@ export default function App() {
   };
 
   return (
-    <div className="app-root">
-      {/* Header Navigation with Mega Menu */}
+    <div className={`app-root ${currentTab === 'home' ? 'is-home-page' : 'is-inner-page'}`}>
+      {/* Ambient Liquid Light Spheres for VisionOS-style Glass Refraction */}
+      <div className="liquid-ambient-backdrop" aria-hidden="true">
+        <div className="liquid-ambient-orb liquid-orb-1" />
+        <div className="liquid-ambient-orb liquid-orb-2" />
+        <div className="liquid-ambient-orb liquid-orb-3" />
+        <div className="liquid-ambient-orb liquid-orb-4" />
+      </div>
+
+      {/* Header Navigation with Mega Menu & Theme Control */}
       <Header
         currentTab={currentTab}
         setCurrentTab={setCurrentTab}
         onOpenBooking={handleOpenBooking}
         onSelectItem={handleSelectItem}
+        isDarkMode={isDarkMode}
+        toggleTheme={toggleTheme}
       />
 
       {/* Main View Router */}
@@ -171,25 +260,19 @@ export default function App() {
           />
         )}
         {currentTab === 'home' && (
-          <>
-            <HeroSlider onOpenBooking={handleOpenBooking} />
-            <BookingForm onSuccessToast={showToast} />
-            <DoctorProfile onOpenBooking={handleOpenBooking} />
-            <GoogleReviews />
-            <FeaturedTreatments
-              onSelectTreatment={handleSelectItem}
-              onOpenBooking={handleOpenBooking}
-            />
-            <BeforeAfterBanner onOpenBooking={handleOpenBooking} />
-            <SkinTreatmentsGrid onSelectCondition={handleSelectItem} />
-            <HairTreatmentsGrid onSelectCondition={handleSelectItem} />
-            <LocationMapSection onSuccessToast={showToast} />
-          </>
+          <DesktopHomeView
+            onOpenBooking={handleOpenBooking}
+            onOpenNavigator={() => setIsNavigatorOpen(true)}
+            onOpenCostPlanner={() => setIsCostPlannerOpen(true)}
+            onSelectTreatment={handleSelectItem}
+            onTabChange={setCurrentTab}
+          />
         )}
 
         {currentTab === 'skin' && (
           <SkinTreatmentsPage
             onSelectCondition={handleSelectItem}
+            onSelectTreatment={handleSelectItem}
             onOpenBooking={handleOpenBooking}
           />
         )}
@@ -197,12 +280,14 @@ export default function App() {
         {currentTab === 'hair' && (
           <HairTreatmentsPage
             onSelectCondition={handleSelectItem}
+            onSelectTreatment={handleSelectItem}
             onOpenBooking={handleOpenBooking}
           />
         )}
 
         {currentTab === 'cosmetic' && (
           <CosmeticTreatmentsPage
+            onSelectCondition={handleSelectItem}
             onSelectTreatment={handleSelectItem}
             onOpenBooking={handleOpenBooking}
           />
@@ -210,6 +295,7 @@ export default function App() {
 
         {currentTab === 'laser' && (
           <LaserTreatmentsPage
+            onSelectCondition={handleSelectItem}
             onSelectTreatment={handleSelectItem}
             onOpenBooking={handleOpenBooking}
           />
@@ -217,6 +303,7 @@ export default function App() {
 
         {currentTab === 'treatments' && (
           <AllTreatmentsPage
+            onSelectCondition={handleSelectItem}
             onSelectTreatment={handleSelectItem}
             onOpenBooking={handleOpenBooking}
           />
@@ -287,11 +374,6 @@ export default function App() {
         )}
       </main>
 
-      {/* Why Choose Us Placed Directly on Top of FAQs */}
-      <WhyChooseUs />
-
-      {/* FAQs Section */}
-      <FAQAccordion />
 
       {/* Footer */}
       <Footer onOpenBooking={handleOpenBooking} onTabChange={setCurrentTab} />
@@ -299,22 +381,47 @@ export default function App() {
       {/* Sticky Badge & Floating WhatsApp */}
       <FloatingWidgets onOpenBooking={handleOpenBooking} />
 
-      {/* Appointment Modal Popup */}
-      {isBookingModalOpen && (
-        <div className="modal-overlay" onClick={() => setIsBookingModalOpen(false)}>
-          <div className="modal-content-box" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '520px' }}>
-            <button className="modal-close-btn" onClick={() => setIsBookingModalOpen(false)}>
-              ×
-            </button>
-            <BookingForm
-              onSuccessToast={(msg) => {
-                setIsBookingModalOpen(false);
-                showToast(msg);
-              }}
-            />
-          </div>
-        </div>
-      )}
+      {/* Mobile Sticky Action Bar (Section 1.4 & 7.3 of spec & Blueprint 1 Screen 12) */}
+      <MobileActionBar onOpenBooking={handleOpenBooking} />
+
+      {/* AI-Era Skin Concern Navigator Modal (Blueprint 2 Screens 6–8) */}
+      <SkinConcernNavigatorModal
+        isOpen={isNavigatorOpen}
+        onClose={() => setIsNavigatorOpen(false)}
+        onOpenBooking={handleOpenBooking}
+      />
+
+      {/* CRO Treatment Cost Planner Modal (Blueprint 2 Screen 9) */}
+      <TreatmentCostPlannerModal
+        isOpen={isCostPlannerOpen}
+        onClose={() => setIsCostPlannerOpen(false)}
+        onOpenBooking={handleOpenBooking}
+      />
+
+      {/* Smart 5-Step Mobile Booking Journey (Blueprint 2 Screens 1–5) */}
+      <MobileSmartBookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+        onSuccessToast={showToast}
+      />
+
+      {/* Mobile Patient Portal, Aftercare & CRM Journey (Blueprint 2 Screens 10–12) */}
+      <MobilePatientPortalModal
+        isOpen={isPortalOpen}
+        onClose={() => setIsPortalOpen(false)}
+        onOpenBooking={handleOpenBooking}
+      />
+
+      {/* Desktop Simulator Frame for Mobile Blueprint */}
+      <MobileViewDeviceSimulator
+        isOpen={isSimulatorOpen}
+        onClose={() => setIsSimulatorOpen(false)}
+        onOpenBooking={handleOpenBooking}
+        onOpenNavigator={() => setIsNavigatorOpen(true)}
+        onOpenCostPlanner={() => setIsCostPlannerOpen(true)}
+        onOpenPortal={() => setIsPortalOpen(true)}
+        onSelectTreatment={handleSelectItem}
+      />
 
       {/* Toast Notification */}
       {toastMessage && (

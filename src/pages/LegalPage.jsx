@@ -11,13 +11,13 @@ export default function LegalPage({ type = 'privacy' }) {
   };
 
   return (
-    <div style={{ padding: '60px 0', background: '#FFFFFF' }}>
+    <div style={{ padding: '60px 0', background: 'transparent' }}>
       <div className="container" style={{ maxWidth: '850px' }}>
         <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '42px', color: '#2B1B4D', marginBottom: '20px' }}>
           {titles[type] || 'Legal & Policy Information'}
         </h1>
 
-        <div style={{ background: '#FDF9FB', padding: '36px', borderRadius: '20px', border: '1px solid #EBE0EA', fontSize: '15px', color: '#5C5268', lineHeight: '1.8' }}>
+        <div className="location-card-box" style={{ padding: '36px', fontSize: '15px', color: '#5C5268', lineHeight: '1.8' }}>
           {type === 'privacy' && (
             <>
               <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>1. Patient Information Protection</h3>

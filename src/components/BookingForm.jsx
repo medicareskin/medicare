@@ -66,7 +66,7 @@ export default function BookingForm({ onSuccessToast, singleCardMode = false, pr
 
             {submitted ? (
               <div style={{ textAlign: 'center', padding: '36px 12px' }}>
-                <CheckCircle2 size={64} style={{ color: '#25D366', margin: '0 auto 16px' }} />
+                <CheckCircle2 size={64} style={{ color: '#942876', margin: '0 auto 16px' }} />
                 <h3 style={{ color: '#2B1B4D', fontSize: '24px', marginBottom: '12px' }}>
                   Appointment Requested!
                 </h3>

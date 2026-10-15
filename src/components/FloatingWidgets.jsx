@@ -10,17 +10,17 @@ export default function FloatingWidgets({ onOpenBooking }) {
   const initialMessages = [
     {
       id: 1,
-      text: "👋 Hello! Welcome to Medicare Skin & Cosmetic Clinic. I'm Dr. Sujay M's AI Assistant.",
+      text: "Welcome to Medicare Skin & Cosmetic Clinic. How can we assist you today?",
       isBot: true,
       time: "Just now",
       chips: [
-        { label: "🩺 Dr. Sujay M Profile", query: "Tell me about Dr Sujay M" },
-        { label: "✨ Acne Scar Treatment", query: "Tell me about Acne Scar Treatment" },
-        { label: "⚡ Laser Hair Removal", query: "Tell me about Laser Hair Removal" },
-        { label: "💇 Hair Fall & GFT", query: "Tell me about Hair Fall Growth Factor Therapy" },
-        { label: "📍 Clinic Location & Hours", query: "Where is the clinic located?" },
-        { label: "💰 Pricing & Fees", query: "What are the consultation fees?" },
-        { label: "📅 Book Consultation", isCta: true }
+        { label: "Dr. Sujay M Profile", query: "Tell me about Dr Sujay M" },
+        { label: "Acne Scar Treatment", query: "Tell me about Acne Scar Treatment" },
+        { label: "Laser Hair Removal", query: "Tell me about Laser Hair Removal" },
+        { label: "Hair Fall & GFT", query: "Tell me about Hair Fall Growth Factor Therapy" },
+        { label: "Clinic Location & Hours", query: "Where is the clinic located?" },
+        { label: "Pricing & Fees", query: "What are the consultation fees?" },
+        { label: "Book Consultation", isCta: true }
       ]
     }
   ];
@@ -65,44 +65,44 @@ export default function FloatingWidgets({ onOpenBooking }) {
       let triggerBooking = false;
 
       if (lower.includes('doctor') || lower.includes('sujay') || lower.includes('profile')) {
-        replyText = "Dr. (Mrs.) Sujay M (MBBS, DDVL) is a Senior Dermatologist & Cosmetologist with 18+ years of clinical experience from Bangalore Medical College (2005). She has performed 10.1K+ procedures in skin revision, laser therapy, and vitiligo surgery.";
+        replyText = "Dr. (Mrs.) Sujay M (MBBS, DDVL) is a Senior Dermatologist & Cosmetologist with 18+ years of clinical experience from Bangalore Medical College (2005). She has performed 10,000+ procedures in skin revision, laser therapy, and vitiligo surgery.";
         replyChips = [
-          { label: "📅 Book Appointment with Dr. Sujay", isCta: true },
-          { label: "✨ Treatments Offered", query: "What treatments are offered?" }
+          { label: "Book Appointment with Dr. Sujay", isCta: true },
+          { label: "Treatments Offered", query: "What treatments are offered?" }
         ];
       } else if (lower.includes('acne') || lower.includes('pimple') || lower.includes('scar')) {
         replyText = "For Acne Scars & Pores, we use a clinical multi-tier protocol:\n1. Subcision for tethered scars\n2. US-FDA Fractional Laser / RF Microneedling\n3. Medical Chemical Peels\n\nResult: 70%-90% smooth skin texture restoration.";
         replyChips = [
-          { label: "📅 Book Acne Scar Consultation", isCta: true },
-          { label: "⚡ Laser Hair Removal", query: "Tell me about Laser Hair Removal" }
+          { label: "Book Acne Scar Consultation", isCta: true },
+          { label: "Laser Hair Removal", query: "Tell me about Laser Hair Removal" }
         ];
       } else if (lower.includes('laser') || lower.includes('hair removal')) {
         replyText = "Our US-FDA approved Diode Laser Hair Removal is 100% safe, painless, and suitable for all Indian skin types. Most patients achieve 85%-95% permanent reduction in 4 to 6 sessions.";
         replyChips = [
-          { label: "📅 Book Laser Session", isCta: true },
-          { label: "💇 Hair Fall & GFT", query: "Tell me about Hair Fall" }
+          { label: "Book Laser Session", isCta: true },
+          { label: "Hair Fall & GFT", query: "Tell me about Hair Fall" }
         ];
       } else if (lower.includes('hair fall') || lower.includes('thinning') || lower.includes('gft') || lower.includes('prp')) {
         replyText = "For Hair Fall & Scalp Thinning, Dr. Sujay M performs Growth Factor Therapy (GFT) and digital trichoscopy to reactivate dormant hair roots and double hair density naturally.";
         replyChips = [
-          { label: "📅 Book Hair Consultation", isCta: true },
-          { label: "📍 Location & Directions", query: "Where is the clinic?" }
+          { label: "Book Hair Consultation", isCta: true },
+          { label: "Location & Directions", query: "Where is the clinic?" }
         ];
       } else if (lower.includes('location') || lower.includes('address') || lower.includes('where') || lower.includes('metro')) {
-        replyText = `📍 Medicare Skin & Cosmetic Clinic\nNear Yelachenahalli Metro Station, 2nd Main, 2nd Cross Jyothi Layout, Kanakapura Main Road, Bangalore – 560 078.\n\n📞 Phone: ${CLINIC_INFO.phone}\n⏰ Hours: Mon-Sat 10:00 AM - 8:30 PM | Sun 10:00 AM - 1:30 PM`;
+        replyText = `Medicare Skin & Cosmetic Clinic\nNear Yelachenahalli Metro Station, 2nd Main, 2nd Cross Jyothi Layout, Kanakapura Main Road, Bangalore – 560 078.\n\nPhone: ${CLINIC_INFO.phone}\nHours: Mon-Sat 10:00 AM - 8:30 PM | Sun 10:00 AM - 1:30 PM`;
         replyChips = [
-          { label: "📅 Book Appointment Now", isCta: true }
+          { label: "Book Appointment Now", isCta: true }
         ];
       } else if (lower.includes('fee') || lower.includes('price') || lower.includes('cost') || lower.includes('charge')) {
         replyText = "We maintain affordable, transparent medical pricing. Consultation charges are modest and include a thorough digital skin/scalp diagnosis with Dr. Sujay M before any procedure starts.";
         replyChips = [
-          { label: "📅 Book Consultation", isCta: true }
+          { label: "Book Consultation", isCta: true }
         ];
       } else {
-        replyText = "Thank you for asking! Medicare Skin Clinic provides evidence-based clinical dermatology, US-FDA laser care, and cosmetic procedures by Dr. Sujay M (MBBS, DDVL). Would you like to schedule a personal consultation?";
+        replyText = "Thank you for asking. Medicare Skin Clinic provides evidence-based clinical dermatology, US-FDA laser care, and cosmetic procedures by Dr. Sujay M (MBBS, DDVL). Would you like to schedule a personal consultation?";
         replyChips = [
-          { label: "📅 Book Appointment", isCta: true },
-          { label: "📍 Clinic Location", query: "Where is the clinic?" }
+          { label: "Book Appointment", isCta: true },
+          { label: "Clinic Location", query: "Where is the clinic?" }
         ];
       }
 
@@ -129,8 +129,8 @@ export default function FloatingWidgets({ onOpenBooking }) {
       {/* WhatsApp Style AI Assistant Chat Drawer Window */}
       {isAiOpen && (
         <div className="aichat-window active">
-          {/* Header - WhatsApp Style */}
-          <div className="aichat-header" style={{ background: '#1E122A', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+          {/* Header - Light Medicare Logo Aesthetic */}
+          <div className="aichat-header" style={{ background: 'linear-gradient(135deg, #FAF4F8 0%, #F5ECF2 100%)', borderBottom: '1px solid #EBE0EA', color: '#2B1B4D' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <div style={{ position: 'relative' }}>
                 <img
@@ -147,14 +147,14 @@ export default function FloatingWidgets({ onOpenBooking }) {
                     width: '10px',
                     height: '10px',
                     borderRadius: '50%',
-                    background: '#25D366',
-                    border: '2px solid #1E122A'
+                    background: '#C8509B',
+                    border: '2px solid #FFF'
                   }}
                 />
               </div>
 
               <div>
-                <div style={{ fontWeight: '700', fontSize: '15px', color: '#FFFFFF', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <div style={{ fontWeight: '700', fontSize: '15px', color: '#2B1B4D', display: 'flex', alignItems: 'center', gap: '6px' }}>
                   Medicare AI <Sparkles size={14} style={{ color: '#FFB800' }} />
                 </div>
               </div>
@@ -162,7 +162,7 @@ export default function FloatingWidgets({ onOpenBooking }) {
 
             <button
               onClick={() => setIsAiOpen(false)}
-              style={{ background: 'none', border: 'none', color: '#FFFFFF', cursor: 'pointer', padding: '4px' }}
+              style={{ background: 'none', border: 'none', color: '#942876', cursor: 'pointer', padding: '4px' }}
               aria-label="Close Chat"
             >
               <X size={20} />
@@ -170,7 +170,7 @@ export default function FloatingWidgets({ onOpenBooking }) {
           </div>
 
           {/* Messages Area */}
-          <div className="aichat-messages" style={{ background: '#F5ECE7' }}>
+          <div className="aichat-messages" style={{ background: '#FAF3F7' }}>
             {messages.map((m) => (
               <div key={m.id} style={{ display: 'flex', flexDirection: 'column', alignItems: m.isBot ? 'flex-start' : 'flex-end' }}>
                 <div className={`chat-msg ${m.isBot ? 'bot' : 'user'}`} style={{ whiteSpace: 'pre-line' }}>
@@ -197,15 +197,15 @@ export default function FloatingWidgets({ onOpenBooking }) {
                           }
                         }}
                         style={{
-                          background: chip.isCta ? '#271654' : '#FFFFFF',
-                          color: chip.isCta ? '#FFFFFF' : '#1E122A',
-                          border: chip.isCta ? 'none' : '1px solid #DDD0DA',
+                          background: chip.isCta ? 'linear-gradient(135deg, #942876 0%, #C8509B 100%)' : '#FFFFFF',
+                          color: chip.isCta ? '#FFFFFF' : '#2B1B4D',
+                          border: chip.isCta ? 'none' : '1px solid #EBE0EA',
                           padding: '6px 12px',
                           borderRadius: '16px',
                           fontSize: '12px',
                           fontWeight: '600',
                           cursor: 'pointer',
-                          boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
+                          boxShadow: '0 2px 6px rgba(148, 40, 118, 0.08)',
                           transition: 'all 0.2s ease'
                         }}
                       >
@@ -220,7 +220,7 @@ export default function FloatingWidgets({ onOpenBooking }) {
           </div>
 
           {/* Footer Input Bar */}
-          <form className="aichat-input-area" onSubmit={handleFormSubmit} style={{ background: '#FFFFFF', padding: '10px 14px' }}>
+          <form className="aichat-input-area" onSubmit={handleFormSubmit} style={{ padding: '10px 14px' }}>
             <input
               type="text"
               className="aichat-input"
@@ -231,7 +231,7 @@ export default function FloatingWidgets({ onOpenBooking }) {
             <button
               type="submit"
               className="aichat-send-btn"
-              style={{ background: '#8C2668', border: 'none', width: '38px', height: '38px', borderRadius: '50%', padding: '0' }}
+              style={{ background: 'linear-gradient(135deg, #942876 0%, #C8509B 100%)', border: 'none', width: '38px', height: '38px', borderRadius: '50%', padding: '0', color: '#FFF' }}
             >
               <Send size={16} />
             </button>
@@ -260,20 +260,28 @@ export default function FloatingWidgets({ onOpenBooking }) {
           title="Ask Medicare AI Assistant"
           aria-label="AI Dermatology Assistant"
           style={{
-            width: '56px',
-            height: '56px',
+            width: '50px',
+            height: '50px',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'linear-gradient(135deg, #271654 0%, #8C2668 100%)',
-            border: 'none',
+            background: 'linear-gradient(135deg, #8B096C 0%, #A61B84 100%)',
+            border: '1.5px solid rgba(255, 255, 255, 0.85)',
             cursor: 'pointer',
-            boxShadow: '0 8px 25px rgba(0,0,0,0.25)',
-            transition: 'transform 0.2s ease'
+            boxShadow: '0 8px 24px rgba(139, 9, 108, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.75)',
+            transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px) scale(1.05)';
+            e.currentTarget.style.boxShadow = '0 12px 28px rgba(139, 9, 108, 0.45)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'none';
+            e.currentTarget.style.boxShadow = '0 8px 24px rgba(139, 9, 108, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.75)';
           }}
         >
-          <Sparkles size={24} style={{ color: '#FFB800' }} />
+          <Sparkles size={22} style={{ color: '#D4AF37' }} />
         </button>
 
         {/* WhatsApp Button on BOTTOM */}
@@ -285,22 +293,33 @@ export default function FloatingWidgets({ onOpenBooking }) {
           title="Chat with Medicare Skin Clinic on WhatsApp"
           aria-label="WhatsApp Chat"
           style={{
-            width: '56px',
-            height: '56px',
+            width: '50px',
+            height: '50px',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: '#25D366',
-            boxShadow: '0 8px 25px rgba(0,0,0,0.25)',
-            transition: 'transform 0.2s ease'
+            background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+            border: '1.5px solid rgba(255, 255, 255, 0.85)',
+            boxShadow: '0 8px 24px rgba(37, 211, 102, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.75)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px) scale(1.05)';
+            e.currentTarget.style.boxShadow = '0 12px 28px rgba(37, 211, 102, 0.45)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'none';
+            e.currentTarget.style.boxShadow = '0 8px 24px rgba(37, 211, 102, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.75)';
           }}
         >
           <img
             src="/images/WhatsApp.svg"
             onError={(e) => { e.target.src = "/WhatsApp.svg"; }}
             alt="WhatsApp"
-            style={{ width: '32px', height: '32px' }}
+            style={{ width: '28px', height: '28px' }}
           />
         </a>
       </div>

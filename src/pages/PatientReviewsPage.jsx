@@ -30,11 +30,11 @@ export default function PatientReviewsPage({ onOpenBooking }) {
   };
 
   return (
-    <div style={{ padding: '60px 0', background: '#FDF9FB' }}>
+    <div style={{ padding: '60px 0', background: 'transparent' }}>
       <div className="container">
         {/* Page Hero Header */}
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 40px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#FFF', padding: '8px 20px', borderRadius: '30px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', marginBottom: '14px' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.95)', padding: '8px 20px', borderRadius: '30px', boxShadow: '0 4px 15px rgba(148, 40, 118, 0.06)', marginBottom: '14px' }}>
             <div style={{ display: 'flex', gap: '2px' }}>
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={18} fill="#FFB800" stroke="none" />
@@ -64,9 +64,9 @@ export default function PatientReviewsPage({ onOpenBooking }) {
         </div>
 
         {/* Reviews Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '28px', marginBottom: '60px' }}>
+        <div className="grid-responsive-3" style={{ gap: '28px', marginBottom: '60px' }}>
           {filteredReviews.map((item) => (
-            <div key={item.id} className="review-card-item" style={{ background: '#FFFFFF', flex: 'none' }}>
+            <div key={item.id} className="review-card-item" style={{ flex: 'none' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
                 <div style={{ display: 'flex', gap: '3px' }}>
                   {[...Array(item.rating || 5)].map((_, i) => (
@@ -78,14 +78,14 @@ export default function PatientReviewsPage({ onOpenBooking }) {
               <p className="review-quote-text">"{item.text}"</p>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span className="review-author-name">— {item.author}</span>
-                <span style={{ fontSize: '11px', color: '#25D366', fontWeight: '600' }}>✓ Verified Patient</span>
+                <span style={{ fontSize: '11px', color: '#942876', fontWeight: '600' }}>✓ Verified Patient</span>
               </div>
             </div>
           ))}
         </div>
 
         {/* Submit Patient Review Form Card */}
-        <div style={{ background: '#FFFFFF', padding: '40px', borderRadius: '20px', border: '1px solid #EBE0EA', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', maxWidth: '700px', margin: '0 auto' }}>
+        <div className="location-card-box" style={{ padding: '36px', maxWidth: '700px', margin: '0 auto' }}>
           <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', color: '#2B1B4D', marginBottom: '8px', textAlign: 'center' }}>
             Share Your Experience
           </h3>
@@ -95,13 +95,13 @@ export default function PatientReviewsPage({ onOpenBooking }) {
 
           {submitted ? (
             <div style={{ textAlign: 'center', padding: '30px' }}>
-              <CheckCircle2 size={56} color="#25D366" style={{ margin: '0 auto 12px' }} />
+              <CheckCircle2 size={56} color="#942876" style={{ margin: '0 auto 12px' }} />
               <h4 style={{ color: '#2B1B4D', fontSize: '20px', marginBottom: '8px' }}>Thank You for Your Feedback!</h4>
               <p style={{ color: '#5C5268', fontSize: '14px' }}>Your review has been published below.</p>
             </div>
           ) : (
             <form onSubmit={handleReviewSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div className="grid-responsive-2" style={{ gap: '16px' }}>
                 <div className="form-group" style={{ marginBottom: 0 }}>
                   <label style={{ fontSize: '13px', fontWeight: '600', color: '#2B1B4D' }}>Your Name *</label>
                   <input

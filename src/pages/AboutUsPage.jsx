@@ -5,11 +5,11 @@ import { Award, GraduationCap, ShieldCheck, HeartHandshake, Sparkles, Calendar, 
 
 export default function AboutUsPage({ onOpenBooking }) {
   return (
-    <div style={{ background: '#FFFFFF' }}>
+    <div style={{ background: 'transparent' }}>
       {/* Page Hero Header */}
-      <section style={{ padding: '60px 0 40px', background: 'linear-gradient(135deg, #FDF9FB 0%, #F5ECF2 100%)', textAlign: 'center' }}>
+      <section style={{ padding: '60px 0 40px', background: 'transparent', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '800px' }}>
-          <span style={{ background: '#FBF4F8', color: '#942876', padding: '6px 16px', borderRadius: '20px', fontSize: '13px', fontWeight: '600', display: 'inline-block', marginBottom: '14px' }}>
+          <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.95)', color: '#942876', padding: '6px 18px', borderRadius: '30px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '14px', boxShadow: '0 4px 14px rgba(148, 40, 118, 0.06)' }}>
             ★ Bangalore's Premier Dermatology & Cosmetic Center
           </span>
           <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#2B1B4D', marginBottom: '16px' }}>
@@ -25,7 +25,7 @@ export default function AboutUsPage({ onOpenBooking }) {
       <DoctorProfile onOpenBooking={onOpenBooking} />
 
       {/* Clinical Philosophy & Standards */}
-      <section style={{ padding: '80px 0', background: '#FDF9FB' }}>
+      <section style={{ padding: '80px 0', background: 'transparent' }}>
         <div className="container">
           <div className="section-header-center" style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 50px' }}>
             <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '36px', color: '#2B1B4D', marginBottom: '14px' }}>
@@ -36,8 +36,8 @@ export default function AboutUsPage({ onOpenBooking }) {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '28px' }}>
-            <div style={{ background: '#FFFFFF', padding: '32px', borderRadius: '16px', border: '1px solid #EBE0EA', boxShadow: '0 6px 20px rgba(0,0,0,0.04)' }}>
+          <div className="grid-responsive-3" style={{ gap: '28px' }}>
+            <div className="location-card-box" style={{ padding: '32px' }}>
               <GraduationCap size={40} color="#942876" style={{ marginBottom: '16px' }} />
               <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
                 Bangalore Medical College (2005)
@@ -47,7 +47,7 @@ export default function AboutUsPage({ onOpenBooking }) {
               </p>
             </div>
 
-            <div style={{ background: '#FFFFFF', padding: '32px', borderRadius: '16px', border: '1px solid #EBE0EA', boxShadow: '0 6px 20px rgba(0,0,0,0.04)' }}>
+            <div className="location-card-box" style={{ padding: '32px' }}>
               <Award size={40} color="#942876" style={{ marginBottom: '16px' }} />
               <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
                 10,100+ Procedures Completed
@@ -57,7 +57,7 @@ export default function AboutUsPage({ onOpenBooking }) {
               </p>
             </div>
 
-            <div style={{ background: '#FFFFFF', padding: '32px', borderRadius: '16px', border: '1px solid #EBE0EA', boxShadow: '0 6px 20px rgba(0,0,0,0.04)' }}>
+            <div className="location-card-box" style={{ padding: '32px' }}>
               <HeartHandshake size={40} color="#942876" style={{ marginBottom: '16px' }} />
               <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
                 Ethical & Transparent Pricing
@@ -71,9 +71,9 @@ export default function AboutUsPage({ onOpenBooking }) {
       </section>
 
       {/* Facilities & Equipment Highlights */}
-      <section style={{ padding: '80px 0', background: '#FFFFFF' }}>
+      <section style={{ padding: '80px 0', background: 'transparent' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '50px', alignItems: 'center' }}>
+          <div className="grid-responsive-2" style={{ gap: '50px', alignItems: 'center' }}>
             <div>
               <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '36px', color: '#2B1B4D', marginBottom: '16px' }}>
                 State-of-the-Art Clinical Facility
@@ -92,12 +92,12 @@ export default function AboutUsPage({ onOpenBooking }) {
                   <CheckCircle2 color="#942876" size={20} /> Accessible location near Yelachenahalli Metro Station
                 </li>
               </ul>
-              <button className="btn-primary" onClick={onOpenBooking} style={{ background: '#2B1B4D' }}>
+              <button className="btn-primary" onClick={onOpenBooking}>
                 <Calendar size={18} /> Schedule Clinic Consultation
               </button>
             </div>
-            <div style={{ borderRadius: '20px', overflow: 'hidden', boxShadow: '0 15px 40px rgba(0,0,0,0.08)', border: '4px solid #FFF' }}>
-              <img src="/images/imageye___-_imgi_1_cropped-Medicare-Logo.webp" alt="Medicare Skin Clinic Facility" style={{ width: '100%', height: '380px', objectFit: 'cover', background: '#FAF4EE' }} />
+            <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 48px rgba(148, 40, 118, 0.12)', border: '2px solid rgba(255, 255, 255, 0.95)', background: 'rgba(255, 255, 255, 0.8)' }}>
+              <img src="/slide-img/98874dd1eae0b34c8798464c6c3f1c7d.jpg" alt="Medicare Skin Clinic Reception & Facility" style={{ width: '100%', height: '380px', objectFit: 'cover' }} />
             </div>
           </div>
         </div>

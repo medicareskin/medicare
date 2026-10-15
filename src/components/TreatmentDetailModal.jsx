@@ -19,11 +19,11 @@ export default function TreatmentDetailModal({ item, onClose, onOpenBooking }) {
           {item.title}
         </h2>
 
-        <div style={{ display: 'flex', gap: '12px', marginBottom: '18px' }}>
-          <span style={{ background: '#FBF4F8', color: '#942876', padding: '4px 12px', borderRadius: '20px', fontSize: '13px', fontWeight: '600' }}>
+        <div style={{ display: 'flex', gap: '12px', marginBottom: '18px', flexWrap: 'wrap' }}>
+          <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(148, 40, 118, 0.2)', color: '#942876', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: '600', boxShadow: '0 2px 8px rgba(148, 40, 118, 0.06)' }}>
             Dr. Sujay M Specialist Care
           </span>
-          <span style={{ background: '#FAF4EE', color: '#2B1B4D', padding: '4px 12px', borderRadius: '20px', fontSize: '13px', fontWeight: '600' }}>
+          <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(148, 40, 118, 0.15)', color: '#2B1B4D', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: '600', boxShadow: '0 2px 8px rgba(148, 40, 118, 0.04)' }}>
             Clinically Proven
           </span>
         </div>
@@ -32,8 +32,8 @@ export default function TreatmentDetailModal({ item, onClose, onOpenBooking }) {
           {item.fullText || item.description || item.summary}
         </p>
 
-        <div style={{ background: '#F9F5F6', padding: '16px', borderRadius: '8px', marginBottom: '24px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', fontWeight: '600', color: '#2B1B4D', marginBottom: '6px' }}>
+        <div style={{ background: 'rgba(255, 255, 255, 0.65)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', padding: '18px 20px', borderRadius: '16px', border: '1px solid rgba(148, 40, 118, 0.15)', marginBottom: '24px', boxShadow: '0 4px 16px rgba(148, 40, 118, 0.04)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', fontWeight: '600', color: '#2B1B4D', marginBottom: '8px' }}>
             <ShieldCheck size={18} color="#942876" /> Treatment Highlights:
           </div>
           <ul style={{ paddingLeft: '24px', fontSize: '13px', color: '#5C5268', lineHeight: '1.6' }}>
@@ -50,7 +50,7 @@ export default function TreatmentDetailModal({ item, onClose, onOpenBooking }) {
               onClose();
               onOpenBooking();
             }}
-            style={{ flex: 1, justifyContent: 'center', background: '#942876' }}
+            style={{ flex: 1, justifyContent: 'center' }}
           >
             <Calendar size={18} /> Book Appointment for {item.title}
           </button>

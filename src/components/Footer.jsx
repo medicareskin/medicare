@@ -13,7 +13,7 @@ export default function Footer({ onOpenBooking, onTabChange }) {
     border: 'none',
     padding: 0,
     cursor: 'pointer',
-    color: '#E2D9F3',
+    color: '#5C4D68',
     fontSize: '14px',
     textAlign: 'left',
     transition: 'color 0.2s ease'
@@ -32,16 +32,16 @@ export default function Footer({ onOpenBooking, onTabChange }) {
                 style={{ height: '84px', objectFit: 'contain', display: 'block' }}
               />
             </div>
-            <p style={{ color: '#E2D9F3', fontSize: '14px', lineHeight: '1.6', margin: '16px 0' }}>
-              Medicare Skin & Cosmetic Clinic is South Bangalore’s premier dermatology and cosmetic aesthetic center. Guided by <strong style={{ color: '#FFF' }}>Dr. Sujay M (MBBS, DDVL)</strong> with over 18+ years of clinical excellence.
+            <p style={{ color: '#5C4D68', fontSize: '14px', lineHeight: '1.6', margin: '16px 0' }}>
+              Medicare Skin & Cosmetic Clinic is South Bangalore’s premier dermatology and cosmetic aesthetic center. Guided by <strong style={{ color: '#2B1B4D' }}>Dr. Sujay M (MBBS, DDVL)</strong> with over 18+ years of clinical excellence.
             </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px', color: '#E2D9F3' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px', color: '#5C4D68' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <ShieldCheck size={16} style={{ color: '#C8509B' }} />
+                <ShieldCheck size={16} style={{ color: '#D4AF37' }} />
                 <span>US-FDA Approved Laser Systems</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Award size={16} style={{ color: '#C8509B' }} />
+                <Award size={16} style={{ color: '#D4AF37' }} />
                 <span>100% Medically Supervised Procedures</span>
               </div>
             </div>
@@ -83,35 +83,35 @@ export default function Footer({ onOpenBooking, onTabChange }) {
             <h3 className="footer-heading">Clinic Address</h3>
             <ul className="footer-contact-list">
               <li>
-                <MapPin size={18} style={{ color: '#C8509B', flexShrink: 0, marginTop: '3px' }} />
-                <span style={{ color: '#E2D9F3' }}>{CLINIC_INFO.address}</span>
+                <MapPin size={18} style={{ color: '#8B096C', flexShrink: 0, marginTop: '3px' }} />
+                <span style={{ color: '#5C4D68' }}>{CLINIC_INFO.address}</span>
               </li>
               <li>
-                <Phone size={18} style={{ color: '#25D366', flexShrink: 0 }} />
-                <a href={`tel:${CLINIC_INFO.rawPhone}`} style={{ color: '#FFFFFF', fontWeight: '600' }}>{CLINIC_INFO.phone}</a>
+                <Phone size={18} style={{ color: '#8B096C', flexShrink: 0 }} />
+                <a href={`tel:${CLINIC_INFO.rawPhone}`} style={{ color: '#2B1B4D', fontWeight: '600' }}>{CLINIC_INFO.phone}</a>
               </li>
               <li>
-                <Mail size={18} style={{ color: '#C8509B', flexShrink: 0 }} />
-                <a href={`mailto:${CLINIC_INFO.email}`} style={{ color: '#FFFFFF' }}>{CLINIC_INFO.email}</a>
+                <Mail size={18} style={{ color: '#8B096C', flexShrink: 0 }} />
+                <a href={`mailto:${CLINIC_INFO.email}`} style={{ color: '#2B1B4D' }}>{CLINIC_INFO.email}</a>
               </li>
               <li>
-                <Clock size={18} style={{ color: '#FFB800', flexShrink: 0 }} />
-                <span style={{ color: '#E2D9F3' }}>{CLINIC_INFO.hours}</span>
+                <Clock size={18} style={{ color: '#D4AF37', flexShrink: 0 }} />
+                <span style={{ color: '#5C4D68' }}>{CLINIC_INFO.hours}</span>
               </li>
             </ul>
 
             <div style={{ marginTop: '20px' }}>
-              <div style={{ fontSize: '13px', fontWeight: '600', color: '#E2D9F3', marginBottom: '10px' }}>
-                Connect With Us
+              <div style={{ fontSize: '13px', fontWeight: '600', color: '#2B1B4D', marginBottom: '10px' }}>
+                Follow Us
               </div>
               <div className="footer-social-icons">
-                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="Facebook">
+                <a href="https://www.facebook.com/DrSujayMediCareSkin" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="Facebook">
                   <Facebook size={18} />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="Instagram">
+                <a href="https://www.instagram.com/medicareskinandcosmeticclinic/?hl=en" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="Instagram">
                   <Instagram size={18} />
                 </a>
-                <a href="https://youtube.com" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="YouTube">
+                <a href="https://www.youtube.com/@medicareskincosmeticclinic4373" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="YouTube">
                   <Youtube size={18} />
                 </a>
               </div>
@@ -120,13 +120,17 @@ export default function Footer({ onOpenBooking, onTabChange }) {
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="footer-bottom-bar" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#B5A9C6' }}>
-          <p style={{ margin: 0 }}>© {new Date().getFullYear()} Medicare Skin & Cosmetic Clinic. All Rights Reserved.</p>
+        <div className="footer-bottom-bar" style={{ borderTop: '1px solid #EBE0EA', paddingTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#7A6C82', flexWrap: 'wrap', gap: '14px' }}>
+          <div>
+            <p style={{ margin: 0, fontSize: '13px' }}>
+              © {new Date().getFullYear()} Medicare Skin & Cosmetic Clinic. All Rights Reserved.
+            </p>
+          </div>
           <div style={{ display: 'flex', gap: '20px', fontSize: '13px' }}>
-            <span style={{ cursor: 'pointer', color: '#E2D9F3' }} onClick={() => handleNav('privacy')}>Privacy Policy</span>
-            <span style={{ cursor: 'pointer', color: '#E2D9F3' }} onClick={() => handleNav('terms')}>Terms of Service</span>
-            <span style={{ cursor: 'pointer', color: '#E2D9F3' }} onClick={() => handleNav('cancellation')}>Cancellation Policy</span>
-            <span style={{ cursor: 'pointer', color: '#E2D9F3' }} onClick={() => handleNav('disclaimer')}>Medical Disclaimer</span>
+            <span style={{ cursor: 'pointer', color: '#5C4D68' }} onClick={() => handleNav('privacy')}>Privacy Policy</span>
+            <span style={{ cursor: 'pointer', color: '#5C4D68' }} onClick={() => handleNav('terms')}>Terms &amp; Conditions</span>
+            <span style={{ cursor: 'pointer', color: '#5C4D68' }} onClick={() => handleNav('cancellation')}>Cancellation Policy</span>
+            <span style={{ cursor: 'pointer', color: '#5C4D68' }} onClick={() => handleNav('disclaimer')}>Medical Disclaimer</span>
           </div>
         </div>
       </div>

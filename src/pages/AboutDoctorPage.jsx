@@ -8,15 +8,15 @@ export default function AboutDoctorPage({ onOpenBooking }) {
     <div>
       <DoctorProfile onOpenBooking={onOpenBooking} />
 
-      <section style={{ padding: '70px 0', background: '#FFFFFF' }}>
+      <section style={{ padding: '70px 0', background: 'transparent' }}>
         <div className="container">
           <div className="section-header-center">
             <h2>Clinical Philosophy & Expertise</h2>
             <p>Combining medical dermatology with aesthetic precision</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
-            <div style={{ background: '#FBF4F8', padding: '30px', borderRadius: '12px', border: '1px solid #EBE0EA' }}>
+          <div className="grid-responsive-3" style={{ gap: '30px' }}>
+            <div className="location-card-box" style={{ padding: '30px' }}>
               <GraduationCap size={36} color="#942876" style={{ marginBottom: '16px' }} />
               <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
                 Academic Credentials
@@ -26,7 +26,7 @@ export default function AboutDoctorPage({ onOpenBooking }) {
               </p>
             </div>
 
-            <div style={{ background: '#FBF4F8', padding: '30px', borderRadius: '12px', border: '1px solid #EBE0EA' }}>
+            <div className="location-card-box" style={{ padding: '30px' }}>
               <Award size={36} color="#942876" style={{ marginBottom: '16px' }} />
               <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
                 18+ Years Precision
@@ -36,7 +36,7 @@ export default function AboutDoctorPage({ onOpenBooking }) {
               </p>
             </div>
 
-            <div style={{ background: '#FBF4F8', padding: '30px', borderRadius: '12px', border: '1px solid #EBE0EA' }}>
+            <div className="location-card-box" style={{ padding: '30px' }}>
               <HeartHandshake size={36} color="#942876" style={{ marginBottom: '16px' }} />
               <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
                 Affordable Patient Care

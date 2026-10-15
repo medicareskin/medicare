@@ -131,11 +131,11 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
   const currentLocality = localities.find(l => l.id === selectedLocality) || localities[0];
 
   return (
-    <div style={{ padding: '60px 0', background: '#FDF9FB' }}>
+    <div style={{ padding: '60px 0', background: 'transparent' }}>
       <div className="container">
         {/* Locality Selector Header */}
         <div style={{ textAlign: 'center', maxWidth: '880px', margin: '0 auto 40px' }}>
-          <span style={{ background: '#FFF', color: '#942876', padding: '8px 20px', borderRadius: '20px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '14px', boxShadow: '0 4px 14px rgba(0,0,0,0.06)' }}>
+          <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.95)', color: '#942876', padding: '8px 22px', borderRadius: '30px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '14px', boxShadow: '0 4px 14px rgba(148, 40, 118, 0.06)' }}>
             📍 South Bangalore Local Dermatology Guide
           </span>
           <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '38px', color: '#2B1B4D', marginBottom: '14px', lineHeight: '1.25' }}>
@@ -166,7 +166,7 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
         {/* Locality Details Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '36px', marginBottom: '50px' }}>
           {/* Card 1: Key Info & Why Choose */}
-          <div style={{ background: '#FFFFFF', padding: '36px', borderRadius: '20px', border: '1px solid #EBE0EA', boxShadow: '0 10px 30px rgba(0,0,0,0.04)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div className="location-card-box" style={{ padding: '36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#FFB800', marginBottom: '16px', fontSize: '14px', fontWeight: '700' }}>
                 <Star fill="#FFB800" size={18} /> 5.0 Rating | 18+ Years Experience | 10.1K+ Procedures
@@ -188,14 +188,14 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
               <button className="btn-primary" onClick={onOpenBooking} style={{ background: '#942876' }}>
                 <Calendar size={18} /> Book Consultation
               </button>
-              <a href="https://maps.google.com/?q=Medicare+Skin+Clinic+Yelachenahalli+Bangalore" target="_blank" rel="noreferrer" className="btn-secondary" style={{ background: '#FFF', color: '#2B1B4D', border: '1px solid #2B1B4D' }}>
+              <a href="https://maps.google.com/?q=Medicare+Skin+Clinic+Yelachenahalli+Bangalore" target="_blank" rel="noreferrer" className="btn-secondary" style={{ color: '#2B1B4D' }}>
                 <Navigation size={16} /> Get Directions
               </a>
             </div>
           </div>
 
           {/* Card 2: Treatments & Local Accessibility */}
-          <div style={{ background: '#FFFFFF', padding: '36px', borderRadius: '20px', border: '1px solid #EBE0EA', boxShadow: '0 10px 30px rgba(0,0,0,0.04)' }}>
+          <div className="location-card-box" style={{ padding: '36px' }}>
             <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '24px', color: '#2B1B4D', marginBottom: '16px' }}>
               Treatments Available for {currentLocality.name} Residents
             </h3>
@@ -222,7 +222,7 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
         </div>
 
         {/* Embedded Map Section */}
-        <div style={{ background: '#FFFFFF', borderRadius: '20px', padding: '24px', border: '1px solid #EBE0EA', boxShadow: '0 10px 30px rgba(0,0,0,0.04)' }}>
+        <div className="location-card-box" style={{ padding: '24px' }}>
           <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '16px', textAlign: 'center' }}>
             Find Medicare Skin & Cosmetic Clinic on Google Maps
           </h3>

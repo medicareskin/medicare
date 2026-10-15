@@ -547,10 +547,15 @@ export const BLOG_POSTS = [
 ];
 
 export const GALLERY_IMAGES = [
-  { id: 1, title: "Clinic Reception & Consultation Desk", category: "Facility", image: "/images/imageye___-_imgi_1_cropped-Medicare-Logo.webp" },
-  { id: 2, title: "US-FDA Laser Treatment Suite", category: "Equipment", image: "/images/imageye___-_imgi_12_Laser-Hair-Removal.webp" },
-  { id: 3, title: "Dr. Sujay M Patient Consultation", category: "Clinical", image: "/images/imageye___-_imgi_6_dr-sujay.webp" },
-  { id: 4, title: "Acne Scar Revision Procedure", category: "Treatment", image: "/images/imageye___-_imgi_11_acne-scar-treatment.webp" }
+  { id: 1, title: "Clinic Reception & Consultation Lounge", category: "Facility", image: "/slide-img/98874dd1eae0b34c8798464c6c3f1c7d.jpg" },
+  { id: 2, title: "US-FDA Laser Treatment Suite", category: "Equipment", image: "/slide-img/1.jpg" },
+  { id: 3, title: "Dr. (Mrs.) Sujay M Clinical Consultation", category: "Clinical", image: "/images/imageye___-_imgi_6_dr-sujay.webp" },
+  { id: 4, title: "Acne Scar Revision Procedure OT", category: "Treatment", image: "/slide-img/Scar Treatment.jpg" },
+  { id: 5, title: "Hair Growth Factor Therapy Suite", category: "Biotherapy", image: "/slide-img/4.jpg" },
+  { id: 6, title: "Skin Allergies & Patch Testing Lab", category: "Diagnostics", image: "/slide-img/Skin Allergies 1.jpg" },
+  { id: 7, title: "Sterile Minor Procedure OT", category: "Facility", image: "/slide-img/5e08dab87e8917ce313789c4ee7df0ba.jpg" },
+  { id: 8, title: "Diode Laser Hair Reduction Suite", category: "Laser Tech", image: "/slide-img/02ca7a5ac5e40183b9aac44d4de24a60.jpg" },
+  { id: 9, title: "Medical Chemical Peel & Glow Suite", category: "Cosmetic", image: "/slide-img/13ccee217da9f1337ade58831c6f2fd3.jpg" }
 ];
 
 export const LOCAL_AREAS = [
@@ -607,10 +612,69 @@ export const FAQS = [
   }
 ];
 
+export const MEDICAL_DERMATOLOGY_TREATMENTS = [
+  {
+    id: "eczema",
+    title: "Eczema & Atopic Dermatitis Care",
+    category: "Medical Dermatology",
+    image: "/images/imageye___-_imgi_23_Allergies.webp",
+    summary: "Clinical assessment of skin barrier impairment, non-steroidal immunomodulators, and therapeutic anti-itch protocols.",
+    fullText: "Eczema causes chronic itching, skin xerosis, and red patches. Dr. Sujay M prescribes personalized barrier repair emulsions, non-steroidal topicals, and allergen avoidance strategies."
+  },
+  {
+    id: "psoriasis",
+    title: "Psoriasis Management & Phototherapy",
+    category: "Medical Dermatology",
+    image: "/images/imageye___-_imgi_20_Connective-Tissue-Disorders.webp",
+    summary: "Evidence-based systemic and topical therapies for plaque, guttate, and scalp psoriasis management.",
+    fullText: "Psoriasis is an autoimmune proliferative skin disorder. We combine clinical biological/systemic medications, keratolytic regimens, and narrow-band light therapies for long-term remission."
+  },
+  {
+    id: "vitiligo-medical",
+    title: "Vitiligo & Phototherapy / Surgical Grafting",
+    category: "Medical Dermatology",
+    image: "/images/imageye___-_imgi_10_Vitiligo-Surgery-1.webp",
+    summary: "Targeted repigmentation protocols, narrowband UVB phototherapy, and specialized epidermal punch/cellular grafting.",
+    fullText: "Vitiligo causes localized melanin loss. For stable vitiligo, Dr. Sujay M performs non-cultured epidermal cell suspension and minigrafting with proven clinical repigmentation rates."
+  },
+  {
+    id: "fungal-infections",
+    title: "Fungal Skin Infections & Tinea Management",
+    category: "Medical Dermatology",
+    image: "/images/imageye___-_imgi_22_Bacterial-Fungal-Skin-Infections.webp",
+    summary: "Targeted mycological diagnosis and oral/topical antifungals for ringworm, athlete's foot, and candida.",
+    fullText: "Avoid self-medicating with steroid combination creams. Dr. Sujay M conducts accurate clinical scraping and targeted antifungal therapy to prevent recalcitrant recurrences."
+  },
+  {
+    id: "skin-allergies-medical",
+    title: "Clinical Patch Testing & Skin Allergies",
+    category: "Medical Dermatology",
+    image: "/images/imageye___-_imgi_23_Allergies.webp",
+    summary: "Comprehensive Indian Standard Patch Test battery to isolate contact dermatitis allergens in cosmetics and metals.",
+    fullText: "Recurrent contact dermatitis requires scientific identification of allergens. Our clinical patch testing isolates culprit chemicals, fragrance compounds, and occupational triggers."
+  },
+  {
+    id: "mole-removal",
+    title: "Mole, Wart & Skin Tag Radiofrequency Excision",
+    category: "Medical Dermatology",
+    image: "/images/imageye___-_imgi_9_skin-tightening-01.webp",
+    summary: "Scarless radiofrequency ablation and precision excision of benign moles, warts, and seborrheic keratoses.",
+    fullText: "Dr. Sujay M performs dermoscopic evaluation prior to excision to confirm benign status, followed by RF ablation with minimal downtime and no scarring."
+  },
+  {
+    id: "skin-biopsy",
+    title: "Diagnostic Skin Biopsy & Minor Surgery",
+    category: "Medical Dermatology",
+    image: "/images/imageye___-_imgi_6_dr-sujay.webp",
+    summary: "Punch and shave biopsies with histopathological correlation for ambiguous dermatoses and dermal cysts.",
+    fullText: "When clinical presentation is atypical, a microscopic histopathology evaluation via a sterile punch biopsy provides definitive diagnosis and treatment direction."
+  }
+];
+
 export const MASTER_TAXONOMY = [
   {
     id: "skin-care",
-    category: "Skin care",
+    category: "Skin Care",
     items: SKIN_CONDITIONS
   },
   {
@@ -619,13 +683,19 @@ export const MASTER_TAXONOMY = [
     items: HAIR_CONDITIONS
   },
   {
+    id: "laser-care",
+    category: "Laser Services",
+    items: LASER_TREATMENTS
+  },
+  {
     id: "aesthetics",
     category: "Aesthetics",
     items: COSMETIC_TREATMENTS
   },
   {
-    id: "laser-care",
-    category: "Laser Services",
-    items: LASER_TREATMENTS
+    id: "medical-dermatology",
+    category: "Medical Dermatology",
+    items: MEDICAL_DERMATOLOGY_TREATMENTS
   }
 ];
+

@@ -12,11 +12,11 @@ export default function FaqsPage({ onOpenBooking }) {
   );
 
   return (
-    <div style={{ padding: '60px 0', background: '#FFFFFF' }}>
+    <div style={{ padding: '60px 0', background: 'transparent' }}>
       <div className="container">
         {/* Page Hero Header */}
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 40px' }}>
-          <span style={{ background: '#FBF4F8', color: '#942876', padding: '6px 16px', borderRadius: '20px', fontSize: '13px', fontWeight: '600', display: 'inline-block', marginBottom: '12px' }}>
+          <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.95)', color: '#942876', padding: '6px 18px', borderRadius: '30px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '12px', boxShadow: '0 4px 14px rgba(148, 40, 118, 0.06)' }}>
             ❓ Clinical Information & Safety FAQs
           </span>
           <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#2B1B4D', marginBottom: '16px' }}>
@@ -67,14 +67,14 @@ export default function FaqsPage({ onOpenBooking }) {
         </div>
 
         {/* Call To Action Banner */}
-        <div style={{ background: '#2B1B4D', color: '#FFF', padding: '45px', borderRadius: '20px', textAlign: 'center' }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '30px', marginBottom: '12px' }}>
+        <div className="location-card-box" style={{ padding: '45px', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '30px', marginBottom: '12px', color: '#2B1B4D' }}>
             Have a Specific Skin or Hair Question?
           </h2>
-          <p style={{ fontSize: '15px', opacity: 0.9, maxWidth: '550px', margin: '0 auto 20px' }}>
+          <p style={{ fontSize: '15px', color: '#5C4D68', maxWidth: '550px', margin: '0 auto 20px' }}>
             Schedule an in-person diagnostic consultation with Dr. Sujay M (MBBS, DDVL).
           </p>
-          <button className="btn-primary" onClick={onOpenBooking} style={{ background: '#942876', margin: '0 auto' }}>
+          <button className="btn-primary" onClick={onOpenBooking} style={{ margin: '0 auto' }}>
             <Calendar size={18} /> Book Consultation Slot
           </button>
         </div>

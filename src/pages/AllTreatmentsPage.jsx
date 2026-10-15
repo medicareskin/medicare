@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { SKIN_CONDITIONS, HAIR_CONDITIONS, COSMETIC_TREATMENTS, LASER_TREATMENTS, FEATURED_TREATMENTS } from '../data/clinicData';
-import { Search, Calendar, Filter } from 'lucide-react';
+import { Search, Calendar, Filter, X } from 'lucide-react';
 
-export default function AllTreatmentsPage({ onSelectCondition, onOpenBooking }) {
+export default function AllTreatmentsPage({ onSelectCondition, onSelectTreatment, onOpenBooking }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTab, setActiveTab] = useState('All');
+
+  const handleSelect = onSelectTreatment || onSelectCondition;
 
   const allItems = [
     ...SKIN_CONDITIONS.map(i => ({ ...i, type: 'Skin' })),
@@ -21,7 +23,7 @@ export default function AllTreatmentsPage({ onSelectCondition, onOpenBooking }) 
   });
 
   return (
-    <div style={{ padding: '60px 0', background: '#FDF9FB' }}>
+    <div style={{ padding: '60px 0', background: 'transparent' }}>
       <div className="container">
         {/* Page Hero Header */}
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 40px' }}>
@@ -34,9 +36,9 @@ export default function AllTreatmentsPage({ onSelectCondition, onOpenBooking }) 
         </div>
 
         {/* Search Bar & Filter Controls */}
-        <div style={{ background: '#FFFFFF', padding: '24px', borderRadius: '16px', border: '1px solid #EBE0EA', boxShadow: '0 6px 20px rgba(0,0,0,0.04)', marginBottom: '40px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '16px', alignItems: 'center' }}>
-            <div style={{ position: 'relative' }}>
+        <div className="location-card-box" style={{ padding: '24px', marginBottom: '40px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div style={{ position: 'relative', width: '100%' }}>
               <Search size={20} color="#942876" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
               <input
                 type="text"
@@ -44,17 +46,39 @@ export default function AllTreatmentsPage({ onSelectCondition, onOpenBooking }) 
                 placeholder="Search treatments (e.g., acne scar, laser, hair fall, peel, vitiligo)..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                style={{ paddingLeft: '48px', height: '48px', fontSize: '15px' }}
+                style={{ paddingLeft: '48px', paddingRight: searchTerm ? '42px' : '16px', height: '48px', fontSize: '15px' }}
               />
+              {searchTerm && (
+                <button
+                  onClick={() => setSearchTerm('')}
+                  style={{
+                    position: 'absolute',
+                    right: '12px',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    background: 'none',
+                    border: 'none',
+                    color: '#942876',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '4px'
+                  }}
+                  title="Clear search"
+                >
+                  <X size={18} />
+                </button>
+              )}
             </div>
 
-            <div style={{ display: 'flex', gap: '8px' }}>
+            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
               {["All", "Skin", "Hair", "Cosmetic", "Laser"].map((tab) => (
                 <button
                   key={tab}
                   className={`category-tag-btn ${activeTab === tab ? 'active' : ''}`}
                   onClick={() => setActiveTab(tab)}
-                  style={{ padding: '10px 18px', fontSize: '14px' }}
+                  style={{ padding: '8px 16px', fontSize: '13.5px' }}
                 >
                   {tab}
                 </button>
@@ -79,16 +103,23 @@ export default function AllTreatmentsPage({ onSelectCondition, onOpenBooking }) 
                     <h3 style={{ marginTop: '4px' }}>{item.title}</h3>
                     <p>{item.summary}</p>
                   </div>
-                  <button className="read-more-btn" onClick={() => onSelectCondition(item)}>
+                  <button className="read-more-btn" onClick={() => handleSelect && handleSelect(item)}>
                     View Full Details
                   </button>
                 </div>
               </div>
             ))
           ) : (
-            <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '60px 20px', background: '#FFF', borderRadius: '16px', border: '1px solid #EBE0EA' }}>
+            <div className="location-card-box" style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '60px 20px' }}>
               <h3 style={{ color: '#2B1B4D', fontSize: '22px', marginBottom: '8px' }}>No Treatments Found</h3>
-              <p style={{ color: '#5C5268', fontSize: '15px' }}>Try searching for another term like "acne", "hair", "laser", or "peel".</p>
+              <p style={{ color: '#5C5268', fontSize: '15px', marginBottom: '16px' }}>Try searching for another term like "acne", "hair", "laser", or "peel".</p>
+              <button
+                className="btn-primary"
+                onClick={() => { setSearchTerm(''); setActiveTab('All'); }}
+                style={{ padding: '8px 20px', fontSize: '13.5px' }}
+              >
+                Reset Search Filters
+              </button>
             </div>
           )}
         </div>

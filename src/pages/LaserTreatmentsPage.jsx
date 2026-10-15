@@ -1,76 +1,254 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LASER_TREATMENTS } from '../data/clinicData';
-import { Calendar, ShieldCheck, Zap } from 'lucide-react';
+import {
+  Calendar, ShieldCheck, Zap, Sparkles, ChevronDown,
+  ArrowRight, Phone, CheckCircle2, Shield, HeartHandshake
+} from 'lucide-react';
 
-export default function LaserTreatmentsPage({ onSelectCondition, onOpenBooking }) {
+export default function LaserTreatmentsPage({ onSelectCondition, onSelectTreatment, onOpenBooking }) {
+  const [openFaq, setOpenFaq] = useState(null);
+  const handleSelect = onSelectTreatment || onSelectCondition;
+
+  const laserFaqs = [
+    {
+      q: "Is laser hair reduction completely safe for South Asian / Indian skin tones?",
+      a: "Yes. Our triple-wavelength diode platform combines 808nm and 1064nm wavelengths, which bypass epidermal melanin and target solely the deeper hair root bulb. Combined with active sapphire contact cooling at 0°C, the skin surface is shielded against burns or post-inflammatory hyperpigmentation (PIH)."
+    },
+    {
+      q: "How many sessions are necessary for permanent hair reduction?",
+      a: "Because hair grows in cyclical phases (Anagen, Catagen, Telogen), lasers only destroy follicles in active Anagen growth. Typically 6 to 8 sessions spaced 4 to 6 weeks apart result in up to 90-95% permanent reduction."
+    },
+    {
+      q: "Does the treatment hurt?",
+      a: "Most patients report only a mild, soothing tapping or cooling sensation, similar to a cold ice cube moving over the skin with occasional warm snaps on dense areas. No topical anesthesia is usually required."
+    },
+    {
+      q: "What should I do before and after my laser session?",
+      a: "Before: Shave the treatment zone 24 hours prior; avoid bleaching, waxing, or plucking for 3 weeks. After: Apply prescribed soothing aloe or calamine gel, avoid hot steam showers for 24 hours, and use broad-spectrum SPF 50 sunscreen daily."
+    }
+  ];
+
   return (
-    <div style={{ padding: '60px 0', background: '#FFFFFF' }}>
+    <div style={{ padding: '60px 0 80px', background: 'transparent' }}>
       <div className="container">
         {/* Page Hero Header */}
-        <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 50px' }}>
-          <span style={{ background: '#FAF4EE', color: '#2B1B4D', padding: '6px 16px', borderRadius: '20px', fontSize: '13px', fontWeight: '600', display: 'inline-block', marginBottom: '12px' }}>
-            ⚡ US-FDA Approved Laser Technology
+        <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 46px' }}>
+          <span style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            background: 'rgba(139, 9, 108, 0.08)',
+            border: '1.5px solid rgba(139, 9, 108, 0.2)',
+            color: '#8B096C',
+            padding: '6px 18px',
+            borderRadius: '30px',
+            fontSize: '12.5px',
+            fontWeight: '800',
+            letterSpacing: '0.04em',
+            marginBottom: '16px'
+          }}>
+            <Zap size={14} color="#8B096C" />
+            US-FDA APPROVED TRIPLE-WAVELENGTH LASER SUITES
           </span>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#2B1B4D', marginBottom: '16px' }}>
-            Advanced Laser Dermatology & Hair Reduction
+          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#1B0344', marginBottom: '16px', lineHeight: '1.18' }}>
+            Advanced Laser Dermatology &amp; Hair Reduction
           </h1>
-          <p style={{ fontSize: '17px', color: '#5C5268', lineHeight: '1.7' }}>
-            Experience 100% medically supervised laser procedures designed specifically for South Asian skin tones. From painless diode laser hair reduction to Dermatrix RF scar microneedling and Q-switched laser toning.
+          <p style={{ fontSize: '17px', color: '#4E4158', lineHeight: '1.7' }}>
+            Experience 100% medically supervised laser procedures customized specifically for Indian skin types. From painless diode hair reduction to Dermatrix RF scar remodeling and Q-switched pigment toning.
           </p>
         </div>
 
-        {/* Procedures Grid */}
-        <div className="conditions-grid" style={{ marginBottom: '60px' }}>
-          {LASER_TREATMENTS.map((item) => (
-            <div key={item.id} className="condition-card">
-              <div className="condition-card-img">
-                <img src={item.image} alt={item.title} />
-              </div>
-              <div className="condition-card-body">
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.summary}</p>
-                </div>
-                <button className="read-more-btn" onClick={() => onSelectCondition(item)}>
-                  Read Laser Details
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Laser Technology & Safety Highlight Card */}
+        <div style={{
+          background: 'rgba(255, 255, 255, 0.82)',
+          backdropFilter: 'blur(28px) saturate(210%)',
+          WebkitBackdropFilter: 'blur(28px) saturate(210%)',
+          border: '1.5px solid rgba(255, 255, 255, 0.98)',
+          borderRadius: '28px',
+          padding: '40px',
+          boxShadow: '0 16px 44px rgba(139, 9, 108, 0.06)',
+          marginBottom: '56px'
+        }}>
+          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+            <span style={{ fontSize: '12px', fontWeight: '800', color: '#8B096C', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              CLINICAL EXCELLENCE
+            </span>
+            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '30px', color: '#1B0344', margin: '6px 0 0' }}>
+              Why Laser Care at Medicare Skin is 100% Safe
+            </h2>
+          </div>
 
-        {/* Safety & Technology Highlights */}
-        <div style={{ background: '#FAF4EE', padding: '40px', borderRadius: '20px', border: '1px solid #EEDCE6', marginBottom: '60px' }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', color: '#2B1B4D', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <ShieldCheck size={28} color="#942876" /> Why Laser Care at Medicare Skin is 100% Safe
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginTop: '20px' }}>
-            <div>
-              <h4 style={{ color: '#2B1B4D', marginBottom: '6px', fontSize: '16px' }}>US-FDA Certified Diode</h4>
-              <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>Targeted 808nm wavelengths safely target melanin roots without thermal damage to surrounding tissue.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div style={{
+              background: 'rgba(255, 255, 255, 0.72)',
+              border: '1px solid rgba(139, 9, 108, 0.12)',
+              borderRadius: '20px',
+              padding: '24px 22px'
+            }}>
+              <ShieldCheck size={28} color="#8B096C" style={{ marginBottom: '12px' }} />
+              <strong style={{ fontSize: '17px', color: '#1B0344', display: 'block', marginBottom: '8px' }}>
+                Triple-Wavelength Optics
+              </strong>
+              <p style={{ fontSize: '13.5px', color: '#4E4158', margin: 0, lineHeight: '1.6' }}>
+                Simultaneously targets 755nm, 808nm, and 1064nm depths, treating fine facial hairs as effectively as coarse root follicles.
+              </p>
             </div>
-            <div>
-              <h4 style={{ color: '#2B1B4D', marginBottom: '6px', fontSize: '16px' }}>Integrated Contact Chilling</h4>
-              <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>Sapphire contact cooling maintains skin at comfortable temperatures during the entire session.</p>
+
+            <div style={{
+              background: 'rgba(255, 255, 255, 0.72)',
+              border: '1px solid rgba(139, 9, 108, 0.12)',
+              borderRadius: '20px',
+              padding: '24px 22px'
+            }}>
+              <Sparkles size={28} color="#D4AF37" style={{ marginBottom: '12px' }} />
+              <strong style={{ fontSize: '17px', color: '#1B0344', display: 'block', marginBottom: '8px' }}>
+                Sapphire Contact Chilling
+              </strong>
+              <p style={{ fontSize: '13.5px', color: '#4E4158', margin: 0, lineHeight: '1.6' }}>
+                Continuous 0°C contact cooling maintains epidermal safety throughout each pulse, ensuring a painless experience without thermal trauma.
+              </p>
             </div>
-            <div>
-              <h4 style={{ color: '#2B1B4D', marginBottom: '6px', fontSize: '16px' }}>Doctor Supervised</h4>
-              <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>All laser fluence settings are prescribed and verified by Senior Consultant Dr. Sujay M (MBBS, DDVL).</p>
+
+            <div style={{
+              background: 'rgba(255, 255, 255, 0.72)',
+              border: '1px solid rgba(139, 9, 108, 0.12)',
+              borderRadius: '20px',
+              padding: '24px 22px'
+            }}>
+              <Shield size={28} color="#8B096C" style={{ marginBottom: '12px' }} />
+              <strong style={{ fontSize: '17px', color: '#1B0344', display: 'block', marginBottom: '8px' }}>
+                Dermatologist Supervision
+              </strong>
+              <p style={{ fontSize: '13.5px', color: '#4E4158', margin: 0, lineHeight: '1.6' }}>
+                Fluence, pulse duration, and skin type calibration are prescribed and monitored directly by Dr. Sujay M (MBBS, DDVL).
+              </p>
             </div>
           </div>
         </div>
 
-        {/* CTA Banner */}
-        <div style={{ background: '#2B1B4D', color: '#FFF', padding: '50px', borderRadius: '20px', textAlign: 'center' }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '34px', marginBottom: '14px' }}>
-            Book Your Laser Patch Test & Consultation
+        {/* Procedures Grid */}
+        <div style={{ marginBottom: '64px' }}>
+          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#1B0344', marginBottom: '24px' }}>
+            Clinical Laser Procedures
           </h2>
-          <p style={{ fontSize: '16px', opacity: 0.9, maxWidth: '600px', margin: '0 auto 24px' }}>
-            Get an in-person hair density analysis or skin scar evaluation with Dr. Sujay M.
+          <div className="conditions-grid">
+            {LASER_TREATMENTS.map((item) => (
+              <div key={item.id} className="condition-card">
+                <div className="condition-card-img">
+                  <img src={item.image} alt={item.title} />
+                </div>
+                <div className="condition-card-body">
+                  <div>
+                    <h3 style={{ color: '#1B0344' }}>{item.title}</h3>
+                    <p style={{ color: '#4E4158' }}>{item.summary}</p>
+                  </div>
+                  <button className="read-more-btn" onClick={() => handleSelect && handleSelect(item)}>
+                    Read Laser Details <ArrowRight size={14} style={{ display: 'inline', verticalAlign: 'middle', marginLeft: '4px' }} />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Laser FAQs Accordion */}
+        <div style={{
+          background: 'rgba(255, 255, 255, 0.82)',
+          backdropFilter: 'blur(28px) saturate(210%)',
+          WebkitBackdropFilter: 'blur(28px) saturate(210%)',
+          border: '1.5px solid rgba(255, 255, 255, 0.98)',
+          borderRadius: '28px',
+          padding: '40px',
+          boxShadow: '0 16px 44px rgba(139, 9, 108, 0.06)',
+          marginBottom: '64px'
+        }}>
+          <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+            <span style={{ fontSize: '12px', fontWeight: '800', color: '#8B096C', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              PATIENT GUIDELINES
+            </span>
+            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', color: '#1B0344', margin: '6px 0 0' }}>
+              Laser Treatment FAQs
+            </h2>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            {laserFaqs.map((faq, idx) => (
+              <div
+                key={idx}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.7)',
+                  border: '1px solid rgba(139, 9, 108, 0.14)',
+                  borderRadius: '16px',
+                  overflow: 'hidden'
+                }}
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                  style={{
+                    width: '100%',
+                    padding: '16px 20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    background: 'transparent',
+                    border: 'none',
+                    textAlign: 'left',
+                    cursor: 'pointer',
+                    fontSize: '15px',
+                    fontWeight: '700',
+                    color: '#1B0344'
+                  }}
+                >
+                  <span>{faq.q}</span>
+                  <ChevronDown
+                    size={18}
+                    color="#8B096C"
+                    style={{
+                      transform: openFaq === idx ? 'rotate(180deg)' : 'rotate(0deg)',
+                      transition: 'transform 0.25s ease',
+                      flexShrink: 0,
+                      marginLeft: '12px'
+                    }}
+                  />
+                </button>
+                {openFaq === idx && (
+                  <div style={{ padding: '0 20px 18px', fontSize: '14px', color: '#4E4158', lineHeight: '1.6', borderTop: '1px solid rgba(139, 9, 108, 0.08)', paddingTop: '12px' }}>
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Liquid Glass Banner */}
+        <div style={{
+          background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(253, 248, 255, 0.85) 100%)',
+          backdropFilter: 'blur(30px) saturate(210%)',
+          WebkitBackdropFilter: 'blur(30px) saturate(210%)',
+          border: '2px solid rgba(255, 255, 255, 0.98)',
+          padding: '48px 40px',
+          borderRadius: '32px',
+          textAlign: 'center',
+          boxShadow: '0 20px 50px rgba(139, 9, 108, 0.08), inset 0 1.5px 2px rgba(255, 255, 255, 1)'
+        }}>
+          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '34px', marginBottom: '12px', color: '#1B0344' }}>
+            Book Your Laser Patch Test &amp; Consultation
+          </h2>
+          <p style={{ fontSize: '16px', color: '#4E4158', maxWidth: '620px', margin: '0 auto 26px', lineHeight: '1.6' }}>
+            Experience our ice-cool sapphire laser on a small test zone and receive an in-person skin calibration by Dr. Sujay M.
           </p>
-          <button className="btn-primary" onClick={onOpenBooking} style={{ background: '#942876', margin: '0 auto' }}>
-            <Calendar size={18} /> Book Laser Evaluation
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px', flexWrap: 'wrap' }}>
+            <button className="desk-btn-primary" onClick={onOpenBooking}>
+              <Calendar size={18} />
+              <span>Book Laser Patch Test</span>
+              <ArrowRight size={16} />
+            </button>
+            <a href="tel:919242855707" className="desk-btn-call">
+              <Phone size={16} />
+              <span>Call Reception</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
