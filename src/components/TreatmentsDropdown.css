@@ -1,0 +1,234 @@
+/* ─────────────────────────────────────────────────────────────
+   TREATMENTS 2-TIER FLYOUT DROPDOWN (Luminous White Liquid Glass)
+────────────────────────────────────────────────────────────── */
+
+.nav-item-has-dropdown {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.nav-treatments-trigger {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+}
+
+.dropdown-chevron {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.dropdown-chevron.rotated {
+  transform: rotate(180deg) !important;
+}
+
+/* Floating 2-Tier White Liquid Glass Container */
+.treatments-flyout-menu {
+  position: absolute !important;
+  top: calc(100% + 12px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  width: 580px !important;
+  min-width: 580px !important;
+  max-width: 580px !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(36px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(200%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.96) !important;
+  border-radius: 20px !important;
+  box-shadow: 
+    0 24px 60px rgba(139, 9, 108, 0.14),
+    0 8px 24px rgba(43, 27, 77, 0.08),
+    inset 0 2px 3px #FFFFFF,
+    inset 0 -1px 2px rgba(148, 40, 118, 0.06) !important;
+  z-index: 99999 !important;
+  overflow: visible !important;
+  animation: flyoutSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+
+/* Hover bridge between trigger button and dropdown */
+.treatments-flyout-menu::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -16px !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 16px !important;
+  background: transparent !important;
+}
+
+@keyframes flyoutSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Left Column: 4 Categories (Pearl Liquid Glass) */
+.flyout-categories-col {
+  width: 205px !important;
+  min-width: 205px !important;
+  max-width: 205px !important;
+  background: rgba(250, 245, 251, 0.8) !important;
+  border-right: 1.5px solid rgba(148, 40, 118, 0.1) !important;
+  border-radius: 19px 0 0 19px !important;
+  padding: 12px 6px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.flyout-cat-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 13px 18px !important;
+  color: #241442 !important;
+  font-family: 'Funnel Display', 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  background: transparent !important;
+  user-select: none !important;
+  border-radius: 12px !important;
+  margin: 3px 6px !important;
+  border: 1px solid transparent !important;
+}
+
+.flyout-cat-btn:hover {
+  background: rgba(148, 40, 118, 0.08) !important;
+  color: #8B096C !important;
+  transform: translateX(2px) !important;
+}
+
+.flyout-cat-btn.active {
+  background: linear-gradient(135deg, rgba(148, 40, 118, 0.13) 0%, rgba(200, 80, 155, 0.08) 100%) !important;
+  color: #8B096C !important;
+  font-weight: 750 !important;
+  border: 1px solid rgba(148, 40, 118, 0.22) !important;
+  box-shadow: 0 4px 14px rgba(148, 40, 118, 0.08), inset 0 1px 1.5px #FFFFFF !important;
+}
+
+.flyout-arrow {
+  color: rgba(36, 20, 66, 0.32) !important;
+  transition: transform 0.2s ease, color 0.2s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.flyout-cat-btn:hover .flyout-arrow,
+.flyout-cat-btn.active .flyout-arrow {
+  color: #8B096C !important;
+  transform: translateX(4px) !important;
+}
+
+/* Right Column: Conditions & Procedures List (Crystal White Liquid Glass) */
+.flyout-subitems-col {
+  width: 375px !important;
+  min-width: 375px !important;
+  max-width: 375px !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-radius: 0 19px 19px 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.flyout-subitems-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 14px 20px !important;
+  border-bottom: 1px solid rgba(148, 40, 118, 0.09) !important;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  color: #715E7C !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.07em !important;
+  background: rgba(252, 249, 252, 0.6) !important;
+}
+
+.flyout-view-all {
+  background: none !important;
+  border: none !important;
+  color: #8B096C !important;
+  font-size: 12px !important;
+  font-weight: 750 !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  transition: all 0.18s ease !important;
+}
+
+.flyout-view-all:hover {
+  color: #700756 !important;
+  text-decoration: underline !important;
+  transform: translateX(2px) !important;
+}
+
+.flyout-subitems-list {
+  max-height: 410px !important;
+  overflow-y: auto !important;
+  padding: 8px 6px !important;
+}
+
+.flyout-subitems-list::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+.flyout-subitems-list::-webkit-scrollbar-thumb {
+  background: rgba(148, 40, 118, 0.28) !important;
+  border-radius: 6px !important;
+}
+
+.flyout-subitems-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 40, 118, 0.5) !important;
+}
+
+.flyout-subitem-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 9.5px 16px !important;
+  margin: 2px 4px !important;
+  color: #241442 !important;
+  font-size: 13.5px !important;
+  font-weight: 550 !important;
+  font-family: 'Outfit', sans-serif !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+}
+
+.flyout-subitem-link:hover {
+  background: linear-gradient(90deg, rgba(148, 40, 118, 0.08) 0%, rgba(200, 80, 155, 0.04) 100%) !important;
+  color: #8B096C !important;
+  padding-left: 20px !important;
+  font-weight: 650 !important;
+}
+
+.subitem-action {
+  color: rgba(36, 20, 66, 0.3) !important;
+  font-size: 14px !important;
+  transition: transform 0.18s ease, color 0.18s ease !important;
+  flex-shrink: 0 !important;
+  margin-left: 8px !important;
+}
+
+.flyout-subitem-link:hover .subitem-action {
+  color: #8B096C !important;
+  transform: translateX(3px) !important;
+}

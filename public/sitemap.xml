@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.medicareskin.com/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- High-Priority Treatment Landing Pages (SEO • AEO • GEO) -->
+  <url>
+    <loc>https://www.medicareskin.com/q-switched-laser-melasma-pigmentation-bangalore/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.medicareskin.com/images/q-switched-laser-pigmentation-treatment-bangalore.webp</image:loc>
+      <image:title>Q-switched laser treatment for facial pigmentation at a dermatology clinic in Bengaluru</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.medicareskin.com/images/q-switched-laser-equipment-medicareskin.webp</image:loc>
+      <image:title>Q-switched dermatology laser equipment used at Medicare Skin, Bengaluru</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/hydrafacial-bangalore/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.medicareskin.com/images/hydrafacial-skin-hydration-treatment-bangalore.webp</image:loc>
+      <image:title>Woman receiving a device-assisted facial hydration treatment in Bengaluru</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.medicareskin.com/images/hydrafacial-equipment-medicareskin.webp</image:loc>
+      <image:title>Facial cleansing and hydration treatment device at Medicare Skin clinic</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/treatment-comparison/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Specific Treatment Landing Pages -->
+  <url>
+    <loc>https://www.medicareskin.com/acne-laser/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.medicareskin.com/hair-care/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.medicareskin.com/chemical-peels/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.medicareskin.com/dermal-fillers-anti-wrinkle-injections/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.medicareskin.com/microneedling-for-skin-tightening/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.medicareskin.com/vitiligo-surgery/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Category Treatment Pages -->
+  <url>
+    <loc>https://www.medicareskin.com/laser-treatments</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/skin-treatments</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/cosmetic-treatments</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/hair-treatments</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Educational Blog & Clinical Journal -->
+  <url>
+    <loc>https://www.medicareskin.com/blog</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Doctor & Clinic Credentials -->
+  <url>
+    <loc>https://www.medicareskin.com/about-doctor</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.medicareskin.com/images/dr_sujay_portrait.jpg</image:loc>
+      <image:title>Dr. Sujay M MBBS DDVL Senior Dermatologist South Bengaluru</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/about-us</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Local SEO & Geo Landing Pages (South Bengaluru Hubs) -->
+  <url>
+    <loc>https://www.medicareskin.com/areas-we-serve</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/dermatologist-yelachenahalli/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/dermatologist-kanakapura-road/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/dermatologist-jp-nagar/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/skin-clinic-banashankari/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/dermatologist-jayanagar/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/dermatologist-kumaraswamy-layout/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/dermatologist-konanakunte/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/dermatologist-padmanabhanagar/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/dermatologist-btm-layout/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Patient FAQs & Contact -->
+  <url>
+    <loc>https://www.medicareskin.com/faqs</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/book-appointment</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicareskin.com/contact-us</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>

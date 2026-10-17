@@ -15,7 +15,7 @@ export const CLINIC_INFO = {
   hours: "Monday - Saturday: 10:00 AM - 7:00 PM | Sunday: Closed",
   whatsappNumber: "919242855707",
   googleMapsLink: "https://maps.app.goo.gl/G5NWQuyQ9cP4xdPA9",
-  mapEmbedUrl: "https://maps.google.com/maps?q=Medicare+Skin+and+Cosmetic+Clinic,+Jyothi+Layout,+Yelachenahalli,+Kanakapura+Main+Rd,+Bangalore&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+  mapEmbedUrl: "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sMedicare+Skin+and+Cosmetic+Clinic,+Jyothi+Layout,+Yelachenahalli,+Bangalore!6i16"
 };
 
 export const HERO_SLIDES = [
@@ -28,7 +28,7 @@ export const HERO_SLIDES = [
       "10,000+ Patients Treated",
       "Affordable & Clinically Proven"
     ],
-    image: "/images/imageye___-_imgi_3_banner1.webp"
+    image: "/images/hero_skin_clinic_woman.jpg"
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ export const HERO_SLIDES = [
       "Trusted Skin Clinic in JP Nagar, Bangalore",
       "Dr. Sujay M, MBBS DDVL"
     ],
-    image: "/images/imageye___-_imgi_2_banner3.webp"
+    image: "/images/cat_skin_care.jpg"
   },
   {
     id: 3,
@@ -49,45 +49,57 @@ export const HERO_SLIDES = [
       "18 Yrs Experience",
       "10,000+ Procedures"
     ],
-    image: "/images/imageye___-_imgi_4_banner2.webp"
+    image: "/images/hero_laser_woman.jpg"
   }
 ];
 
 export const FEATURED_TREATMENTS = [
   {
+    id: "q-switched-laser-melasma-pigmentation-bangalore",
+    title: "Q-Switched Laser for Melasma",
+    image: "/images/q_switched_procedure.jpg",
+    description: "Gold-standard Nd:YAG laser toning to clear stubborn melasma, dark spots, sun tanning, and hyperpigmentation."
+  },
+  {
+    id: "hydrafacial-bangalore",
+    title: "HydraFacial Skin Rejuvenation",
+    image: "/images/hydrafacial_procedure.jpg",
+    description: "Medical hydradermabrasion for instant glass-skin radiance, deep vortex pore cleansing, and intense hyaluronic hydration."
+  },
+  {
     id: "acne-scar",
     title: "Acne Scar Treatment",
-    image: "/images/imageye___-_imgi_11_acne-scar-treatment.webp",
+    image: "/images/hero_slide_2_acne.jpg",
     description: "Advanced fractional laser, subcision, and chemical peels to smooth acne scars and restore clear skin texture."
   },
   {
     id: "laser-hair",
     title: "Laser Hair Removal",
-    image: "/images/imageye___-_imgi_12_Laser-Hair-Removal.webp",
+    image: "/images/cat_laser_care.jpg",
     description: "US-FDA approved painless diode laser technology for permanent facial and body hair reduction."
   },
   {
     id: "chemical-peels",
     title: "Chemical Peels",
-    image: "/images/imageye___-_imgi_7_Chemical-Peel.webp",
+    image: "/images/luxury_indian_skin_model.png",
     description: "Custom dermatological peels designed for glow, acne reduction, hyperpigmentation, and anti-aging."
   },
   {
     id: "botox-fillers",
     title: "Dermal Fillers/Anti-wrinkle Injections",
-    image: "/images/imageye___-_imgi_8_Botox-and-Fillers-1.webp",
+    image: "/images/radiant_skin_model.jpg",
     description: "Non-surgical aesthetic injections for volume restoration, wrinkle smoothing, and youthful contouring."
   },
   {
     id: "skin-tightening",
     title: "Skin Tightening",
-    image: "/images/imageye___-_imgi_9_skin-tightening-01.webp",
+    image: "/images/radiant_skin_glow.jpg",
     description: "RF and ultrasound non-invasive therapies to stimulate collagen and firm sagging facial and neck skin."
   },
   {
     id: "vitiligo-surgery",
     title: "Vitiligo Surgery",
-    image: "/images/imageye___-_imgi_10_Vitiligo-Surgery-1.webp",
+    image: "/images/hero_slide_5_results.jpg",
     description: "Specialised punch grafting and melanocyte transfer procedures for stable vitiligo repigmentation."
   }
 ];
@@ -445,10 +457,43 @@ export const COSMETIC_TREATMENTS = [
     image: "/images/imageye___-_imgi_11_acne-scar-treatment.webp",
     summary: "Gold microneedle RF heat therapy to break deep tethered acne scars and rebuild dermal collagen.",
     fullText: "Combines insulated gold microneedles with radiofrequency energy to break fibrous scar tethers, promoting deep dermal collagen regeneration."
+  },
+  {
+    id: "hydrafacial-bangalore",
+    slug: "hydrafacial-bangalore",
+    title: "HydraFacial for Skin Glow, Hydration & Brightness",
+    category: "Cosmetic",
+    image: "/images/hydrafacial-skin-hydration-treatment-bangalore.webp",
+    equipmentImage: "/images/hydrafacial-equipment-medicareskin.webp",
+    summary: "Medical hydradermabrasion for instant glass-skin radiance, pore purification & deep hyaluronic hydration.",
+    fullText: "4-step vortex cleansing, gentle acid exfoliation, painless blackhead extraction, and concentrated antioxidant peptide infusion. Zero downtime party glow guided by Dr. (Mrs.) Sujay M in South Bengaluru.",
+    url: "/hydrafacial-bangalore/"
+  },
+  {
+    id: "hydrafacial",
+    slug: "hydrafacial-bangalore",
+    title: "Medical HydraFacial Rejuvenation",
+    category: "Cosmetic",
+    image: "/images/hydrafacial-skin-hydration-treatment-bangalore.webp",
+    equipmentImage: "/images/hydrafacial-equipment-medicareskin.webp",
+    summary: "Device-assisted hydradermabrasion for clogged pores, dead skin removal and luminous hydration.",
+    fullText: "Gentle spiral vortex fluid technology extracts stubborn blackheads, clears city pollution debris, and deeply infuses medical serums for an immediate dewy glow.",
+    url: "/hydrafacial-bangalore/"
   }
 ];
 
 export const LASER_TREATMENTS = [
+  {
+    id: "q-switched-laser-melasma-pigmentation-bangalore",
+    slug: "q-switched-laser-melasma-pigmentation-bangalore",
+    title: "Q-Switched Laser for Melasma & Pigmentation",
+    category: "Laser",
+    image: "/images/q-switched-laser-pigmentation-treatment-bangalore.webp",
+    equipmentImage: "/images/q-switched-laser-equipment-medicareskin.webp",
+    summary: "Gold-standard nanosecond laser toning for stubborn facial melasma, dark spots, sun tan, freckles & PIH.",
+    fullText: "Low-fluence 1064nm Q-switched Nd:YAG laser toning gently shatters epidermal and dermal melanin clusters through photoacoustic shockwaves. Specially calibrated for safe, non-rebound results on Indian skin (Fitzpatrick IV–VI) by Dr. (Mrs.) Sujay M.",
+    url: "/q-switched-laser-melasma-pigmentation-bangalore/"
+  },
   {
     id: "diode-laser-hair-removal",
     title: "Diode Laser Hair Reduction",
@@ -467,11 +512,13 @@ export const LASER_TREATMENTS = [
   },
   {
     id: "q-switched-laser-toning",
+    slug: "q-switched-laser-melasma-pigmentation-bangalore",
     title: "Q-Switched Nd:YAG Laser Toning",
     category: "Laser",
-    image: "/images/imageye___-_imgi_7_Chemical-Peel.webp",
+    image: "/images/q-switched-laser-pigmentation-treatment-bangalore.webp",
+    equipmentImage: "/images/q-switched-laser-equipment-medicareskin.webp",
     summary: "Laser depigmentation for stubborn melasma, sun tan, freckles & dark spots.",
-    fullText: "Nanosecond pulse Q-Switched laser selectively shatters epidermal and dermal melanin clusters into microscopic particles."
+    fullText: "Nanosecond pulse Q-Switched laser selectively shatters epidermal and dermal melanin clusters into microscopic particles with zero downtime."
   },
   {
     id: "laser-electrolysis",
@@ -518,10 +565,174 @@ export const GOOGLE_REVIEWS = [
     rating: 5,
     tag: "Clinical Care",
     text: "Perfect place for all your skin problems and treatments. Affordable and trustworthy with quick consultations and effective medicines."
+  },
+  {
+    id: 6,
+    author: "Ananya R.",
+    rating: 5,
+    tag: "Acne Scar Revision",
+    text: "I had deep acne scars from college days and had tried multiple clinics in Koramangala and Indiranagar with zero results. Dr. Sujay M diagnosed the fibrous bands tethering my scars and did subcision combined with microneedling RF. After just 3 sessions my skin texture has smoothed out tremendously! She never pushes unnecessary packages, only what is medically necessary."
+  },
+  {
+    id: 7,
+    author: "Karthik Venkatesh",
+    rating: 5,
+    tag: "Laser Hair Removal",
+    text: "Visited Medicare Skin Clinic for beard shaping and neck laser hair removal. Their diode laser has an amazing cooling tip so there was practically zero pain. By the 4th session, the ingrown hairs and coarse neck hair were completely gone. Very hygienic clinic right next to Yelachenahalli metro station."
+  },
+  {
+    id: 8,
+    author: "Sneha Murthy",
+    rating: 5,
+    tag: "HydraFacial Glow",
+    text: "Booked a medical HydraFacial session before my sister's wedding. Dr. Sujay customised the serums with hyaluronic acid and antioxidant infusion. My face had an instant glass-skin radiance that lasted for weeks! The extraction step was gentle and thoroughly cleared my congested pores. Highly recommended for bridal glow."
+  },
+  {
+    id: 9,
+    author: "Ramesh Babu",
+    rating: 5,
+    tag: "Vitiligo Care",
+    text: "Dr. Sujay's expertise in vitiligo management is exceptional. She took time to explain the stability criteria and prescribed a regimen with targeted phototherapy and topical immunomodulators. The white patches on my hands have started repigmenting. Her moral support and patient counselling gave me immense confidence."
+  },
+  {
+    id: 10,
+    author: "Pooja Sharma",
+    rating: 5,
+    tag: "Chemical Peels & Tan Removal",
+    text: "Had severe sun tan and uneven tone after a coastal vacation. Dr. Sujay recommended a mild glycolic peel series. There was no harsh peeling or downtime, just gentle brightening and a very fresh, even complexion. Very reasonable pricing compared to corporate cosmetic chains in Bangalore."
+  },
+  {
+    id: 11,
+    author: "Dr. Arvind Swamy",
+    rating: 5,
+    tag: "Hair Fall & Growth Factor (GFC)",
+    text: "Being a physician myself, I appreciate Dr. Sujay's evidence-based clinical trichology. She evaluated my diffuse hair thinning with dermoscopy and initiated autologous Growth Factor Therapy (GFT). The hair shed reduced within a month and visible density has improved at the crown. Extremely professional and trustworthy."
+  },
+  {
+    id: 12,
+    author: "Meera N.",
+    rating: 5,
+    tag: "Dark Circles & Tear Trough",
+    text: "I had persistent genetic dark circles and hollows under my eyes that made me look constantly exhausted. Dr. Sujay advised subtle hyaluronic tear-trough restoration and brightening peels. The results look completely natural with zero puffiness. She has a very gentle aesthetic hand."
+  },
+  {
+    id: 13,
+    author: "Shwetha Prasanna",
+    rating: 5,
+    tag: "Skin Tightening & Anti-Aging",
+    text: "Consulted Dr. Sujay for early sagging along my jawline and smile lines. The non-surgical RF skin tightening session stimulated collagen visibly over the next few weeks. My jawline feels firmer and lifted without any surgical intervention or needles. The clinic ambience is peaceful and spotless."
+  },
+  {
+    id: 14,
+    author: "Vinod Kumar",
+    rating: 5,
+    tag: "Chronic Eczema & Allergies",
+    text: "My 8-year-old son was suffering from chronic itchy eczema patches that kept flaring every winter. Dr. Sujay identified the contact allergens, prescribed barrier repair creams and mild soothing topicals. Within two weeks his skin was completely calm and rash-free. Dr. Sujay is so warm and wonderful with children."
   }
 ];
 
 export const BLOG_POSTS = [
+  {
+    id: "q-switched-laser-melasma-pigmentation-guide",
+    title: "Q-Switched Laser for Melasma & Pigmentation in Bengaluru: The Dermatologist's Clinical Guide",
+    category: "Laser Treatments",
+    date: "October 16, 2026",
+    author: "Dr. Sujay M (MBBS, DDVL)",
+    readTime: "7 min read",
+    image: "/images/q-switched-laser-pigmentation-treatment-bangalore.webp",
+    treatmentTab: "q-switched-laser",
+    treatmentLink: "/q-switched-laser-melasma-pigmentation-bangalore/",
+    excerpt: "Dark patches, uneven tone or persistent pigmentation? Understand how low-fluence Q-switched Nd:YAG laser toning works, safety for Indian skin, and why sun protection is non-negotiable.",
+    content: "Are you noticing dark patches on your cheeks, forehead or upper lip? Do stubborn marks remain even after your acne has healed? Facial pigmentation is a common concern among Indian women and men. In this comprehensive guide, Dr. Sujay M explains the mechanisms, safety for Indian skin, realistic benefits, and why lasers are an adjunct rather than a standalone cure.",
+    sections: [
+      {
+        heading: "What Is Q-Switched Laser Treatment?",
+        text: "Q-switched laser is a medical technology that delivers very short pulses of concentrated light energy in the nanosecond range. Certain Q-switched lasers, including Nd systems, are used in dermatology to target pigment within the skin. In simple terms, the laser delivers controlled pulses of energy to pigment-containing structures, fragmenting them so the body's immune system can clear them away naturally. However, not every type of pigmentation responds equally well. Melasma is particularly complex, and lasers are generally considered an additional treatment option for selected patients rather than an automatic first treatment."
+      },
+      {
+        heading: "What Causes Dark Spots and Facial Pigmentation?",
+        text: "Skin gets its natural colour from melanin. When melanin production increases in certain areas, darker patches appear. Key causes include: 1. Melasma (brown/grey patches on cheeks, forehead, upper lip influenced by sun, hormones, genetics), 2. Sun Spots and solar damage, 3. Post-Acne Pigmentation (flat macules left after inflammation subsides), 4. Freckles and localized pigmented lesions, and 5. Uneven Skin Tone caused by inflammation or environmental stress. Note: Any changing, bleeding, or irregular spot requires immediate medical assessment."
+      },
+      {
+        heading: "Can Q-Switched Laser Help Treat Melasma?",
+        text: "Q-switched Nd laser in carefully selected low-energy settings has been studied as an additional option for melasma management. Some patients experience improvement, but results vary and are not permanent. Inappropriate or aggressive laser settings can cause rebound darkening or hypopigmentation (white spots). For many patients, the foundation of care remains daily broad-spectrum sun protection, prescription topical treatment, and long-term maintenance."
+      },
+      {
+        heading: "Step-by-Step Treatment Journey",
+        text: "A typical clinical protocol at Medicare Skin spans 5 disciplined steps: 1. Dermatologist Consultation & Pigmentation Assessment under dermoscopy, 2. Personalised Treatment Planning, 3. Laser Treatment Session with eye protection and calibrated low-fluence passes (mild warm tingling sensation), 4. Post-Treatment Calming Skincare, and 5. Follow-Up and Long-Term Maintenance."
+      },
+      {
+        heading: "Is Q-Switched Laser Safe for Indian Skin?",
+        text: "Indian skin tones (Fitzpatrick IV–VI) have higher epidermal melanin, making them susceptible to post-inflammatory hyperpigmentation (PIH) or mottled hypopigmentation if treated with excessive thermal energy. Dr. Sujay M utilizes low-fluence sub-thermolytic parameters specifically calibrated to avoid heat buildup, ensuring an exceptional safety profile."
+      },
+      {
+        heading: "Why Sunscreen Is Essential for Pigmentation",
+        text: "Daily photoprotection is mandatory. A broad-spectrum SPF 30 or higher sunscreen is standard. For melasma, tinted sunscreen containing iron oxides provides crucial added protection against visible light, which directly stimulates melanocytes in darker skin tones. Reapplication every 3 to 4 hours is necessary when outdoors."
+      }
+    ]
+  },
+  {
+    id: "hydrafacial-skin-hydration-glow-bangalore",
+    title: "HydraFacial Treatment in Bengaluru for Glowing, Hydrated & Brighter Skin: Everything You Need to Know",
+    category: "Aesthetics & Glow",
+    date: "October 15, 2026",
+    author: "Dr. Sujay M (MBBS, DDVL)",
+    readTime: "6 min read",
+    image: "/images/hydrafacial-skin-hydration-treatment-bangalore.webp",
+    treatmentTab: "hydrafacial",
+    treatmentLink: "/hydrafacial-bangalore/",
+    excerpt: "Is your skin looking dull, tired or dehydrated? Discover how gentle device-assisted cleansing, exfoliation, extraction, and antioxidant hydration refresh your complexion.",
+    content: "Pollution, sun exposure, stress, cosmetics, and everyday environmental factors take a toll on our skin's barrier. A HydraFacial treatment combines multiple clinical skincare steps in one relaxing session to help improve dullness, dryness, and superficial congestion.",
+    sections: [
+      {
+        heading: "What Is HydraFacial?",
+        text: "HydraFacial is a device-assisted facial treatment that combines cleansing, exfoliation, extraction, and the application of hydrating solutions. Using a specialized vortex handpiece and controlled suction, it gently lifts away dead skin cells and sebum while bathing the freshly opened pores in nourishing serums. It does not permanently change your skin colour or cure deep melasma, but temporarily enhances surface radiance, hydration, and smoothness."
+      },
+      {
+        heading: "Who May Benefit From HydraFacial?",
+        text: "HydraFacial is ideal for patients with: 1. Dull-looking, fatigued skin, 2. Dehydrated or tight skin, 3. Rough, uneven skin texture, 4. Congested pores and blackheads, 5. Occasional refreshment before weddings or special events, and 6. Regular skin maintenance. However, patients with active inflammatory acne, severe rosacea, or open eczema must have their skin barrier treated first."
+      },
+      {
+        heading: "The 5-Step Treatment Process",
+        text: "Step 1: Cleansing to dissolve surface sebum. Step 2: Gentle Exfoliation using custom acid solutions to unglue dead cells. Step 3: Painless Vortex Extraction to vacuum out blackheads and pore debris. Step 4: Intensive Hydration infusing hyaluronic acid, peptides, and antioxidants. Step 5: Skincare Advice & Aftercare to prolong your radiant glow."
+      },
+      {
+        heading: "HydraFacial vs. Regular Salon Facials",
+        text: "Regular salon facials involve manual steaming, physical massage, and manual comedone extraction, which can traumatize sensitive skin or break capillaries. HydraFacial utilizes calibrated medical-grade device technology with consistent, controlled suction and medical-grade active solutions tailored to your skin's tolerance."
+      },
+      {
+        heading: "Downtime and How Long the Glow Lasts",
+        text: "There is virtually zero downtime. Most patients leave the clinic with a radiant, dewy complexion and can return to work or social activities immediately. The visible glow typically peaks over the first 48 to 72 hours and can be sustained for weeks with a diligent home moisturization and sunscreen regimen."
+      }
+    ]
+  },
+  {
+    id: "q-switched-laser-vs-hydrafacial-comparison",
+    title: "Q-Switched Laser vs. HydraFacial: Which Treatment Does Your Skin Really Need?",
+    category: "Treatment Guides",
+    date: "October 14, 2026",
+    author: "Dr. Sujay M (MBBS, DDVL)",
+    readTime: "5 min read",
+    image: "/images/luxury_indian_skin_model.png",
+    treatmentTab: "comparison",
+    treatmentLink: "/treatment-comparison/",
+    excerpt: "Wondering whether you need photoacoustic melanin clearing or deep vortex hydration? Compare mechanisms, downtime, pain levels, and Dr. Sujay M's combination protocol.",
+    content: "Both Q-Switched laser toning and HydraFacial are highly sought-after aesthetic procedures in Bengaluru, but they work on entirely different skin layers. Understanding their differences ensures you invest in the right treatment for your personal skin concerns.",
+    sections: [
+      {
+        heading: "Comparing the Targets: Melanin vs. Hydration",
+        text: "Q-Switched Nd:YAG laser operates at 1064 nm wavelength to penetrate deep into the dermis and basal epidermis, mechanically shattering stubborn melanin clusters that cause melasma, sun spots, and PIH. HydraFacial operates on the outermost epidermal stratum corneum, exfoliating dead cells, extracting follicular plugs, and replenishing depleted moisture reservoirs."
+      },
+      {
+        heading: "Sensation, Comfort & Downtime",
+        text: "HydraFacial is a completely painless, cooling, and soothing experience with zero downtime—ideal for immediate pre-event glow. Q-Switched laser toning delivers a mild warm tingling sensation (like a tiny rubber band snap), causing mild pinkness for 1 to 2 hours before settling into clean, refined skin."
+      },
+      {
+        heading: "Dr. Sujay M's Combination Synergy Protocol",
+        text: "For patients experiencing both surface congestion/dullness and deeper pigmentation, Dr. Sujay M often recommends a combination approach: starting with a HydraFacial session to clear follicular debris and smooth the stratum corneum, followed 10 to 14 days later by Q-switched laser toning. This allows the laser light to penetrate uniformly without surface light scatter."
+      }
+    ]
+  },
   {
     id: "acne-scar-treatment-guide",
     title: "Complete Guide to Acne Scar Revision: Subcision vs Fractional Laser",
@@ -529,9 +740,20 @@ export const BLOG_POSTS = [
     date: "October 10, 2026",
     author: "Dr. Sujay M (MBBS, DDVL)",
     readTime: "5 min read",
-    image: "/images/imageye___-_imgi_11_acne-scar-treatment.webp",
+    image: "/images/skin_elasticity_cheek_touch.png",
+    treatmentTab: "skin",
     excerpt: "Learn how combining subcision with fractional RF microneedling and medical peels achieves up to 90% smooth skin texture restoration.",
-    content: "Acne scars are more than surface blemishes; they are tethered fibrous bands pulling down top skin layers. Dr. Sujay M outlines why a combination approach using subcision, fractional laser, and chemical peels delivers superior results."
+    content: "Acne scars are more than surface blemishes; they are tethered fibrous bands pulling down top skin layers. Dr. Sujay M outlines why a combination approach using subcision, fractional laser, and chemical peels delivers superior results.",
+    sections: [
+      {
+        heading: "Understanding Types of Acne Scars",
+        text: "Acne scars fall into distinct clinical categories: icepick scars (deep and narrow), boxcar scars (broad with sharp edges), and rolling scars (tethered by subcutaneous fibrous bands). Each scar type requires a specific revision tool."
+      },
+      {
+        heading: "Why Combination Therapy Works Best",
+        text: "No single treatment fixes all scars. At Medicare Skin, subcision physically cuts deep tethering bands, while fractional microneedling RF (MNRF) induces dermal neocollagenesis to elevate the depressed base smoothly."
+      }
+    ]
   },
   {
     id: "growth-factor-therapy-hair-loss",
@@ -540,9 +762,20 @@ export const BLOG_POSTS = [
     date: "October 02, 2026",
     author: "Dr. Sujay M (MBBS, DDVL)",
     readTime: "4 min read",
-    image: "/images/imageye___-_imgi_27_Growth-Factor-Therapy.webp",
+    image: "/images/radiant_hair_smile_woman.png",
+    treatmentTab: "hair",
     excerpt: "Discover the medical science behind concentrated growth factor scalp micro-injections for halting hair fall and boosting root density.",
-    content: "Growth Factor Therapy (GFT) extracts essential autologous growth factors from your blood to nourish weakened hair follicles. Clinical trials show visible root thickening and reduced shedding within 3 to 4 sessions."
+    content: "Growth Factor Therapy (GFT) extracts essential autologous growth factors from your blood to nourish weakened hair follicles. Clinical trials show visible root thickening and reduced shedding within 3 to 4 sessions.",
+    sections: [
+      {
+        heading: "The Biology of Follicular Miniaturization",
+        text: "Genetic sensitivity to dihydrotestosterone (DHT) causes hair follicles to shrink progressively, leading to shorter growth phases and brittle strands. Growth factors provide concentrated signaling proteins that wake up dormant dermal papilla cells."
+      },
+      {
+        heading: "What to Expect During a Session",
+        text: "A small sample of blood is drawn and processed in a specialized centrifuge to isolate platelet growth factors. The concentrated serum is gently delivered into thinning scalp zones under local cooling, requiring under 45 minutes with zero downtime."
+      }
+    ]
   }
 ];
 
@@ -698,4 +931,78 @@ export const MASTER_TAXONOMY = [
     items: MEDICAL_DERMATOLOGY_TREATMENTS
   }
 ];
+
+export const NAV_TREATMENTS_MENU = [
+  {
+    id: 'skin-care',
+    name: 'Skin care',
+    tab: 'skin',
+    items: [
+      { name: 'Allergies', slug: 'allergies', tab: 'skin', desc: 'Clinical patch testing & anti-inflammatory regimens' },
+      { name: 'Psoriasis', slug: 'psoriasis', tab: 'skin', desc: 'Targeted medical management & topical therapies' },
+      { name: 'Eczema', slug: 'eczema', tab: 'skin', desc: 'Barrier restoration & corticosteroid-sparing protocols' },
+      { name: 'Contact Dermatitis', slug: 'contact-dermatitis', tab: 'skin', desc: 'Allergen detection & soothing recovery' },
+      { name: 'Photosensitive Dermatitis', slug: 'photosensitive-dermatitis', tab: 'skin', desc: 'Sun allergy protection & desensitisation' },
+      { name: 'Connective Tissue Disorders', slug: 'connective-tissue-disorders', tab: 'skin', desc: 'Multidisciplinary dermatological monitoring' },
+      { name: 'Vitiligo', slug: 'vitiligo', tab: 'skin', desc: 'Medical phototherapy & surgical grafting options' },
+      { name: 'Bacterial & Fungal Skin Infections', slug: 'bacterial-fungal-skin-infections', tab: 'skin', desc: 'Sterile diagnostics & prescription antimicrobials' },
+      { name: 'Pimples/Acne', slug: 'pimples-acne', tab: 'skin', desc: 'Comedone extraction, chemical peels & medical acne protocols' },
+      { name: 'Pigmentation', slug: 'pigmentation', tab: 'skin', desc: 'Q-Switched laser toning & medical depigmenting peels' },
+      { name: 'Rosacea', slug: 'rosacea', tab: 'skin', desc: 'Vascular redness control & soothing barrier repair' },
+      { name: 'Melasma', slug: 'melasma', tab: 'q-switched-laser', desc: 'Specialised Q-Switched Nd:YAG laser toning' },
+      { name: 'Wrinkles', slug: 'wrinkles', tab: 'cosmetic', desc: 'Anti-wrinkle injections & collagen remodelling' },
+      { name: 'Sagging', slug: 'sagging', tab: 'cosmetic', desc: 'Non-surgical radiofrequency MNRF skin tightening' },
+      { name: 'Nail Infections', slug: 'nail-infections', tab: 'skin', desc: 'Antifungal regimens & nail plate restoration' },
+      { name: 'Ear Lobe Piercing', slug: 'ear-lobe-piercing', tab: 'cosmetic', desc: 'Aseptic medical ear piercing with gold studs' }
+    ]
+  },
+  {
+    id: 'hair-care',
+    name: 'Hair Care',
+    tab: 'hair',
+    items: [
+      { name: 'Dandruff', slug: 'dandruff', tab: 'hair', desc: 'Ketoconazole & salicylic scalp antifungal washes' },
+      { name: 'Premature Grey Hair', slug: 'premature-grey-hair', tab: 'hair', desc: 'Follicular nutrition & oxidative stress reduction' },
+      { name: 'Brittle Hair', slug: 'brittle-hair', tab: 'hair', desc: 'Keratin peptide infusion & cuticle repair' },
+      { name: 'Unwanted Facial Hair', slug: 'unwanted-facial-hair', tab: 'laser', desc: 'Painless chilled diode laser reduction' },
+      { name: 'Growth Factor Therapy', slug: 'growth-factor-therapy', tab: 'hair', desc: 'Autologous platelet GFC & PRP biotherapy' },
+      { name: 'Laser Hair Reduction', slug: 'laser-hair-reduction', tab: 'laser', desc: 'Permanent face & body diode laser' },
+      { name: 'Electrolysis', slug: 'electrolysis', tab: 'hair', desc: 'Precision permanent follicular epilation' }
+    ]
+  },
+  {
+    id: 'aesthetics',
+    name: 'Aesthetics',
+    tab: 'cosmetic',
+    items: [
+      { name: 'Chemical Peels', slug: 'chemical-peels', tab: 'cosmetic', desc: 'Custom medical AHA/BHA glow & acne peels' },
+      { name: 'Dermal Fillers/Anti-wrinkle Injections', slug: 'dermal-fillers-anti-wrinkle-injections', tab: 'cosmetic', desc: 'Natural volume restoration & expression smoothing' },
+      { name: 'Microdermabrasion', slug: 'microdermabrasion', tab: 'hydrafacial', desc: 'HydraFacial vortex diamond exfoliation' },
+      { name: 'Microneedling for skin tightening', slug: 'microneedling-for-skin-tightening', tab: 'cosmetic', desc: 'Collagen induction for elasticity & fine lines' },
+      { name: 'Radiofrequency & Electrocautery', slug: 'radiofrequency-electrocautery', tab: 'cosmetic', desc: 'Painless mole, wart & skin tag clearance' },
+      { name: 'Microneedling Radiofrequency (MNRF) for Acne Scars', slug: 'microneedling-radiofrequency-mnrf-for-acne-scars', tab: 'skin', desc: 'Gold-insulated needles for deep pitted scar revision' },
+      { name: 'Acne Laser', slug: 'acne-laser', tab: 'skin', desc: 'Fractional laser resurfacing & bacterial clearance' },
+      { name: 'Intralesional Injections', slug: 'intralesional-injections', tab: 'skin', desc: 'Targeted anti-inflammatory injections for cystic acne & keloids' },
+      { name: 'Thread Lifting', slug: 'thread-lifting', tab: 'cosmetic', desc: 'Absorbable PDO threads for jawline contouring' },
+      { name: 'Diagnostic Skin Biopsies For Histopathology', slug: 'diagnostic-skin-biopsies-for-histopathology', tab: 'skin', desc: 'Microscopic analysis for definitive diagnosis' },
+      { name: 'Laser For Pigmentation Removal', slug: 'laser-for-pigmentation-removal', tab: 'laser', desc: 'Selective photothermolysis for sun spots & freckles' },
+      { name: 'Laser Hair Reduction', slug: 'laser-hair-reduction-aesthetic', tab: 'laser', desc: 'Chilled diode laser for permanent hair reduction' }
+    ]
+  },
+  {
+    id: 'surgery',
+    name: 'Surgery',
+    tab: 'skin',
+    items: [
+      { name: 'Vitiligo Surgery', slug: 'vitiligo-surgery', tab: 'skin', desc: 'Melanocyte transfer & suction blister grafting' },
+      { name: 'Mole Removal', slug: 'mole-removal', tab: 'cosmetic', desc: 'Scar-free radiofrequency excision with biopsy' },
+      { name: 'Sebaceous Cyst Removal', slug: 'sebaceous-cyst-removal', tab: 'skin', desc: 'Minimal-access surgical enucleation' },
+      { name: 'Corn Removal', slug: 'corn-removal', tab: 'skin', desc: 'Pain-free core excision & pressure relief' },
+      { name: 'Ear Lobe Repair', slug: 'ear-lobe-repair', tab: 'cosmetic', desc: 'Non-surgical sutureless lobuloplasty' },
+      { name: 'Acne Scar Revision Surgery', slug: 'acne-scar-revision-surgery', tab: 'skin', desc: 'Subcision, punch excision & dermal grafting' },
+      { name: 'Ingrown Toe Nail Surgery', slug: 'ingrown-toe-nail-surgery', tab: 'skin', desc: 'Partial nail avulsion with chemical matrixectomy' }
+    ]
+  }
+];
+
 

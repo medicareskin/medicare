@@ -285,10 +285,10 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
               </h3>
               <div className="grid-responsive-4">
                 {[
-                  { name: 'Fractional CO2 Laser', desc: 'Fractional micro-beams vaporize damaged tissue and trigger deep dermal neo-collagenesis.', img: '/images/imageye___-_imgi_11_acne-scar-treatment.webp' },
-                  { name: 'Microneedling + PRP', desc: 'Autologous platelet growth factors stimulate rapid fibroblast cellular renewal.', img: '/images/imageye___-_imgi_14_Hair-Treatment.webp' },
-                  { name: 'Clinical Chemical Peels', desc: 'Medical-grade AHA/BHA solutions safely exfoliate dull skin cells and hyperpigmentation.', img: '/images/imageye___-_imgi_7_Chemical-Peel.webp' },
-                  { name: 'Subcision & Collagen Fillers', desc: 'Releasing fibrotic tethered scars combined with targeted volume replenishment.', img: '/images/imageye___-_imgi_8_Botox-and-Fillers-1.webp' }
+                  { name: 'Fractional CO2 Laser', desc: 'Fractional micro-beams vaporize damaged tissue and trigger deep dermal neo-collagenesis.', img: '/images/skin_elasticity_cheek_touch.png' },
+                  { name: 'Microneedling + PRP', desc: 'Autologous platelet growth factors stimulate rapid fibroblast cellular renewal.', img: '/images/radiant_hair_smile_woman.png' },
+                  { name: 'Clinical Chemical Peels', desc: 'Medical-grade AHA/BHA solutions safely exfoliate dull skin cells and hyperpigmentation.', img: '/images/luxury_indian_skin_model.png' },
+                  { name: 'Subcision & Collagen Fillers', desc: 'Releasing fibrotic tethered scars combined with targeted volume replenishment.', img: '/images/poreless_glass_skin_glow.jpg' }
                 ].map((opt, idx) => (
                   <div
                     key={idx}
@@ -589,19 +589,19 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
               {
                 title: 'Acne Scar Reduction',
                 sessions: '3 Sessions · Fractional CO2 Laser',
-                img: '/images/imageye___-_imgi_11_acne-scar-treatment.webp',
+                img: '/images/skin_elasticity_cheek_touch.png',
                 desc: 'Visible shallowing of rolling scars and smoother light reflection.'
               },
               {
                 title: 'Improved Skin Texture',
                 sessions: '4 Sessions · Laser + PRP Protocol',
-                img: '/images/imageye___-_imgi_7_Chemical-Peel.webp',
+                img: '/images/poreless_glass_skin_glow.jpg',
                 desc: 'Deep dermal collagen stimulation and reduction of enlarged pores.'
               },
               {
                 title: 'Smoother, Clearer Skin',
                 sessions: '3 Sessions · Microneedling + Peels',
-                img: '/images/imageye___-_imgi_12_Laser-Hair-Removal.webp',
+                img: '/images/luxury_indian_skin_model.png',
                 desc: 'Even epidermal pigmentation and radiant, renewed skin barrier.'
               }
             ].map((res, idx) => (

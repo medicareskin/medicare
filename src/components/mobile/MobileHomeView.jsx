@@ -5,7 +5,8 @@ import {
   Clock, Compass, Calculator, UserCheck, ChevronLeft, CheckCircle2,
   Layers, Maximize2
 } from 'lucide-react';
-import { CLINIC_INFO, MASTER_TAXONOMY } from '../../data/clinicData';
+import { CLINIC_INFO, MASTER_TAXONOMY, GOOGLE_REVIEWS } from '../../data/clinicData';
+import ClinicalConcernsStrip from '../ClinicalConcernsStrip';
 
 const HERO_BANNERS = [
   {
@@ -13,7 +14,7 @@ const HERO_BANNERS = [
     tag: 'DR. SUJAY M (MBBS, DDVL) · 18+ YRS EXP',
     title: 'Healthy Skin, Beautiful You',
     subtitle: '10,000+ Treated · Clinically Proven Care',
-    image: '/images/imageye___-_imgi_3_banner1.webp',
+    image: '/images/luxury_indian_skin_model.png',
     pill: 'Dr. Sujay M, MBBS DDVL'
   },
   {
@@ -21,7 +22,7 @@ const HERO_BANNERS = [
     tag: 'TARGETED SCAR REVISION',
     title: 'Acne Scar Revision Suite',
     subtitle: 'Subcision, MNRF & Fractional Peels in JP Nagar',
-    image: '/images/imageye___-_imgi_2_banner3.webp',
+    image: '/images/hero_slide_2_acne.jpg',
     pill: '5.0 ★ Acne Clinic'
   },
   {
@@ -29,123 +30,153 @@ const HERO_BANNERS = [
     tag: 'US-FDA CLEARED TRIPLE ICE TECH',
     title: 'Painless Laser Hair Removal',
     subtitle: 'Safe for All Indian Skin Tones · Permanent Reduction',
-    image: '/images/imageye___-_imgi_4_banner2.webp',
+    image: '/images/cat_laser_care.jpg',
     pill: 'US-FDA Laser Tech'
+  },
+  {
+    id: 3,
+    tag: 'ADVANCED TRICHOLOGY SUITE',
+    title: 'Hair Fall Control & PRP',
+    subtitle: 'Doctor-Administered GFC & Scalp Bio-Therapy',
+    image: '/images/hero_slide_3_hair.jpg',
+    pill: 'Follicular Regrowth'
   }
 ];
 
 const FACILITY_PHOTOS = [
-  { id: 1, src: '/slide-img/1.jpg', title: 'US-FDA Laser Treatment Suite', tag: 'Laser Tech' },
-  { id: 2, src: '/slide-img/2.jpg', title: 'Dr. Sujay M Clinical Consultation', tag: 'Senior Diagnosis' },
-  { id: 3, src: '/slide-img/3.jpg', title: 'Acne Scar Subcision Suite', tag: 'Dermal Revision' },
-  { id: 4, src: '/slide-img/4.jpg', title: 'Growth Factor Scalp Therapy', tag: 'Hair Biotherapy' },
+  { id: 1, src: '/images/cat_laser_care.jpg', title: 'US-FDA Laser Treatment Suite', tag: 'Laser Tech' },
+  { id: 2, src: '/images/dr_sujaya.jpeg', title: 'Dr. Sujay M Clinical Consultation', tag: 'Senior Diagnosis' },
+  { id: 3, src: '/images/hero_slide_2_acne.jpg', title: 'Acne Scar Subcision Suite', tag: 'Dermal Revision' },
+  { id: 4, src: '/images/hero_slide_3_hair.jpg', title: 'Growth Factor Scalp Therapy', tag: 'Hair Biotherapy' },
   { id: 5, src: '/slide-img/Scar Treatment.jpg', title: 'Fractional Resurfacing OT', tag: 'Scar Resurfacing' },
   { id: 6, src: '/slide-img/Skin Allergies 1.jpg', title: 'Clinical Patch Testing Lab', tag: 'Allergy Care' },
-  { id: 7, src: '/slide-img/98874dd1eae0b34c8798464c6c3f1c7d.jpg', title: 'Patient Reception & Lounge', tag: 'Clinic Ambience' }
+  { id: 7, src: '/images/clinic_interior_reception.jpg', title: 'Patient Reception & Lounge', tag: 'Clinic Ambience' },
+  { id: 8, src: '/images/hydrafacial_procedure.jpg', title: 'HydraFacial Vortex Infusion Chamber', tag: 'Hydra Care' }
 ];
 
 const SIGNATURE_TREATMENTS = [
   {
-    id: 'acne-scars',
-    title: 'Acne Scars',
-    subtitle: 'Advanced subcision, MNRF & resurfacing',
-    image: '/images/imageye___-_imgi_11_acne-scar-treatment.webp',
-    tag: 'Skin'
-  },
-  {
-    id: 'pigmentation',
-    title: 'Pigmentation & Melasma',
-    subtitle: 'Q-switched laser & depigmentation peels',
-    image: '/images/imageye___-_imgi_7_Chemical-Peel.webp',
-    tag: 'Skin'
-  },
-  {
-    id: 'hair-loss',
-    title: 'Hair Fall & Scalp GFT',
-    subtitle: 'Autologous growth factor restoration',
-    image: '/images/imageye___-_imgi_14_Hair-Treatment.webp',
-    tag: 'Hair'
+    id: 'acne-laser',
+    title: 'Acne Scar Treatment',
+    subtitle: 'Multi-modal scar revision: subcision, MNRF & fractional laser',
+    image: '/images/hero_slide_2_acne.jpg',
+    tag: 'Acne Laser',
+    url: '/acne-laser/'
   },
   {
     id: 'laser-hair',
     title: 'Laser Hair Removal',
-    subtitle: 'Painless contact chilled diode technology',
-    image: '/images/imageye___-_imgi_12_Laser-Hair-Removal.webp',
-    tag: 'Laser'
-  },
-  {
-    id: 'anti-wrinkle',
-    title: 'Anti-Wrinkle Care',
-    subtitle: 'Precision botulinum & dermal fillers',
-    image: '/images/imageye___-_imgi_8_Botox-and-Fillers-1.webp',
-    tag: 'Aesthetics'
+    subtitle: 'Painless chilled diode laser technology for face & body',
+    image: '/images/cat_laser_care.jpg',
+    tag: 'Diode Laser',
+    url: '/hair-care/'
   },
   {
     id: 'chemical-peels',
-    title: 'Chemical Medi-Peels',
-    subtitle: 'Custom dermatologist glow protocols',
-    image: '/images/imageye___-_imgi_13_Acne-Treatment.webp',
-    tag: 'Skin'
+    title: 'Chemical Peels',
+    subtitle: 'Custom dermatological medipeels for glow & acne reduction',
+    image: '/images/luxury_indian_skin_model.png',
+    tag: 'Peels',
+    url: '/chemical-peels/'
+  },
+  {
+    id: 'dermal-fillers-anti-wrinkle-injections',
+    title: 'Dermal Fillers/Anti-wrinkle Injections',
+    subtitle: 'Micro-droplet anti-wrinkle smoothing & volume restoration',
+    image: '/images/radiant_skin_model.jpg',
+    tag: 'Anti-Wrinkle',
+    url: '/dermal-fillers-anti-wrinkle-injections/'
+  },
+  {
+    id: 'microneedling-for-skin-tightening',
+    title: 'Skin Tightening',
+    subtitle: 'Non-surgical radiofrequency MNRF collagen lift',
+    image: '/images/radiant_skin_glow.jpg',
+    tag: 'Skin Tightening',
+    url: '/microneedling-for-skin-tightening/'
+  },
+  {
+    id: 'vitiligo-surgery',
+    title: 'Vitiligo Surgery',
+    subtitle: 'Specialised punch grafting & melanocyte transfer',
+    image: '/images/hero_slide_5_results.jpg',
+    tag: 'Surgery',
+    url: '/vitiligo-surgery/'
+  },
+  {
+    id: 'q-switched-laser-melasma-pigmentation-bangalore',
+    title: 'Q-Switched Laser Melasma',
+    subtitle: 'Nd:YAG laser toning for deep facial pigmentation',
+    image: '/images/q_switched_procedure.jpg',
+    tag: 'Melasma',
+    url: '/q-switched-laser-melasma-pigmentation-bangalore/'
+  },
+  {
+    id: 'hydrafacial-bangalore',
+    title: 'HydraFacial Glow & Hydration',
+    subtitle: 'Deep vortex pore cleansing & hyaluronic hydration',
+    image: '/images/hydrafacial_procedure.jpg',
+    tag: 'HydraFacial',
+    url: '/hydrafacial-bangalore/'
   }
 ];
 
-const PATIENT_STORIES = [
-  {
-    id: 1,
-    name: 'Priya S',
-    role: 'Google Verified Review',
-    text: 'Dr. Sujay is extremely patient and explains everything in detail. My skin texture has improved drastically after subcision and MNRF sessions. Highly recommend!',
-    avatar: '👩',
-    stars: 5,
-    treatment: 'Acne Scar Treatment'
-  },
-  {
-    id: 2,
-    name: 'Rahul M',
-    role: 'Google Verified Review',
-    text: 'Very professional and clean clinic. The painless laser treatment results have been amazing after just 4 sessions. Zero downtime and super friendly staff.',
-    avatar: '👨',
-    stars: 5,
-    treatment: 'Laser Hair Removal'
-  },
-  {
-    id: 3,
-    name: 'Sneha K',
-    role: 'Google Verified Review',
-    text: 'Best dermatology clinic in South Bengaluru. Doctor took time to understand my skin concern and gave honest advice without pushing expensive packages.',
-    avatar: '👩‍🦰',
-    stars: 5,
-    treatment: 'Pigmentation Care'
-  }
-];
+// All 14 authentic 5-star Google Patient Reviews
+const PATIENT_STORIES = GOOGLE_REVIEWS.map((rev) => ({
+  id: rev.id,
+  name: rev.name || rev.author || 'Verified Patient',
+  role: rev.role || 'Google Verified Review',
+  text: rev.text,
+  avatar: rev.avatar || '⭐',
+  stars: rev.rating || 5,
+  treatment: rev.treatment || rev.tag || 'Dermatology Care'
+}));
 
 const BLOG_ARTICLES = [
   {
     id: 1,
-    category: 'Skin Care',
-    title: 'How to Treat Acne Scars: Evidence-Based Options That Work',
-    date: 'Apr 10, 2026',
-    readTime: '5 min read',
-    image: '/images/imageye___-_imgi_11_acne-scar-treatment.webp',
-    tag: 'skin'
+    category: 'Laser Treatments',
+    title: 'Q-Switched Laser for Melasma & Pigmentation: Clinical Guide',
+    date: 'Oct 16, 2026',
+    readTime: '7 min read',
+    image: '/images/q-switched-laser-pigmentation-treatment-bangalore.webp',
+    tag: 'laser'
   },
   {
     id: 2,
-    category: 'Hair Care',
-    title: 'Common Causes of Hair Fall and How Growth Factor Scalp Therapy Works',
-    date: 'Mar 28, 2026',
-    readTime: '5 min read',
-    image: '/images/imageye___-_imgi_14_Hair-Treatment.webp',
-    tag: 'hair'
+    category: 'Aesthetics & Glow',
+    title: 'HydraFacial Treatment in Bengaluru for Glowing Skin: Everything You Need to Know',
+    date: 'Oct 15, 2026',
+    readTime: '6 min read',
+    image: '/images/hydrafacial-skin-hydration-treatment-bangalore.webp',
+    tag: 'aesthetics'
   },
   {
     id: 3,
-    category: 'Aesthetics',
-    title: 'Why Diode Laser with Ice-Cooling is Safest for Indian Skin Tones',
-    date: 'Mar 15, 2026',
-    readTime: '4 min read',
-    image: '/images/imageye___-_imgi_12_Laser-Hair-Removal.webp',
-    tag: 'aesthetics'
+    category: 'Treatment Guides',
+    title: 'Q-Switched Laser vs. HydraFacial: Which Treatment Does Your Skin Need?',
+    date: 'Oct 14, 2026',
+    readTime: '5 min read',
+    image: '/images/luxury_indian_skin_model.png',
+    tag: 'laser'
+  },
+  {
+    id: 4,
+    category: 'Skin Care',
+    title: 'How to Treat Acne Scars: Evidence-Based Options That Work',
+    date: 'Oct 10, 2026',
+    readTime: '5 min read',
+    image: '/images/skin_elasticity_cheek_touch.png',
+    tag: 'skin'
+  },
+  {
+    id: 5,
+    category: 'Hair Care',
+    title: 'Common Causes of Hair Fall and How Growth Factor Scalp Therapy Works',
+    date: 'Sep 28, 2026',
+    readTime: '5 min read',
+    image: '/images/radiant_hair_smile_woman.png',
+    tag: 'hair'
   }
 ];
 
@@ -184,6 +215,7 @@ export default function MobileHomeView({
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeBlogTab, setActiveBlogTab] = useState('all');
   const [reviewIdx, setReviewIdx] = useState(0);
+  const [reviewTouchStart, setReviewTouchStart] = useState(null);
 
   // Auto-rotate hero banners every 5 seconds
   useEffect(() => {
@@ -192,6 +224,22 @@ export default function MobileHomeView({
     }, 5000);
     return () => clearInterval(timer);
   }, []);
+
+  const handleReviewTouchStart = (e) => {
+    setReviewTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleReviewTouchEnd = (e) => {
+    if (reviewTouchStart === null) return;
+    const touchEnd = e.changedTouches[0].clientX;
+    const diff = reviewTouchStart - touchEnd;
+    if (diff > 45) {
+      setReviewIdx((prev) => (prev + 1) % PATIENT_STORIES.length);
+    } else if (diff < -45) {
+      setReviewIdx((prev) => (prev === 0 ? PATIENT_STORIES.length - 1 : prev - 1));
+    }
+    setReviewTouchStart(null);
+  };
 
   const toggleFaq = (idx) => {
     setActiveFaq(activeFaq === idx ? null : idx);
@@ -373,6 +421,15 @@ export default function MobileHomeView({
       </section>
 
       {/* ───────────────────────────────────────────────────────────
+          POPULAR CONCERNS & PROCEDURES STRIP (Pixel-Matched to Reference)
+      ──────────────────────────────────────────────────────────── */}
+      <ClinicalConcernsStrip
+        onOpenBooking={onOpenBooking}
+        onTabChange={onTabChange}
+        onSelectConcern={onSelectTreatment}
+      />
+
+      {/* ───────────────────────────────────────────────────────────
           SCREEN 3: TREATMENT CATEGORIES (Liquid Glass)
       ──────────────────────────────────────────────────────────── */}
       <section className="mob-categories-section">
@@ -474,11 +531,11 @@ export default function MobileHomeView({
       {/* ───────────────────────────────────────────────────────────
           SCREEN 4: SIGNATURE PROCEDURES (Liquid Glass Grid)
       ──────────────────────────────────────────────────────────── */}
-      <section className="mob-signature-section">
+      <section className="mob-signature-section" id="mob-our-treatments-section">
         <div className="mob-section-header">
-          <h2 className="mob-section-title">Signature Procedures</h2>
+          <h2 className="mob-section-title">Our Treatments</h2>
           <p className="mob-section-subtitle">
-            Clinically proven treatments with clear evidence-based results.
+            Doctor-guided aesthetic and dermatological treatments performed by Dr. Sujay M.
           </p>
         </div>
 
@@ -519,9 +576,10 @@ export default function MobileHomeView({
         <div className="mob-doctor-card">
           <div className="mob-doctor-photo-wrap">
             <img
-              src="/images/imageye___-_imgi_6_dr-sujay.webp"
+              src="/images/dr_sujaya.jpeg"
               alt="Dr. (Mrs.) Sujay M - MBBS, DDVL"
               className="mob-doctor-photo"
+              onError={(e) => { e.target.src = "/images/DR%20SUJAYA.jpeg"; }}
             />
             <div className="mob-doc-badge-floating">
               <Award size={15} />
@@ -597,11 +655,16 @@ export default function MobileHomeView({
       </section>
 
       {/* ───────────────────────────────────────────────────────────
-          SCREEN 6: PATIENT REVIEWS (Liquid Glass)
+          SCREEN 6: PATIENT REVIEWS (All 14 Google Verified Reviews)
       ──────────────────────────────────────────────────────────── */}
       <section className="mob-reviews-section">
         <div className="mob-reviews-top-row">
-          <h2 className="mob-section-title" style={{ margin: 0 }}>Patient Stories</h2>
+          <div>
+            <h2 className="mob-section-title" style={{ margin: 0 }}>Patient Stories</h2>
+            <div className="mob-reviews-counter">
+              Review {reviewIdx + 1} of {PATIENT_STORIES.length} · Swipe to explore
+            </div>
+          </div>
           <div className="mob-reviews-nav-arrows">
             <button
               onClick={() => setReviewIdx((prev) => (prev === 0 ? PATIENT_STORIES.length - 1 : prev - 1))}
@@ -634,27 +697,58 @@ export default function MobileHomeView({
                 ))}
               </div>
             </div>
-            <div className="mob-g-label">500+ Verified Patient Reviews on Google</div>
+            <div className="mob-g-label">500+ Verified Patient Reviews on Google Maps</div>
           </div>
         </div>
 
-        {/* Active Review Story Card */}
-        <div className="mob-patient-story-card">
-          <div className="mob-story-stars">
-            {[...Array(PATIENT_STORIES[reviewIdx].stars)].map((_, i) => (
-              <Star key={i} size={15} fill="#C5A174" color="#C5A174" />
-            ))}
+        {/* Active Review Story Card with Touch Swiping */}
+        <div
+          className="mob-patient-story-card"
+          onTouchStart={handleReviewTouchStart}
+          onTouchEnd={handleReviewTouchEnd}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px', gap: '8px', flexWrap: 'wrap' }}>
+            <div className="mob-story-stars">
+              {[...Array(PATIENT_STORIES[reviewIdx].stars)].map((_, i) => (
+                <Star key={i} size={15} fill="#C5A174" color="#C5A174" />
+              ))}
+            </div>
+            {PATIENT_STORIES[reviewIdx].treatment && (
+              <span className="mob-story-treatment-pill">
+                {PATIENT_STORIES[reviewIdx].treatment}
+              </span>
+            )}
           </div>
           <p className="mob-story-text">
             “{PATIENT_STORIES[reviewIdx].text}”
           </p>
           <div className="mob-story-author-row">
-            <div className="mob-story-avatar">{PATIENT_STORIES[reviewIdx].avatar}</div>
-            <div>
+            <div className="mob-story-avatar-initial">
+              {PATIENT_STORIES[reviewIdx].name.charAt(0)}
+            </div>
+            <div style={{ flexGrow: 1 }}>
               <div className="mob-story-author-name">{PATIENT_STORIES[reviewIdx].name}</div>
-              <div className="mob-story-badge">{PATIENT_STORIES[reviewIdx].role}</div>
+              <div className="mob-story-badge">
+                <CheckCircle2 size={12} color="#16A34A" style={{ display: 'inline', marginRight: '4px', verticalAlign: 'middle' }} />
+                <span>{PATIENT_STORIES[reviewIdx].role}</span>
+              </div>
+            </div>
+            <div className="mob-g-mini-badge" title="Google Verified">
+              G
             </div>
           </div>
+        </div>
+
+        {/* Interactive Dots Pagination */}
+        <div className="mob-reviews-dots-row">
+          {PATIENT_STORIES.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setReviewIdx(i)}
+              className={`mob-review-dot ${reviewIdx === i ? 'active' : ''}`}
+              aria-label={`Go to review ${i + 1}`}
+            />
+          ))}
         </div>
       </section>
 
@@ -705,52 +799,7 @@ export default function MobileHomeView({
       </section>
 
       {/* ───────────────────────────────────────────────────────────
-          SCREEN 8: JOURNAL / BLOG (Liquid Glass)
-      ──────────────────────────────────────────────────────────── */}
-      <section className="mob-blog-section">
-        <div className="mob-section-header">
-          <h2 className="mob-section-title">Skin Journal</h2>
-          <p className="mob-section-subtitle">
-            Dermatologist insights and clinical skincare advice from Dr. Sujay M.
-          </p>
-        </div>
-
-        {/* Filter Pills */}
-        <div className="mob-blog-filter-pills">
-          {['all', 'skin', 'hair', 'aesthetics'].map((tag) => (
-            <button
-              key={tag}
-              onClick={() => setActiveBlogTab(tag)}
-              className={`mob-filter-pill ${activeBlogTab === tag ? 'active' : ''}`}
-            >
-              {tag.charAt(0).toUpperCase() + tag.slice(1)}
-            </button>
-          ))}
-        </div>
-
-        {/* Blog Article Cards */}
-        <div className="mob-blog-cards-list">
-          {filteredArticles.map((article) => (
-            <div
-              key={article.id}
-              className="mob-blog-card"
-              onClick={() => onTabChange && onTabChange('blog')}
-            >
-              <img src={article.image} alt={article.title} className="mob-blog-thumb" />
-              <div className="mob-blog-body">
-                <span className="mob-blog-tag">{article.category}</span>
-                <h3 className="mob-blog-title">{article.title}</h3>
-                <div className="mob-blog-meta">
-                  {article.date} · {article.readTime}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ───────────────────────────────────────────────────────────
-          SCREEN 9: CLINIC LOCATION & DIRECTIONS (Liquid Glass)
+          SCREEN 8: CLINIC LOCATION & DIRECTIONS (Liquid Glass)
       ──────────────────────────────────────────────────────────── */}
       <section className="mob-location-section">
         <div className="mob-section-header">
@@ -789,6 +838,51 @@ export default function MobileHomeView({
               <span>Get Directions on Google Maps →</span>
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* ───────────────────────────────────────────────────────────
+          SCREEN 9: JOURNAL / BLOG (Liquid Glass)
+      ──────────────────────────────────────────────────────────── */}
+      <section className="mob-blog-section">
+        <div className="mob-section-header">
+          <h2 className="mob-section-title">Skin Journal</h2>
+          <p className="mob-section-subtitle">
+            Dermatologist insights and clinical skincare advice from Dr. Sujay M.
+          </p>
+        </div>
+
+        {/* Filter Pills */}
+        <div className="mob-blog-filter-pills">
+          {['all', 'laser', 'skin', 'aesthetics', 'hair'].map((tag) => (
+            <button
+              key={tag}
+              onClick={() => setActiveBlogTab(tag)}
+              className={`mob-filter-pill ${activeBlogTab === tag ? 'active' : ''}`}
+            >
+              {tag.charAt(0).toUpperCase() + tag.slice(1)}
+            </button>
+          ))}
+        </div>
+
+        {/* Blog Article Cards */}
+        <div className="mob-blog-cards-list">
+          {filteredArticles.map((article) => (
+            <div
+              key={article.id}
+              className="mob-blog-card"
+              onClick={() => onTabChange && onTabChange('blog')}
+            >
+              <img src={article.image} alt={article.title} className="mob-blog-thumb" />
+              <div className="mob-blog-body">
+                <span className="mob-blog-tag">{article.category}</span>
+                <h3 className="mob-blog-title">{article.title}</h3>
+                <div className="mob-blog-meta">
+                  {article.date} · {article.readTime}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

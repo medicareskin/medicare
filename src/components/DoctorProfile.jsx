@@ -69,8 +69,9 @@ export default function DoctorProfile({ onOpenBooking }) {
 
             <div style={{ borderRadius: '28px 28px 0 0', overflow: 'hidden' }}>
               <img
-                src="/images/imageye___-_imgi_6_dr-sujay.webp"
+                src="/images/dr_sujaya.jpeg"
                 alt="Dr. Sujay M - Senior Dermatologist & Cosmetologist"
+                onError={(e) => { e.target.src = "/images/DR%20SUJAYA.jpeg"; }}
                 style={{
                   width: '100%',
                   display: 'block',

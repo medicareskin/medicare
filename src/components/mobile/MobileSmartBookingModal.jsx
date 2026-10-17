@@ -10,31 +10,31 @@ const CONCERN_OPTIONS = [
     id: 'acne',
     title: 'Acne & Breakouts',
     desc: 'Active pimples, cystic acne, inflammation',
-    image: '/images/imageye___-_imgi_13_Acne-Treatment.webp'
+    image: '/images/hero_slide_2_acne.jpg'
   },
   {
     id: 'hair',
     title: 'Hair Loss & Thinning',
     desc: 'Excessive shedding, hairline recession, PRP/GFC',
-    image: '/images/imageye___-_imgi_14_Hair-Treatment.webp'
+    image: '/images/hero_slide_3_hair.jpg'
   },
   {
     id: 'pigmentation',
     title: 'Pigmentation & Dark Spots',
     desc: 'Melasma, sun spots, tan & uneven tone',
-    image: '/images/imageye___-_imgi_7_Chemical-Peel.webp'
+    image: '/images/q_switched_procedure.jpg'
   },
   {
     id: 'laser',
     title: 'Laser Hair Reduction',
     desc: 'Painless triple wavelength diode laser',
-    image: '/images/imageye___-_imgi_12_Laser-Hair-Removal.webp'
+    image: '/images/cat_laser_care.jpg'
   },
   {
     id: 'other',
     title: 'Other Concerns',
     desc: 'Acne scars, anti-ageing, skin tags, eczema',
-    image: '/images/imageye___-_imgi_11_acne-scar-treatment.webp'
+    image: '/images/hydrafacial_procedure.jpg'
   }
 ];
 
@@ -44,9 +44,15 @@ const TIME_SLOTS = [
   '05:00 PM', '05:30 PM', '06:00 PM', '06:30 PM'
 ];
 
-export default function MobileSmartBookingModal({ isOpen, onClose, onSuccessToast }) {
+export default function MobileSmartBookingModal({ isOpen, onClose, onSuccessToast, initialConcern = 'acne' }) {
   const [step, setStep] = useState(1);
-  const [selectedConcern, setSelectedConcern] = useState('acne');
+  const [selectedConcern, setSelectedConcern] = useState(initialConcern || 'acne');
+
+  React.useEffect(() => {
+    if (initialConcern) {
+      setSelectedConcern(initialConcern);
+    }
+  }, [initialConcern, isOpen]);
   const [selectedLocation, setSelectedLocation] = useState('south-bengaluru');
   const [selectedDate, setSelectedDate] = useState(() => {
     const today = new Date();

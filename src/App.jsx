@@ -33,6 +33,9 @@ import BookAppointmentPage from './pages/BookAppointmentPage';
 import ContactPage from './pages/ContactPage';
 import LegalPage from './pages/LegalPage';
 import SeoAuditReportPage from './pages/SeoAuditReportPage';
+import QSwitchedLaserTreatmentPage from './pages/QSwitchedLaserTreatmentPage';
+import HydraFacialTreatmentPage from './pages/HydraFacialTreatmentPage';
+import TreatmentComparisonSection from './components/TreatmentComparisonSection';
 
 const PATH_TO_TAB = {
   '/': 'home',
@@ -51,7 +54,43 @@ const PATH_TO_TAB = {
   '/faqs': 'faqs',
   '/book-appointment': 'book',
   '/contact-us': 'contact',
-  '/contact': 'contact'
+  '/contact': 'contact',
+  '/q-switched-laser-melasma-pigmentation-bangalore': 'q-switched-laser',
+  '/q-switched-laser-melasma-pigmentation-bangalore/': 'q-switched-laser',
+  '/hydrafacial-bangalore': 'hydrafacial',
+  '/hydrafacial-bangalore/': 'hydrafacial',
+  '/treatment-comparison': 'comparison',
+  '/treatment-comparison/': 'comparison',
+  '/dermatologist-yelachenahalli': 'local-yelachenahalli',
+  '/dermatologist-yelachenahalli/': 'local-yelachenahalli',
+  '/dermatologist-kanakapura-road': 'local-kanakapura-road',
+  '/dermatologist-kanakapura-road/': 'local-kanakapura-road',
+  '/dermatologist-jp-nagar': 'local-jp-nagar',
+  '/dermatologist-jp-nagar/': 'local-jp-nagar',
+  '/skin-clinic-banashankari': 'local-banashankari',
+  '/skin-clinic-banashankari/': 'local-banashankari',
+  '/dermatologist-jayanagar': 'local-jayanagar',
+  '/dermatologist-jayanagar/': 'local-jayanagar',
+  '/dermatologist-kumaraswamy-layout': 'local-kumaraswamy-layout',
+  '/dermatologist-kumaraswamy-layout/': 'local-kumaraswamy-layout',
+  '/dermatologist-konanakunte': 'local-konanakunte',
+  '/dermatologist-konanakunte/': 'local-konanakunte',
+  '/dermatologist-padmanabhanagar': 'local-padmanabhanagar',
+  '/dermatologist-padmanabhanagar/': 'local-padmanabhanagar',
+  '/dermatologist-btm-layout': 'local-btm-layout',
+  '/dermatologist-btm-layout/': 'local-btm-layout',
+  '/acne-laser': 'skin',
+  '/acne-laser/': 'skin',
+  '/hair-care': 'hair',
+  '/hair-care/': 'hair',
+  '/chemical-peels': 'cosmetic',
+  '/chemical-peels/': 'cosmetic',
+  '/dermal-fillers-anti-wrinkle-injections': 'cosmetic',
+  '/dermal-fillers-anti-wrinkle-injections/': 'cosmetic',
+  '/microneedling-for-skin-tightening': 'cosmetic',
+  '/microneedling-for-skin-tightening/': 'cosmetic',
+  '/vitiligo-surgery': 'skin',
+  '/vitiligo-surgery/': 'skin'
 };
 
 const TAB_TO_PATH = {
@@ -69,7 +108,19 @@ const TAB_TO_PATH = {
   'local': '/areas-we-serve',
   'faqs': '/faqs',
   'book': '/book-appointment',
-  'contact': '/contact-us'
+  'contact': '/contact-us',
+  'q-switched-laser': '/q-switched-laser-melasma-pigmentation-bangalore/',
+  'hydrafacial': '/hydrafacial-bangalore/',
+  'comparison': '/treatment-comparison/',
+  'local-yelachenahalli': '/dermatologist-yelachenahalli/',
+  'local-kanakapura-road': '/dermatologist-kanakapura-road/',
+  'local-jp-nagar': '/dermatologist-jp-nagar/',
+  'local-banashankari': '/skin-clinic-banashankari/',
+  'local-jayanagar': '/dermatologist-jayanagar/',
+  'local-kumaraswamy-layout': '/dermatologist-kumaraswamy-layout/',
+  'local-konanakunte': '/dermatologist-konanakunte/',
+  'local-padmanabhanagar': '/dermatologist-padmanabhanagar/',
+  'local-btm-layout': '/dermatologist-btm-layout/'
 };
 
 import TreatmentDetailPage from './pages/TreatmentDetailPage';
@@ -121,7 +172,15 @@ export default function App() {
 
   const [currentTab, setCurrentTabState] = React.useState(() => {
     const path = window.location.pathname.toLowerCase();
-    if (path.startsWith('/treatment/')) return 'treatment-detail';
+    if (path === '/q-switched-laser-melasma-pigmentation-bangalore' || path === '/q-switched-laser-melasma-pigmentation-bangalore/') return 'q-switched-laser';
+    if (path === '/hydrafacial-bangalore' || path === '/hydrafacial-bangalore/') return 'hydrafacial';
+    if (path === '/treatment-comparison' || path === '/treatment-comparison/') return 'comparison';
+    if (path.startsWith('/treatment/')) {
+      const slug = path.replace('/treatment/', '');
+      if (slug === 'q-switched-laser-melasma-pigmentation-bangalore' || slug === 'q-switched-laser-toning') return 'q-switched-laser';
+      if (slug === 'hydrafacial-bangalore' || slug === 'hydrafacial') return 'hydrafacial';
+      return 'treatment-detail';
+    }
     return PATH_TO_TAB[path] || 'home';
   });
 
@@ -146,7 +205,6 @@ export default function App() {
   }, []);
 
   const toggleTheme = () => {};
-
 
   // Lock body scroll whenever any modal, simulator, or portal is open
   React.useEffect(() => {
@@ -194,8 +252,22 @@ export default function App() {
   React.useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname.toLowerCase();
-      if (path.startsWith('/treatment/')) {
+      if (path === '/q-switched-laser-melasma-pigmentation-bangalore' || path === '/q-switched-laser-melasma-pigmentation-bangalore/') {
+        setCurrentTabState('q-switched-laser');
+      } else if (path === '/hydrafacial-bangalore' || path === '/hydrafacial-bangalore/') {
+        setCurrentTabState('hydrafacial');
+      } else if (path === '/treatment-comparison' || path === '/treatment-comparison/') {
+        setCurrentTabState('comparison');
+      } else if (path.startsWith('/treatment/')) {
         const slug = path.replace('/treatment/', '');
+        if (slug === 'q-switched-laser-melasma-pigmentation-bangalore' || slug === 'q-switched-laser-toning') {
+          setCurrentTabState('q-switched-laser');
+          return;
+        }
+        if (slug === 'hydrafacial-bangalore' || slug === 'hydrafacial') {
+          setCurrentTabState('hydrafacial');
+          return;
+        }
         const matched = ALL_CLINIC_TREATMENTS.find(t =>
           t.id.toLowerCase() === slug ||
           t.title.toLowerCase().replace(/[^a-z0-9]+/g, '-') === slug
@@ -217,11 +289,41 @@ export default function App() {
     }, 5000);
   };
 
-  const handleOpenBooking = () => {
+  const [initialBookingConcern, setInitialBookingConcern] = useState('acne');
+
+  const handleOpenBooking = (concern) => {
+    if (concern) {
+      let key = 'acne';
+      const cLower = String(concern).toLowerCase();
+      if (cLower.includes('hair') && !cLower.includes('laser')) key = 'hair';
+      else if (cLower.includes('laser')) key = 'laser';
+      else if (cLower.includes('pigment') || cLower.includes('melasma') || cLower.includes('peel')) key = 'pigmentation';
+      else if (cLower.includes('anti') || cLower.includes('filler') || cLower.includes('medical') || cLower.includes('allergy') || cLower.includes('eczema')) key = 'other';
+      setInitialBookingConcern(key);
+    }
     setIsBookingModalOpen(true);
   };
 
   const handleSelectItem = (item) => {
+    if (!item) return;
+    if (
+      item.id === 'q-switched-laser-melasma-pigmentation-bangalore' ||
+      item.id === 'q-switched-laser-toning' ||
+      item.slug === 'q-switched-laser-melasma-pigmentation-bangalore'
+    ) {
+      setCurrentTab('q-switched-laser');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    if (
+      item.id === 'hydrafacial-bangalore' ||
+      item.id === 'hydrafacial' ||
+      item.slug === 'hydrafacial-bangalore'
+    ) {
+      setCurrentTab('hydrafacial');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     setSelectedItem(item);
     setCurrentTabState('treatment-detail');
     const slug = item.id ? item.id.toLowerCase() : item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -260,13 +362,23 @@ export default function App() {
           />
         )}
         {currentTab === 'home' && (
-          <DesktopHomeView
-            onOpenBooking={handleOpenBooking}
-            onOpenNavigator={() => setIsNavigatorOpen(true)}
-            onOpenCostPlanner={() => setIsCostPlannerOpen(true)}
-            onSelectTreatment={handleSelectItem}
-            onTabChange={setCurrentTab}
-          />
+          isMobileViewport ? (
+            <MobileHomeView
+              onOpenBooking={handleOpenBooking}
+              onOpenNavigator={() => setIsNavigatorOpen(true)}
+              onOpenCostPlanner={() => setIsCostPlannerOpen(true)}
+              onSelectTreatment={handleSelectItem}
+              onTabChange={setCurrentTab}
+            />
+          ) : (
+            <DesktopHomeView
+              onOpenBooking={handleOpenBooking}
+              onOpenNavigator={() => setIsNavigatorOpen(true)}
+              onOpenCostPlanner={() => setIsCostPlannerOpen(true)}
+              onSelectTreatment={handleSelectItem}
+              onTabChange={setCurrentTab}
+            />
+          )
         )}
 
         {currentTab === 'skin' && (
@@ -326,31 +438,19 @@ export default function App() {
         )}
 
         {currentTab === 'blog' && (
-          <BlogPage onOpenBooking={handleOpenBooking} />
+          <BlogPage
+            onOpenBooking={handleOpenBooking}
+            onNavigatePage={setCurrentTab}
+            onSelectTreatment={handleSelectItem}
+          />
         )}
 
-        {currentTab === 'local' && (
-          <LocalSeoPage initialLocality="kanakapura-road" onOpenBooking={handleOpenBooking} />
+        {(currentTab === 'local' || currentTab === 'areas-we-serve') && (
+          <LocalSeoPage initialLocality="yelachenahalli" onOpenBooking={handleOpenBooking} onNavigatePage={setCurrentTab} />
         )}
 
-        {currentTab === 'dermatologist-kanakapura-road' && (
-          <LocalSeoPage initialLocality="kanakapura-road" onOpenBooking={handleOpenBooking} />
-        )}
-
-        {currentTab === 'dermatologist-jp-nagar' && (
-          <LocalSeoPage initialLocality="jp-nagar" onOpenBooking={handleOpenBooking} />
-        )}
-
-        {currentTab === 'skin-clinic-banashankari' && (
-          <LocalSeoPage initialLocality="banashankari" onOpenBooking={handleOpenBooking} />
-        )}
-
-        {currentTab === 'dermatologist-jayanagar' && (
-          <LocalSeoPage initialLocality="jayanagar" onOpenBooking={handleOpenBooking} />
-        )}
-
-        {currentTab === 'areas-we-serve' && (
-          <LocalSeoPage initialLocality="areas-we-serve" onOpenBooking={handleOpenBooking} />
+        {currentTab.startsWith('local-') && (
+          <LocalSeoPage initialLocality={currentTab.replace('local-', '')} onOpenBooking={handleOpenBooking} onNavigatePage={setCurrentTab} />
         )}
 
         {currentTab === 'faqs' && (
@@ -371,6 +471,32 @@ export default function App() {
 
         {currentTab === 'seo-audit' && (
           <SeoAuditReportPage />
+        )}
+
+        {currentTab === 'q-switched-laser' && (
+          <QSwitchedLaserTreatmentPage
+            onOpenBooking={handleOpenBooking}
+            onNavigatePage={setCurrentTab}
+            onSelectTreatment={handleSelectItem}
+          />
+        )}
+
+        {currentTab === 'hydrafacial' && (
+          <HydraFacialTreatmentPage
+            onOpenBooking={handleOpenBooking}
+            onNavigatePage={setCurrentTab}
+            onSelectTreatment={handleSelectItem}
+          />
+        )}
+
+        {currentTab === 'comparison' && (
+          <div style={{ padding: '40px 0 60px' }}>
+            <TreatmentComparisonSection
+              onOpenBooking={handleOpenBooking}
+              onNavigatePage={setCurrentTab}
+              onSelectTreatment={handleSelectItem}
+            />
+          </div>
         )}
       </main>
 
@@ -403,6 +529,7 @@ export default function App() {
         isOpen={isBookingModalOpen}
         onClose={() => setIsBookingModalOpen(false)}
         onSuccessToast={showToast}
+        initialConcern={initialBookingConcern}
       />
 
       {/* Mobile Patient Portal, Aftercare & CRM Journey (Blueprint 2 Screens 10–12) */}

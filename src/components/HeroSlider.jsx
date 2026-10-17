@@ -13,7 +13,7 @@ const HERO_SLIDES = [
       "Bangalore Medical College Postgraduate (2005)",
       "US-FDA Approved Laser & Dermal Suites"
     ],
-    image: "/images/imageye___-_imgi_3_banner1.webp",
+    image: "/images/hero_slide_1_welcome.jpg",
     floatingBadge: { icon: "award", text: "Dr. Sujay M, MBBS DDVL" }
   },
   {
@@ -27,7 +27,7 @@ const HERO_SLIDES = [
       "Dr. Sujay M, MBBS DDVL Specialist",
       "Subcision, MNRF & Fractional Resurfacing"
     ],
-    image: "/images/imageye___-_imgi_2_banner3.webp",
+    image: "/images/hero_slide_2_acne.jpg",
     floatingBadge: { icon: "star", text: "5.0 ★ Acne Clinic" }
   },
   {
@@ -41,8 +41,22 @@ const HERO_SLIDES = [
       "Safe for All Indian Skin Tones",
       "10,000+ Successful Procedures"
     ],
-    image: "/images/imageye___-_imgi_4_banner2.webp",
+    image: "/images/hero_slide_4_laser.jpg",
     floatingBadge: { icon: "shield", text: "US-FDA Approved" }
+  },
+  {
+    id: 3,
+    titleLine1: "Advanced Hair Fall",
+    titleLine2: "Control & PRP.",
+    tagline: "TRICHOLOGY & SCALP BIOTHERAPY",
+    support: "Growth Factor Concentrate (GFC) and micro-needling protocols for targeted follicle revival.",
+    features: [
+      "Autologous Growth Factor Therapy",
+      "Follicular Density Restoration",
+      "Safe & Zero Social Downtime"
+    ],
+    image: "/images/hero_slide_3_hair.jpg",
+    floatingBadge: { icon: "award", text: "GFC & Scalp PRP" }
   }
 ];
 

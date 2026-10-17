@@ -25,6 +25,13 @@ export default function BookingForm({ onSuccessToast, singleCardMode = false, pr
     "Others"
   ];
 
+  const displayedConcerns = React.useMemo(() => {
+    if (preSelectedConcern && !availableConcerns.includes(preSelectedConcern)) {
+      return [preSelectedConcern, ...availableConcerns];
+    }
+    return availableConcerns;
+  }, [preSelectedConcern]);
+
   const handleCheckboxChange = (concern) => {
     setFormData((prev) => {
       const exists = prev.concerns.includes(concern);
@@ -58,8 +65,8 @@ export default function BookingForm({ onSuccessToast, singleCardMode = false, pr
     <section className="booking-overview-section" id="booking-section">
       <div className="container">
         <div className={isStandalone ? "booking-standalone-wrap" : "booking-grid"} style={isStandalone ? { maxWidth: '620px', margin: '0 auto' } : {}}>
-          {/* Liquid Glass Booking Form Card */}
-          <div className="booking-card liquid-glass-card" style={isStandalone ? { width: '100%', margin: '0 auto' } : {}}>
+          {/* Ultra-Crisp Booking Form Card */}
+          <div className="booking-card" style={isStandalone ? { width: '100%', margin: '0 auto' } : {}}>
             <h2 className="booking-form-title">
               {preSelectedConcern ? `Book Appointment for ${preSelectedConcern}` : 'Book Your Appointment'}
             </h2>
@@ -185,7 +192,7 @@ export default function BookingForm({ onSuccessToast, singleCardMode = false, pr
                   {/* Slide Down Collapsible Box */}
                   <div className={`concern-slidedown-content ${isConcernDropdownOpen ? 'open' : ''}`}>
                     <div className="concerns-glass-pills">
-                      {availableConcerns.map((concern) => {
+                      {displayedConcerns.map((concern) => {
                         const isSelected = formData.concerns.includes(concern);
                         return (
                           <label
@@ -200,9 +207,11 @@ export default function BookingForm({ onSuccessToast, singleCardMode = false, pr
                               type="checkbox"
                               checked={isSelected}
                               readOnly
-                              style={{ accentColor: '#942876', width: '16px', height: '16px', cursor: 'pointer' }}
+                              style={{ accentColor: '#942876', width: '17px', height: '17px', cursor: 'pointer', flexShrink: 0 }}
                             />
-                            <span>{concern}</span>
+                            <span style={{ fontSize: '14.5px', fontWeight: isSelected ? '700' : '600' }}>
+                              {concern}
+                            </span>
                           </label>
                         );
                       })}

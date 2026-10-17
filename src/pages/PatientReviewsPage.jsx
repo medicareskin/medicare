@@ -8,7 +8,7 @@ export default function PatientReviewsPage({ onOpenBooking }) {
   const [newReview, setNewReview] = useState({ name: '', treatment: 'Acne Scar Treatment', rating: 5, text: '' });
   const [submitted, setSubmitted] = useState(false);
 
-  const tags = ["All", "Mole Removal", "Skin Tag Removal", "Clinical Care", "Laser Hair Removal", "GFT Hair Therapy", "Acne Scar Revision", "Chemical Peel"];
+  const tags = ["All", ...Array.from(new Set(reviewsList.map(r => r.tag).filter(Boolean)))];
 
   const filteredReviews = filterTag === 'All'
     ? reviewsList
@@ -77,7 +77,7 @@ export default function PatientReviewsPage({ onOpenBooking }) {
               </div>
               <p className="review-quote-text">"{item.text}"</p>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span className="review-author-name">— {item.author}</span>
+                <span className="review-author-name">— {item.author || item.name}</span>
                 <span style={{ fontSize: '11px', color: '#942876', fontWeight: '600' }}>✓ Verified Patient</span>
               </div>
             </div>
