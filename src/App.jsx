@@ -35,7 +35,23 @@ import LegalPage from './pages/LegalPage';
 import SeoAuditReportPage from './pages/SeoAuditReportPage';
 import QSwitchedLaserTreatmentPage from './pages/QSwitchedLaserTreatmentPage';
 import HydraFacialTreatmentPage from './pages/HydraFacialTreatmentPage';
+import HairConcernLandingPage from './pages/HairConcernLandingPage';
 import TreatmentComparisonSection from './components/TreatmentComparisonSection';
+
+const DEDICATED_TREATMENT_PATHS = {
+  'hair-fall-treatment': '/hair-fall-treatment/',
+  'hair-thinning-treatment': '/hair-thinning-treatment/',
+  'unwanted-facial-hair-treatment': '/unwanted-facial-hair-treatment/'
+};
+
+const getDedicatedTreatment = (path) => {
+  const normalizedPath = path.endsWith('/') ? path : `${path}/`;
+  const matchingEntry = Object.entries(DEDICATED_TREATMENT_PATHS)
+    .find(([, route]) => route === normalizedPath);
+  return matchingEntry
+    ? ALL_CLINIC_TREATMENTS.find((treatment) => treatment.id === matchingEntry[0])
+    : null;
+};
 
 const PATH_TO_TAB = {
   '/': 'home',
@@ -59,6 +75,12 @@ const PATH_TO_TAB = {
   '/q-switched-laser-melasma-pigmentation-bangalore/': 'q-switched-laser',
   '/hydrafacial-bangalore': 'hydrafacial',
   '/hydrafacial-bangalore/': 'hydrafacial',
+  '/hair-fall-treatment': 'treatment-detail',
+  '/hair-fall-treatment/': 'treatment-detail',
+  '/hair-thinning-treatment': 'treatment-detail',
+  '/hair-thinning-treatment/': 'treatment-detail',
+  '/unwanted-facial-hair-treatment': 'treatment-detail',
+  '/unwanted-facial-hair-treatment/': 'treatment-detail',
   '/treatment-comparison': 'comparison',
   '/treatment-comparison/': 'comparison',
   '/dermatologist-yelachenahalli': 'local-yelachenahalli',
@@ -160,6 +182,8 @@ const ALL_CLINIC_TREATMENTS = [
 export default function App() {
   const [selectedItem, setSelectedItem] = useState(() => {
     const path = window.location.pathname.toLowerCase();
+    const dedicatedTreatment = getDedicatedTreatment(path);
+    if (dedicatedTreatment) return dedicatedTreatment;
     if (path.startsWith('/treatment/')) {
       const slug = path.replace('/treatment/', '');
       return ALL_CLINIC_TREATMENTS.find(t =>
@@ -252,6 +276,12 @@ export default function App() {
   React.useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname.toLowerCase();
+      const dedicatedTreatment = getDedicatedTreatment(path);
+      if (dedicatedTreatment) {
+        setSelectedItem(dedicatedTreatment);
+        setCurrentTabState('treatment-detail');
+        return;
+      }
       if (path === '/q-switched-laser-melasma-pigmentation-bangalore' || path === '/q-switched-laser-melasma-pigmentation-bangalore/') {
         setCurrentTabState('q-switched-laser');
       } else if (path === '/hydrafacial-bangalore' || path === '/hydrafacial-bangalore/') {
@@ -327,7 +357,8 @@ export default function App() {
     setSelectedItem(item);
     setCurrentTabState('treatment-detail');
     const slug = item.id ? item.id.toLowerCase() : item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    window.history.pushState({ tab: 'treatment-detail', item }, '', `/treatment/${slug}`);
+    const targetPath = DEDICATED_TREATMENT_PATHS[item.id] || `/treatment/${slug}`;
+    window.history.pushState({ tab: 'treatment-detail', item }, '', targetPath);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

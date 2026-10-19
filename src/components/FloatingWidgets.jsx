@@ -299,27 +299,27 @@ export default function FloatingWidgets({ onOpenBooking }) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+            background: 'linear-gradient(135deg, #8B096C 0%, #A61B84 100%)',
             border: '1.5px solid rgba(255, 255, 255, 0.85)',
-            boxShadow: '0 8px 24px rgba(37, 211, 102, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.75)',
+            boxShadow: '0 8px 24px rgba(139, 9, 108, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.75)',
             backdropFilter: 'blur(16px)',
             WebkitBackdropFilter: 'blur(16px)',
             transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-2px) scale(1.05)';
-            e.currentTarget.style.boxShadow = '0 12px 28px rgba(37, 211, 102, 0.45)';
+            e.currentTarget.style.boxShadow = '0 12px 28px rgba(139, 9, 108, 0.45)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'none';
-            e.currentTarget.style.boxShadow = '0 8px 24px rgba(37, 211, 102, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.75)';
+            e.currentTarget.style.boxShadow = '0 8px 24px rgba(139, 9, 108, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.75)';
           }}
         >
           <img
             src="/images/WhatsApp.svg"
             onError={(e) => { e.target.src = "/WhatsApp.svg"; }}
             alt="WhatsApp"
-            style={{ width: '28px', height: '28px' }}
+            style={{ width: '28px', height: '28px', filter: 'grayscale(1) brightness(0) invert(1)' }}
           />
         </a>
       </div>

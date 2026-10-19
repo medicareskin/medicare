@@ -6,12 +6,22 @@ import {
   Clock, Award, Phone, ChevronDown, ChevronUp, Check, Info, Star, HelpCircle
 } from 'lucide-react';
 import { CLINIC_INFO } from '../data/clinicData';
+import HairConcernLandingPage from './HairConcernLandingPage';
 
 export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuccessToast }) {
   const [activeTab, setActiveTab] = useState('overview');
   const [openFaq, setOpenFaq] = useState(0);
 
   if (!item) return null;
+  if (['hair-fall-treatment', 'hair-thinning-treatment', 'unwanted-facial-hair-treatment'].includes(item.id)) {
+    return (
+      <HairConcernLandingPage
+        item={item}
+        onOpenBooking={onOpenBooking}
+        onBack={onBack}
+      />
+    );
+  }
 
   const treatmentTitle = item.title || 'Dermatology Treatment';
   const categoryName = item.category || item.type || 'Clinical Dermatology';

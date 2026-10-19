@@ -1,0 +1,177 @@
+.hair-landing {
+  --hair-ink: #2b1b4d;
+  --hair-text: #5c5268;
+  --hair-accent: #942876;
+  --hair-gold: #b78d4b;
+  --hair-ivory: #faf8f3;
+  color: var(--hair-ink);
+  background: #fff;
+}
+
+.hair-landing-hero {
+  background: linear-gradient(110deg, #faf8f3 0%, #fff 56%, #f6f2e9 100%);
+  padding: 52px 0 44px;
+}
+
+.hair-landing-hero-grid,
+.hair-landing-intro-grid,
+.hair-landing-faq-grid,
+.hair-landing-bottom-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 44px;
+  align-items: center;
+}
+
+.hair-landing-copy { max-width: 610px; }
+
+.hair-landing-back {
+  display: block;
+  margin: 0 0 26px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--hair-accent);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hair-landing-eyebrow,
+.hair-landing-kicker {
+  color: var(--hair-gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.hair-landing-eyebrow {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.hair-landing-copy h1,
+.hair-landing-section h2,
+.hair-landing-bottom h2 {
+  margin: 12px 0;
+  color: var(--hair-ink);
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.13;
+}
+
+.hair-landing-copy h1 { max-width: 620px; font-size: clamp(36px, 4.5vw, 58px); }
+.hair-landing-copy > p { max-width: 570px; margin: 0; color: var(--hair-text); font-size: 16px; line-height: 1.7; }
+.hair-landing-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.hair-landing-primary,
+.hair-landing-call {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hair-landing-primary { border: 1px solid var(--hair-accent); background: var(--hair-accent); color: #fff; cursor: pointer; }
+.hair-landing-call { border: 1px solid #d8d1c3; color: var(--hair-accent); background: #fff; }
+.hair-landing-disclaimer { margin-top: 13px !important; font-size: 11px !important; }
+
+.hair-landing-visual { position: relative; min-height: 350px; }
+.hair-landing-visual > img { display: block; width: 100%; height: 410px; border-radius: 14px; object-fit: cover; }
+.hair-landing-doctor {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 10px;
+  background: rgba(255,255,255,.95);
+  color: var(--hair-accent);
+  box-shadow: 0 8px 24px rgba(32,59,54,.12);
+}
+.hair-landing-doctor strong,
+.hair-landing-doctor small { display: block; }
+.hair-landing-doctor strong { color: var(--hair-ink); font-size: 13px; }
+.hair-landing-doctor small { margin-top: 3px; color: var(--hair-text); font-size: 11px; }
+
+.hair-landing-trust { border-top: 1px solid #eee8dd; border-bottom: 1px solid #eee8dd; background: #fff; }
+.hair-landing-trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.hair-landing-trust-grid > div { min-height: 70px; display: flex; align-items: center; gap: 10px; padding: 12px 18px; color: var(--hair-text); font-size: 12px; font-weight: 700; }
+.hair-landing-trust-grid > div + div { border-left: 1px solid #eee8dd; }
+.hair-landing-trust svg { flex: none; color: var(--hair-gold); }
+
+.hair-landing-section { padding: 56px 0; }
+.hair-landing-intro-grid { align-items: stretch; }
+.hair-landing-panel { padding: 28px; border: 1px solid #eee9df; border-radius: 13px; background: #fff; }
+.hair-landing-section h2 { font-size: clamp(25px, 3vw, 34px); }
+.hair-landing-panel > p,
+.hair-landing-faq-grid > div:first-child > p { color: var(--hair-text); font-size: 14px; line-height: 1.75; }
+.hair-landing-note { display: flex; gap: 10px; margin-top: 22px; padding: 15px; border-radius: 9px; background: var(--hair-ivory); color: var(--hair-text); font-size: 12px; line-height: 1.65; }
+.hair-landing-note svg { flex: none; color: var(--hair-gold); }
+.hair-landing-signs { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 12px; margin-top: 22px; }
+.hair-landing-signs > div { display: flex; align-items: flex-start; gap: 9px; }
+.hair-landing-signs svg { flex: none; color: var(--hair-gold); }
+.hair-landing-signs strong,
+.hair-landing-signs small { display: block; }
+.hair-landing-signs strong { color: var(--hair-ink); font-size: 12px; }
+.hair-landing-signs small { margin-top: 4px; color: var(--hair-text); font-size: 11px; line-height: 1.5; }
+
+.hair-landing-tinted { background: var(--hair-ivory); }
+.hair-landing-section-heading { margin-bottom: 24px; text-align: center; }
+.hair-landing-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.hair-landing-step { min-height: 180px; padding: 20px; border: 1px solid #ede7db; border-radius: 11px; background: #fff; }
+.hair-landing-step-number { color: var(--hair-gold); font-size: 13px; font-weight: 800; }
+.hair-landing-step h3 { margin: 13px 0 8px; color: var(--hair-ink); font-family: 'Playfair Display', Georgia, serif; font-size: 18px; }
+.hair-landing-step p { margin: 0; color: var(--hair-text); font-size: 12px; line-height: 1.6; }
+
+.hair-landing-faq-grid { align-items: start; }
+.hair-landing-faq-grid > div:first-child { padding: 12px 0; }
+.hair-landing-location { display: flex; align-items: center; gap: 8px; margin-top: 22px; color: var(--hair-accent); font-size: 12px; font-weight: 700; }
+.hair-landing-faqs { padding: 24px; border: 1px solid #eee9df; border-radius: 13px; background: #fff; }
+.hair-landing-faqs h2 { margin-top: 0; font-size: 25px; }
+.hair-landing-faq { border-top: 1px solid #eee9df; }
+.hair-landing-faq > button { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 15px 0; border: 0; background: transparent; color: var(--hair-ink); text-align: left; font-size: 13px; font-weight: 700; cursor: pointer; }
+.hair-landing-faq > button svg { flex: none; color: var(--hair-gold); }
+.hair-landing-faq > p { margin: -2px 24px 15px 0; color: var(--hair-text); font-size: 12px; line-height: 1.65; }
+
+.hair-landing-bottom { padding: 38px 0; background: #f7f3e9; }
+.hair-landing-bottom h2 { margin: 8px 0; font-size: clamp(25px, 3vw, 34px); }
+.hair-landing-bottom p { margin: 0; color: var(--hair-text); font-size: 13px; }
+.hair-landing-bottom-inner { grid-template-columns: 1fr auto; gap: 20px; }
+
+@media (max-width: 850px) {
+  .hair-landing-hero-grid,
+  .hair-landing-intro-grid,
+  .hair-landing-faq-grid { grid-template-columns: 1fr; gap: 26px; }
+  .hair-landing-hero { padding-top: 32px; }
+  .hair-landing-back { margin-bottom: 20px; }
+  .hair-landing-visual { min-height: 280px; }
+  .hair-landing-visual > img { height: 330px; }
+  .hair-landing-trust-grid { grid-template-columns: 1fr 1fr; }
+  .hair-landing-trust-grid > div:nth-child(3) { border-left: 0; }
+  .hair-landing-trust-grid > div:nth-child(n+3) { border-top: 1px solid #eee8dd; }
+  .hair-landing-steps { grid-template-columns: 1fr 1fr; }
+  .hair-landing-bottom-inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .hair-landing-hero { padding-top: 24px; }
+  .hair-landing-visual > img { height: 270px; }
+  .hair-landing-copy h1 { font-size: 37px; }
+  .hair-landing-section { padding: 38px 0; }
+  .hair-landing-panel { padding: 21px; }
+  .hair-landing-signs,
+  .hair-landing-steps { grid-template-columns: 1fr; }
+  .hair-landing-step { min-height: auto; }
+  .hair-landing-trust-grid > div { padding: 10px; font-size: 11px; }
+  .hair-landing-primary,
+  .hair-landing-call { width: 100%; }
+}

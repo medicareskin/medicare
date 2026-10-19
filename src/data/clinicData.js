@@ -314,7 +314,7 @@ export const HAIR_CONDITIONS = [
     id: "hair-loss-balding",
     title: "Hair Loss / Balding Treatment",
     category: "Hair",
-    image: "/images/imageye___-_imgi_31_Hair-Fall.webp",
+    image: "/images/hero_slide_3_hair.jpg",
     summary: "Male & female pattern balding (Androgenetic Alopecia) treated with growth factor scalp therapy and FDA medicines.",
     fullText: "Pattern baldness shrinks hair follicles due to DHT sensitivity. We combine DHT blockers, minoxidil formulations, and Growth Factor scalp micro-injections."
   },
@@ -322,7 +322,7 @@ export const HAIR_CONDITIONS = [
     id: "hair-thinning-treatment",
     title: "Hair Thinning Treatment",
     category: "Hair",
-    image: "/images/imageye___-_imgi_31_Hair-Fall.webp",
+    image: "/images/imageye___-_imgi_14_Hair-Treatment.webp",
     summary: "Miniaturized thin hair shafts thickened with follicle nourishing growth factor therapy.",
     fullText: "Early hair thinning indicates follicle miniaturization. GFT micro-injections deliver vital nutrition to double hair shaft thickness."
   },
@@ -370,7 +370,7 @@ export const HAIR_CONDITIONS = [
     id: "unwanted-facial-hair-treatment",
     title: "Unwanted Facial Hair Treatment",
     category: "Hair",
-    image: "/images/imageye___-_imgi_26_Unwanted-Facial-Hair.webp",
+    image: "/images/imageye___-_imgi_28_Laser-Hair-Reductions.webp",
     summary: "Chin, lip, and facial hair permanently reduced with PCOS hormonal evaluation & diode laser.",
     fullText: "Unwanted facial hair caused by hirsutism or PCOS is treated with diode laser hair reduction and medical hormonal assessment."
   },
@@ -1004,5 +1004,4 @@ export const NAV_TREATMENTS_MENU = [
     ]
   }
 ];
-
 
