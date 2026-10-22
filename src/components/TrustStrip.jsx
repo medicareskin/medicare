@@ -4,29 +4,24 @@ import { Award, GraduationCap, MapPin, ShieldCheck, CheckCircle2 } from 'lucide-
 export default function TrustStrip() {
   const TRUST_ITEMS = [
     {
-      icon: <GraduationCap size={20} color="#942876" />,
-      title: "Dr. Sujay M, MBBS, DDVL",
-      subtitle: "Bangalore Medical College (2005)"
+      icon: <GraduationCap size={20} color="#153F39" />,
+      title: "Experienced Dermatologist",
+      subtitle: "Dr. (Mrs.) Sujay M (18+ Yrs, BMCRI)"
     },
     {
-      icon: <Award size={20} color="#942876" />,
-      title: "18+ Years Clinical Practice",
-      subtitle: "10,000+ Treatments Supervised"
+      icon: <ShieldCheck size={20} color="#153F39" />,
+      title: "Personalised Assessment",
+      subtitle: "Diagnostic-first care for skin & hair"
     },
     {
-      icon: <MapPin size={20} color="#942876" />,
-      title: "South Bengaluru Clinic",
-      subtitle: "2 Min from Yelachenahalli Metro"
+      icon: <MapPin size={20} color="#153F39" />,
+      title: "Near Yelachenahalli Metro",
+      subtitle: "Kanakapura Main Road, South BLR"
     },
     {
-      icon: <ShieldCheck size={20} color="#942876" />,
-      title: "US-FDA Approved Laser Systems",
-      subtitle: "Triple Wavelength & Contact Cooling"
-    },
-    {
-      icon: <CheckCircle2 size={20} color="#942876" />,
-      title: "Dermatologist-Led Care",
-      subtitle: "Zero Untrained Technician Handoff"
+      icon: <CheckCircle2 size={20} color="#C5A174" />,
+      title: "Clear Treatment Guidance",
+      subtitle: "Evidence-based clinical options"
     }
   ];
 

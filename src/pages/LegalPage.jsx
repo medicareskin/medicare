@@ -13,7 +13,7 @@ export default function LegalPage({ type = 'privacy' }) {
   return (
     <div style={{ padding: '60px 0', background: 'transparent' }}>
       <div className="container" style={{ maxWidth: '850px' }}>
-        <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '42px', color: '#2B1B4D', marginBottom: '20px' }}>
+        <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '42px', color: '#153F39', marginBottom: '20px' }}>
           {titles[type] || 'Legal & Policy Information'}
         </h1>
 

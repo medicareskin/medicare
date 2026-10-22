@@ -19,7 +19,7 @@ export default function FaqsPage({ onOpenBooking }) {
           <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.95)', color: '#942876', padding: '6px 18px', borderRadius: '30px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '12px', boxShadow: '0 4px 14px rgba(148, 40, 118, 0.06)' }}>
             ❓ Clinical Information & Safety FAQs
           </span>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#2B1B4D', marginBottom: '16px' }}>
+          <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '46px', color: '#153F39', marginBottom: '16px' }}>
             Frequently Asked Questions
           </h1>
           <p style={{ fontSize: '17px', color: '#5C5268', lineHeight: '1.7' }}>
@@ -68,7 +68,7 @@ export default function FaqsPage({ onOpenBooking }) {
 
         {/* Call To Action Banner */}
         <div className="location-card-box" style={{ padding: '45px', textAlign: 'center' }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '30px', marginBottom: '12px', color: '#2B1B4D' }}>
+          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '30px', marginBottom: '12px', color: '#153F39' }}>
             Have a Specific Skin or Hair Question?
           </h2>
           <p style={{ fontSize: '15px', color: '#5C4D68', maxWidth: '550px', margin: '0 auto 20px' }}>

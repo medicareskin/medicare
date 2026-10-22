@@ -54,7 +54,7 @@ export default function Header({ currentTab, setCurrentTab, onOpenBooking, onSel
         category: item.tab || 'skin',
         description: item.desc || `Expert dermatological treatment for ${item.name} at Medicare Skin Clinic Bangalore.`,
         procedures: [item.name, 'Clinical Evaluation', 'Customized Treatment Plan'],
-        benefits: ['Personalized protocol by Dr. Savitha AS', 'US-FDA approved technology', 'Visible long-term results'],
+        benefits: ['Personalized protocol by Dr. (Mrs.) Sujay M, MBBS, DDVL', 'US-FDA approved technology', 'Visible long-term results'],
         results: 'Noticeable clinical improvement with evidence-based dermatological care.',
         downtime: 'Zero to minimal downtime',
         sessions: '1 to 4 sessions as per severity'
@@ -368,6 +368,15 @@ export default function Header({ currentTab, setCurrentTab, onOpenBooking, onSel
             </li>
             <li>
               <button
+                className={`serif-nav-item ${currentTab === 'blog' ? 'active' : ''}`}
+                onClick={() => handleNavClick('blog')}
+                id="navbar-journal-link"
+              >
+                Skin Journal
+              </button>
+            </li>
+            <li>
+              <button
                 className={`serif-nav-item ${isContactActive ? 'active' : ''}`}
                 onClick={() => handleNavClick('contact')}
               >
@@ -380,7 +389,7 @@ export default function Header({ currentTab, setCurrentTab, onOpenBooking, onSel
           <div className="nav-actions-desktop">
             <a
               href={`tel:${CLINIC_INFO.rawPhone}`}
-              className="header-phone-pill"
+              className="header-phone-pill btn-liquid-secondary"
               title={`Call ${CLINIC_INFO.phone}`}
             >
               <Phone size={13} />
@@ -389,7 +398,7 @@ export default function Header({ currentTab, setCurrentTab, onOpenBooking, onSel
 
             <button
               onClick={onOpenBooking}
-              className="header-book-pill"
+              className="header-book-pill btn-liquid-primary"
               id="header-book-appointment-btn"
             >
               <span>Book Appointment</span>
@@ -401,7 +410,7 @@ export default function Header({ currentTab, setCurrentTab, onOpenBooking, onSel
           <div className="mobile-header-right-actions">
             <a
               href={`tel:${CLINIC_INFO.rawPhone}`}
-              className="mobile-header-call-pill"
+              className="mobile-header-call-pill btn-liquid-secondary"
               title="Call Medicare Skin Clinic"
             >
               <Phone size={14} />

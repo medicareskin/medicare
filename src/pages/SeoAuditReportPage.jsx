@@ -10,7 +10,7 @@ export default function SeoAuditReportPage() {
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(255, 255, 255, 0.72)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(148, 40, 118, 0.25)', color: '#942876', padding: '6px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: '600', marginBottom: '12px', boxShadow: '0 4px 14px rgba(148, 40, 118, 0.08)' }}>
             <FileSearch size={16} /> Complete Technical & SEO Analysis
           </div>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '44px', color: '#2B1B4D', marginBottom: '16px' }}>
+          <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '44px', color: '#153F39', marginBottom: '16px' }}>
             Medicare Skin & Cosmetic Clinic Audit & Strategy Report
           </h1>
           <p style={{ fontSize: '16px', color: '#5C5268', lineHeight: '1.7' }}>
@@ -24,7 +24,7 @@ export default function SeoAuditReportPage() {
             <div style={{ width: '44px', height: '44px', background: 'rgba(200, 80, 155, 0.12)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#942876', marginBottom: '16px' }}>
               <Search size={22} />
             </div>
-            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
+            <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', marginBottom: '10px' }}>
               1. Local SEO & Geo-Targeting
             </h3>
             <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>
@@ -36,7 +36,7 @@ export default function SeoAuditReportPage() {
             <div style={{ width: '44px', height: '44px', background: 'rgba(200, 80, 155, 0.12)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#942876', marginBottom: '16px' }}>
               <Zap size={22} />
             </div>
-            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
+            <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', marginBottom: '10px' }}>
               2. AEO & Voice Search (ChatGPT/Siri)
             </h3>
             <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>
@@ -48,7 +48,7 @@ export default function SeoAuditReportPage() {
             <div style={{ width: '44px', height: '44px', background: 'rgba(200, 80, 155, 0.12)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#942876', marginBottom: '16px' }}>
               <Globe size={22} />
             </div>
-            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
+            <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', marginBottom: '10px' }}>
               3. GEO (Generative Engine Optimization)
             </h3>
             <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>
@@ -59,7 +59,7 @@ export default function SeoAuditReportPage() {
 
         {/* Detailed Audit Table */}
         <div className="location-card-box" style={{ padding: '40px', marginBottom: '40px' }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '30px', color: '#2B1B4D', marginBottom: '20px' }}>
+          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '30px', color: '#153F39', marginBottom: '20px' }}>
             Technical & Content Audit Breakdown
           </h2>
 
@@ -105,7 +105,7 @@ export default function SeoAuditReportPage() {
 
         {/* Recommended Keyword Clusters */}
         <div className="location-card-box" style={{ padding: '40px' }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', marginBottom: '16px', color: '#2B1B4D' }}>
+          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '28px', marginBottom: '16px', color: '#153F39' }}>
             Target Keyword Clusters for South Bangalore
           </h2>
 

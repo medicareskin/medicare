@@ -248,10 +248,33 @@ const JOURNEY_STEPS = [
 // ── Screen 8: Skin Journal Articles (From Image 3 Blueprint) ────────────────
 const SKIN_JOURNAL_ARTICLES = [
   {
+    id: 'science-of-glass-skin-radiance-bangalore',
+    category: 'BEAUTY & SKIN RADIANCE',
+    filterTag: 'beauty',
+    title: 'The Science of Glass Skin & Radiance: Dermatologist Secrets',
+    date: 'Oct 22, 2026',
+    readTime: '6 min read',
+    image: '/images/glass_skin_radiance.jpg',
+    tab: 'blog',
+    excerpt: 'How optical light reflection, barrier hydration, multi-molecular HA, and gentle chemo-exfoliation deliver genuine dewy luminescence without harsh bleaching.'
+  },
+  {
+    id: 'bridal-pre-event-beauty-countdown-guide',
+    category: 'BEAUTY & SKIN RADIANCE',
+    filterTag: 'beauty',
+    title: 'Pre-Event & Bridal Beauty Countdown: Clinical Timeline',
+    date: 'Oct 21, 2026',
+    readTime: '7 min read',
+    image: '/images/bridal_beauty_radiance.jpg',
+    tab: 'blog',
+    excerpt: 'A month-by-month clinical preparation guide for brides and event attendees in Bengaluru to look camera-ready without risking purging or redness.'
+  },
+  {
     id: 'q-switched-laser-melasma-pigmentation-guide',
     category: 'LASER TREATMENTS',
-    title: 'Q-Switched Laser for Melasma & Pigmentation: Dermatologist Guide',
-    date: 'Oct 16, 2026',
+    filterTag: 'laser',
+    title: 'Q-Switched Laser for Melasma & Pigmentation: Clinical Guide',
+    date: 'Oct 20, 2026',
     readTime: '7 min read',
     image: '/images/q-switched-laser-pigmentation-treatment-bangalore.webp',
     tab: 'q-switched-laser',
@@ -260,32 +283,68 @@ const SKIN_JOURNAL_ARTICLES = [
   {
     id: 'hydrafacial-skin-hydration-glow-bangalore',
     category: 'AESTHETICS & GLOW',
+    filterTag: 'aesthetics',
     title: 'HydraFacial Treatment for Glowing, Hydrated & Brighter Skin',
-    date: 'Oct 15, 2026',
+    date: 'Oct 19, 2026',
     readTime: '6 min read',
     image: '/images/hydrafacial-skin-hydration-treatment-bangalore.webp',
     tab: 'hydrafacial',
     excerpt: 'The 5-step device-assisted facial combining gentle vortex exfoliation, vacuum extraction, and antioxidant peptide hydration.'
   },
   {
+    id: 'medical-chemical-peels-vs-salon-bleach-glow',
+    category: 'BEAUTY & SKIN RADIANCE',
+    filterTag: 'beauty',
+    title: 'Medical Peels vs Salon Bleach: Authentic Beauty Without Damage',
+    date: 'Oct 18, 2026',
+    readTime: '5 min read',
+    image: '/images/medical_peel_glow.jpg',
+    tab: 'blog',
+    excerpt: 'Why salon hydrogen peroxide bleaches trigger reactive hyperpigmentation in Indian skin, and how clinical lactic and mandelic peels unlock true radiance.'
+  },
+  {
     id: 'q-switched-laser-vs-hydrafacial-comparison',
     category: 'TREATMENT GUIDES',
+    filterTag: 'guides',
     title: 'Q-Switched Laser vs. HydraFacial: Which One Do You Need?',
-    date: 'Oct 14, 2026',
+    date: 'Oct 16, 2026',
     readTime: '5 min read',
     image: '/images/luxury_indian_skin_model.png',
     tab: 'comparison',
     excerpt: 'Comparing photoacoustic pigment clearance against surface vortex hydration, and Dr. Sujay M\'s combination synergy protocol.'
   },
   {
-    id: 'acne-scars-expert-options',
+    id: 'anti-ageing-collagen-preservation-beauty-secrets',
+    category: 'BEAUTY & SKIN RADIANCE',
+    filterTag: 'beauty',
+    title: 'Collagen Preservation & Graceful Beauty: Non-Invasive Anti-Ageing Secrets',
+    date: 'Oct 15, 2026',
+    readTime: '6 min read',
+    image: '/images/skin_elasticity_cheek_touch.png',
+    tab: 'blog',
+    excerpt: 'Dermatologist insights on counteracting the 1% annual collagen decline with retinoid synergy, peptides, and radiofrequency tissue remodeling.'
+  },
+  {
+    id: 'acne-scar-treatment-guide',
     category: 'SKIN CARE',
+    filterTag: 'skincare',
     title: 'How to Treat Acne Scars: Expert Options That Work',
-    date: 'Oct 10, 2026',
+    date: 'Oct 12, 2026',
     readTime: '5 min read',
     image: '/images/skin_elasticity_cheek_touch.png',
     tab: 'skin',
     excerpt: 'Explore dermatological options from subcision to fractional RF microneedling and medical peels for smoother skin.'
+  },
+  {
+    id: 'growth-factor-therapy-hair-loss',
+    category: 'HAIR RESTORATION',
+    filterTag: 'hair',
+    title: 'Growth Factor Scalp Therapy: Halting Fall & Reactivating Dormant Roots',
+    date: 'Oct 08, 2026',
+    readTime: '4 min read',
+    image: '/images/radiant_hair_smile_woman.png',
+    tab: 'hair',
+    excerpt: 'Medical science behind autologous growth factor scalp micro-injections for natural hair density and strength.'
   }
 ];
 
@@ -327,22 +386,22 @@ const HERO_SLIDES_DATA = [
     id: 'clinic-welcome',
     image: '/images/hero_slide_1_welcome.jpg',
     imagePosition: 'right center',
-    eyebrow: 'WELCOME TO MEDICARE SKIN · DR. SUJAY M (MBBS, DDVL)',
-    title: 'Dermatologist-Led Skin, Hair & Laser Care',
-    subtitle: 'Comprehensive, evidence-based dermatological therapies in South Bengaluru backed by 18+ years of clinical excellence.',
-    badgeHighlight: '18+ Years Clinical Excellence',
-    primaryBtn: { text: 'Book Consultation', action: 'book' },
+    eyebrow: 'DERMATOLOGIST-LED CARE IN SOUTH BENGALURU',
+    title: 'Skin, Hair & Laser Care with Personalised Dermatology Expertise',
+    subtitle: 'Get individual care for acne, acne scars, melasma, pigmentation, hair loss, skin allergies and selected aesthetic concerns at Medicare Skin & Cosmetic Clinic. Consult Dr. (Mrs.) Sujay M, MBBS, DDVL, near Yelachenahalli Metro Station, Bengaluru.',
+    badgeHighlight: '18+ Years Experience',
+    primaryBtn: { text: 'Request a Dermatologist Consultation', action: 'book' },
     secondaryBtn: { text: 'Call +91 92428 55707', action: 'call' }
   },
   {
     id: 'acne-reversal',
     image: '/images/hero_slide_2_acne.jpg',
     imagePosition: 'right center',
-    eyebrow: 'MNRF · SUBCISION · CLINICAL PEELS',
-    title: 'Noticeable Acne Scar & Pigmentation Reversal',
+    eyebrow: 'DERMATOLOGIST-LED ACNE & SCAR CARE',
+    title: 'Acne & Acne Scar Assessment & Care',
     subtitle: 'Doctor-supervised multi-modal scar revision protocols engineered for stubborn rolling scars, pitted blemishes, and deep melasma.',
-    badgeHighlight: 'Noticeable Texture Revival',
-    primaryBtn: { text: 'Book Acne Assessment', action: 'book' },
+    badgeHighlight: 'Personalised Assessment',
+    primaryBtn: { text: 'Request a Dermatologist Consultation', action: 'book' },
     secondaryBtn: { text: 'View Scar Treatments', action: 'tab:skin' }
   },
   {
@@ -353,30 +412,30 @@ const HERO_SLIDES_DATA = [
     title: 'Advanced Hair Fall Control & GFC Therapy',
     subtitle: 'High-concentration Growth Factor Therapy and precision trichoscopy to revive dormant follicles and stimulate natural regrowth.',
     badgeHighlight: 'Doctor-Administered GFC & PRP',
-    primaryBtn: { text: 'Consult for Hair Loss', action: 'book' },
+    primaryBtn: { text: 'Request a Dermatologist Consultation', action: 'book' },
     secondaryBtn: { text: 'Explore Hair Care', action: 'tab:hair' }
   },
   {
     id: 'laser-hair',
     image: '/images/hero_slide_4_laser.jpg',
     imagePosition: 'right center',
-    eyebrow: 'PAINLESS SAPPHIRE CHILLING · ZERO DOWNTIME',
-    title: 'Triple-Wavelength Laser Hair Reduction',
+    eyebrow: 'PRECISION DIODE LASER TECHNOLOGY',
+    title: 'Laser Hair Reduction for Indian Skin',
     subtitle: 'Safe, effective, and doctor-calibrated diode laser technology specially tailored for South Asian and Indian skin types.',
     badgeHighlight: 'Safe for Indian Skin',
-    primaryBtn: { text: 'Book Laser Session', action: 'book' },
+    primaryBtn: { text: 'Request a Dermatologist Consultation', action: 'book' },
     secondaryBtn: { text: 'Explore Laser Tech', action: 'tab:laser' }
   },
   {
     id: 'clinic-facility',
     image: '/images/clinic_interior_reception.jpg',
     imagePosition: '70% center',
-    eyebrow: '10,000+ SATISFIED PATIENTS · SOUTH BENGALURU',
-    title: 'Trusted Dermatological Care & Proven Results',
+    eyebrow: 'NEAR YELACHENAHALLI METRO · SOUTH BENGALURU',
+    title: 'Trusted Dermatological Care & Clear Treatment Guidance',
     subtitle: 'Experience doctor-guided skin and hair transformations with personalised treatment plans and state-of-the-art clinical safety.',
-    badgeHighlight: '10,000+ Happy Patients',
-    primaryBtn: { text: 'Book Consultation', action: 'book' },
-    secondaryBtn: { text: 'Visit Clinic in Jayanagar', action: 'location' }
+    badgeHighlight: 'Near Yelachenahalli Metro',
+    primaryBtn: { text: 'Request a Dermatologist Consultation', action: 'book' },
+    secondaryBtn: { text: 'Visit Clinic in Yelachenahalli', action: 'location' }
   }
 ];
 
@@ -396,11 +455,16 @@ export default function DesktopHomeView({
   });
   const [inquirySent, setInquirySent] = useState(false);
   const [selectedCategoryTab, setSelectedCategoryTab] = useState('all');
+  const [journalCategory, setJournalCategory] = useState('all');
   const [openFaqIdx, setOpenFaqIdx] = useState(0);
   const [heroSlideIdx, setHeroSlideIdx] = useState(0);
   const [isHeroHovered, setIsHeroHovered] = useState(false);
   const signatureScrollRef = React.useRef(null);
   const reviewsScrollRef = React.useRef(null);
+
+  const filteredJournalArticles = journalCategory === 'all'
+    ? SKIN_JOURNAL_ARTICLES
+    : SKIN_JOURNAL_ARTICLES.filter((art) => art.filterTag === journalCategory);
 
   // Auto-advance hero slider every 5.5s unless hovered
   useEffect(() => {
@@ -621,13 +685,13 @@ export default function DesktopHomeView({
                     18+ Yrs Experience
                   </span>
                   <span className="desk-directory-trust-pill">
-                    <Star size={13} fill="#D4AF37" color="#D4AF37" />
-                    5.0 Google Rating (1,044+ Reviews)
+                    <MapPin size={13} color="#D4AF37" />
+                    Near Yelachenahalli Metro
                   </span>
                 </div>
-                <h2 className="desk-section-title">Our Treatment Categories</h2>
+                <h2 className="desk-section-title">Find Care for Your Concern</h2>
                 <p className="desk-section-sub">
-                  Doctor-supervised clinical protocols across medical dermatology, advanced aesthetic contouring, medical lasers &amp; trichology led by Dr. Sujay M.
+                  Explore skin conditions, hair and scalp concerns, laser options, aesthetic procedures, and medical dermatology. Start with a concern—our team will help determine whether a consultation is appropriate.
                 </p>
               </div>
 
@@ -731,9 +795,9 @@ export default function DesktopHomeView({
           <div className="desk-section-head-row">
             <div>
               <span className="desk-section-badge">EVIDENCE-BASED PROCEDURES</span>
-              <h2 className="desk-section-title">Our Treatments</h2>
+              <h2 className="desk-section-title">Our Commonly Discussed Treatments</h2>
               <p className="desk-section-sub">
-                Doctor-guided aesthetic and dermatological treatments performed by Dr. Sujay M with US-FDA approved technologies.
+                Acne and acne scars, pigmentation and melasma, laser hair reduction, chemical peels, hair loss, MNRF and selected aesthetic procedures. Only procedures performed by Dr. (Mrs.) Sujay M.
               </p>
             </div>
             <div className="desk-head-actions-row">
@@ -824,9 +888,9 @@ export default function DesktopHomeView({
             {/* Right Column: Credentials, Specializations & Quote */}
             <div className="desk-doc-details">
               <span className="desk-section-badge">OUR DERMATOLOGIST</span>
-              <h2 className="desk-doc-name">Meet Dr. Sujay M</h2>
+              <h2 className="desk-doc-name">Meet Dr. (Mrs.) Sujay M</h2>
               <p className="desk-doc-role">
-                MBBS, DDVL — Consultant Dermatologist &amp; Hair Transplant Surgeon
+                MBBS, DDVL — Dermatologist &amp; Cosmetologist
               </p>
 
               {/* Key Credentials Grid */}
@@ -835,15 +899,15 @@ export default function DesktopHomeView({
                   <Award size={18} color="#D4AF37" />
                   <div>
                     <strong>18+ Years Experience</strong>
-                    <span>BMCRI Post-Graduate Alumni (2005)</span>
+                    <span>Bangalore Medical College Alumni (2005)</span>
                   </div>
                 </div>
 
                 <div className="desk-cred-item">
                   <UserCheck size={18} color="#8B096C" />
                   <div>
-                    <strong>10,000+ Happy Patients</strong>
-                    <span>Treated across South Bengaluru</span>
+                    <strong>Personalised Clinical Care</strong>
+                    <span>Individual assessment for skin &amp; hair</span>
                   </div>
                 </div>
 
@@ -851,7 +915,7 @@ export default function DesktopHomeView({
                   <ShieldCheck size={18} color="#D4AF37" />
                   <div>
                     <strong>MBBS, DDVL Qualified</strong>
-                    <span>Medical Council of India Certified</span>
+                    <span>Clear, evidence-backed treatment guidance</span>
                   </div>
                 </div>
 
@@ -867,9 +931,9 @@ export default function DesktopHomeView({
               {/* Personal Message Quote Box */}
               <div className="desk-doc-quote-card">
                 <p className="desk-doc-quote-text">
-                  “My goal is to help every patient feel confident in their skin, with care that is safe, effective and tailored to their needs.”
+                  “Individualised dermatology care combining clinical assessment, patient education and responsible treatment selection.”
                 </p>
-                <span className="desk-doc-quote-author">— Dr. Sujay M</span>
+                <span className="desk-doc-quote-author">— Dr. (Mrs.) Sujay M, MBBS, DDVL</span>
               </div>
 
               <div className="desk-doc-actions">
@@ -902,10 +966,10 @@ export default function DesktopHomeView({
         <div className="desk-container">
           <div className="desk-section-head-row">
             <div>
-              <span className="desk-section-badge">TESTIMONIALS</span>
-              <h2 className="desk-section-title">Patient Stories</h2>
+              <span className="desk-section-badge">PATIENT EXPERIENCES</span>
+              <h2 className="desk-section-title">Patient Experiences</h2>
               <p className="desk-section-sub">
-                Real patient stories, Google rating and key trust indicators.
+                Read authentic patient comments and medically appropriate treatment experiences. No invented reviews or guaranteed results.
               </p>
             </div>
             <div className="desk-head-actions-row">
@@ -930,10 +994,10 @@ export default function DesktopHomeView({
               <div className="desk-google-rating-badge">
                 <span className="desk-g-icon">G</span>
                 <div>
-                  <strong>4.9 / 5 Average rating on Google</strong>
+                  <strong>Verified Patient Experiences on Google</strong>
                   <div className="desk-stars-row">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={14} fill="#D4AF37" color="#D4AF37" />
+                      <Star key={i} size={14} fill="#C5A174" color="#C5A174" />
                     ))}
                   </div>
                 </div>
@@ -967,28 +1031,23 @@ export default function DesktopHomeView({
           {/* Trust Strip at Bottom of Reviews */}
           <div className="desk-trust-strip">
             <div className="desk-strip-item">
-              <strong>500+</strong>
-              <span>Happy Patients</span>
-            </div>
-            <div className="desk-strip-divider" />
-            <div className="desk-strip-item">
-              <strong>4.9/5</strong>
-              <span>Google Rating</span>
-            </div>
-            <div className="desk-strip-divider" />
-            <div className="desk-strip-item">
-              <strong>Evidence-Based</strong>
-              <span>Treatments</span>
-            </div>
-            <div className="desk-strip-divider" />
-            <div className="desk-strip-item">
-              <strong>Safe &amp; Modern</strong>
-              <span>Clinic</span>
+              <strong>Experienced</strong>
+              <span>Dermatologist</span>
             </div>
             <div className="desk-strip-divider" />
             <div className="desk-strip-item">
               <strong>Personalised</strong>
-              <span>Care Plans</span>
+              <span>Assessment</span>
+            </div>
+            <div className="desk-strip-divider" />
+            <div className="desk-strip-item">
+              <strong>Near Yelachenahalli</strong>
+              <span>Metro Station</span>
+            </div>
+            <div className="desk-strip-divider" />
+            <div className="desk-strip-item">
+              <strong>Clear Treatment</strong>
+              <span>Guidance</span>
             </div>
           </div>
         </div>
@@ -1001,9 +1060,9 @@ export default function DesktopHomeView({
         <div className="desk-container">
           <div className="desk-journey-center">
             <span className="desk-section-badge center">STEP-BY-STEP PROCESS</span>
-            <h2 className="desk-section-title center">Your Consultation Journey</h2>
+            <h2 className="desk-section-title center">How a Consultation Works</h2>
             <p className="desk-section-sub center">
-              A simple, seamless process to get the right care for your skin and hair.
+              Request an appointment, meet the dermatologist, discuss findings and available options, receive an individual care plan, and follow recommended aftercare and review.
             </p>
           </div>
 
@@ -1062,37 +1121,96 @@ export default function DesktopHomeView({
 
 
       {/* ───────────────────────────────────────────────────────────
-          7. SKIN JOURNAL / BLOG LISTING (Blueprint Screen 8)
+          7. SKIN & BEAUTY JOURNAL (Blueprint Screen 8)
       ──────────────────────────────────────────────────────────── */}
-      <section className="desk-section desk-journal-section">
+      <section className="desk-section desk-journal-section" id="desk-journal-section">
         <div className="desk-container">
           <div className="desk-section-head-row">
             <div>
-              <span className="desk-section-badge">DERMATOLOGY EDUCATION</span>
-              <h2 className="desk-section-title">Skin Journal</h2>
+              <span className="desk-section-badge">
+                <Sparkles size={14} color="#C5A174" /> CLINICAL DERMATOLOGY &amp; BEAUTY JOURNAL
+              </span>
+              <h2 className="desk-section-title">Skin &amp; Beauty Journal</h2>
               <p className="desk-section-sub">
-                Expert insights, tips and updates from our dermatology team.
+                Doctor-reviewed articles explaining glass skin radiance, pre-event countdowns, non-invasive anti-ageing protocols, and advanced laser science.
               </p>
             </div>
             <button
               className="desk-link-btn"
               onClick={() => navigateToTab('blog')}
+              id="desk-view-all-journal-btn"
             >
-              <span>View All Articles</span>
+              <span>View All 9 Articles</span>
               <ArrowRight size={16} />
             </button>
           </div>
 
+          {/* Interactive Category Filter Pills */}
+          <div style={{
+            display: 'flex',
+            gap: '10px',
+            flexWrap: 'wrap',
+            margin: '22px 0 28px',
+            alignItems: 'center'
+          }}>
+            {[
+              { id: 'all', label: 'All Articles' },
+              { id: 'beauty', label: '✨ Beauty & Skin Radiance' },
+              { id: 'laser', label: 'Laser & Melasma' },
+              { id: 'aesthetics', label: 'Aesthetics & Glow' },
+              { id: 'skincare', label: 'Clinical Skin Care' },
+              { id: 'hair', label: 'Hair Restoration' }
+            ].map((cat) => {
+              const isActive = journalCategory === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setJournalCategory(cat.id)}
+                  style={{
+                    padding: '8px 18px',
+                    borderRadius: '24px',
+                    fontSize: '13px',
+                    fontWeight: 700,
+                    fontFamily: "'Manrope', sans-serif",
+                    border: isActive ? '1.5px solid #153F39' : '1.5px solid rgba(21, 63, 57, 0.16)',
+                    background: isActive ? '#153F39' : '#FFFFFF',
+                    color: isActive ? '#FFFFFF' : '#253532',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                    boxShadow: isActive ? '0 4px 14px rgba(21, 63, 57, 0.2)' : '0 2px 6px rgba(0,0,0,0.02)'
+                  }}
+                >
+                  {cat.label}
+                </button>
+              );
+            })}
+          </div>
+
           <div className="desk-journal-grid">
-            {SKIN_JOURNAL_ARTICLES.map((art) => (
+            {filteredJournalArticles.slice(0, 6).map((art) => (
               <div
                 key={art.id}
                 className="desk-journal-card"
-                onClick={() => navigateToTab('blog')}
+                onClick={() => {
+                  if (art.tab && art.tab !== 'blog') {
+                    navigateToTab(art.tab);
+                  } else {
+                    navigateToTab('blog');
+                  }
+                }}
               >
                 <div className="desk-journal-img-frame">
-                  <img src={art.image} alt={art.title} />
-                  <span className="desk-journal-cat-pill">{art.category}</span>
+                  <img src={art.image} alt={art.title} loading="lazy" />
+                  <span
+                    className="desk-journal-cat-pill"
+                    style={{
+                      background: art.filterTag === 'beauty' ? '#153F39' : 'rgba(255, 255, 255, 0.94)',
+                      color: art.filterTag === 'beauty' ? '#FFFFFF' : '#153F39',
+                      border: art.filterTag === 'beauty' ? '1px solid #C5A174' : 'none'
+                    }}
+                  >
+                    {art.filterTag === 'beauty' ? '✨ ' + art.category : art.category}
+                  </span>
                 </div>
                 <div className="desk-journal-content">
                   <div className="desk-journal-meta">
@@ -1109,6 +1227,47 @@ export default function DesktopHomeView({
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Quick Beauty Topic Prompts */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            flexWrap: 'wrap',
+            marginTop: '28px',
+            padding: '14px 20px',
+            background: 'rgba(245, 239, 230, 0.7)',
+            borderRadius: '16px',
+            border: '1px solid rgba(197, 161, 116, 0.35)'
+          }}>
+            <span style={{ fontSize: '12px', fontWeight: 800, color: '#153F39', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
+              ✨ Trending Topics:
+            </span>
+            <button
+              onClick={() => navigateToTab('blog')}
+              style={{ background: '#FFFFFF', border: '1px solid rgba(21, 63, 57, 0.15)', borderRadius: '12px', padding: '5px 12px', fontSize: '12px', fontWeight: 700, color: '#153F39', cursor: 'pointer' }}
+            >
+              The Science of Glass Skin
+            </button>
+            <button
+              onClick={() => navigateToTab('blog')}
+              style={{ background: '#FFFFFF', border: '1px solid rgba(21, 63, 57, 0.15)', borderRadius: '12px', padding: '5px 12px', fontSize: '12px', fontWeight: 700, color: '#153F39', cursor: 'pointer' }}
+            >
+              Bridal Radiance Countdown
+            </button>
+            <button
+              onClick={() => navigateToTab('blog')}
+              style={{ background: '#FFFFFF', border: '1px solid rgba(21, 63, 57, 0.15)', borderRadius: '12px', padding: '5px 12px', fontSize: '12px', fontWeight: 700, color: '#153F39', cursor: 'pointer' }}
+            >
+              Medical Peels vs Salon Bleach
+            </button>
+            <button
+              onClick={() => navigateToTab('blog')}
+              style={{ background: '#FFFFFF', border: '1px solid rgba(21, 63, 57, 0.15)', borderRadius: '12px', padding: '5px 12px', fontSize: '12px', fontWeight: 700, color: '#153F39', cursor: 'pointer' }}
+            >
+              Collagen Preservation &amp; Anti-Ageing
+            </button>
           </div>
         </div>
       </section>
@@ -1276,130 +1435,7 @@ export default function DesktopHomeView({
         </div>
       </section>
 
-      {/* ───────────────────────────────────────────────────────────
-          9. CLINICAL BLOGS & DOCTOR INSIGHTS (Screen 9)
-      ──────────────────────────────────────────────────────────── */}
-      <section className="desk-section desk-blogs-section" id="desk-blogs-section">
-        <div className="desk-container">
-          <div className="desk-section-head-row">
-            <div>
-              <span className="desk-section-badge">
-                <FileText size={14} /> CLINICAL DERMATOLOGY JOURNAL
-              </span>
-              <h2 className="desk-section-title">
-                Latest Skin & Laser Insights by Dr. Sujay M
-              </h2>
-              <p className="desk-section-sub">
-                Evidence-based dermatology guides on advanced laser toning, medical facials, acne scar revision protocols, and hair restoration.
-              </p>
-            </div>
-            <button
-              className="desk-link-btn"
-              onClick={() => onTabChange('blog')}
-              id="desk-view-all-blogs-btn"
-            >
-              <span>View All 5+ Clinical Articles</span>
-              <ChevronRight size={16} />
-            </button>
-          </div>
 
-          <div className="desk-blogs-grid">
-            {SKIN_JOURNAL_ARTICLES.slice(0, 3).map((post) => (
-              <article
-                key={post.id}
-                className="desk-blog-card"
-                onClick={() => {
-                  if (post.tab) {
-                    onTabChange(post.tab);
-                  } else {
-                    onTabChange('blog');
-                  }
-                }}
-              >
-                <div className="desk-blog-img-box">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="desk-blog-img"
-                    loading="lazy"
-                  />
-                  <div className="desk-blog-badge-overlay">
-                    <span className="desk-blog-cat-badge">{post.category}</span>
-                  </div>
-                </div>
-
-                <div className="desk-blog-body">
-                  <div className="desk-blog-meta">
-                    <span className="desk-blog-meta-item">
-                      <Clock size={13} /> {post.readTime}
-                    </span>
-                    <span className="desk-blog-meta-dot">•</span>
-                    <span className="desk-blog-meta-item">
-                      <Calendar size={13} /> {post.date}
-                    </span>
-                  </div>
-
-                  <h3 className="desk-blog-title">{post.title}</h3>
-                  <p className="desk-blog-excerpt">{post.excerpt}</p>
-
-                  <div className="desk-blog-footer">
-                    <div className="desk-blog-author">
-                      <div className="desk-blog-avatar-ring">
-                        <img
-                          src="/images/dr_sujaya.jpeg"
-                          alt="Dr. Sujay M"
-                          className="desk-blog-author-avatar"
-                          onError={(e) => { e.target.src = "/images/DR%20SUJAYA.jpeg"; }}
-                        />
-                      </div>
-                      <div className="desk-blog-author-info">
-                        <span className="desk-blog-author-name">Dr. Sujay M</span>
-                        <span className="desk-blog-author-role">MBBS, DDVL</span>
-                      </div>
-                    </div>
-
-                    <span className="desk-blog-read-cta">
-                      <span>Read Guide</span>
-                      <ArrowRight size={15} />
-                    </span>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          {/* Quick Comparison & Treatment Guides Pill Row */}
-          <div className="desk-blogs-quick-links">
-            <span className="desk-quick-label">
-              <Sparkles size={14} /> Quick Clinical Guides:
-            </span>
-            <button
-              className="desk-quick-chip"
-              onClick={() => onTabChange('q-switched-laser')}
-            >
-              Q-Switched Laser Guide
-            </button>
-            <button
-              className="desk-quick-chip"
-              onClick={() => onTabChange('hydrafacial')}
-            >
-              HydraFacial Protocol
-            </button>
-            <button
-              className="desk-quick-chip"
-              onClick={() => onTabChange('comparison')}
-            >
-              Laser vs HydraFacial Comparison
-            </button>
-            <button
-              className="desk-quick-chip"
-              onClick={() => onTabChange('skin')}
-            >
-              Acne Scar Subcision Guide
-            </button>
-          </div>
-        </div>
-      </section>
 
       {/* ───────────────────────────────────────────────────────────
           10. PATIENT FREQUENTLY ASKED QUESTIONS (Screen 10)
@@ -1492,12 +1528,12 @@ export default function DesktopHomeView({
         <div className="desk-container">
           <div className="desk-cta-banner-card">
             <div className="desk-cta-content">
-              <span className="desk-cta-badge">START TODAY</span>
+              <span className="desk-cta-badge">SOUTH BENGALURU DERMATOLOGY</span>
               <h2 className="desk-cta-title">
-                Ready to Start Your Skin Confidence Journey?
+                Ready to Understand Your Skin or Hair Concern?
               </h2>
               <p className="desk-cta-desc">
-                Consult with Dr. Sujay M for personalised, expert dermatology and aesthetic care in South Bengaluru.
+                Speak with Medicare Skin about a dermatologist consultation with Dr. (Mrs.) Sujay M, MBBS, DDVL, near Yelachenahalli Metro Station.
               </p>
 
               <div className="desk-cta-buttons">
@@ -1507,7 +1543,7 @@ export default function DesktopHomeView({
                   id="final-cta-book-btn"
                 >
                   <Calendar size={18} />
-                  <span>Book a Dermatologist Consultation</span>
+                  <span>Request a Dermatologist Consultation</span>
                   <ArrowRight size={16} />
                 </button>
                 <a

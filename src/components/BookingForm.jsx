@@ -66,22 +66,28 @@ export default function BookingForm({ onSuccessToast, singleCardMode = false, pr
       <div className="container">
         <div className={isStandalone ? "booking-standalone-wrap" : "booking-grid"} style={isStandalone ? { maxWidth: '620px', margin: '0 auto' } : {}}>
           {/* Ultra-Crisp Booking Form Card */}
-          <div className="booking-card" style={isStandalone ? { width: '100%', margin: '0 auto' } : {}}>
+          <div className="booking-card liquid-glass-card" style={isStandalone ? { width: '100%', margin: '0 auto' } : {}}>
             <h2 className="booking-form-title">
-              {preSelectedConcern ? `Book Appointment for ${preSelectedConcern}` : 'Book Your Appointment'}
+              {preSelectedConcern ? `Request Consultation for ${preSelectedConcern}` : 'Request a Dermatologist Consultation'}
             </h2>
+            <p style={{ fontSize: '13.5px', color: '#5C5268', marginBottom: '18px', lineHeight: '1.5' }}>
+              Choose a concern to help us direct your enquiry. You can also request without selecting a concern. Select a preferred time; the clinic will confirm your appointment.
+            </p>
 
             {submitted ? (
               <div style={{ textAlign: 'center', padding: '36px 12px' }}>
-                <CheckCircle2 size={64} style={{ color: '#942876', margin: '0 auto 16px' }} />
-                <h3 style={{ color: '#2B1B4D', fontSize: '24px', marginBottom: '12px' }}>
-                  Appointment Requested!
+                <CheckCircle2 size={64} style={{ color: '#153F39', margin: '0 auto 16px' }} />
+                <h3 style={{ color: '#153F39', fontSize: '24px', marginBottom: '12px' }}>
+                  Request Received
                 </h3>
-                <p style={{ color: '#5C5268', fontSize: '15px', marginBottom: '20px' }}>
-                  We have received your request for <strong>{formData.date || 'your preferred date'}</strong> at <strong>{formData.time}</strong>.
+                <p style={{ color: '#253532', fontSize: '15px', marginBottom: '16px', fontWeight: '600' }}>
+                  Your request has been received. This is not a confirmed appointment.
                 </p>
-                <p style={{ fontSize: '14px', color: '#8C8099', marginBottom: '24px' }}>
-                  Dr. Sujay M's desk will contact you at <strong>{formData.phone}</strong> to confirm your slot.
+                <p style={{ color: '#5C5268', fontSize: '14.5px', marginBottom: '16px' }}>
+                  The clinic will contact you at <strong>{formData.phone}</strong> to confirm availability for <strong>{formData.date || 'your preferred date'}</strong> at <strong>{formData.time}</strong>.
+                </p>
+                <p style={{ fontSize: '12.5px', color: '#7E728C', marginBottom: '24px' }}>
+                  Medicare Skin &amp; Cosmetic Clinic · Near Yelachenahalli Metro Station · Phone: +91 92428 55707
                 </p>
                 <button
                   className="btn-primary liquid-glass-btn"
@@ -96,7 +102,7 @@ export default function BookingForm({ onSuccessToast, singleCardMode = false, pr
                     });
                   }}
                 >
-                  Book Another Consultation
+                  Submit Another Request
                 </button>
               </div>
             ) : (
@@ -219,13 +225,26 @@ export default function BookingForm({ onSuccessToast, singleCardMode = false, pr
                   </div>
                 </div>
 
+                <div style={{ margin: '14px 0 16px', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                  <input
+                    type="checkbox"
+                    id="consent-check"
+                    required
+                    defaultChecked
+                    style={{ marginTop: '3px', accentColor: '#153F39', cursor: 'pointer' }}
+                  />
+                  <label htmlFor="consent-check" style={{ fontSize: '12.5px', color: '#5C5268', cursor: 'pointer', lineHeight: '1.4' }}>
+                    I agree to Medicare Skin contacting me via phone or message to process this appointment request. Marketing communication is optional.
+                  </label>
+                </div>
+
                 <button
                   type="submit"
                   className="btn-primary liquid-glass-btn"
                   disabled={submitting}
-                  style={{ width: '100%', justifyContent: 'center', marginTop: '10px' }}
+                  style={{ width: '100%', justifyContent: 'center', marginTop: '6px', background: '#153F39' }}
                 >
-                  <Sparkles size={18} /> {submitting ? 'Submitting Enquiry...' : 'Book My Consultation'}
+                  <Sparkles size={18} /> {submitting ? 'Submitting Request...' : 'Request a Dermatologist Consultation'}
                 </button>
               </form>
             )}
@@ -251,19 +270,19 @@ export default function BookingForm({ onSuccessToast, singleCardMode = false, pr
                 effective world-class procedures at affordable prices.
               </p>
 
-              {/* Counter Row */}
+              {/* Counter Row with Verified Facts */}
               <div className="stats-counter-row">
                 <div className="stat-item-box">
                   <div className="stat-number">18+</div>
                   <div className="stat-label">Years Experience</div>
                 </div>
                 <div className="stat-item-box">
-                  <div className="stat-number">12K+</div>
-                  <div className="stat-label">Procedures</div>
+                  <div className="stat-number">MBBS, DDVL</div>
+                  <div className="stat-label">Bangalore Medical College</div>
                 </div>
                 <div className="stat-item-box">
-                  <div className="stat-number">500K+</div>
-                  <div className="stat-label">Lives Touched</div>
+                  <div className="stat-number">Metro Gate 2</div>
+                  <div className="stat-label">Yelachenahalli</div>
                 </div>
               </div>
             </div>

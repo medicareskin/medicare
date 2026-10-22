@@ -11,35 +11,43 @@ import ClinicalConcernsStrip from '../ClinicalConcernsStrip';
 const HERO_BANNERS = [
   {
     id: 0,
-    tag: 'DR. SUJAY M (MBBS, DDVL) · 18+ YRS EXP',
-    title: 'Healthy Skin, Beautiful You',
-    subtitle: '10,000+ Treated · Clinically Proven Care',
-    image: '/images/luxury_indian_skin_model.png',
-    pill: 'Dr. Sujay M, MBBS DDVL'
+    tag: 'ADVANCED TRICHOLOGY SUITE',
+    title: 'Hair Fall Control & PRP / GFC',
+    subtitle: 'Doctor-Administered Follicular Regrowth Protocols',
+    image: '/images/hero_slide_3_hair.jpg',
+    pill: 'Follicular Regrowth'
   },
   {
     id: 1,
     tag: 'TARGETED SCAR REVISION',
     title: 'Acne Scar Revision Suite',
-    subtitle: 'Subcision, MNRF & Fractional Peels in JP Nagar',
+    subtitle: 'Subcision, MNRF, TCA Cross & Fractional Resurfacing',
     image: '/images/hero_slide_2_acne.jpg',
-    pill: '5.0 ★ Acne Clinic'
+    pill: 'Personalised Assessment'
   },
   {
     id: 2,
-    tag: 'US-FDA CLEARED TRIPLE ICE TECH',
-    title: 'Painless Laser Hair Removal',
-    subtitle: 'Safe for All Indian Skin Tones · Permanent Reduction',
+    tag: 'PRECISION DIODE LASER TECH',
+    title: 'Laser Hair Reduction',
+    subtitle: 'Safe for All Indian Skin Tones · Contact Chilled Tip',
     image: '/images/cat_laser_care.jpg',
-    pill: 'US-FDA Laser Tech'
+    pill: 'Safe for Indian Skin'
   },
   {
     id: 3,
-    tag: 'ADVANCED TRICHOLOGY SUITE',
-    title: 'Hair Fall Control & PRP',
-    subtitle: 'Doctor-Administered GFC & Scalp Bio-Therapy',
-    image: '/images/hero_slide_3_hair.jpg',
-    pill: 'Follicular Regrowth'
+    tag: 'HYDRAFACIAL VORTEX INFUSION',
+    title: 'Medical Glow & Deep Hydration',
+    subtitle: 'Pore Extraction, Hyaluronic Infusion & Glass Skin Radiance',
+    image: '/images/glass_skin_radiance.jpg',
+    pill: 'Glass Skin Radiance'
+  },
+  {
+    id: 4,
+    tag: 'SENIOR DERMATOLOGIST CONSULTATION',
+    title: 'Personalised Clinical Dermatology',
+    subtitle: 'Evidence-based acne, melasma & aesthetic diagnosis',
+    image: '/images/luxury_indian_skin_model.png',
+    pill: 'Dr. (Mrs.) Sujay M · 18+ Yrs'
   }
 ];
 
@@ -134,47 +142,83 @@ const PATIENT_STORIES = GOOGLE_REVIEWS.map((rev) => ({
 
 const BLOG_ARTICLES = [
   {
-    id: 1,
+    id: 'science-of-glass-skin-radiance-bangalore',
+    category: 'Beauty & Radiance',
+    title: 'The Science of Glass Skin: Dermatologist Secrets for Radiance',
+    date: 'Oct 22, 2026',
+    readTime: '6 min read',
+    image: '/images/glass_skin_radiance.jpg',
+    tag: 'beauty'
+  },
+  {
+    id: 'bridal-pre-event-beauty-countdown-guide',
+    category: 'Beauty & Radiance',
+    title: 'Pre-Event & Bridal Beauty Countdown: Clinical Timeline',
+    date: 'Oct 21, 2026',
+    readTime: '7 min read',
+    image: '/images/bridal_beauty_radiance.jpg',
+    tag: 'beauty'
+  },
+  {
+    id: 'q-switched-laser-melasma-pigmentation-guide',
     category: 'Laser Treatments',
     title: 'Q-Switched Laser for Melasma & Pigmentation: Clinical Guide',
-    date: 'Oct 16, 2026',
+    date: 'Oct 20, 2026',
     readTime: '7 min read',
     image: '/images/q-switched-laser-pigmentation-treatment-bangalore.webp',
     tag: 'laser'
   },
   {
-    id: 2,
+    id: 'hydrafacial-skin-hydration-glow-bangalore',
     category: 'Aesthetics & Glow',
-    title: 'HydraFacial Treatment in Bengaluru for Glowing Skin: Everything You Need to Know',
-    date: 'Oct 15, 2026',
+    title: 'HydraFacial Treatment in Bengaluru for Glowing Skin',
+    date: 'Oct 19, 2026',
     readTime: '6 min read',
     image: '/images/hydrafacial-skin-hydration-treatment-bangalore.webp',
     tag: 'aesthetics'
   },
   {
-    id: 3,
-    category: 'Treatment Guides',
-    title: 'Q-Switched Laser vs. HydraFacial: Which Treatment Does Your Skin Need?',
-    date: 'Oct 14, 2026',
+    id: 'medical-chemical-peels-vs-salon-bleach-glow',
+    category: 'Beauty & Radiance',
+    title: 'Medical Peels vs Salon Bleach: Authentic Skin Beauty',
+    date: 'Oct 18, 2026',
     readTime: '5 min read',
-    image: '/images/luxury_indian_skin_model.png',
-    tag: 'laser'
+    image: '/images/medical_peel_glow.jpg',
+    tag: 'beauty'
   },
   {
-    id: 4,
+    id: 'q-switched-laser-vs-hydrafacial-comparison',
+    category: 'Treatment Guides',
+    title: 'Q-Switched Laser vs. HydraFacial: Which Treatment You Need',
+    date: 'Oct 16, 2026',
+    readTime: '5 min read',
+    image: '/images/luxury_indian_skin_model.png',
+    tag: 'guides'
+  },
+  {
+    id: 'anti-ageing-collagen-preservation-beauty-secrets',
+    category: 'Beauty & Radiance',
+    title: 'Collagen Preservation: Non-Invasive Anti-Ageing Secrets',
+    date: 'Oct 15, 2026',
+    readTime: '6 min read',
+    image: '/images/skin_elasticity_cheek_touch.png',
+    tag: 'beauty'
+  },
+  {
+    id: 'acne-scar-treatment-guide',
     category: 'Skin Care',
     title: 'How to Treat Acne Scars: Evidence-Based Options That Work',
-    date: 'Oct 10, 2026',
+    date: 'Oct 12, 2026',
     readTime: '5 min read',
     image: '/images/skin_elasticity_cheek_touch.png',
     tag: 'skin'
   },
   {
-    id: 5,
+    id: 'growth-factor-therapy-hair-loss',
     category: 'Hair Care',
-    title: 'Common Causes of Hair Fall and How Growth Factor Scalp Therapy Works',
-    date: 'Sep 28, 2026',
-    readTime: '5 min read',
+    title: 'Causes of Hair Fall and How Growth Factor Scalp Therapy Works',
+    date: 'Oct 08, 2026',
+    readTime: '4 min read',
     image: '/images/radiant_hair_smile_woman.png',
     tag: 'hair'
   }
@@ -217,6 +261,8 @@ export default function MobileHomeView({
   const [reviewIdx, setReviewIdx] = useState(0);
   const [reviewTouchStart, setReviewTouchStart] = useState(null);
 
+  const [bannerTouchStart, setBannerTouchStart] = useState(null);
+
   // Auto-rotate hero banners every 5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
@@ -224,6 +270,30 @@ export default function MobileHomeView({
     }, 5000);
     return () => clearInterval(timer);
   }, []);
+
+  const handleBannerTouchStart = (e) => {
+    setBannerTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleBannerTouchEnd = (e) => {
+    if (bannerTouchStart === null) return;
+    const touchEnd = e.changedTouches[0].clientX;
+    const diff = bannerTouchStart - touchEnd;
+    if (diff > 40) {
+      setBannerIdx((prev) => (prev + 1) % HERO_BANNERS.length);
+    } else if (diff < -40) {
+      setBannerIdx((prev) => (prev === 0 ? HERO_BANNERS.length - 1 : prev - 1));
+    }
+    setBannerTouchStart(null);
+  };
+
+  const prevBanner = () => {
+    setBannerIdx((prev) => (prev === 0 ? HERO_BANNERS.length - 1 : prev - 1));
+  };
+
+  const nextBanner = () => {
+    setBannerIdx((prev) => (prev + 1) % HERO_BANNERS.length);
+  };
 
   const handleReviewTouchStart = (e) => {
     setReviewTouchStart(e.targetTouches[0].clientX);
@@ -254,66 +324,50 @@ export default function MobileHomeView({
   return (
     <div className="mobile-blueprint-home">
       {/* ───────────────────────────────────────────────────────────
-          SCREEN 1: MOBILE HERO (Liquid Glass with Authentic Banners)
+          SCREEN 1: MOBILE HERO (Big Image Container on Top, Caption on Bottom)
       ──────────────────────────────────────────────────────────── */}
       <section className="mob-hero-section">
-        {/* Eyebrow Badge */}
-        <div className="mob-eyebrow-badge">
-          <Sparkles size={13} />
-          <span>EXPERT DERMATOLOGY IN SOUTH BENGALURU</span>
-        </div>
-
-        {/* H1 Title */}
-        <h1 className="mob-hero-title">
-          Clearer, Healthier Skin & Hair Care
-        </h1>
-
-        {/* Support Description */}
-        <p className="mob-hero-support">
-          Advanced, personalised clinical skin, hair, laser and aesthetic care, led by <strong>Dr. (Mrs.) Sujay M</strong> (MBBS, DDVL — Bangalore Medical College 2005).
-        </p>
-
-        {/* Dual Primary & Secondary CTAs */}
-        <div className="mob-hero-ctas">
-          <button
-            className="mob-btn-primary"
-            onClick={onOpenBooking}
-          >
-            <Calendar size={18} />
-            <span>Book Appointment</span>
-            <ArrowRight size={18} />
-          </button>
-
-          <a
-            href={`tel:${CLINIC_INFO.rawPhone}`}
-            className="mob-btn-secondary"
-          >
-            <Phone size={17} />
-            <span>Call {CLINIC_INFO.phone}</span>
-          </a>
-        </div>
-
-        {/* Authentic Medicare Banner Slider in Liquid Glass Container */}
+        {/* TOP: Prominent Big Image Container & Visual Showcase */}
         <div className="mob-hero-banner-container">
-          <div className="mob-banner-frame">
+          <div
+            className="mob-banner-frame"
+            onTouchStart={handleBannerTouchStart}
+            onTouchEnd={handleBannerTouchEnd}
+          >
             <img
               key={activeBanner.image}
               src={activeBanner.image}
               alt={activeBanner.title}
               className="mob-banner-img"
+              loading="eager"
             />
             <div className="mob-banner-scrim" />
 
-            {/* Floating Top Badge */}
-            <div className="mob-banner-top-pill">
-              <span className="mob-pulse-dot" />
-              <span>{activeBanner.pill}</span>
-            </div>
+            {/* Quick Touch Nav Arrows on Left & Right */}
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); prevBanner(); }}
+              className="mob-banner-nav-btn prev"
+              aria-label="Previous clinical slide"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); nextBanner(); }}
+              className="mob-banner-nav-btn next"
+              aria-label="Next clinical slide"
+            >
+              <ChevronRight size={18} />
+            </button>
 
-            {/* Floating Bottom Info */}
+            {/* Floating Bottom Info (Caption on Bottom of Image Container) */}
             <div className="mob-banner-caption">
               <div className="mob-bc-tag">{activeBanner.tag}</div>
               <div className="mob-bc-title">{activeBanner.title}</div>
+              {activeBanner.subtitle && (
+                <div className="mob-bc-subtitle">{activeBanner.subtitle}</div>
+              )}
             </div>
           </div>
 
@@ -330,27 +384,66 @@ export default function MobileHomeView({
           </div>
         </div>
 
-        {/* 3 Horizontal Trust Indicators in Liquid Glass Strip */}
-        <div className="mob-trust-indicators-row">
-          <div className="mob-trust-item">
-            <div className="mob-trust-icon-box">
-              <Award size={18} color="#942876" />
-            </div>
-            <span className="mob-trust-label">Senior Dermatologist (18+ Yrs)</span>
+        {/* BOTTOM: Headline, Description & Call-to-Actions */}
+        <div className="mob-hero-content-bottom">
+          {/* Eyebrow Badge */}
+          <div className="mob-eyebrow-badge">
+            <Sparkles size={13} />
+            <span>EXPERT DERMATOLOGY IN SOUTH BENGALURU</span>
           </div>
 
-          <div className="mob-trust-item">
-            <div className="mob-trust-icon-box">
-              <Star size={18} fill="#C5A174" color="#C5A174" />
-            </div>
-            <span className="mob-trust-label">5.0 ★ Google Rating</span>
+          {/* H1 Title */}
+          <h1 className="mob-hero-title">
+            Clearer, Healthier Skin &amp; Hair Care
+          </h1>
+
+          {/* Support Description */}
+          <p className="mob-hero-support">
+            Advanced, personalised clinical skin, hair, laser and aesthetic care, led by <strong>Dr. (Mrs.) Sujay M</strong> (MBBS, DDVL — Bangalore Medical College 2005) near Yelachenahalli Metro Station, South Bengaluru.
+          </p>
+
+          {/* Dual Primary & Secondary CTAs */}
+          <div className="mob-hero-ctas">
+            <button
+              className="mob-btn-primary"
+              onClick={onOpenBooking}
+            >
+              <Calendar size={18} />
+              <span>Book Appointment</span>
+              <ArrowRight size={18} />
+            </button>
+
+            <a
+              href={`tel:${CLINIC_INFO.rawPhone}`}
+              className="mob-btn-secondary"
+            >
+              <Phone size={17} />
+              <span>Call +91-92428 55707</span>
+            </a>
           </div>
 
-          <div className="mob-trust-item">
-            <div className="mob-trust-icon-box">
-              <MapPin size={18} color="#942876" />
+          {/* 3 Horizontal Trust Indicators in Liquid Glass Strip */}
+          <div className="mob-trust-indicators-row">
+            <div className="mob-trust-item">
+              <div className="mob-trust-icon-box">
+                <Award size={18} color="#153F39" />
+              </div>
+              <span className="mob-trust-label">Senior Dermatologist (18+ Yrs)</span>
             </div>
-            <span className="mob-trust-label">Near Yelachenahalli Metro</span>
+
+            <div className="mob-trust-item">
+              <div className="mob-trust-icon-box">
+                <Star size={18} fill="#C5A174" color="#C5A174" />
+              </div>
+              <span className="mob-trust-label">5.0 ★ Google Rating</span>
+            </div>
+
+            <div className="mob-trust-item">
+              <div className="mob-trust-icon-box">
+                <MapPin size={18} color="#153F39" />
+              </div>
+              <span className="mob-trust-label">Near Yelachenahalli Metro</span>
+            </div>
           </div>
         </div>
       </section>
@@ -853,14 +946,22 @@ export default function MobileHomeView({
         </div>
 
         {/* Filter Pills */}
-        <div className="mob-blog-filter-pills">
-          {['all', 'laser', 'skin', 'aesthetics', 'hair'].map((tag) => (
+        <div className="mob-blog-filter-pills" style={{ overflowX: 'auto', display: 'flex', gap: '8px', paddingBottom: '4px' }}>
+          {[
+            { id: 'all', label: 'All' },
+            { id: 'beauty', label: '✨ Beauty' },
+            { id: 'laser', label: 'Laser' },
+            { id: 'aesthetics', label: 'Glow' },
+            { id: 'skin', label: 'Skin' },
+            { id: 'hair', label: 'Hair' }
+          ].map((item) => (
             <button
-              key={tag}
-              onClick={() => setActiveBlogTab(tag)}
-              className={`mob-filter-pill ${activeBlogTab === tag ? 'active' : ''}`}
+              key={item.id}
+              onClick={() => setActiveBlogTab(item.id)}
+              className={`mob-filter-pill ${activeBlogTab === item.id ? 'active' : ''}`}
+              style={{ flexShrink: 0 }}
             >
-              {tag.charAt(0).toUpperCase() + tag.slice(1)}
+              {item.label}
             </button>
           ))}
         </div>
@@ -873,9 +974,18 @@ export default function MobileHomeView({
               className="mob-blog-card"
               onClick={() => onTabChange && onTabChange('blog')}
             >
-              <img src={article.image} alt={article.title} className="mob-blog-thumb" />
+              <img src={article.image} alt={article.title} className="mob-blog-thumb" loading="lazy" />
               <div className="mob-blog-body">
-                <span className="mob-blog-tag">{article.category}</span>
+                <span
+                  className="mob-blog-tag"
+                  style={{
+                    background: article.tag === 'beauty' ? '#153F39' : 'rgba(21, 63, 57, 0.08)',
+                    color: article.tag === 'beauty' ? '#FFFFFF' : '#153F39',
+                    border: article.tag === 'beauty' ? '1px solid #C5A174' : 'none'
+                  }}
+                >
+                  {article.category}
+                </span>
                 <h3 className="mob-blog-title">{article.title}</h3>
                 <div className="mob-blog-meta">
                   {article.date} · {article.readTime}
@@ -883,6 +993,17 @@ export default function MobileHomeView({
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View All Journal CTA */}
+        <div style={{ marginTop: '16px', textAlign: 'center' }}>
+          <button
+            onClick={() => onTabChange && onTabChange('blog')}
+            className="mob-btn-secondary"
+            style={{ width: '100%', justifyContent: 'center' }}
+          >
+            <span>View All Articles in Skin Journal →</span>
+          </button>
         </div>
       </section>
 

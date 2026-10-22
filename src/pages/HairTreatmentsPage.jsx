@@ -49,7 +49,7 @@ export default function HairTreatmentsPage({ onSelectCondition, onOpenBooking })
             <Sparkles size={14} color="#8B096C" />
             CLINICAL TRICHOLOGY &amp; SCALP RESTORATION
           </span>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#1B0344', marginBottom: '16px', lineHeight: '1.18' }}>
+          <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '46px', color: '#153F39', marginBottom: '16px', lineHeight: '1.18' }}>
             Advanced Hair Care &amp; Scalp Treatments
           </h1>
           <p style={{ fontSize: '17px', color: '#4E4158', lineHeight: '1.7' }}>
@@ -83,7 +83,7 @@ export default function HairTreatmentsPage({ onSelectCondition, onOpenBooking })
             <span style={{ fontSize: '12px', fontWeight: '800', color: '#8B096C', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               TIMELY INTERVENTION
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#1B0344', margin: '8px 0 14px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', margin: '8px 0 14px' }}>
               Why Early Hair Fall Evaluation Matters
             </h2>
             <p style={{ color: '#4E4158', fontSize: '15px', lineHeight: '1.7', marginBottom: '20px' }}>
@@ -130,7 +130,7 @@ export default function HairTreatmentsPage({ onSelectCondition, onOpenBooking })
             <span style={{ fontSize: '12px', fontWeight: '800', color: '#8B096C', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               EXPECTED CLINICAL MILESTONES
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', color: '#1B0344', margin: '6px 0 0' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '28px', color: '#153F39', margin: '6px 0 0' }}>
               The 6-Month Hair Restoration Journey
             </h2>
           </div>
@@ -185,7 +185,7 @@ export default function HairTreatmentsPage({ onSelectCondition, onOpenBooking })
 
         {/* Hair Conditions Catalogue */}
         <div style={{ marginBottom: '64px' }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#1B0344', marginBottom: '24px' }}>
+          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', marginBottom: '24px' }}>
             Hair Concerns &amp; Clinical Solutions
           </h2>
           <div className="conditions-grid">
@@ -223,7 +223,7 @@ export default function HairTreatmentsPage({ onSelectCondition, onOpenBooking })
             <span style={{ fontSize: '12px', fontWeight: '800', color: '#8B096C', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               FREQUENTLY ASKED
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', color: '#1B0344', margin: '6px 0 0' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '28px', color: '#153F39', margin: '6px 0 0' }}>
               Hair Restoration FAQs
             </h2>
           </div>
@@ -289,7 +289,7 @@ export default function HairTreatmentsPage({ onSelectCondition, onOpenBooking })
           textAlign: 'center',
           boxShadow: '0 20px 50px rgba(139, 9, 108, 0.08), inset 0 1.5px 2px rgba(255, 255, 255, 1)'
         }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '34px', marginBottom: '12px', color: '#1B0344' }}>
+          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '34px', marginBottom: '12px', color: '#153F39' }}>
             Start Your Hair Recovery Today
           </h2>
           <p style={{ fontSize: '16px', color: '#4E4158', maxWidth: '620px', margin: '0 auto 26px', lineHeight: '1.6' }}>

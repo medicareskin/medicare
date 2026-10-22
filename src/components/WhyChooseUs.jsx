@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
             <Sparkles size={14} color="#942876" />
             THE MEDICARE STANDARD
           </span>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '42px', color: '#2B1B4D', marginBottom: '14px' }}>
+          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '42px', color: '#153F39', marginBottom: '14px' }}>
             Why Patients Choose Medicare
           </h2>
           <p style={{ fontSize: '16px', color: '#5C5268', maxWidth: '650px', margin: '0 auto', lineHeight: '1.6' }}>
@@ -87,9 +87,9 @@ export default function WhyChooseUs() {
               </div>
               <h3
                 style={{
-                  fontFamily: 'Playfair Display, serif',
+                  fontFamily: 'Fraunces, Georgia, serif',
                   fontSize: '20px',
-                  color: '#2B1B4D',
+                  color: '#153F39',
                   marginBottom: '12px',
                   transform: 'translateZ(20px)',
                   transformStyle: 'preserve-3d'

@@ -67,21 +67,21 @@ export default function TreatmentComparisonSection({ onOpenBooking, onSelectTrea
     },
     {
       feature: 'Downtime & Recovery',
-      laser: 'Minimal (1–2 hours of mild transient pinkness; resume work immediately)',
-      hydra: 'Zero downtime; instant radiant camera-ready complexion',
-      winner: 'HydraFacial (0 downtime)'
+      laser: 'Minimal (mild transient pinkness; resume normal routines shortly)',
+      hydra: 'Minimal to zero downtime for most patients; temporary redness may occur',
+      winner: 'Both offer convenient outpatient recovery'
     },
     {
       feature: 'Number of Sessions',
-      laser: '4 to 8 sessions spaced 2 to 4 weeks apart for cumulative pigment breakdown',
-      hydra: 'Single session for instant glow; monthly maintenance for ongoing skin health',
-      winner: 'Laser for long-term fix; Hydra for instant boost'
+      laser: 'Variable sessions recommended based on clinical response and pigment depth',
+      hydra: 'Single session for surface freshness; ongoing maintenance based on skin needs',
+      winner: 'Laser for targeted pigment care; Hydra for hydration'
     },
     {
       feature: 'Fitzpatrick Indian Skin Safety',
-      laser: '100% safe when performed with low-fluence Nd:YAG laser toning protocol',
-      hydra: 'Safe across all Indian skin phototypes (Types III to VI) year-round',
-      winner: 'Both are safe for Indian skin'
+      laser: 'Controlled low-fluence Nd:YAG laser toning protocol tailored for Fitzpatrick skin types III-V to minimise rebound risk',
+      hydra: 'Gentle protocol suitable across Indian skin phototypes with clinician assessment',
+      winner: 'Both require professional patient assessment'
     },
     {
       feature: 'Key Active Ingredients / Energy',
@@ -121,7 +121,7 @@ export default function TreatmentComparisonSection({ onOpenBooking, onSelectTrea
             <Sparkles size={14} color="#942876" />
             TREATMENT COMPARISON GUIDE
           </span>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '36px', color: '#2B1B4D', margin: '0 0 14px', lineHeight: 1.25 }}>
+          <h2 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '36px', fontWeight: 650, color: '#153F39', margin: '0 0 14px', lineHeight: 1.25 }}>
             Q-Switched Laser vs. HydraFacial
           </h2>
           <p style={{ fontSize: '16px', color: '#5C5268', lineHeight: 1.7 }}>
@@ -306,7 +306,7 @@ export default function TreatmentComparisonSection({ onOpenBooking, onSelectTrea
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#F1A9D4', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               INTERACTIVE CLINICAL ASSISTANT
             </span>
-            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', margin: '6px 0 10px', color: '#FFFFFF' }}>
+            <h3 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '28px', fontWeight: 650, margin: '6px 0 10px', color: '#FFFFFF' }}>
               Not Sure Which Treatment Is Right For You?
             </h3>
             <p style={{ fontSize: '15px', color: '#D9D0E2', lineHeight: 1.6, margin: 0 }}>
@@ -476,7 +476,7 @@ export default function TreatmentComparisonSection({ onOpenBooking, onSelectTrea
                 THE CLINICAL SYNERGY PROTOCOL
               </span>
             </div>
-            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '24px', color: '#2B1B4D', margin: '0 0 10px' }}>
+            <h3 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '24px', fontWeight: 650, color: '#153F39', margin: '0 0 10px' }}>
               Can Q-Switched Laser &amp; HydraFacial Be Combined?
             </h3>
             <p style={{ fontSize: '15px', color: '#5C5268', lineHeight: 1.65, margin: 0 }}>

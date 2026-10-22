@@ -50,7 +50,7 @@ export default function CosmeticTreatmentsPage({ onSelectCondition, onSelectTrea
             <Sparkles size={14} color="#8B096C" />
             FACIAL AESTHETICS &amp; REJUVENATION SUITE
           </span>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#1B0344', marginBottom: '16px', lineHeight: '1.18' }}>
+          <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '46px', color: '#153F39', marginBottom: '16px', lineHeight: '1.18' }}>
             Cosmetic Dermatology &amp; Aesthetic Care
           </h1>
           <p style={{ fontSize: '17px', color: '#4E4158', lineHeight: '1.7' }}>
@@ -73,7 +73,7 @@ export default function CosmeticTreatmentsPage({ onSelectCondition, onSelectTrea
             <span style={{ fontSize: '12px', fontWeight: '800', color: '#8B096C', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               OUR AESTHETIC PHILOSOPHY
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '30px', color: '#1B0344', margin: '6px 0 0' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '30px', color: '#153F39', margin: '6px 0 0' }}>
               Subtle, Natural &amp; Medically Safe
             </h2>
           </div>
@@ -104,7 +104,7 @@ export default function CosmeticTreatmentsPage({ onSelectCondition, onSelectTrea
 
         {/* Procedures Grid */}
         <div style={{ marginBottom: '64px' }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#1B0344', marginBottom: '24px' }}>
+          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', marginBottom: '24px' }}>
             Aesthetic Procedures Catalogue
           </h2>
           <div className="conditions-grid">
@@ -142,7 +142,7 @@ export default function CosmeticTreatmentsPage({ onSelectCondition, onSelectTrea
             <span style={{ fontSize: '12px', fontWeight: '800', color: '#8B096C', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               EXPERT CONSULTATION
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', color: '#1B0344', margin: '6px 0 0' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '28px', color: '#153F39', margin: '6px 0 0' }}>
               Aesthetic Treatments FAQs
             </h2>
           </div>
@@ -208,7 +208,7 @@ export default function CosmeticTreatmentsPage({ onSelectCondition, onSelectTrea
           textAlign: 'center',
           boxShadow: '0 20px 50px rgba(139, 9, 108, 0.08), inset 0 1.5px 2px rgba(255, 255, 255, 1)'
         }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '34px', marginBottom: '12px', color: '#1B0344' }}>
+          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '34px', marginBottom: '12px', color: '#153F39' }}>
             Book Your Personalized Aesthetic Consultation
           </h2>
           <p style={{ fontSize: '16px', color: '#4E4158', maxWidth: '620px', margin: '0 auto 26px', lineHeight: '1.6' }}>

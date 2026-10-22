@@ -87,7 +87,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                 </span>
               </div>
 
-              <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#2B1B4D', lineHeight: 1.2, margin: '0 0 10px', fontWeight: 800 }}>
+              <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '46px', color: '#153F39', lineHeight: 1.2, margin: '0 0 10px', fontWeight: 700 }}>
                 {treatmentTitle}
               </h1>
 
@@ -215,7 +215,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
               <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
                 Clinical Understanding
               </span>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '34px', color: '#2B1B4D', margin: '6px 0 12px' }}>
+              <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '34px', color: '#153F39', margin: '6px 0 12px' }}>
                 Understanding {treatmentTitle}
               </h2>
               <p style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: 1.7 }}>
@@ -254,7 +254,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
 
             {/* Common Symptoms 4 Cards (Blueprint Screen 2) */}
             <div style={{ marginBottom: '40px' }}>
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '20px', color: '#2B1B4D', marginBottom: '18px' }}>
+              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '20px', color: '#153F39', marginBottom: '18px' }}>
                 Common Symptoms & Manifestations
               </h3>
               <div className="grid-responsive-4">
@@ -290,7 +290,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
 
             {/* Treatment Options at Medicare Skin with Images */}
             <div>
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '20px', color: '#2B1B4D', marginBottom: '18px' }}>
+              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '20px', color: '#153F39', marginBottom: '18px' }}>
                 Treatment Options at Medicare Skin Clinic
               </h3>
               <div className="grid-responsive-4">
@@ -350,7 +350,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                   <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '12px', fontWeight: 800, color: '#15803D', background: '#DCFCE7', padding: '3px 10px', borderRadius: '12px', marginBottom: '4px' }}>
                     <ShieldCheck size={13} /> US-FDA Gold Standard
                   </div>
-                  <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '20px', color: '#2B1B4D', margin: 0 }}>
+                  <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '20px', color: '#153F39', margin: 0 }}>
                     Is It Safe?
                   </h3>
                   <p style={{ fontSize: '12.5px', color: '#6A5F75', margin: '4px 0 0' }}>
@@ -394,7 +394,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
             <div style={{ background: '#FFFFFF', borderRadius: '26px', border: '1.5px solid #EBE0EA', padding: '36px', boxShadow: '0 12px 30px rgba(43, 27, 77, 0.04)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
                 <HelpCircle size={22} color="#942876" />
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', margin: 0 }}>
+                <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', margin: 0 }}>
                   Frequently Asked Questions
                 </h3>
               </div>
@@ -456,7 +456,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                 <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
                   Transparent Medical Pricing
                 </span>
-                <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#2B1B4D', margin: '6px 0 12px' }}>
+                <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', margin: '6px 0 12px' }}>
                   {treatmentTitle} Cost in Bengaluru
                 </h2>
                 <p style={{ fontSize: '15px', color: '#5C5268', lineHeight: 1.6, marginBottom: '24px' }}>
@@ -483,7 +483,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                     <div style={{ fontSize: '11px', fontWeight: 800, color: '#942876', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                       Typical Price Range at Medicare Skin
                     </div>
-                    <div style={{ fontSize: '28px', fontWeight: 800, color: '#2B1B4D', fontFamily: 'Playfair Display, serif' }}>
+                    <div style={{ fontSize: '28px', fontWeight: 700, color: '#153F39', fontFamily: 'Fraunces, Georgia, serif' }}>
                       ₹5,000 – ₹25,000 <span style={{ fontSize: '13px', fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#6A5F75', fontWeight: 600 }}>/ session</span>
                     </div>
                   </div>
@@ -521,7 +521,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                 <div style={{ width: '70px', height: '70px', borderRadius: '50%', margin: '0 auto 14px', overflow: 'hidden', border: '3px solid #942876' }}>
                   <img src="/images/radiant_skin_glow.jpg" alt="Get Estimate" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', margin: '0 0 8px' }}>
+                <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', margin: '0 0 8px' }}>
                   Get an Accurate Estimate
                 </h3>
                 <p style={{ fontSize: '13px', color: '#6A5F75', margin: '0 0 20px', lineHeight: 1.5 }}>
@@ -573,7 +573,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               Real Results
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '36px', color: '#2B1B4D', margin: '6px 0 10px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '36px', color: '#153F39', margin: '6px 0 10px' }}>
               {treatmentTitle} Before & After
             </h2>
             <p style={{ fontSize: '15px', color: '#6A5F75' }}>
@@ -582,13 +582,13 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
 
             {/* Results Trust Signals */}
             <div style={{ display: 'flex', justifyContent: 'center', gap: '32px', marginTop: '16px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', fontWeight: 700, color: '#2B1B4D' }}>
-                <span style={{ fontSize: '20px', color: '#942876', fontWeight: 800 }}>95%</span>
-                Patients saw visible improvement
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', fontWeight: 700, color: '#153F39' }}>
+                <span style={{ fontSize: '20px', color: '#153F39', fontWeight: 800 }}>18+</span>
+                Years Clinical Dermatology
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', fontWeight: 700, color: '#2B1B4D' }}>
-                <span style={{ fontSize: '20px', color: '#D97706', fontWeight: 800 }}>4.9/5</span>
-                Patient satisfaction rating
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', fontWeight: 700, color: '#153F39' }}>
+                <span style={{ fontSize: '20px', color: '#C5A174', fontWeight: 800 }}>MBBS, DDVL</span>
+                Doctor-Supervised Treatment
               </div>
             </div>
           </div>
@@ -658,7 +658,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               Direct Booking
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#2B1B4D', margin: '6px 0 8px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', margin: '6px 0 8px' }}>
               Book Your Consultation with Dr. Sujay M
             </h2>
             <p style={{ fontSize: '14.5px', color: '#6A5F75' }}>

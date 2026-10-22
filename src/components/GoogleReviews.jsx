@@ -66,7 +66,7 @@ export default function GoogleReviews() {
             <ShieldCheck size={16} color="#942876" />
             100% VERIFIED GOOGLE REVIEWS
           </span>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '42px', color: '#2B1B4D', marginBottom: '14px' }}>
+          <h2 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '42px', fontWeight: 650, color: '#153F39', marginBottom: '14px' }}>
             Patient Stories & Clinical Outcomes
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '12px' }}>
@@ -226,9 +226,10 @@ export default function GoogleReviews() {
               <p
                 className="review-quote-text"
                 style={{
-                  fontSize: '14.5px',
+                  fontFamily: "'Fraunces', Georgia, serif",
+                  fontSize: '15px',
                   lineHeight: '1.65',
-                  color: '#3D2B4C',
+                  color: '#253532',
                   fontStyle: 'italic',
                   marginBottom: '20px',
                   transform: 'translateZ(15px)',

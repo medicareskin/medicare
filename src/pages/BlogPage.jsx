@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { BLOG_POSTS } from '../data/clinicData';
+import { BLOG_POSTS, CLINIC_INFO } from '../data/clinicData';
 import { 
   BookOpen, Clock, Calendar, User, Search, ArrowRight, X, 
-  Sparkles, CheckCircle2, ChevronRight, Tag, ShieldCheck, Phone
+  Sparkles, CheckCircle2, ChevronRight, Tag, ShieldCheck, Phone, Heart
 } from 'lucide-react';
-import { CLINIC_INFO } from '../data/clinicData';
 
 export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatment }) {
   const [selectedPost, setSelectedPost] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
 
-  // Dynamic SEO Structured Data for Medical Blog
+  // Dynamic SEO Structured Data for Medical & Beauty Blog
   useEffect(() => {
     const originalTitle = document.title;
-    document.title = "Dermatology Guides & Clinical Articles | Medicare Skin Bengaluru";
+    document.title = "Dermatology & Skin Radiance Journal | Medicare Skin Bengaluru";
 
     const scriptId = 'json-ld-blog';
     let scriptTag = document.getElementById(scriptId);
@@ -29,8 +28,8 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
       "@context": "https://schema.org",
       "@type": "Blog",
       "@id": "https://www.medicareskin.com/blog/#blog",
-      "name": "Medicare Skin Clinical Dermatology Journal",
-      "description": "Evidence-based skin care, laser treatments, and hair restoration guides authored by Dr. Sujay M, MBBS, DDVL.",
+      "name": "Medicare Skin Clinical Dermatology & Radiance Journal",
+      "description": "Evidence-based beauty, glass skin radiance, laser treatments, chemical peels, and anti-ageing guides authored by Dr. (Mrs.) Sujay M, MBBS, DDVL.",
       "publisher": {
         "@type": "MedicalClinic",
         "name": "Medicare Skin & Cosmetic Clinic",
@@ -50,7 +49,7 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
         "image": post.image,
         "author": {
           "@type": "Person",
-          "name": "Dr. Sujay M",
+          "name": "Dr. (Mrs.) Sujay M",
           "jobTitle": "Consultant Dermatologist (MBBS, DDVL)"
         },
         "publisher": {
@@ -70,13 +69,33 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
     };
   }, []);
 
-  const categories = ['All', 'Laser Treatments', 'Aesthetics & Glow', 'Treatment Guides', 'Skin Care', 'Hair Restoration'];
+  const categories = [
+    'All',
+    'Beauty & Skin Radiance',
+    'Laser Treatments',
+    'Aesthetics & Glow',
+    'Skin Care',
+    'Treatment Guides',
+    'Hair Restoration'
+  ];
+
+  const quickTopics = [
+    { label: '✨ Glass Skin Radiance', query: 'glass skin' },
+    { label: '👰 Bridal Countdown', query: 'bridal' },
+    { label: '🌿 Peels vs Bleach', query: 'bleach' },
+    { label: '💎 Collagen & Anti-Ageing', query: 'collagen' },
+    { label: '🔬 Melasma Laser', query: 'melasma' },
+    { label: '💧 HydraFacial Glow', query: 'hydrafacial' }
+  ];
 
   const filteredPosts = BLOG_POSTS.filter(post => {
+    const term = searchTerm.toLowerCase().trim();
     const matchesSearch = 
-      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.category.toLowerCase().includes(searchTerm.toLowerCase());
+      !term ||
+      post.title.toLowerCase().includes(term) ||
+      post.excerpt.toLowerCase().includes(term) ||
+      post.category.toLowerCase().includes(term) ||
+      (post.content && post.content.toLowerCase().includes(term));
     
     const matchesCategory = activeCategory === 'All' || post.category === activeCategory;
 
@@ -92,81 +111,153 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
   };
 
   return (
-    <div style={{ padding: '60px 0 90px', background: 'transparent' }}>
-      <div className="container">
+    <div style={{ padding: '48px 0 96px', background: 'transparent', minHeight: '80vh' }}>
+      <div className="container" style={{ maxWidth: '1240px', margin: '0 auto', padding: '0 20px' }}>
         
         {/* Page Hero Header */}
-        <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 40px' }}>
+        <div style={{ textAlign: 'center', maxWidth: '840px', margin: '0 auto 36px' }}>
           <span style={{
-            background: 'rgba(255, 255, 255, 0.8)',
-            backdropFilter: 'blur(12px)',
-            border: '1px solid #EBE0EA',
-            color: '#942876',
-            padding: '6px 20px',
+            background: 'rgba(21, 63, 57, 0.08)',
+            border: '1px solid rgba(197, 161, 116, 0.45)',
+            color: '#153F39',
+            padding: '7px 20px',
             borderRadius: '30px',
-            fontSize: '12.5px',
+            fontSize: '12px',
             fontWeight: 800,
-            letterSpacing: '0.04em',
+            letterSpacing: '0.08em',
             textTransform: 'uppercase',
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            marginBottom: '14px',
-            boxShadow: '0 4px 14px rgba(148, 40, 118, 0.06)'
+            marginBottom: '16px'
           }}>
-            <Sparkles size={14} color="#942876" />
-            DOCTOR-REVIEWED DERMATOLOGY GUIDES
+            <Sparkles size={14} color="#C5A174" />
+            DOCTOR-REVIEWED DERMATOLOGY & BEAUTY JOURNAL
           </span>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#2B1B4D', margin: '0 0 16px', lineHeight: 1.2 }}>
-            Skin, Laser &amp; Hair Care Journal
+          <h1 style={{
+            fontFamily: "'Fraunces', Georgia, serif",
+            fontSize: 'clamp(32px, 4.5vw, 48px)',
+            color: '#153F39',
+            margin: '0 0 16px',
+            lineHeight: 1.18,
+            letterSpacing: '-0.02em',
+            fontWeight: 650
+          }}>
+            Clinical Skin, Beauty & Radiance Guides
           </h1>
-          <p style={{ fontSize: '16.5px', color: '#5C5268', lineHeight: 1.7, margin: 0 }}>
-            In-depth patient guides, procedure comparisons, and post-treatment protocols authored by Senior Dermatologist <strong>Dr. Sujay M (MBBS, DDVL)</strong> to help you make evidence-based decisions about your skin health.
+          <p style={{
+            fontFamily: "'Manrope', -apple-system, sans-serif",
+            fontSize: '16.5px',
+            color: '#34465B',
+            lineHeight: 1.65,
+            margin: 0
+          }}>
+            Authentic, evidence-based skin science, pre-event countdowns, glass skin barrier protocols, and advanced laser insights authored by Senior Dermatologist <strong>Dr. (Mrs.) Sujay M (MBBS, DDVL)</strong>.
           </p>
         </div>
 
         {/* Category Filter Tabs */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '24px' }}>
-          {categories.map((cat) => (
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '10px',
+          flexWrap: 'wrap',
+          marginBottom: '22px'
+        }}>
+          {categories.map((cat) => {
+            const isActive = activeCategory === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => {
+                  setActiveCategory(cat);
+                  setSearchTerm('');
+                }}
+                style={{
+                  padding: '9px 20px',
+                  borderRadius: '26px',
+                  fontSize: '13.5px',
+                  fontWeight: 700,
+                  fontFamily: "'Manrope', sans-serif",
+                  border: isActive ? '1.5px solid #153F39' : '1.5px solid rgba(21, 63, 57, 0.16)',
+                  background: isActive ? '#153F39' : 'rgba(255, 255, 255, 0.85)',
+                  color: isActive ? '#FFFFFF' : '#253532',
+                  cursor: 'pointer',
+                  transition: 'all 0.22s cubic-bezier(0.16, 1, 0.3, 1)',
+                  boxShadow: isActive ? '0 6px 18px rgba(21, 63, 57, 0.25)' : '0 2px 6px rgba(0, 0, 0, 0.03)'
+                }}
+              >
+                {cat === 'Beauty & Skin Radiance' ? '✨ Beauty & Skin Radiance' : cat}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Quick Topic Chips */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '8px',
+          flexWrap: 'wrap',
+          marginBottom: '28px'
+        }}>
+          <span style={{ fontSize: '12px', fontWeight: 700, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            Popular Topics:
+          </span>
+          {quickTopics.map((qt, idx) => (
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
+              key={idx}
+              onClick={() => {
+                setSearchTerm(qt.query);
+                setActiveCategory('All');
+              }}
               style={{
-                padding: '8px 18px',
-                borderRadius: '24px',
-                fontSize: '13.5px',
-                fontWeight: 700,
-                border: activeCategory === cat ? '1.5px solid #942876' : '1.5px solid #EBE0EA',
-                background: activeCategory === cat ? '#942876' : '#FFFFFF',
-                color: activeCategory === cat ? '#FFFFFF' : '#5C5268',
+                background: 'rgba(245, 239, 230, 0.75)',
+                border: '1px solid rgba(197, 161, 116, 0.4)',
+                borderRadius: '16px',
+                padding: '4px 12px',
+                fontSize: '12.5px',
+                fontWeight: 650,
+                color: '#153F39',
                 cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                boxShadow: activeCategory === cat ? '0 4px 12px rgba(148, 40, 118, 0.2)' : 'none'
+                transition: 'all 0.18s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#153F39';
+                e.currentTarget.style.color = '#FFFFFF';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(245, 239, 230, 0.75)';
+                e.currentTarget.style.color = '#153F39';
               }}
             >
-              {cat}
+              {qt.label}
             </button>
           ))}
         </div>
 
         {/* Search Input */}
-        <div style={{ maxWidth: '600px', margin: '0 auto 46px', position: 'relative' }}>
-          <Search size={18} color="#942876" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
+        <div style={{ maxWidth: '640px', margin: '0 auto 48px', position: 'relative' }}>
+          <Search size={18} color="#C5A174" style={{ position: 'absolute', left: '18px', top: '50%', transform: 'translateY(-50%)' }} />
           <input
             type="text"
             className="form-control"
-            placeholder="Search guides by topic (melasma, laser, hydrafacial, acne scars)..."
+            placeholder="Search beauty secrets, glass skin, bridal timeline, melasma, peels..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             style={{
-              paddingLeft: '48px',
-              paddingRight: searchTerm ? '44px' : '16px',
-              height: '50px',
+              paddingLeft: '50px',
+              paddingRight: searchTerm ? '44px' : '18px',
+              height: '52px',
               fontSize: '14.5px',
-              borderRadius: '25px',
+              fontFamily: "'Manrope', sans-serif",
+              borderRadius: '26px',
               background: '#FFFFFF',
-              border: '1.5px solid #EBE0EA',
-              boxShadow: '0 6px 20px rgba(43, 27, 77, 0.04)'
+              border: '1.5px solid rgba(21, 63, 57, 0.18)',
+              boxShadow: '0 8px 24px rgba(21, 63, 57, 0.05)',
+              width: '100%',
+              boxSizing: 'border-box'
             }}
           />
           {searchTerm && (
@@ -174,10 +265,10 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
               onClick={() => setSearchTerm('')}
               style={{
                 position: 'absolute',
-                right: '12px',
+                right: '14px',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                background: 'rgba(148, 40, 118, 0.1)',
+                background: 'rgba(21, 63, 57, 0.1)',
                 border: 'none',
                 borderRadius: '50%',
                 width: '28px',
@@ -186,7 +277,7 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
                 alignItems: 'center',
                 justifyContent: 'center',
                 cursor: 'pointer',
-                color: '#942876'
+                color: '#153F39'
               }}
               title="Clear search"
             >
@@ -197,88 +288,130 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
 
         {/* Blog Grid */}
         {filteredPosts.length > 0 ? (
-          <div className="grid-responsive-3" style={{ gap: '28px', marginBottom: '60px' }}>
+          <div className="grid-responsive-3" style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
+            gap: '30px',
+            marginBottom: '60px'
+          }}>
             {filteredPosts.map((post) => (
               <div 
                 key={post.id} 
                 style={{
                   background: '#FFFFFF',
-                  borderRadius: '22px',
-                  border: '1.5px solid #EBE0EA',
+                  borderRadius: '24px',
+                  border: '1.5px solid rgba(21, 63, 57, 0.1)',
                   overflow: 'hidden',
                   display: 'flex',
                   flexDirection: 'column',
-                  boxShadow: '0 10px 30px rgba(43, 27, 77, 0.04)',
-                  transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+                  boxShadow: '0 12px 32px rgba(21, 63, 57, 0.06)',
+                  transition: 'transform 0.28s ease, box-shadow 0.28s ease',
+                  cursor: 'pointer'
+                }}
+                onClick={() => setSelectedPost(post)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-6px)';
+                  e.currentTarget.style.boxShadow = '0 20px 48px rgba(21, 63, 57, 0.12)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'none';
+                  e.currentTarget.style.boxShadow = '0 12px 32px rgba(21, 63, 57, 0.06)';
                 }}
               >
-                <div style={{ height: '220px', overflow: 'hidden', position: 'relative' }}>
-                  <img src={post.image} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div style={{ height: '225px', overflow: 'hidden', position: 'relative', background: '#F4EFEA' }}>
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                    onError={(e) => { e.target.src = '/images/luxury_indian_skin_model.png'; }}
+                  />
                   <span style={{
                     position: 'absolute',
                     top: '14px',
                     left: '14px',
-                    background: 'rgba(255, 255, 255, 0.95)',
-                    backdropFilter: 'blur(8px)',
-                    color: '#942876',
-                    padding: '4px 12px',
-                    borderRadius: '12px',
-                    fontSize: '11.5px',
+                    background: post.category === 'Beauty & Skin Radiance' ? '#153F39' : 'rgba(255, 255, 255, 0.94)',
+                    backdropFilter: 'blur(10px)',
+                    color: post.category === 'Beauty & Skin Radiance' ? '#FFFFFF' : '#153F39',
+                    border: post.category === 'Beauty & Skin Radiance' ? '1px solid #C5A174' : '1px solid rgba(21, 63, 57, 0.15)',
+                    padding: '5px 13px',
+                    borderRadius: '16px',
+                    fontSize: '11px',
                     fontWeight: 800,
-                    letterSpacing: '0.04em',
-                    boxShadow: '0 4px 10px rgba(0,0,0,0.08)'
+                    letterSpacing: '0.05em',
+                    textTransform: 'uppercase',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                   }}>
-                    {post.category}
+                    {post.category === 'Beauty & Skin Radiance' ? '✨ Beauty & Radiance' : post.category}
                   </span>
                 </div>
 
-                <div style={{ padding: '24px', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div style={{ padding: '24px 26px', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                   <div>
-                    <div style={{ display: 'flex', gap: '8px', alignItems: 'center', fontSize: '12px', color: '#8C8099', marginBottom: '10px' }}>
-                      <Calendar size={13} color="#942876" />
+                    <div style={{ display: 'flex', gap: '8px', alignItems: 'center', fontSize: '12px', color: '#64748B', marginBottom: '10px', fontWeight: 600 }}>
+                      <Calendar size={13} color="#C5A174" />
                       <span>{post.date}</span>
                       <span>•</span>
-                      <Clock size={13} color="#942876" />
+                      <Clock size={13} color="#C5A174" />
                       <span>{post.readTime}</span>
                     </div>
 
-                    <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '21px', color: '#2B1B4D', marginBottom: '10px', lineHeight: 1.3, fontWeight: 700 }}>
+                    <h3 style={{
+                      fontFamily: "'Fraunces', Georgia, serif",
+                      fontSize: '20px',
+                      color: '#153F39',
+                      marginBottom: '10px',
+                      lineHeight: 1.32,
+                      fontWeight: 650
+                    }}>
                       {post.title}
                     </h3>
 
-                    <p style={{ fontSize: '13.5px', color: '#5C5268', lineHeight: 1.6, marginBottom: '20px' }}>
+                    <p style={{
+                      fontFamily: "'Manrope', sans-serif",
+                      fontSize: '13.5px',
+                      color: '#34465B',
+                      lineHeight: 1.62,
+                      marginBottom: '20px'
+                    }}>
                       {post.excerpt}
                     </p>
                   </div>
 
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid #F2ECF2', paddingTop: '16px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid rgba(21, 63, 57, 0.08)', paddingTop: '16px' }}>
                     <button
-                      onClick={() => setSelectedPost(post)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedPost(post);
+                      }}
                       style={{
-                        background: 'linear-gradient(135deg, #942876 0%, #C8509B 100%)',
+                        background: '#153F39',
                         color: '#FFF',
                         padding: '9px 18px',
                         borderRadius: '20px',
                         border: 'none',
                         cursor: 'pointer',
-                        fontSize: '13px',
+                        fontSize: '12.5px',
                         fontWeight: 700,
+                        fontFamily: "'Manrope', sans-serif",
                         display: 'inline-flex',
                         alignItems: 'center',
                         gap: '6px',
-                        boxShadow: '0 4px 12px rgba(148, 40, 118, 0.2)'
+                        boxShadow: '0 4px 12px rgba(21, 63, 57, 0.2)'
                       }}
                     >
-                      Read Full Article <ArrowRight size={14} />
+                      Read Full Guide <ArrowRight size={13} />
                     </button>
 
                     {post.treatmentTab && (
                       <button
-                        onClick={() => handleReadTreatment(post.treatmentTab)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleReadTreatment(post.treatmentTab);
+                        }}
                         style={{
                           background: 'none',
                           border: 'none',
-                          color: '#2B73AF',
+                          color: '#C5A174',
                           fontSize: '12px',
                           fontWeight: 700,
                           cursor: 'pointer',
@@ -287,7 +420,7 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
                           gap: '3px'
                         }}
                       >
-                        Procedure Details →
+                        Clinical Details →
                       </button>
                     )}
                   </div>
@@ -296,14 +429,32 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
             ))}
           </div>
         ) : (
-          <div style={{ textAlign: 'center', padding: '60px 20px', background: 'rgba(255, 255, 255, 0.7)', borderRadius: '22px', marginBottom: '60px', border: '1.5px solid #EBE0EA' }}>
-            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '24px', color: '#2B1B4D', marginBottom: '10px' }}>
-              No Guides Found
+          <div style={{
+            textAlign: 'center',
+            padding: '60px 20px',
+            background: 'rgba(255, 255, 255, 0.8)',
+            borderRadius: '24px',
+            marginBottom: '60px',
+            border: '1.5px solid rgba(21, 63, 57, 0.12)'
+          }}>
+            <h3 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '24px', color: '#153F39', marginBottom: '10px' }}>
+              No Articles Found
             </h3>
-            <p style={{ color: '#5C5268', fontSize: '15px', marginBottom: '20px' }}>
-              We couldn't find any articles matching "{searchTerm}". Try another keyword or reset the filter.
+            <p style={{ color: '#34465B', fontSize: '15px', marginBottom: '22px' }}>
+              We couldn't find any articles matching "{searchTerm}". Try a broader keyword like "glow", "peel", "laser", or reset the filter.
             </p>
-            <button className="btn-primary" onClick={() => { setSearchTerm(''); setActiveCategory('All'); }} style={{ display: 'inline-flex', margin: '0 auto' }}>
+            <button
+              onClick={() => { setSearchTerm(''); setActiveCategory('All'); }}
+              style={{
+                background: '#153F39',
+                color: '#FFFFFF',
+                padding: '10px 24px',
+                borderRadius: '20px',
+                border: 'none',
+                fontWeight: 700,
+                cursor: 'pointer'
+              }}
+            >
               Reset Filters
             </button>
           </div>
@@ -311,52 +462,108 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
 
         {/* ── FULL ARTICLE MODAL READER ───────────────────────────────── */}
         {selectedPost && (
-          <div className="modal-overlay" onClick={() => setSelectedPost(null)} style={{ zIndex: 1200 }}>
+          <div className="modal-overlay" onClick={() => setSelectedPost(null)} style={{ zIndex: 1200, padding: '20px' }}>
             <div 
               className="modal-content-box" 
               onClick={(e) => e.stopPropagation()} 
               style={{
-                maxWidth: '820px',
+                maxWidth: '860px',
                 maxHeight: '90vh',
                 overflowY: 'auto',
-                borderRadius: '26px',
+                borderRadius: '28px',
                 padding: '36px',
                 background: '#FFFFFF',
-                boxShadow: '0 24px 60px rgba(43, 27, 77, 0.25)'
+                boxShadow: '0 24px 70px rgba(21, 63, 57, 0.28)',
+                border: '1px solid rgba(21, 63, 57, 0.12)',
+                position: 'relative'
               }}
             >
               <button 
                 className="modal-close-btn" 
                 onClick={() => setSelectedPost(null)}
-                style={{ top: '20px', right: '20px' }}
+                style={{
+                  position: 'absolute',
+                  top: '20px',
+                  right: '20px',
+                  background: 'rgba(21, 63, 57, 0.08)',
+                  border: 'none',
+                  borderRadius: '50%',
+                  width: '36px',
+                  height: '36px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  color: '#153F39'
+                }}
               >
-                <X size={22} />
+                <X size={20} />
               </button>
 
-              <div style={{ height: '300px', borderRadius: '18px', overflow: 'hidden', marginBottom: '24px' }}>
-                <img src={selectedPost.image} alt={selectedPost.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div style={{ height: '320px', borderRadius: '20px', overflow: 'hidden', marginBottom: '24px', background: '#F4EFEA' }}>
+                <img
+                  src={selectedPost.image}
+                  alt={selectedPost.title}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  onError={(e) => { e.target.src = '/images/luxury_indian_skin_model.png'; }}
+                />
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', marginBottom: '12px' }}>
-                <span style={{ background: '#FAF0F6', color: '#942876', padding: '4px 12px', borderRadius: '12px', fontSize: '12px', fontWeight: 800 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', marginBottom: '14px' }}>
+                <span style={{
+                  background: '#153F39',
+                  color: '#FFFFFF',
+                  padding: '5px 14px',
+                  borderRadius: '16px',
+                  fontSize: '11.5px',
+                  fontWeight: 800,
+                  letterSpacing: '0.04em'
+                }}>
                   {selectedPost.category}
                 </span>
-                <span style={{ fontSize: '12px', color: '#7E7288' }}>•</span>
-                <span style={{ fontSize: '12.5px', color: '#7E7288' }}>Published: {selectedPost.date}</span>
-                <span style={{ fontSize: '12px', color: '#7E7288' }}>•</span>
-                <span style={{ fontSize: '12.5px', color: '#7E7288' }}>{selectedPost.readTime}</span>
+                <span style={{ fontSize: '12px', color: '#64748B' }}>•</span>
+                <span style={{ fontSize: '13px', color: '#64748B', fontWeight: 600 }}>Published: {selectedPost.date}</span>
+                <span style={{ fontSize: '12px', color: '#64748B' }}>•</span>
+                <span style={{ fontSize: '13px', color: '#64748B', fontWeight: 600 }}>{selectedPost.readTime}</span>
               </div>
 
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '30px', color: '#2B1B4D', margin: '0 0 14px', lineHeight: 1.25 }}>
+              <h2 style={{
+                fontFamily: "'Fraunces', Georgia, serif",
+                fontSize: 'clamp(24px, 3.5vw, 32px)',
+                color: '#153F39',
+                margin: '0 0 14px',
+                lineHeight: 1.24,
+                fontWeight: 650
+              }}>
                 {selectedPost.title}
               </h2>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#2B73AF', fontWeight: 700, marginBottom: '22px' }}>
-                <ShieldCheck size={16} />
-                <span>Reviewed by {selectedPost.author} · Medicare Skin &amp; Cosmetic Clinic</span>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                fontSize: '13.5px',
+                color: '#153F39',
+                fontWeight: 700,
+                background: 'rgba(245, 239, 230, 0.7)',
+                padding: '8px 16px',
+                borderRadius: '12px',
+                marginBottom: '22px',
+                border: '1px solid rgba(197, 161, 116, 0.35)'
+              }}>
+                <ShieldCheck size={18} color="#C5A174" />
+                <span>Medically Authored &amp; Reviewed by {selectedPost.author} · Medicare Skin &amp; Cosmetic Clinic</span>
               </div>
 
-              <div style={{ fontSize: '15.5px', color: '#3A2E47', lineHeight: 1.75, borderBottom: '1px solid #ECE3EC', paddingBottom: '20px', marginBottom: '24px' }}>
+              <div style={{
+                fontSize: '16px',
+                fontFamily: "'Manrope', sans-serif",
+                color: '#253532',
+                lineHeight: 1.75,
+                borderBottom: '1px solid rgba(21, 63, 57, 0.1)',
+                paddingBottom: '22px',
+                marginBottom: '26px'
+              }}>
                 <p style={{ margin: 0 }}>
                   {selectedPost.content}
                 </p>
@@ -364,31 +571,61 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
 
               {/* Sub-sections rendering */}
               {selectedPost.sections && selectedPost.sections.length > 0 && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '22px', marginBottom: '32px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '32px' }}>
                   {selectedPost.sections.map((sec, sIdx) => (
-                    <div key={sIdx} style={{ background: '#FAF8FB', borderRadius: '16px', padding: '20px 24px', border: '1px solid #EBE2EB' }}>
-                      <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#2B1B4D', margin: '0 0 8px' }}>
+                    <div
+                      key={sIdx}
+                      style={{
+                        background: '#FAF8F5',
+                        borderRadius: '18px',
+                        padding: '22px 26px',
+                        border: '1px solid rgba(21, 63, 57, 0.08)'
+                      }}
+                    >
+                      <h3 style={{
+                        fontFamily: "'Fraunces', Georgia, serif",
+                        fontSize: '19px',
+                        fontWeight: 650,
+                        color: '#153F39',
+                        margin: '0 0 10px',
+                        lineHeight: 1.3
+                      }}>
                         {sec.heading}
                       </h3>
-                      <p style={{ fontSize: '14.5px', color: '#5C5268', lineHeight: 1.7, margin: 0 }}>
+                      <div style={{
+                        fontFamily: "'Manrope', sans-serif",
+                        fontSize: '14.5px',
+                        color: '#34465B',
+                        lineHeight: 1.72,
+                        margin: 0,
+                        whiteSpace: 'pre-line'
+                      }}>
                         {sec.text}
-                      </p>
+                      </div>
                     </div>
                   ))}
                 </div>
               )}
 
               {/* Action Buttons Row */}
-              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', borderTop: '1px solid #ECE3EC', paddingTop: '24px' }}>
+              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', borderTop: '1px solid rgba(21, 63, 57, 0.1)', paddingTop: '24px' }}>
                 <button
-                  className="btn-primary"
                   onClick={() => { setSelectedPost(null); onOpenBooking(); }}
                   style={{
-                    flex: '1 1 200px',
+                    flex: '1 1 220px',
                     justifyContent: 'center',
-                    background: 'linear-gradient(135deg, #942876 0%, #C8509B 100%)',
-                    padding: '13px 22px',
-                    borderRadius: '12px'
+                    background: '#153F39',
+                    color: '#FFFFFF',
+                    padding: '14px 24px',
+                    borderRadius: '14px',
+                    border: 'none',
+                    fontWeight: 700,
+                    fontSize: '14px',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    cursor: 'pointer',
+                    boxShadow: '0 6px 18px rgba(21, 63, 57, 0.25)'
                   }}
                 >
                   <Calendar size={17} /> Book Dermatologist Consultation
@@ -399,11 +636,11 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
                     onClick={() => handleReadTreatment(selectedPost.treatmentTab)}
                     style={{
                       flex: '1 1 200px',
-                      padding: '13px 22px',
-                      borderRadius: '12px',
-                      background: '#F0F6FA',
-                      border: '1.5px solid #D2E4F2',
-                      color: '#2B73AF',
+                      padding: '14px 22px',
+                      borderRadius: '14px',
+                      background: 'rgba(245, 239, 230, 0.85)',
+                      border: '1.5px solid rgba(197, 161, 116, 0.5)',
+                      color: '#153F39',
                       fontSize: '14px',
                       fontWeight: 700,
                       cursor: 'pointer',
@@ -418,9 +655,16 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
                 )}
 
                 <button
-                  className="btn-secondary"
                   onClick={() => setSelectedPost(null)}
-                  style={{ borderRadius: '12px', padding: '13px 20px' }}
+                  style={{
+                    borderRadius: '14px',
+                    padding: '14px 22px',
+                    background: '#FFFFFF',
+                    border: '1px solid rgba(21, 63, 57, 0.2)',
+                    color: '#64748B',
+                    fontWeight: 600,
+                    cursor: 'pointer'
+                  }}
                 >
                   Close
                 </button>

@@ -1,20 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Sparkles, Calendar, Award, Star, CheckCircle2, ChevronLeft, ChevronRight, ShieldCheck } from 'lucide-react';
+import { Sparkles, Calendar, Award, Star, CheckCircle2, ChevronLeft, ChevronRight, ShieldCheck, Phone } from 'lucide-react';
 
 const HERO_SLIDES = [
   {
     id: 0,
-    titleLine1: "Dermatologist-Led",
-    titleLine2: "Skin, Hair & Laser Care.",
-    tagline: "EXPERT DERMATOLOGY IN SOUTH BENGALURU",
-    support: "Personalised care for acne scars, pigmentation, hair concerns and aesthetic treatments, guided by Dr. Sujay M, MBBS, DDVL.",
+    titleLine1: "Skin, Hair & Laser Care",
+    titleLine2: "with Personalised Expertise.",
+    tagline: "DERMATOLOGIST-LED CARE IN SOUTH BENGALURU",
+    support: "Get individual care for acne, acne scars, melasma, pigmentation, hair loss, skin allergies and selected aesthetic concerns at Medicare Skin & Cosmetic Clinic. Consult Dr. (Mrs.) Sujay M, MBBS, DDVL, near Yelachenahalli Metro Station.",
     features: [
-      "Guided by Dr. Sujay M, MBBS, DDVL (18+ Yrs)",
+      "Guided by Dr. (Mrs.) Sujay M, MBBS, DDVL (18+ Yrs)",
       "Bangalore Medical College Postgraduate (2005)",
-      "US-FDA Approved Laser & Dermal Suites"
+      "Near Yelachenahalli Metro Station"
     ],
     image: "/images/hero_slide_1_welcome.jpg",
-    floatingBadge: { icon: "award", text: "Dr. Sujay M, MBBS DDVL" }
+    floatingBadge: { icon: "award", text: "Dr. (Mrs.) Sujay M, MBBS DDVL" }
   },
   {
     id: 1,
@@ -23,26 +23,26 @@ const HERO_SLIDES = [
     tagline: "TARGETED DERMAL RECONSTRUCTION",
     support: "Clinical subcision, fractional resurfacing, and MNRF for pitted and rolling acne scars.",
     features: [
-      "Trusted Skin Clinic in JP Nagar & Yelachenahalli",
-      "Dr. Sujay M, MBBS DDVL Specialist",
-      "Subcision, MNRF & Fractional Resurfacing"
+      "Dermatologist-Led Clinic in South Bengaluru",
+      "Dr. (Mrs.) Sujay M, MBBS DDVL Specialist",
+      "Subcision, MNRF & Medical Chemical Peels"
     ],
     image: "/images/hero_slide_2_acne.jpg",
-    floatingBadge: { icon: "star", text: "5.0 ★ Acne Clinic" }
+    floatingBadge: { icon: "shield", text: "Personalised Assessment" }
   },
   {
     id: 2,
-    titleLine1: "Painless Laser",
-    titleLine2: "Hair Reduction.",
-    tagline: "TRIPLE WAVELENGTH ICE-COOL TECH",
+    titleLine1: "Laser Hair",
+    titleLine2: "Reduction.",
+    tagline: "PRECISION DIODE COOLING TECH",
     support: "US-FDA cleared diode cooling laser technology safe for all Indian skin types.",
     features: [
-      "★ ★ ★ ★ ★ 5.0 Google Verified Reviews",
-      "Safe for All Indian Skin Tones",
-      "10,000+ Successful Procedures"
+      "Safe for Indian Skin Tones",
+      "Chilled Tip Contact Cooling",
+      "18+ Years Dedicated Clinical Practice"
     ],
     image: "/images/hero_slide_4_laser.jpg",
-    floatingBadge: { icon: "shield", text: "US-FDA Approved" }
+    floatingBadge: { icon: "shield", text: "US-FDA Cleared Tech" }
   },
   {
     id: 3,
@@ -251,11 +251,11 @@ export default function HeroSlider({ onOpenBooking }) {
                 {/* Main Heading with 3D Depth */}
                 <h1
                   style={{
-                    fontFamily: 'Playfair Display, serif',
+                    fontFamily: "'Fraunces', Georgia, serif",
                     fontSize: '54px',
-                    fontWeight: 700,
+                    fontWeight: 650,
                     lineHeight: 1.15,
-                    color: '#2B1B4D',
+                    color: '#153F39',
                     marginBottom: '20px',
                     transform: 'translateZ(40px)',
                     transformStyle: 'preserve-3d'
@@ -325,47 +325,18 @@ export default function HeroSlider({ onOpenBooking }) {
                 <div style={{ transform: 'translateZ(50px)', transformStyle: 'preserve-3d' }}>
                   <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
                     <button
-                      className="slide-cta-btn btn-3d-lift"
+                      className="slide-cta-btn btn-liquid-primary"
                       onClick={onOpenBooking}
-                      style={{
-                        background: 'linear-gradient(135deg, #942876 0%, #C8509B 100%)',
-                        color: '#FFFFFF',
-                        padding: '16px 34px',
-                        borderRadius: '50px',
-                        fontSize: '15.5px',
-                        fontWeight: 700,
-                        border: '1.5px solid rgba(255, 255, 255, 0.35)',
-                        cursor: 'pointer',
-                        boxShadow: '0 12px 32px rgba(148, 40, 118, 0.36), inset 0 1.5px 2px rgba(255, 255, 255, 0.6)',
-                        transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '10px'
-                      }}
                     >
                       <Calendar size={18} /> Book a Consultation
                     </button>
 
                     <a
                       href="tel:+919242855707"
-                      className="btn-3d-tactile"
-                      style={{
-                        background: 'rgba(255, 255, 255, 0.88)',
-                        backdropFilter: 'blur(16px)',
-                        color: '#2B1B4D',
-                        padding: '15px 26px',
-                        borderRadius: '50px',
-                        fontSize: '15px',
-                        fontWeight: 700,
-                        border: '1.5px solid rgba(148, 40, 118, 0.25)',
-                        textDecoration: 'none',
-                        boxShadow: '0 8px 24px rgba(148, 40, 118, 0.1), inset 0 1px 2px rgba(255, 255, 255, 1)',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '8px'
-                      }}
+                      className="btn-secondary btn-liquid-secondary"
                     >
-                      Call Our Clinic
+                      <Phone size={17} style={{ color: '#942876' }} />
+                      <span>Call Our Clinic</span>
                     </a>
                   </div>
 

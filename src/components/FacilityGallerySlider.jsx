@@ -93,9 +93,10 @@ export default function FacilityGallerySlider({ onOpenBooking }) {
           </span>
           <h2
             style={{
-              fontFamily: 'Playfair Display, serif',
+              fontFamily: "'Fraunces', Georgia, serif",
               fontSize: '42px',
-              color: '#2B1B4D',
+              fontWeight: 650,
+              color: '#153F39',
               marginBottom: '14px',
               letterSpacing: '-0.02em'
             }}
@@ -322,7 +323,8 @@ export default function FacilityGallerySlider({ onOpenBooking }) {
                   >
                     <h3
                       style={{
-                        fontFamily: 'Playfair Display, serif',
+                        fontFamily: "'Fraunces', Georgia, serif",
+                        fontWeight: 650,
                         fontSize: isCenter ? '20px' : '16px',
                         color: '#FFFFFF',
                         margin: 0,
@@ -375,7 +377,7 @@ export default function FacilityGallerySlider({ onOpenBooking }) {
               <div style={{ fontSize: '11px', fontWeight: 700, color: '#942876', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '4px' }}>
                 Active Facility ({activeIdx + 1} of {SLIDE_IMAGES.length})
               </div>
-              <h4 style={{ fontFamily: 'Playfair Display, serif', fontSize: '20px', color: '#2B1B4D', margin: 0 }}>
+              <h4 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '20px', fontWeight: 650, color: '#153F39', margin: 0 }}>
                 {activeImage.title}
               </h4>
             </div>
@@ -504,7 +506,7 @@ export default function FacilityGallerySlider({ onOpenBooking }) {
                 <span style={{ background: 'rgba(255, 255, 255, 0.9)', border: '1px solid rgba(148, 40, 118, 0.25)', color: '#942876', padding: '5px 14px', borderRadius: '14px', fontSize: '12px', fontWeight: '700' }}>
                   {activeLightbox.tag}
                 </span>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '24px', color: '#2B1B4D', marginTop: '10px', margin: '10px 0 0' }}>
+                <h3 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '24px', fontWeight: 650, color: '#153F39', marginTop: '10px', margin: '10px 0 0' }}>
                   {activeLightbox.title}
                 </h3>
               </div>

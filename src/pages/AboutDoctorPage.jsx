@@ -17,8 +17,8 @@ export default function AboutDoctorPage({ onOpenBooking }) {
 
           <div className="grid-responsive-3" style={{ gap: '30px' }}>
             <div className="location-card-box" style={{ padding: '30px' }}>
-              <GraduationCap size={36} color="#942876" style={{ marginBottom: '16px' }} />
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
+              <GraduationCap size={36} color="#153F39" style={{ marginBottom: '16px' }} />
+              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', marginBottom: '10px' }}>
                 Academic Credentials
               </h3>
               <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>
@@ -27,18 +27,18 @@ export default function AboutDoctorPage({ onOpenBooking }) {
             </div>
 
             <div className="location-card-box" style={{ padding: '30px' }}>
-              <Award size={36} color="#942876" style={{ marginBottom: '16px' }} />
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
-                18+ Years Precision
+              <Award size={36} color="#153F39" style={{ marginBottom: '16px' }} />
+              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', marginBottom: '10px' }}>
+                18+ Years Clinical Practice
               </h3>
               <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>
-                Over 10,000 successful clinical procedures including acne scar subcision, laser hair reduction, vitiligo surgery, and anti-aging treatments.
+                Extensive clinical experience in acne scar revision, pigmentation management, medical dermatology, and doctor-supervised laser procedures.
               </p>
             </div>
 
             <div className="location-card-box" style={{ padding: '30px' }}>
-              <HeartHandshake size={36} color="#942876" style={{ marginBottom: '16px' }} />
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
+              <HeartHandshake size={36} color="#153F39" style={{ marginBottom: '16px' }} />
+              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', marginBottom: '10px' }}>
                 Affordable Patient Care
               </h3>
               <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>

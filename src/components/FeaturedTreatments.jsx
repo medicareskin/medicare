@@ -146,7 +146,7 @@ export default function FeaturedTreatments({ onSelectTreatment, onOpenBooking })
             <Sparkles size={15} color="#942876" />
             EVIDENCE-BASED PROCEDURES
           </span>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '42px', color: '#2B1B4D', marginBottom: '14px' }}>
+          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '42px', color: '#153F39', marginBottom: '14px' }}>
             Our Signature Treatments
           </h2>
           <p style={{ fontSize: '16px', color: '#5C5268', maxWidth: '650px', margin: '0 auto', lineHeight: '1.6' }}>

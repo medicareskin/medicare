@@ -54,7 +54,7 @@ class ErrorBoundary extends React.Component {
             <h2 style={{ fontSize: '22px', fontWeight: '700', color: '#942876', margin: '0 0 12px 0' }}>
               Restoring Clinical View
             </h2>
-            <p style={{ fontSize: '14px', color: '#685879', lineHeight: '1.6', margin: '0 0 24px 0' }}>
+            <p style={{ fontSize: '14px', color: '#685879', lineHeight: '1.6', margin: '0 0 20px 0' }}>
               Medicare Skin Clinic loaded with fresh updates. Click below to refresh your view.
             </p>
             <button

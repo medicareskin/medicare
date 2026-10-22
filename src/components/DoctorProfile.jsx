@@ -93,7 +93,7 @@ export default function DoctorProfile({ onOpenBooking }) {
                 transformStyle: 'preserve-3d'
               }}
             >
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '24px', margin: 0, color: '#2B1B4D' }}>
+              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '24px', margin: 0, color: '#153F39' }}>
                 Dr. (Mrs.) Sujay M
               </h3>
               <p style={{ fontSize: '13.5px', margin: '6px 0 0', color: '#942876', fontWeight: '700' }}>
@@ -125,26 +125,22 @@ export default function DoctorProfile({ onOpenBooking }) {
               CHIEF DERMATOLOGIST & MEDICAL DIRECTOR
             </span>
 
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '42px', color: '#2B1B4D', marginBottom: '10px', lineHeight: 1.2 }}>
-              Meet Dr. Sujay M
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '38px', color: '#153F39', marginBottom: '10px', lineHeight: 1.2 }}>
+              Meet Dr. (Mrs.) Sujay M
             </h2>
-            <div className="doctor-subtitle" style={{ fontSize: '18px', fontWeight: 600, color: '#942876', marginBottom: '22px' }}>
-              Bangalore's Leading Clinical & Aesthetic Dermatologist
+            <div className="doctor-subtitle" style={{ fontSize: '18px', fontWeight: 600, color: '#153F39', marginBottom: '22px' }}>
+              Dermatologist &amp; Cosmetologist in Bengaluru
             </div>
 
             <p style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: '1.7', marginBottom: '16px' }}>
-              Dr. Sujay M is a celebrated Dermatologist in Bangalore with over <strong>18+ years of clinical excellence</strong>.
-              She is a qualified <strong>MBBS, DDVL</strong>, having completed her postgraduation from the prestigious
-              <strong> Bangalore Medical College in the year 2005</strong>.
+              Dr. (Mrs.) Sujay M, MBBS, DDVL, provides individualised medical dermatology and aesthetic consultation at Medicare Skin &amp; Cosmetic Clinic in South Bengaluru. She completed her post-graduate dermatology training from the renowned <strong>Bangalore Medical College in 2005</strong> and brings over <strong>18+ years of clinical experience</strong>.
             </p>
 
             <p style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: '1.7', marginBottom: '16px' }}>
-              Medicare Skin and Cosmetic Clinic is the brainchild of Dr. Sujay M, founded with the mission to deliver
-              gold-standard dermatological and trichological procedures at honest, affordable prices. She is extensively
-              trained in US-FDA laser systems, autologous growth factor therapies, and scar resurfacing.
+              Her practice combines rigorous clinical assessment, thorough patient education, and responsible treatment selection. Dr. Sujay M personally supervises diagnostic evaluations, acne scar revision, laser treatments, chemical peels, and trichological therapies.
             </p>
 
-            {/* 3D Floating Credential Badges */}
+            {/* Credential Badges */}
             <div style={{ display: 'flex', gap: '14px', marginTop: '28px', flexWrap: 'wrap' }}>
               <div
                 style={{
@@ -157,10 +153,10 @@ export default function DoctorProfile({ onOpenBooking }) {
                   padding: '12px 22px',
                   borderRadius: '30px',
                   border: '1.5px solid rgba(255, 255, 255, 0.95)',
-                  boxShadow: '0 6px 18px rgba(148, 40, 118, 0.08), inset 0 1px 2px rgba(255, 255, 255, 1)'
+                  boxShadow: '0 6px 18px rgba(21, 63, 57, 0.08), inset 0 1px 2px rgba(255, 255, 255, 1)'
                 }}
               >
-                <GraduationCap size={22} style={{ color: '#942876' }} />
+                <GraduationCap size={22} style={{ color: '#153F39' }} />
                 <span style={{ fontSize: '14px', fontWeight: '700', color: '#2B1B4D' }}>Bangalore Medical College (2005)</span>
               </div>
               <div
@@ -174,17 +170,17 @@ export default function DoctorProfile({ onOpenBooking }) {
                   padding: '12px 22px',
                   borderRadius: '30px',
                   border: '1.5px solid rgba(255, 255, 255, 0.95)',
-                  boxShadow: '0 6px 18px rgba(148, 40, 118, 0.08), inset 0 1px 2px rgba(255, 255, 255, 1)'
+                  boxShadow: '0 6px 18px rgba(21, 63, 57, 0.08), inset 0 1px 2px rgba(255, 255, 255, 1)'
                 }}
               >
-                <Award size={22} style={{ color: '#942876' }} />
-                <span style={{ fontSize: '14px', fontWeight: '700', color: '#2B1B4D' }}>10,000+ Treated Patients</span>
+                <Award size={22} style={{ color: '#C5A174' }} />
+                <span style={{ fontSize: '14px', fontWeight: '700', color: '#2B1B4D' }}>18+ Years Dedicated Practice</span>
               </div>
             </div>
 
             <div style={{ marginTop: '36px' }}>
               <button className="btn-primary btn-3d-tactile" onClick={onOpenBooking}>
-                <Calendar size={18} /> Book Direct Consultation with Dr. Sujay M
+                <Calendar size={18} /> Request Consultation with Dr. (Mrs.) Sujay M
               </button>
             </div>
           </div>

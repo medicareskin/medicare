@@ -285,7 +285,7 @@ export default function SkinConcernNavigatorModal({ isOpen, onClose, onOpenBooki
             </div>
 
             {/* Question Details */}
-            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '26px', color: '#2B1B4D', margin: '0 0 8px', lineHeight: 1.3 }}>
+            <h3 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '26px', fontWeight: 650, color: '#153F39', margin: '0 0 8px', lineHeight: 1.3 }}>
               {currentQ.title}
             </h3>
             <p style={{ fontSize: '14px', color: '#6B5872', margin: '0 0 28px' }}>
@@ -352,7 +352,7 @@ export default function SkinConcernNavigatorModal({ isOpen, onClose, onOpenBooki
                 <ShieldCheck size={16} color="#942876" />
                 CLINICIAN-REVIEWED EDUCATIONAL GUIDANCE
               </span>
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', color: '#2B1B4D', margin: '0 0 8px' }}>
+              <h3 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '28px', fontWeight: 650, color: '#153F39', margin: '0 0 8px' }}>
                 {guidance.title}
               </h3>
               <p style={{ fontSize: '13.5px', color: '#6B5872', maxWidth: '520px', margin: '0 auto' }}>

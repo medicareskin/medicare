@@ -1,26 +1,45 @@
 :root {
-  --primary-navy: #2B1B4D;
-  --primary-purple: #4A225D;
-  --accent-magenta: #942876;
-  --accent-rose: #C8509B;
-  --accent-light: #FBF4F8;
-  --accent-cream: #FAF4EE;
-  --bg-gradient: linear-gradient(135deg, #FDF9FB 0%, #F5ECF2 100%);
-  --text-dark: #1E122A;
-  --text-muted: #5C5268;
-  --text-light: #8C8099;
+  /* Master Build Spec v1.0 Section 02 Brand Tokens */
+  --primary-teal: #153F39;
+  --secondary-slate: #34465B;
+  --accent-gold: #C5A174;
+  --bg-ivory: #F8F6F2;
+  --pure-white: #FFFFFF;
+  --text-charcoal: #253532;
+
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-sans: 'Manrope', Arial, Helvetica, sans-serif;
+
+  /* Theme mappings mapped to verified brand palette */
+  --primary-navy: #153F39;
+  --primary-purple: #34465B;
+  --accent-magenta: #153F39;
+  --accent-rose: #C5A174;
+  --accent-light: #F8F6F2;
+  --accent-cream: #F8F6F2;
+  --bg-gradient: linear-gradient(135deg, #F8F6F2 0%, #FFFFFF 100%);
+  --text-dark: #253532;
+  --text-muted: #5C655D;
+  --text-light: #7E7288;
   --white: #FFFFFF;
-  --border-light: #EBE0EA;
-  --shadow-sm: 0 4px 15px rgba(43, 27, 77, 0.05);
-  --shadow-md: 0 10px 30px rgba(43, 27, 77, 0.08);
-  --shadow-lg: 0 20px 40px rgba(43, 27, 77, 0.12);
+  --border-light: #EBE4D8;
+  --shadow-sm: 0 4px 15px rgba(21, 63, 57, 0.05);
+  --shadow-md: 0 10px 30px rgba(21, 63, 57, 0.08);
+  --shadow-lg: 0 20px 40px rgba(21, 63, 57, 0.12);
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 24px;
-  --font-heading: 'Playfair Display', serif;
-  --font-sans: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-  --transition-fast: 0.25s ease;
-  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 * {
@@ -35,9 +54,9 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: #F8F9FD;
-  color: var(--text-dark);
-  line-height: 1.6;
+  background-color: var(--bg-ivory);
+  color: var(--text-charcoal);
+  line-height: 1.62;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -80,66 +99,212 @@ img {
   -webkit-text-fill-color: transparent;
 }
 
-/* Liquid Glass Buttons */
-.btn-primary {
-  background: linear-gradient(135deg, rgba(148, 40, 118, 0.94) 0%, rgba(200, 80, 155, 0.9) 100%) !important;
-  backdrop-filter: blur(20px) saturate(190%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
-  color: #FFFFFF !important;
-  padding: 14px 30px !important;
-  border-radius: 30px !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
-  font-weight: 700 !important;
+/* ── Apple VisionOS / iOS Liquid Glass Buttons & Interaction Foundation ── */
+.btn-primary,
+.btn-liquid-primary {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 13.5px 28px !important;
+  border-radius: 9999px !important;
+  font-family: 'Manrope', 'Plus Jakarta Sans', -apple-system, sans-serif !important;
   font-size: 14.5px !important;
+  font-weight: 700 !important;
   letter-spacing: 0.02em !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 2px rgba(27, 3, 68, 0.45) !important;
+  background:
+    radial-gradient(100% 75% at 50% 0%, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(135deg, rgba(148, 40, 118, 0.95) 0%, rgba(195, 58, 152, 0.88) 50%, rgba(138, 22, 110, 0.96) 100%) !important;
+  backdrop-filter: blur(28px) saturate(220%) brightness(106%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(220%) brightness(106%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.65) !important;
+  box-shadow:
+    0 8px 26px -4px rgba(148, 40, 118, 0.4),
+    0 2px 8px rgba(43, 27, 77, 0.08),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.2),
+    inset 0 0 12px rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.btn-primary > *,
+.btn-liquid-primary > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.btn-primary::before,
+.btn-liquid-primary::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: inherit !important;
+  background: radial-gradient(ellipse 90% 45% at 50% 0%, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0) 75%) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.btn-primary::after,
+.btn-liquid-primary::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -150% !important;
+  width: 50% !important;
+  height: 200% !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.02) 20%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0.02) 80%,
+    transparent 100%
+  ) !important;
+  transform: skewX(-20deg) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  opacity: 0 !important;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
+}
+
+.btn-primary:hover,
+.btn-liquid-primary:hover {
+  background:
+    radial-gradient(100% 75% at 50% 0%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(135deg, rgba(165, 45, 132, 0.96) 0%, rgba(215, 75, 172, 0.92) 50%, rgba(155, 28, 124, 0.98) 100%) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow:
+    0 14px 40px -4px rgba(148, 40, 118, 0.5),
+    0 4px 12px rgba(43, 27, 77, 0.12),
+    inset 0 2px 2px 0 #FFFFFF,
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.22),
+    inset 0 0 16px rgba(255, 255, 255, 0.15) !important;
+}
+
+.btn-primary:hover::after,
+.btn-liquid-primary:hover::after {
+  opacity: 1 !important;
+  transform: skewX(-20deg) translateX(700%) !important;
+}
+
+.btn-primary:active,
+.btn-liquid-primary:active {
+  transform: translateY(1px) scale(0.98) !important;
+  box-shadow:
+    0 4px 14px -2px rgba(148, 40, 118, 0.35),
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.7),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.25) !important;
+}
+
+.btn-secondary,
+.btn-liquid-secondary,
+.btn-liquid-crystal {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 10px !important;
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow:
-    0 8px 24px rgba(148, 40, 118, 0.28),
-    0 2px 6px rgba(0, 0, 0, 0.04),
-    inset 0 1.5px 2px rgba(255, 255, 255, 0.75) !important;
-  cursor: pointer !important;
-}
-
-.btn-primary:hover {
-  background: linear-gradient(135deg, rgba(175, 45, 140, 0.98) 0%, rgba(220, 95, 175, 0.95) 100%) !important;
-  transform: translateY(-2px) scale(1.02) !important;
-  box-shadow:
-    0 14px 36px rgba(148, 40, 118, 0.38),
-    0 4px 10px rgba(0, 0, 0, 0.06),
-    inset 0 2px 3px rgba(255, 255, 255, 0.9) !important;
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.75) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  color: #2B1B4D !important;
-  border: 1.5px solid rgba(148, 40, 118, 0.22) !important;
-  padding: 13px 28px !important;
-  border-radius: 30px !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 12.5px 26px !important;
+  border-radius: 9999px !important;
+  font-family: 'Manrope', 'Plus Jakarta Sans', -apple-system, sans-serif !important;
+  font-size: 14px !important;
   font-weight: 700 !important;
-  font-size: 14.5px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow:
-    0 6px 20px rgba(43, 27, 77, 0.06),
-    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+  letter-spacing: 0.01em !important;
+  text-decoration: none !important;
   cursor: pointer !important;
+  color: #2B1B4D !important;
+  background:
+    radial-gradient(120% 120% at 50% -10%, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.55) 100%) !important;
+  backdrop-filter: blur(26px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(26px) saturate(190%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.98) !important;
+  box-shadow:
+    0 10px 28px -4px rgba(43, 27, 77, 0.08),
+    0 2px 8px rgba(148, 40, 118, 0.05),
+    inset 0 2px 3px rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px rgba(148, 40, 118, 0.08) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
 }
 
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border-color: #942876 !important;
+.btn-secondary > *,
+.btn-liquid-secondary > *,
+.btn-liquid-crystal > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.btn-secondary::before,
+.btn-liquid-secondary::before,
+.btn-liquid-crystal::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: inherit !important;
+  background: radial-gradient(ellipse 90% 45% at 50% 0%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 75%) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.btn-secondary::after,
+.btn-liquid-secondary::after,
+.btn-liquid-crystal::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -150% !important;
+  width: 50% !important;
+  height: 200% !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 20%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.05) 80%,
+    transparent 100%
+  ) !important;
+  transform: skewX(-20deg) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  opacity: 0 !important;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
+}
+
+.btn-secondary:hover::after,
+.btn-liquid-secondary:hover::after,
+.btn-liquid-crystal:hover::after {
+  opacity: 1 !important;
+  transform: skewX(-20deg) translateX(700%) !important;
+}
+
+.btn-secondary:hover,
+.btn-liquid-secondary:hover,
+.btn-liquid-crystal:hover {
+  background:
+    radial-gradient(120% 120% at 50% -10%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.92) 55%, rgba(255, 255, 255, 0.82) 100%) !important;
   color: #942876 !important;
+  border-color: rgba(148, 40, 118, 0.38) !important;
   transform: translateY(-2px) scale(1.02) !important;
   box-shadow:
-    0 12px 30px rgba(148, 40, 118, 0.14),
-    inset 0 2px 3px rgba(255, 255, 255, 1) !important;
+    0 16px 36px -4px rgba(148, 40, 118, 0.16),
+    0 4px 12px rgba(43, 27, 77, 0.06),
+    inset 0 2px 3px #FFFFFF !important;
+}
+
+.btn-secondary:active,
+.btn-liquid-secondary:active {
+  transform: translateY(1px) scale(0.97) !important;
 }
 
 /* Header & Top Bar - Light Liquid Glass */
@@ -382,8 +547,8 @@ body {
 
 .site-header.mos-header-style .serif-nav-item {
   color: #241442 !important;
-  font-family: 'Funnel Display', 'Outfit', sans-serif !important;
-  font-size: 12.5px !important;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 13px !important;
   font-weight: 650 !important;
   letter-spacing: 0.03em !important;
   text-transform: uppercase !important;
@@ -429,7 +594,7 @@ body {
   -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
   color: #241442 !important;
   border: 1.5px solid rgba(255, 255, 255, 0.92) !important;
-  font-family: 'Funnel Display', sans-serif !important;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif !important;
   font-size: 13px !important;
   font-weight: 750 !important;
   letter-spacing: 0.02em !important;
@@ -469,7 +634,7 @@ body {
   backdrop-filter: blur(28px) saturate(200%) !important;
   -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
   color: #FFFFFF !important;
-  font-family: 'Funnel Display', sans-serif !important;
+  font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif !important;
   font-weight: 750 !important;
   font-size: 13px !important;
   letter-spacing: 0.03em !important;
@@ -3475,10 +3640,10 @@ main section {
 
 .booking-card .booking-form-title,
 .booking-card h2 {
-  font-family: var(--font-heading, 'Playfair Display', serif) !important;
+  font-family: var(--font-heading, 'Fraunces', Georgia, serif) !important;
   font-size: 26px !important;
-  font-weight: 700 !important;
-  color: #942876 !important;
+  font-weight: 650 !important;
+  color: #153F39 !important;
   margin-bottom: 22px !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
@@ -3715,112 +3880,543 @@ main section {
   transform: translateY(-2px);
 }
 
-/* Liquid Glass Specular Primary CTAs */
+/* ═══════════════════════════════════════════════════════════════
+   FULL LIQUID GLASS BUTTONS & TACTILE INTERACTION SYSTEM
+   Apple VisionOS / iOS Liquid Glass Specular Architecture
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. LIQUID GLASS KEYFRAME DYNAMICS ── */
+@keyframes liquidGlassSheen {
+  0% {
+    transform: rotate(26deg) translateX(-180%);
+  }
+  30%, 100% {
+    transform: rotate(26deg) translateX(440%);
+  }
+}
+
+@keyframes liquidOrbPulse {
+  0% {
+    box-shadow: 0 8px 24px rgba(148, 40, 118, 0.35), 0 0 0 0 rgba(200, 80, 155, 0.4), inset 0 2px 3px rgba(255, 255, 255, 0.95);
+  }
+  70% {
+    box-shadow: 0 12px 32px rgba(148, 40, 118, 0.45), 0 0 0 14px rgba(200, 80, 155, 0), inset 0 2px 3px rgba(255, 255, 255, 0.95);
+  }
+  100% {
+    box-shadow: 0 8px 24px rgba(148, 40, 118, 0.35), 0 0 0 0 rgba(200, 80, 155, 0), inset 0 2px 3px rgba(255, 255, 255, 0.95);
+  }
+}
+
+@keyframes liquidGlowBreath {
+  0%, 100% {
+    filter: drop-shadow(0 4px 14px rgba(148, 40, 118, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 8px 26px rgba(148, 40, 118, 0.45));
+  }
+}
+
+/* ── 2. PRIMARY LIQUID MAGENTA GLASS (FLAGSHIP CLINICAL CTAs) ── */
 .btn-primary,
+.desk-btn-primary,
+.mob-btn-primary,
 .nav-book-btn,
 .mobile-book-action-btn,
 .slide-cta-btn,
 .consultation-banner-btn,
-.liquid-glass-btn {
-  background: linear-gradient(135deg, rgba(148, 40, 118, 0.95) 0%, rgba(200, 80, 155, 0.92) 100%) !important;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
-  box-shadow:
-    0 8px 26px rgba(148, 40, 118, 0.28),
-    inset 0 1.5px 2px rgba(255, 255, 255, 0.6),
-    inset 0 -1.5px 2px rgba(0, 0, 0, 0.12) !important;
-  border-radius: 9999px !important;
-  color: #FFFFFF !important;
-  font-weight: 700;
-  position: relative;
+.liquid-glass-btn,
+.btn-liquid-primary,
+.site-header .header-book-pill,
+.site-header.mos-header-style .header-book-pill,
+#hero-book-consult-btn,
+#doctor-book-btn,
+#journey-book-btn,
+#final-cta-book-btn {
+  position: relative !important;
+  isolation: isolate !important;
   overflow: hidden !important;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 13.5px 28px !important;
+  border-radius: 9999px !important;
+  font-family: 'Manrope', 'Plus Jakarta Sans', -apple-system, sans-serif !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 2px rgba(27, 3, 68, 0.45) !important;
+  
+  background:
+    radial-gradient(100% 75% at 50% 0%, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(135deg, rgba(148, 40, 118, 0.95) 0%, rgba(195, 58, 152, 0.88) 50%, rgba(138, 22, 110, 0.96) 100%) !important;
+  
+  backdrop-filter: blur(28px) saturate(220%) brightness(106%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(220%) brightness(106%) !important;
+  
+  border: 1px solid rgba(255, 255, 255, 0.65) !important;
+  box-shadow:
+    0 8px 26px -4px rgba(148, 40, 118, 0.4),
+    0 2px 8px rgba(43, 27, 77, 0.08),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.2),
+    inset 0 0 12px rgba(255, 255, 255, 0.08) !important;
+  
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
 }
 
+.btn-primary > *,
+.desk-btn-primary > *,
+.mob-btn-primary > *,
+.nav-book-btn > *,
+.mobile-book-action-btn > *,
+.slide-cta-btn > *,
+.consultation-banner-btn > *,
+.liquid-glass-btn > *,
+.btn-liquid-primary > *,
+.site-header .header-book-pill > *,
+.site-header.mos-header-style .header-book-pill > *,
+#hero-book-consult-btn > *,
+#doctor-book-btn > *,
+#journey-book-btn > *,
+#final-cta-book-btn > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Curved Top Specular Meniscus */
+.btn-primary::before,
+.desk-btn-primary::before,
+.mob-btn-primary::before,
+.nav-book-btn::before,
+.mobile-book-action-btn::before,
+.slide-cta-btn::before,
+.consultation-banner-btn::before,
+.liquid-glass-btn::before,
+.btn-liquid-primary::before,
+.site-header .header-book-pill::before,
+.site-header.mos-header-style .header-book-pill::before,
+#hero-book-consult-btn::before,
+#doctor-book-btn::before,
+#journey-book-btn::before,
+#final-cta-book-btn::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: inherit !important;
+  background: radial-gradient(ellipse 90% 45% at 50% 0%, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0) 75%) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+/* Liquid Light Sweep Wave */
 .btn-primary::after,
+.desk-btn-primary::after,
+.mob-btn-primary::after,
 .nav-book-btn::after,
-.slide-cta-btn::after {
-  content: '';
-  position: absolute;
-  top: -60%;
-  left: -70%;
-  width: 45%;
-  height: 220%;
+.mobile-book-action-btn::after,
+.slide-cta-btn::after,
+.consultation-banner-btn::after,
+.liquid-glass-btn::after,
+.btn-liquid-primary::after,
+.site-header .header-book-pill::after,
+.site-header.mos-header-style .header-book-pill::after,
+#hero-book-consult-btn::after,
+#doctor-book-btn::after,
+#journey-book-btn::after,
+#final-cta-book-btn::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -150% !important;
+  width: 50% !important;
+  height: 200% !important;
   background: linear-gradient(
-    60deg,
+    90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0.02) 20%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0.02) 80%,
     transparent 100%
-  );
-  transform: rotate(25deg);
-  transition: transform 0.8s ease;
-  pointer-events: none;
+  ) !important;
+  transform: skewX(-20deg) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  opacity: 0 !important;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
 }
 
-.btn-primary:hover::after,
-.nav-book-btn:hover::after,
-.slide-cta-btn:hover::after {
-  transform: rotate(25deg) translateX(420%);
-}
-
+/* Hover State */
 .btn-primary:hover,
+.desk-btn-primary:hover,
+.mob-btn-primary:hover,
 .nav-book-btn:hover,
 .mobile-book-action-btn:hover,
 .slide-cta-btn:hover,
 .consultation-banner-btn:hover,
-.liquid-glass-btn:hover {
-  background: linear-gradient(135deg, #7E1F64 0%, #B23B86 100%) !important;
-  transform: translateY(-3px) scale(1.02);
+.liquid-glass-btn:hover,
+.btn-liquid-primary:hover,
+.site-header .header-book-pill:hover,
+.site-header.mos-header-style .header-book-pill:hover,
+#hero-book-consult-btn:hover,
+#doctor-book-btn:hover,
+#journey-book-btn:hover,
+#final-cta-book-btn:hover {
+  background:
+    radial-gradient(100% 75% at 50% 0%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(135deg, rgba(165, 45, 132, 0.96) 0%, rgba(215, 75, 172, 0.92) 50%, rgba(155, 28, 124, 0.98) 100%) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
   box-shadow:
-    0 14px 34px rgba(148, 40, 118, 0.38),
-    inset 0 2px 3px rgba(255, 255, 255, 0.75) !important;
+    0 14px 40px -4px rgba(148, 40, 118, 0.5),
+    0 4px 12px rgba(43, 27, 77, 0.12),
+    inset 0 2px 2px 0 #FFFFFF,
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.22),
+    inset 0 0 16px rgba(255, 255, 255, 0.15) !important;
 }
 
-/* Translucent Glass Secondary CTAs */
+.btn-primary:hover::after,
+.desk-btn-primary:hover::after,
+.mob-btn-primary:hover::after,
+.nav-book-btn:hover::after,
+.slide-cta-btn:hover::after,
+.liquid-glass-btn:hover::after,
+.site-header .header-book-pill:hover::after,
+#hero-book-consult-btn:hover::after {
+  opacity: 1 !important;
+  transform: skewX(-20deg) translateX(700%) !important;
+}
+
+/* Active Press State */
+.btn-primary:active,
+.desk-btn-primary:active,
+.mob-btn-primary:active,
+.nav-book-btn:active,
+.mobile-book-action-btn:active,
+.slide-cta-btn:active,
+.liquid-glass-btn:active,
+.site-header .header-book-pill:active,
+#hero-book-consult-btn:active {
+  transform: translateY(1.5px) scale(0.97) !important;
+  box-shadow:
+    0 6px 18px -2px rgba(148, 40, 118, 0.35),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.75),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ── 3. PURE WATER CRYSTAL FROSTED GLASS (SECONDARY / CALL CTAs) ── */
 .btn-secondary,
-.read-more-btn {
-  background: rgba(255, 255, 255, 0.72) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  color: #942876 !important;
-  border: 1.5px solid rgba(148, 40, 118, 0.28) !important;
+.desk-btn-call,
+.desk-btn-secondary,
+.desk-btn-call-inline,
+.desk-btn-outline-white,
+.mob-btn-secondary,
+.header-phone-pill,
+.read-more-btn,
+.show-more-toggle-btn,
+.btn-liquid-secondary,
+.btn-liquid-crystal,
+#hero-call-btn {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 12.5px 26px !important;
   border-radius: 9999px !important;
+  font-family: 'Manrope', 'Plus Jakarta Sans', -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  color: #2B1B4D !important;
+  
+  background:
+    radial-gradient(120% 120% at 50% -10%, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.55) 100%) !important;
+  
+  backdrop-filter: blur(26px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(26px) saturate(190%) !important;
+  
+  border: 1.5px solid rgba(255, 255, 255, 0.98) !important;
   box-shadow:
-    0 4px 14px rgba(148, 40, 118, 0.06),
-    inset 0 1px 2px rgba(255, 255, 255, 0.95) !important;
-  font-weight: 600;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    0 10px 28px -4px rgba(43, 27, 77, 0.08),
+    0 2px 8px rgba(148, 40, 118, 0.05),
+    inset 0 2px 3px rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px rgba(148, 40, 118, 0.08) !important;
+  
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
 }
 
-.show-more-toggle-btn {
-  background: rgba(255, 255, 255, 0.82) !important;
-  border: 1.5px solid rgba(200, 80, 155, 0.35) !important;
-  box-shadow:
-    0 8px 24px rgba(148, 40, 118, 0.1),
-    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
-  border-radius: 9999px !important;
+.btn-secondary > *,
+.desk-btn-call > *,
+.desk-btn-secondary > *,
+.desk-btn-call-inline > *,
+.desk-btn-outline-white > *,
+.mob-btn-secondary > *,
+.header-phone-pill > *,
+.read-more-btn > *,
+.show-more-toggle-btn > *,
+.btn-liquid-secondary > *,
+.btn-liquid-crystal > *,
+#hero-call-btn > * {
+  position: relative !important;
+  z-index: 2 !important;
 }
 
-.show-more-toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.96) !important;
-  border-color: #942876 !important;
-  transform: translateY(-3px) scale(1.03);
-  box-shadow:
-    0 12px 32px rgba(148, 40, 118, 0.18),
-    inset 0 2px 3px rgba(255, 255, 255, 1) !important;
+.btn-secondary::before,
+.desk-btn-call::before,
+.desk-btn-secondary::before,
+.mob-btn-secondary::before,
+.header-phone-pill::before,
+.btn-liquid-secondary::before,
+.btn-liquid-crystal::before,
+#hero-call-btn::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: inherit !important;
+  background: radial-gradient(ellipse 90% 45% at 50% 0%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 75%) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.btn-secondary::after,
+.desk-btn-call::after,
+.desk-btn-secondary::after,
+.mob-btn-secondary::after,
+.header-phone-pill::after,
+.btn-liquid-secondary::after,
+.btn-liquid-crystal::after,
+#hero-call-btn::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -150% !important;
+  width: 50% !important;
+  height: 200% !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 20%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.05) 80%,
+    transparent 100%
+  ) !important;
+  transform: skewX(-20deg) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  opacity: 0 !important;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
 }
 
 .btn-secondary:hover,
-.read-more-btn:hover {
-  background: rgba(255, 255, 255, 0.92) !important;
-  color: #7E1F64 !important;
-  border-color: #942876 !important;
-  transform: translateY(-2px);
+.desk-btn-call:hover,
+.desk-btn-secondary:hover,
+.desk-btn-call-inline:hover,
+.mob-btn-secondary:hover,
+.header-phone-pill:hover,
+.btn-liquid-secondary:hover,
+.btn-liquid-crystal:hover,
+#hero-call-btn:hover {
+  background:
+    radial-gradient(120% 120% at 50% -10%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.92) 55%, rgba(255, 255, 255, 0.82) 100%) !important;
+  color: #942876 !important;
+  border-color: rgba(148, 40, 118, 0.38) !important;
+  transform: translateY(-2px) scale(1.02) !important;
   box-shadow:
-    0 6px 20px rgba(148, 40, 118, 0.15),
-    inset 0 1px 2px rgba(255, 255, 255, 1) !important;
+    0 16px 36px -4px rgba(148, 40, 118, 0.16),
+    0 4px 12px rgba(43, 27, 77, 0.06),
+    inset 0 2px 3px #FFFFFF !important;
 }
+
+.btn-secondary:hover::after,
+.desk-btn-call:hover::after,
+.header-phone-pill:hover::after {
+  opacity: 1 !important;
+  transform: skewX(-20deg) translateX(700%) !important;
+}
+
+.btn-secondary:active,
+.desk-btn-call:active,
+.mob-btn-secondary:active,
+.header-phone-pill:active {
+  transform: translateY(1px) scale(0.97) !important;
+}
+
+/* ── 4. LIQUID EMERALD GLASS (WHATSAPP & CHAT) ── */
+.btn-whatsapp-chat,
+.desk-btn-whatsapp,
+.desk-btn-whatsapp-solid,
+.btn-liquid-emerald {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  color: #FFFFFF !important;
+  background:
+    radial-gradient(120% 120% at 50% -10%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.15) 45%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(135deg, rgba(16, 185, 129, 0.88) 0%, rgba(5, 150, 105, 0.92) 100%) !important;
+  backdrop-filter: blur(24px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(210%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  box-shadow:
+    0 10px 30px -4px rgba(16, 185, 129, 0.4),
+    inset 0 2px 3px rgba(255, 255, 255, 0.9),
+    inset 0 -1.5px 2px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 9999px !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-whatsapp-chat:hover,
+.desk-btn-whatsapp:hover,
+.desk-btn-whatsapp-solid:hover,
+.btn-liquid-emerald:hover {
+  background:
+    radial-gradient(120% 120% at 50% -10%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.25) 45%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(135deg, rgba(20, 205, 145, 0.94) 0%, rgba(5, 165, 115, 0.96) 100%) !important;
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 16px 40px -4px rgba(16, 185, 129, 0.52), inset 0 2px 3px #FFFFFF !important;
+}
+
+/* ── 5. LIQUID DROPLET FLOATING SPHERES ── */
+.floating-btn-circle {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  backdrop-filter: blur(28px) saturate(220%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(220%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow:
+    0 10px 28px rgba(148, 40, 118, 0.35),
+    inset 0 2px 3px rgba(255, 255, 255, 0.95),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  animation: liquidOrbPulse 4s infinite ease-in-out !important;
+}
+
+.floating-btn-circle::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 2px !important;
+  left: 6px !important;
+  right: 6px !important;
+  height: 40% !important;
+  border-radius: 50% !important;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 70%) !important;
+  pointer-events: none !important;
+}
+
+.floating-btn-circle:hover {
+  transform: translateY(-4px) scale(1.1) !important;
+  box-shadow: 0 16px 38px rgba(148, 40, 118, 0.5), inset 0 2.5px 3.5px #FFFFFF !important;
+}
+
+/* ── 6. FULL LIQUID GLASS UI/UX CARDS & CONTAINERS ── */
+.liquid-glass-card,
+.desk-card,
+.booking-card,
+.review-card,
+.treatment-card-glass {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(32px) saturate(210%) brightness(104%) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(210%) brightness(104%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  border-radius: 28px !important;
+  box-shadow:
+    0 24px 60px -12px rgba(43, 27, 77, 0.08),
+    0 4px 16px rgba(148, 40, 118, 0.04),
+    inset 0 2px 3px rgba(255, 255, 255, 1),
+    inset 0 -2px 3px rgba(148, 40, 118, 0.04) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.liquid-glass-card:hover,
+.booking-card:hover {
+  box-shadow:
+    0 32px 70px -10px rgba(148, 40, 118, 0.14),
+    0 6px 20px rgba(43, 27, 77, 0.06),
+    inset 0 2px 4px #FFFFFF,
+    inset 0 -2px 4px rgba(148, 40, 118, 0.06) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+}
+
+/* ── 7. LIQUID GLASS FORM CONTROLS ── */
+.liquid-glass-input,
+.booking-card input,
+.booking-card select,
+.booking-card textarea,
+.desk-form-input {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1.5px solid rgba(148, 40, 118, 0.18) !important;
+  border-radius: 16px !important;
+  box-shadow: inset 0 1.5px 3px rgba(43, 27, 77, 0.04), 0 2px 8px rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.liquid-glass-input:focus,
+.booking-card input:focus,
+.booking-card select:focus,
+.booking-card textarea:focus,
+.desk-form-input:focus {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: #942876 !important;
+  outline: none !important;
+  box-shadow:
+    0 0 0 4px rgba(148, 40, 118, 0.16),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+}
+
+/* ── 8. LIQUID GLASS FLOATING MOBILE ACTION DOCK ── */
+.mobile-action-bar,
+.liquid-glass-dock {
+  background: rgba(255, 255, 255, 0.84) !important;
+  backdrop-filter: blur(28px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow:
+    0 -8px 30px rgba(43, 27, 77, 0.09),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+}
+
+/* ── 9. LIQUID GLASS BADGES & CHIPS ── */
+.liquid-glass-badge,
+.category-tag-btn,
+.desk-slide-highlight-pill,
+.mob-trust-item {
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 4px 14px rgba(148, 40, 118, 0.06), inset 0 1px 2px rgba(255, 255, 255, 1) !important;
+}
+
+.category-tag-btn.active {
+  background:
+    radial-gradient(130% 130% at 50% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(135deg, rgba(148, 40, 118, 0.92) 0%, rgba(200, 80, 155, 0.88) 100%) !important;
+  border-color: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 8px 22px rgba(148, 40, 118, 0.35), inset 0 1.5px 2px rgba(255, 255, 255, 0.9) !important;
+}
+
 
 /* Ethereal Liquid Frosted Glass Footer */
 .footer-section {
@@ -4401,37 +4997,6 @@ body {
   text-decoration: none !important;
 }
 
-/* Diagonal Shimmer Sweep on Hover */
-.desk-btn-primary::before,
-.header-book-pill::before,
-#final-cta-book-btn::before,
-#hero-book-consult-btn::before,
-#doctor-book-btn::before,
-#journey-book-btn::before,
-.desk-btn-call::before,
-.header-phone-pill::before {
-  content: "" !important;
-  position: absolute !important;
-  top: -50% !important;
-  left: -120% !important;
-  width: 60% !important;
-  height: 200% !important;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent) !important;
-  transform: rotate(28deg) !important;
-  transition: left 0.7s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  pointer-events: none !important;
-}
-
-.desk-btn-primary:hover::before,
-.header-book-pill:hover::before,
-#final-cta-book-btn:hover::before,
-#hero-book-consult-btn:hover::before,
-#doctor-book-btn:hover::before,
-#journey-book-btn:hover::before,
-.desk-btn-call:hover::before,
-.header-phone-pill:hover::before {
-  left: 150% !important;
-}
 
 .desk-btn-primary:hover,
 .header-book-pill:hover,
@@ -5093,7 +5658,7 @@ body {
 .site-header .serif-nav-item,
 .site-header.mos-header-style .serif-nav-item {
   color: #241442 !important;
-  font-family: 'Funnel Display', 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+  font-family: 'Manrope', 'Plus Jakarta Sans', -apple-system, sans-serif !important;
   font-size: 12.5px !important;
   font-weight: 650 !important;
   text-transform: uppercase !important;
@@ -5148,7 +5713,7 @@ body {
   -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
   color: #241442 !important;
   border: 1.5px solid rgba(255, 255, 255, 0.92) !important;
-  font-family: 'Funnel Display', 'Outfit', sans-serif !important;
+  font-family: 'Manrope', 'Plus Jakarta Sans', -apple-system, sans-serif !important;
   font-size: 13px !important;
   font-weight: 750 !important;
   letter-spacing: 0.02em !important;
@@ -5194,30 +5759,41 @@ body {
 /* ── Radiant Ultra-Luminous Liquid Magenta Glass Appointment Button ── */
 .site-header .header-book-pill,
 .site-header.mos-header-style .header-book-pill {
-  background: linear-gradient(135deg, rgba(148, 40, 118, 0.84) 0%, rgba(195, 58, 152, 0.76) 50%, rgba(138, 22, 110, 0.88) 100%) !important;
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(100% 75% at 50% 0%, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(135deg, rgba(148, 40, 118, 0.95) 0%, rgba(195, 58, 152, 0.88) 50%, rgba(138, 22, 110, 0.96) 100%) !important;
   backdrop-filter: blur(28px) saturate(200%) !important;
   -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
   color: #FFFFFF !important;
-  font-family: 'Funnel Display', 'Outfit', sans-serif !important;
+  font-family: 'Manrope', 'Plus Jakarta Sans', -apple-system, sans-serif !important;
   font-size: 13px !important;
   font-weight: 750 !important;
   letter-spacing: 0.03em !important;
   text-transform: uppercase !important;
   padding: 11px 22px !important;
   border-radius: 999px !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.65) !important;
   box-shadow: 
-    0 8px 24px rgba(148, 40, 118, 0.3),
-    inset 0 1.5px 2.5px rgba(255, 255, 255, 0.85),
-    inset 0 -1.5px 2px rgba(0, 0, 0, 0.2) !important;
+    0 8px 24px rgba(148, 40, 118, 0.35),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.2) !important;
   white-space: nowrap !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 8px !important;
   flex-shrink: 0 !important;
   cursor: pointer !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) !important;
+  text-shadow: 0 1px 2px rgba(27, 3, 68, 0.35) !important;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.site-header .header-book-pill > *,
+.site-header.mos-header-style .header-book-pill > * {
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 .site-header .header-book-pill:hover,
@@ -5463,10 +6039,10 @@ body {
 }
 
 .concern-serif-title {
-  font-family: 'Playfair Display', 'Cormorant Garamond', 'Cinzel', Georgia, serif !important;
+  font-family: 'Fraunces', Georgia, serif !important;
   font-size: 22px !important;
-  font-weight: 500 !important;
-  color: #16132F !important;
+  font-weight: 650 !important;
+  color: #153F39 !important;
   margin: 0 0 24px 0 !important;
   letter-spacing: -0.01em !important;
   line-height: 1.25 !important;
@@ -5640,7 +6216,7 @@ body {
   justify-content: space-between !important;
   padding: 13px 18px !important;
   color: #241442 !important;
-  font-family: 'Funnel Display', 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+  font-family: 'Manrope', 'Plus Jakarta Sans', -apple-system, sans-serif !important;
   font-size: 14.5px !important;
   font-weight: 600 !important;
   cursor: pointer !important;

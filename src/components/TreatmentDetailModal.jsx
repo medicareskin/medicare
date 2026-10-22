@@ -15,7 +15,7 @@ export default function TreatmentDetailModal({ item, onClose, onOpenBooking }) {
           <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
 
-        <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', color: '#2B1B4D', marginBottom: '12px' }}>
+        <h2 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '28px', fontWeight: 650, color: '#153F39', marginBottom: '12px' }}>
           {item.title}
         </h2>
 

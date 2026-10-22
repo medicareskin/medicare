@@ -402,7 +402,7 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
           }}>
             📍 South Bangalore Local Dermatology &amp; Laser Hub
           </span>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '38px', color: '#2B1B4D', marginBottom: '14px', lineHeight: '1.25' }}>
+          <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '38px', color: '#153F39', marginBottom: '14px', lineHeight: '1.25' }}>
             {currentLocality.headline}
           </h1>
           <p style={{ fontSize: '16px', color: '#942876', fontWeight: '600', marginBottom: '12px' }}>
@@ -441,7 +441,7 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#FFB800', marginBottom: '16px', fontSize: '14px', fontWeight: '700' }}>
                 <Star fill="#FFB800" size={18} /> 5.0 Rating | 18+ Years Experience | 10.1K+ Procedures
               </div>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '26px', color: '#2B1B4D', marginBottom: '16px' }}>
+              <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '26px', color: '#153F39', marginBottom: '16px' }}>
                 Why Patients from {currentLocality.name} Choose Dr. Sujay M
               </h2>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '24px' }}>
@@ -469,7 +469,7 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
 
           {/* Card 2: Treatments & Local Commute Info */}
           <div className="location-card-box" style={{ padding: '36px', borderRadius: '24px' }}>
-            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '24px', color: '#2B1B4D', marginBottom: '16px' }}>
+            <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '24px', color: '#153F39', marginBottom: '16px' }}>
               Treatments for {currentLocality.name} Residents
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '10px', marginBottom: '24px' }}>
@@ -503,7 +503,7 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
           <div className="location-card-box" style={{ padding: '36px', borderRadius: '24px', marginBottom: '40px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
               <HelpCircle size={22} color="#942876" />
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '24px', color: '#2B1B4D', margin: 0 }}>
+              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '24px', color: '#153F39', margin: 0 }}>
                 Frequently Asked Questions from {currentLocality.name} Patients
               </h3>
             </div>
@@ -557,7 +557,7 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
         <div className="location-card-box" style={{ padding: '28px', borderRadius: '24px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '12px' }}>
             <div>
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', margin: 0 }}>
+              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', margin: 0 }}>
                 Find Medicare Skin &amp; Cosmetic Clinic on Google Maps
               </h3>
               <p style={{ margin: '4px 0 0', fontSize: '13px', color: '#7A6C82' }}>

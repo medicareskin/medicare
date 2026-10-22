@@ -16,7 +16,7 @@ export default function FAQAccordion() {
           <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', color: '#942876', padding: '6px 18px', borderRadius: '30px', fontSize: '13px', fontWeight: '700', display: 'inline-flex', alignItems: 'center', gap: '6px', marginBottom: '10px', border: '1px solid rgba(255, 255, 255, 0.95)', boxShadow: '0 4px 14px rgba(148, 40, 118, 0.06)' }}>
             <HelpCircle size={14} /> PATIENT CLARIFICATIONS
           </span>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '38px', color: '#2B1B4D', marginBottom: '12px' }}>
+          <h2 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '38px', fontWeight: 650, color: '#153F39', marginBottom: '12px' }}>
             Frequently Asked Questions
           </h2>
           <p style={{ fontSize: '16px', color: '#5C5268', maxWidth: '650px', margin: '0 auto' }}>
@@ -70,11 +70,11 @@ export default function FAQAccordion() {
                     </span>
                     <h3
                       style={{
-                        fontFamily: 'Playfair Display, serif',
+                        fontFamily: "'Fraunces', Georgia, serif",
                         fontSize: '19px',
-                        color: '#2B1B4D',
+                        color: '#153F39',
                         margin: 0,
-                        fontWeight: isOpen ? '700' : '600',
+                        fontWeight: isOpen ? '700' : '650',
                         lineHeight: '1.4'
                       }}
                     >

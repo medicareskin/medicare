@@ -113,7 +113,7 @@ export default function HydraFacialAppointmentFlow({ onComplete, onCancel }) {
             <span style={{ fontSize: '11px', fontWeight: 800, color: '#2B73AF', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               DIRECT PATIENT BOOKING
             </span>
-            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '26px', color: '#2B1B4D', margin: '4px 0 0' }}>
+            <h3 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '26px', fontWeight: 650, color: '#153F39', margin: '4px 0 0' }}>
               Book Your HydraFacial Session
             </h3>
           </div>

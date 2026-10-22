@@ -35,14 +35,14 @@ export default function LocationMapSection({ onSuccessToast }) {
     <section className="location-map-section" id="location-section" style={{ padding: '80px 0', background: 'transparent' }}>
       <div className="container">
         <div className="section-header-center" style={{ marginBottom: '45px', textAlign: 'center' }}>
-          <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', color: '#942876', padding: '6px 18px', borderRadius: '30px', fontSize: '13px', fontWeight: '700', display: 'inline-flex', alignItems: 'center', gap: '6px', marginBottom: '10px', border: '1px solid rgba(255, 255, 255, 0.95)', boxShadow: '0 4px 14px rgba(148, 40, 118, 0.06)' }}>
-            <Sparkles size={14} /> CONNECT WITH OUR CLINIC
+          <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', color: '#153F39', padding: '6px 18px', borderRadius: '30px', fontSize: '13px', fontWeight: '700', display: 'inline-flex', alignItems: 'center', gap: '6px', marginBottom: '10px', border: '1px solid rgba(21, 63, 57, 0.15)', boxShadow: '0 4px 14px rgba(21, 63, 57, 0.06)' }}>
+            <Sparkles size={14} /> SOUTH BENGALURU CLINIC
           </span>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '38px', color: '#2B1B4D', marginBottom: '12px' }}>
-            Visit Our Clinic & Get In Touch
+          <h2 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '38px', fontWeight: 650, color: '#153F39', marginBottom: '12px' }}>
+            Visit Us in South Bengaluru
           </h2>
-          <p style={{ fontSize: '16px', color: '#5C5268', maxWidth: '650px', margin: '0 auto' }}>
-            Have questions? Send us an inquiry or visit us right near Yelachenahalli Metro Station, Kanakapura Main Road, South Bangalore.
+          <p style={{ fontSize: '16px', color: '#5C5268', maxWidth: '680px', margin: '0 auto' }}>
+            Near Yelachenahalli Metro Station, Kanakapura Main Road. Confirm directions, clinic hours and contact details before travelling.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export default function LocationMapSection({ onSuccessToast }) {
                 </span>
                 <span style={{ fontSize: '12px', color: '#7E728C' }}>* Required fields</span>
               </div>
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '26px', color: '#2B1B4D', marginBottom: '8px' }}>
+              <h3 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '26px', fontWeight: 650, color: '#153F39', marginBottom: '8px' }}>
                 Have Questions? Get in touch!
               </h3>
               <p style={{ fontSize: '14px', color: '#5C5268', marginBottom: '24px', lineHeight: '1.6' }}>
@@ -150,27 +150,29 @@ export default function LocationMapSection({ onSuccessToast }) {
 
                   {/* Message field */}
                   <div className="form-group" style={{ marginBottom: 0 }}>
-                    <label style={{ fontSize: '13px', fontWeight: '600', color: '#2B1B4D', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <MessageSquare size={14} color="#942876" /> Describe Your Symptoms *
+                    <label style={{ fontSize: '13px', fontWeight: '600', color: '#153F39', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <MessageSquare size={14} color="#153F39" /> Preferred Time or Question (Optional)
                     </label>
                     <textarea
                       className="form-control"
                       rows="3"
-                      placeholder="Briefly describe your skin, scalp or cosmetic question..."
+                      placeholder="Share your preferred consultation timing or general enquiry..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      required
                       style={{ resize: 'vertical' }}
                     ></textarea>
+                    <p style={{ fontSize: '11.5px', color: '#7E728C', marginTop: '6px', lineHeight: '1.4' }}>
+                      Please do not send detailed medical histories or sensitive photographs in this initial enquiry. For urgent symptoms, seek appropriate immediate medical care.
+                    </p>
                   </div>
 
                   <button
                     type="submit"
                     className="btn-primary"
                     disabled={loading}
-                    style={{ width: '100%', justifyContent: 'center', padding: '14px', fontSize: '16px', fontWeight: '600', marginTop: '6px' }}
+                    style={{ width: '100%', justifyContent: 'center', padding: '14px', fontSize: '16px', fontWeight: '600', marginTop: '6px', background: '#153F39' }}
                   >
-                    <Send size={18} /> {loading ? 'Sending Your Message...' : 'Send Message to Dr. Sujay M'}
+                    <Send size={18} /> {loading ? 'Sending Your Message...' : 'Send Message to Dr. (Mrs.) Sujay M'}
                   </button>
                 </form>
               )}
@@ -188,8 +190,8 @@ export default function LocationMapSection({ onSuccessToast }) {
                   <Train size={13} color="#942876" /> 2 Min from Metro
                 </span>
               </div>
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '26px', color: '#2B1B4D', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <MapPin color="#942876" size={24} /> Clinic Location & Interactive Map
+              <h3 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '26px', fontWeight: 650, color: '#153F39', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <MapPin color="#153F39" size={24} /> Clinic Location & Interactive Map
               </h3>
               <p style={{ fontSize: '14px', color: '#5C5268', marginBottom: '20px', lineHeight: '1.6' }}>
                 Easy access with dedicated parking right off Kanakapura Road near Yelachenahalli Metro Station.

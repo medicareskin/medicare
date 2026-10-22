@@ -1,53 +1,67 @@
 export const CLINIC_INFO = {
   name: "Medicare Skin & Cosmetic Clinic",
+  canonicalUrl: "https://www.medicareskin.com",
   tagline: "Healthy Skin, Beautiful You",
   doctor: "Dr. (Mrs.) Sujay M",
   qualifications: "MBBS, DDVL",
   specialisation: "Dermatologist & Cosmetologist",
   experience: "18+ Years",
-  procedures: "12K+ Procedures",
-  livesTouched: "500K+ Lives Touched",
-  googleRating: "5.0 ★★★★★",
-  phone: "+91-92428 55707",
+  phone: "+91 92428 55707",
+  phoneDisplay: "+91 92428 55707",
+  phoneE164: "+919242855707",
   rawPhone: "+919242855707",
   email: "medicareskin.cosmeticclinic@gmail.com",
-  address: "Jyothi Kendriya Vidyalaya Back gate, 2nd Main, 2nd Cross Jyothi Layout, Near Yelachenahalli Metro Station, Kanakapura Main Rd, Bangalore – 560 078",
-  hours: "Monday - Saturday: 10:00 AM - 7:00 PM | Sunday: Closed",
+  address: "Jyothi Kendriya Vidyalaya Back Gate, 2nd Main, 2nd Cross, Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Main Road, Bengaluru 560078",
+  hours: "Monday – Saturday: 10:00 AM – 7:00 PM | Sunday: Closed",
   whatsappNumber: "919242855707",
   googleMapsLink: "https://maps.app.goo.gl/G5NWQuyQ9cP4xdPA9",
-  mapEmbedUrl: "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sMedicare+Skin+and+Cosmetic+Clinic,+Jyothi+Layout,+Yelachenahalli,+Bangalore!6i16"
+  mapEmbedUrl: "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sMedicare+Skin+and+Cosmetic+Clinic,+Jyothi+Layout,+Yelachenahalli,+Bangalore!6i16",
+  trustStripText: "Experienced Dermatologist | Personalised Assessment | Near Yelachenahalli Metro | Clear Treatment Guidance"
 };
 
 export const HERO_SLIDES = [
   {
     id: 1,
-    titleLine1: "Healthy Skin,",
-    titleLine2: "Beautiful You.",
+    eyebrow: "DERMATOLOGIST-LED CARE IN SOUTH BENGALURU",
+    titleLine1: "Skin, Hair & Laser Care",
+    titleLine2: "with Personalised Dermatology Expertise",
+    body: "Get individual care for acne, acne scars, melasma, pigmentation, hair loss, skin allergies and selected aesthetic concerns at Medicare Skin & Cosmetic Clinic. Consult Dr. (Mrs.) Sujay M, MBBS, DDVL, near Yelachenahalli Metro Station, Bengaluru.",
+    primaryCta: "Request a Dermatologist Consultation",
+    secondaryCta: "Call +91 92428 55707",
     features: [
-      "18+ Years Experience",
-      "10,000+ Patients Treated",
-      "Affordable & Clinically Proven"
+      "Experienced Dermatologist (18+ Years)",
+      "Personalised Assessment",
+      "Near Yelachenahalli Metro Station"
     ],
     image: "/images/hero_skin_clinic_woman.jpg"
   },
   {
     id: 2,
-    titleLine1: "Acne Scar",
-    titleLine2: "Treatment",
+    eyebrow: "DERMATOLOGIST-LED ACNE & SCAR CARE",
+    titleLine1: "Acne & Acne Scar",
+    titleLine2: "Assessment & Care",
+    body: "Multi-modal scar revision combining subcision, MNRF, and clinical chemical peels tailored to scar type, downtime, and Indian skin tones.",
+    primaryCta: "Request a Dermatologist Consultation",
+    secondaryCta: "Call +91 92428 55707",
     features: [
-      "Trusted Skin Clinic in JP Nagar, Bangalore",
-      "Dr. Sujay M, MBBS DDVL"
+      "Targeted Scar Evaluation",
+      "Dr. (Mrs.) Sujay M, MBBS DDVL",
+      "Subcision, MNRF & Medical Peels"
     ],
     image: "/images/cat_skin_care.jpg"
   },
   {
     id: 3,
-    titleLine1: "Laser Hair",
-    titleLine2: "Removal",
+    eyebrow: "PRECISION DIODE LASER TECHNOLOGY",
+    titleLine1: "Laser Hair Reduction",
+    titleLine2: "for Indian Skin",
+    body: "Safe, chilled-tip diode laser technology offering gentle, controlled hair reduction with doctor-monitored treatment parameters.",
+    primaryCta: "Request a Dermatologist Consultation",
+    secondaryCta: "Call +91 92428 55707",
     features: [
-      "★ ★ ★ ★ ★ 5.0 Google Reviews",
-      "18 Yrs Experience",
-      "10,000+ Procedures"
+      "Safe for Indian Skin Tones",
+      "Integrated Contact Cooling",
+      "Doctor-Monitored Parameters"
     ],
     image: "/images/hero_laser_woman.jpg"
   }
@@ -633,10 +647,80 @@ export const GOOGLE_REVIEWS = [
 
 export const BLOG_POSTS = [
   {
+    id: "science-of-glass-skin-radiance-bangalore",
+    title: "The Science of Glass Skin & Radiance: Dermatologist-Approved Beauty Secrets for Indian Complexions",
+    category: "Beauty & Skin Radiance",
+    date: "October 22, 2026",
+    author: "Dr. (Mrs.) Sujay M (MBBS, DDVL)",
+    readTime: "6 min read",
+    image: "/images/glass_skin_radiance.jpg",
+    treatmentTab: "cosmetic",
+    treatmentLink: "/cosmetic-treatments",
+    excerpt: "How barrier hydration, gentle AHA/BHA exfoliation, antioxidant serums, and medical facials create a natural dewy glow without damaging Indian skin phototypes.",
+    content: "The viral concept of 'glass skin'—a complexion so smooth, clear, and intensely hydrated that it appears luminous like glass—originates from healthy skin physiology rather than heavy cosmetics or aggressive bleaching. In Indian skin tones (Fitzpatrick phototypes III to V), achieving authentic skin beauty requires a delicate balance between gentle exfoliation, deep lipid barrier replenishment, and consistent defense against Bengaluru's urban particulate pollution and UV radiation.",
+    sections: [
+      {
+        heading: "What 'Glass Skin' Really Means in Clinical Dermatology",
+        text: "In dermatological terms, skin radiance is determined by optical light reflection. When the stratum corneum (the outermost skin layer) is compact, well-hydrated, and free of jagged dead-cell buildup, light bounces off smoothly, producing a natural luminescence. When the barrier is dehydrated or clogged, light scatters irregularly, resulting in a dull, fatigued appearance. True skin beauty is the visible expression of cell-level barrier health—not artificial skin lightening."
+      },
+      {
+        heading: "Hydration Layering: Multi-Molecular Hyaluronic Acid & Ceramides",
+        text: "Drinking water alone cannot correct epidermal dehydration if the skin's lipid matrix is compromised. Dermatologists recommend topical layering: starting with multi-molecular hyaluronic acid (which draws ambient water into superficial and deeper epidermal strata) applied on damp skin, immediately locked in with ceramide- and cholesterol-rich moisturizers to prevent transepidermal water loss (TEWL)."
+      },
+      {
+        heading: "Antioxidant Defense: Vitamin C, Ferulic Acid & Niacinamide",
+        text: "Bengaluru's traffic particulate matter and intense tropical sunlight generate reactive oxygen species (ROS) that oxidize surface sebum, degrade collagen, and trigger dull, uneven melanin deposit. Incorporating a stabilized morning serum with 10–15% L-Ascorbic Acid or ethylated Vitamin C, boosted with Ferulic acid, shields the skin from oxidative stress and improves surface clarity over 6 to 8 weeks."
+      },
+      {
+        heading: "In-Clinic Beauty Boosters: Hydrating Facials & Mild Lactic Peels",
+        text: "For patients needing deeper rejuvenation, device-assisted hydrating facials (hydrodermabrasion) utilize gentle vortex suction to dissolve follicular sebum plugs while infusing antioxidant serums. Pair this with mild, non-irritating lactic acid or mandelic acid peels to stimulate cellular turnover without the harsh flaking or post-inflammatory hyperpigmentation risks associated with aggressive salon treatments."
+      },
+      {
+        heading: "The Essential 4-Step Daily Home Beauty Ritual",
+        text: "1. Gentle, non-foaming pH-balanced cleanser (morning and night).\n2. Hydrating antioxidant serum with Niacinamide or Vitamin C.\n3. Barrier-repair moisturizer rich in ceramides, squalane, or hyaluronic acid.\n4. Broad-spectrum SPF 50 sunscreen with iron oxides to shield against both UV rays and visible blue light."
+      }
+    ]
+  },
+  {
+    id: "bridal-pre-event-beauty-countdown-guide",
+    title: "Pre-Event & Bridal Beauty Countdown: Dermatological Timeline for Camera-Ready Radiance",
+    category: "Beauty & Skin Radiance",
+    date: "October 21, 2026",
+    author: "Dr. (Mrs.) Sujay M (MBBS, DDVL)",
+    readTime: "7 min read",
+    image: "/images/bridal_beauty_radiance.jpg",
+    treatmentTab: "cosmetic",
+    treatmentLink: "/cosmetic-treatments",
+    excerpt: "Planning for a wedding, festive celebration, or photoshoot in Bengaluru? Here is the month-by-month dermatologist guide to safe, glowing beauty treatments without risking last-minute purging or redness.",
+    content: "Whether preparing for your wedding, an anniversary, or an important family celebration, achieving a flawless, photogenic glow requires strategic scheduling. Rushing into intensive peels or unverified salon bleaches just days before an event frequently leads to breakouts, contact dermatitis, or rebound pigmentation. Dr. (Mrs.) Sujay M outlines a structured, medically safe aesthetic countdown to ensure radiant, calm, and resilient skin on your special day.",
+    sections: [
+      {
+        heading: "6 Months Out: Address Pigmentation, Acne Marks & Scarring",
+        text: "Deeper concerns such as hormonal melasma, post-acne dark marks, and pitted acne scars require multiple natural cell turnover cycles (28 to 40 days each). Six months prior is the ideal window to begin low-fluence Q-switched laser toning, subcision for rolling scars, or a supervised series of gentle chemical peels. This allows ample healing time and progressive collagen remodeling."
+      },
+      {
+        heading: "3 Months Out: Hair Reduction & Texture Smoothing",
+        text: "If unwanted facial peach fuzz or body hair is a concern for makeup application, start diode laser hair reduction now. Sessions spaced 4 weeks apart significantly reduce hair density and prevent ingrown bumps or razor shadow, creating a silkier canvas for pre-event photography."
+      },
+      {
+        heading: "1 Month Out: Medical Hydration & Surface Refinement",
+        text: "Four weeks before the event, avoid starting any brand-new prescription active ingredients (such as high-strength tretinoin or glycolic acid). Instead, schedule a device-assisted hydrating facial or an ultra-mild milk peel. This clarifies pore congestion, softens dead surface build-up, and infuses intense moisture without downtime or irritation."
+      },
+      {
+        heading: "1 to 2 Weeks Out: Barrier Locking & Skin Calming",
+        text: "Focus entirely on barrier protection: calm any transient redness with centella asiatica, ceramide balms, and hyaluronic acid sheets. Strictly avoid salon waxing, facial threading, or new cosmetics. Wear SPF 50 religiously during outdoor wedding shopping trips to prevent tan lines or UV-induced flare-ups."
+      },
+      {
+        heading: "The 48-Hour Pre-Event Golden Rule",
+        text: "Do NOT attempt blackhead extractions, steam treatments, or DIY kitchen scrubs 48 hours before your event. Keep your skin barrier calm, hydrated, and rested. Proper hydration, 8 hours of sleep, and gentle barrier creams will ensure your makeup glides on flawlessly and stays radiant through the celebrations."
+      }
+    ]
+  },
+  {
     id: "q-switched-laser-melasma-pigmentation-guide",
     title: "Q-Switched Laser for Melasma & Pigmentation in Bengaluru: The Dermatologist's Clinical Guide",
     category: "Laser Treatments",
-    date: "October 16, 2026",
+    date: "October 20, 2026",
     author: "Dr. Sujay M (MBBS, DDVL)",
     readTime: "7 min read",
     image: "/images/q-switched-laser-pigmentation-treatment-bangalore.webp",
@@ -675,7 +759,7 @@ export const BLOG_POSTS = [
     id: "hydrafacial-skin-hydration-glow-bangalore",
     title: "HydraFacial Treatment in Bengaluru for Glowing, Hydrated & Brighter Skin: Everything You Need to Know",
     category: "Aesthetics & Glow",
-    date: "October 15, 2026",
+    date: "October 19, 2026",
     author: "Dr. Sujay M (MBBS, DDVL)",
     readTime: "6 min read",
     image: "/images/hydrafacial-skin-hydration-treatment-bangalore.webp",
@@ -707,10 +791,41 @@ export const BLOG_POSTS = [
     ]
   },
   {
+    id: "medical-chemical-peels-vs-salon-bleach-glow",
+    title: "Medical Peels vs. Salon Bleach: Unlocking Authentic Skin Beauty Without Barrier Damage",
+    category: "Beauty & Skin Radiance",
+    date: "October 18, 2026",
+    author: "Dr. (Mrs.) Sujay M (MBBS, DDVL)",
+    readTime: "5 min read",
+    image: "/images/medical_peel_glow.jpg",
+    treatmentTab: "skin",
+    treatmentLink: "/skin-treatments",
+    excerpt: "Understand why dermatologist-formulated lactic, glycolic, and mandelic acid peels deliver uniform luminosity, while salon bleaching risks chemical burns and rebound darkening.",
+    content: "When individuals seek immediate skin brightening in Bengaluru, they often turn to quick salon 'insta-glow' bleaches or harsh scrubbing rituals. However, from a dermatologist's vantage point, chemical bleaching can severely compromise the delicate acid mantle of Indian skin. In this guide, Dr. Sujay M contrasts salon bleaching with clinical, medically supervised chemo-exfoliation to help you choose healthy, lasting skin beauty.",
+    sections: [
+      {
+        heading: "The Hidden Hazards of Salon 'Insta-Glow' Bleaches",
+        text: "Salon bleaching products rely on aggressive hydrogen peroxide and ammonium compounds to oxidize facial melanin, creating a temporary yellowing of fine facial hairs and surface cells. In darker skin tones, this chemical burn often damages melanocytes, triggering reactive hyperpigmentation (PIH), contact eczema, patchy hypopigmentation, and heightened photosensitivity."
+      },
+      {
+        heading: "How Dermatological Chemical Peels Work",
+        text: "In contrast to bleach, dermatological chemical peels utilize naturally derived alpha- and beta-hydroxy acids (AHAs and BHAs) at scientifically buffered pH levels. Rather than destroying pigment, peels dissolve the intracellular 'glue' holding old, oxidized corneocytes together. As these dead cells detach naturally, fresh, moisture-receptive basal cells emerge, restoring uniform luminosity and refined texture."
+      },
+      {
+        heading: "Tailored Peels for Every Skin Phototype",
+        text: "1. Lactic Acid (derived from milk): Ultra-hydrating, gentle, and ideal for dry, sensitive, or dull complexions.\n2. Glycolic Acid (derived from sugarcane): Smaller molecular size, penetrating deeper to treat sun tanning and early fine lines.\n3. Mandelic Acid (derived from bitter almonds): Lipophilic with larger molecules, making it exceptionally safe for sensitive Indian skin and acne-prone complexions.\n4. Salicylic Acid (BHA): Penetrates oil glands directly to dissolve blackheads and soothe inflamed acne."
+      },
+      {
+        heading: "What to Expect and Post-Peel Care",
+        text: "Modern medical peels are formulated for minimal 'social downtime.' Patients may notice slight tightness or very fine microscopic flaking for 2 to 3 days, followed by a remarkably clean, fresh glow. Strict application of broad-spectrum SPF and barrier moisturizer is essential to preserve your radiant results."
+      }
+    ]
+  },
+  {
     id: "q-switched-laser-vs-hydrafacial-comparison",
     title: "Q-Switched Laser vs. HydraFacial: Which Treatment Does Your Skin Really Need?",
     category: "Treatment Guides",
-    date: "October 14, 2026",
+    date: "October 16, 2026",
     author: "Dr. Sujay M (MBBS, DDVL)",
     readTime: "5 min read",
     image: "/images/luxury_indian_skin_model.png",
@@ -734,10 +849,41 @@ export const BLOG_POSTS = [
     ]
   },
   {
+    id: "anti-ageing-collagen-preservation-beauty-secrets",
+    title: "Collagen Preservation & Graceful Beauty: Non-Invasive Anti-Ageing Secrets",
+    category: "Beauty & Skin Radiance",
+    date: "October 15, 2026",
+    author: "Dr. (Mrs.) Sujay M (MBBS, DDVL)",
+    readTime: "6 min read",
+    image: "/images/skin_elasticity_cheek_touch.png",
+    treatmentTab: "cosmetic",
+    treatmentLink: "/cosmetic-treatments",
+    excerpt: "From preventive peptide hydration and daily iron-oxide UV defense to radiofrequency skin tightening, discover how to stimulate natural collagen and maintain firm, youthful beauty.",
+    content: "Youthful skin is characterized by high dermal collagen density, organized elastin fibers, and abundant hyaluronic acid. Starting in our mid-twenties, natural collagen synthesis declines by approximately 1% each year, accelerated by Bengaluru's UV exposure, chronic stress, and glycation from dietary sugars. Fortunately, contemporary aesthetic dermatology offers proactive, non-invasive strategies to preserve your skin's architectural integrity and youthful beauty.",
+    sections: [
+      {
+        heading: "Intrinsic vs. Extrinsic Skin Ageing",
+        text: "While intrinsic ageing is genetically programmed, up to 80% of visible facial changes—including fine lines around the eyes, smile folds, uneven texture, and loss of jawline definition—are driven by extrinsic photoageing. Daily broad-spectrum sun protection is the most potent anti-ageing intervention available."
+      },
+      {
+        heading: "The Power Trio: Retinoids, Peptides & Hyaluronic Acid",
+        text: "For at-home collagen support, a dermatologist-curated nightly routine is paramount. Topical retinoids (retinol, retinal, or prescription adapalene) stimulate fibroblasts to produce new collagen and accelerate cellular renewal. Complement this with signal peptides that trigger repair, and multi-weight hyaluronic acid to plump dehydrated fine lines from within."
+      },
+      {
+        heading: "In-Clinic Non-Surgical Firming: RF & Microneedling (MNRF)",
+        text: "When topical creams reach their biological limit, non-invasive energy devices provide powerful collagen renewal. Radiofrequency (RF) delivers controlled therapeutic heat to the deep dermis, causing immediate collagen contraction and stimulating long-term neocollagenesis over 3 to 6 months. This naturally lifts subtle sagging along the cheeks and jawline without needles, incisions, or downtime."
+      },
+      {
+        heading: "Holistic Longevity: Sleep, Diet & Skin Radiance",
+        text: "Dermatological aesthetics works synergistically with lifestyle. Adequate slow-wave sleep is when cellular DNA repair and growth hormone secretion peak. A diet rich in polyphenol antioxidants (berries, green tea, leafy greens) and adequate dietary protein provides the amino acid building blocks required for resilient, radiant skin."
+      }
+    ]
+  },
+  {
     id: "acne-scar-treatment-guide",
     title: "Complete Guide to Acne Scar Revision: Subcision vs Fractional Laser",
     category: "Skin Care",
-    date: "October 10, 2026",
+    date: "October 12, 2026",
     author: "Dr. Sujay M (MBBS, DDVL)",
     readTime: "5 min read",
     image: "/images/skin_elasticity_cheek_touch.png",
@@ -759,7 +905,7 @@ export const BLOG_POSTS = [
     id: "growth-factor-therapy-hair-loss",
     title: "Growth Factor Therapy (GFT): How It Reactivates Dormant Hair Roots",
     category: "Hair Restoration",
-    date: "October 02, 2026",
+    date: "October 08, 2026",
     author: "Dr. Sujay M (MBBS, DDVL)",
     readTime: "4 min read",
     image: "/images/radiant_hair_smile_woman.png",
@@ -817,8 +963,8 @@ export const WHY_CHOOSE_US = [
   },
   {
     icon: "ShieldCheck",
-    title: "10,100+ Proven Procedures",
-    desc: "Over 420K lives touched with 5.0 Google Star Rating. Highest safety standards and hygienic clinic environment."
+    title: "18+ Years Dedicated Clinical Practice",
+    desc: "Over 18+ years of dedicated patient care with the highest clinical safety standards and sterile clinic environment."
   }
 ];
 

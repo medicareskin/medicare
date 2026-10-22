@@ -5,15 +5,15 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.medicareskin.com/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- High-Priority Treatment Landing Pages (SEO • AEO • GEO) -->
   <url>
     <loc>https://www.medicareskin.com/q-switched-laser-melasma-pigmentation-bangalore/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -28,7 +28,7 @@
 
   <url>
     <loc>https://www.medicareskin.com/hydrafacial-bangalore/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -43,8 +43,8 @@
 
   <url>
     <loc>https://www.medicareskin.com/hair-fall-treatment/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
       <image:loc>https://www.medicareskin.com/images/imageye___-_imgi_31_Hair-Fall.webp</image:loc>
@@ -54,8 +54,8 @@
 
   <url>
     <loc>https://www.medicareskin.com/hair-thinning-treatment/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
       <image:loc>https://www.medicareskin.com/images/imageye___-_imgi_14_Hair-Treatment.webp</image:loc>
@@ -65,8 +65,8 @@
 
   <url>
     <loc>https://www.medicareskin.com/unwanted-facial-hair-treatment/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
       <image:loc>https://www.medicareskin.com/images/imageye___-_imgi_28_Laser-Hair-Reductions.webp</image:loc>
@@ -76,7 +76,7 @@
 
   <url>
     <loc>https://www.medicareskin.com/treatment-comparison/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -84,37 +84,37 @@
   <!-- Specific Treatment Landing Pages -->
   <url>
     <loc>https://www.medicareskin.com/acne-laser/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.medicareskin.com/hair-care/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.medicareskin.com/chemical-peels/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.medicareskin.com/dermal-fillers-anti-wrinkle-injections/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.medicareskin.com/microneedling-for-skin-tightening/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.medicareskin.com/vitiligo-surgery/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -122,28 +122,28 @@
   <!-- Category Treatment Pages -->
   <url>
     <loc>https://www.medicareskin.com/laser-treatments</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/skin-treatments</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/cosmetic-treatments</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/hair-treatments</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -151,15 +151,27 @@
   <!-- Educational Blog & Clinical Journal -->
   <url>
     <loc>https://www.medicareskin.com/blog</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.medicareskin.com/images/glass_skin_radiance.jpg</image:loc>
+      <image:title>The Science of Glass Skin Radiance by Dr. Sujay M</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.medicareskin.com/images/bridal_beauty_radiance.jpg</image:loc>
+      <image:title>Pre-Event &amp; Bridal Beauty Countdown Guide</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.medicareskin.com/images/medical_peel_glow.jpg</image:loc>
+      <image:title>Medical Chemical Peels vs Salon Bleach Radiance</image:title>
+    </image:image>
   </url>
 
   <!-- Doctor & Clinic Credentials -->
   <url>
     <loc>https://www.medicareskin.com/about-doctor</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -170,7 +182,7 @@
 
   <url>
     <loc>https://www.medicareskin.com/about-us</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -178,70 +190,70 @@
   <!-- Local SEO & Geo Landing Pages (South Bengaluru Hubs) -->
   <url>
     <loc>https://www.medicareskin.com/areas-we-serve</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/dermatologist-yelachenahalli/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/dermatologist-kanakapura-road/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/dermatologist-jp-nagar/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/skin-clinic-banashankari/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/dermatologist-jayanagar/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/dermatologist-kumaraswamy-layout/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/dermatologist-konanakunte/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/dermatologist-padmanabhanagar/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/dermatologist-btm-layout/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -249,21 +261,21 @@
   <!-- Patient FAQs & Contact -->
   <url>
     <loc>https://www.medicareskin.com/faqs</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/book-appointment</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.medicareskin.com/contact-us</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>

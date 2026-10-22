@@ -8,15 +8,15 @@ export default function AboutUsPage({ onOpenBooking }) {
     <div style={{ background: 'transparent' }}>
       {/* Page Hero Header */}
       <section style={{ padding: '60px 0 40px', background: 'transparent', textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.95)', color: '#942876', padding: '6px 18px', borderRadius: '30px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '14px', boxShadow: '0 4px 14px rgba(148, 40, 118, 0.06)' }}>
-            ★ Bangalore's Premier Dermatology & Cosmetic Center
+        <div className="container" style={{ maxWidth: '850px' }}>
+          <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(21, 63, 57, 0.2)', color: '#153F39', padding: '6px 18px', borderRadius: '30px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '14px', boxShadow: '0 4px 14px rgba(21, 63, 57, 0.06)' }}>
+            Dermatologist-Led Clinic in South Bengaluru
           </span>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#2B1B4D', marginBottom: '16px' }}>
-            About Medicare Skin & Cosmetic Clinic
+          <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '46px', color: '#153F39', marginBottom: '16px' }}>
+            About Medicare Skin &amp; Cosmetic Clinic
           </h1>
-          <p style={{ fontSize: '17px', color: '#5C5268', lineHeight: '1.7' }}>
-            Founded by <strong>Dr. (Mrs.) Sujay M (MBBS, DDVL)</strong>, Medicare Skin & Cosmetic Clinic has provided compassionate, evidence-based dermatological and aesthetic care in South Bangalore for over 18+ years.
+          <p style={{ fontSize: '17px', color: '#5C5268', lineHeight: '1.75' }}>
+            Medicare Skin is a dermatologist-led skin, hair and aesthetic clinic serving South Bengaluru. We focus on understanding individual concerns, discussing appropriate treatment options, and explaining expected benefits and limitations. Our clinic combines medical dermatology with selected aesthetic services, supported by consultation, aftercare advice and ongoing patient communication.
           </p>
         </div>
       </section>
@@ -28,38 +28,38 @@ export default function AboutUsPage({ onOpenBooking }) {
       <section style={{ padding: '80px 0', background: 'transparent' }}>
         <div className="container">
           <div className="section-header-center" style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 50px' }}>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '36px', color: '#2B1B4D', marginBottom: '14px' }}>
-              Our Clinical Philosophy & Standards
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '36px', color: '#153F39', marginBottom: '14px' }}>
+              Our Clinical Philosophy &amp; Standards
             </h2>
             <p style={{ fontSize: '16px', color: '#5C5268' }}>
-              We believe every patient deserves individualized, medically supervised care using gold-standard US-FDA approved technologies.
+              We believe every patient deserves individualized, medically supervised care using evidence-based dermatological therapies.
             </p>
           </div>
 
           <div className="grid-responsive-3" style={{ gap: '28px' }}>
             <div className="location-card-box" style={{ padding: '32px' }}>
-              <GraduationCap size={40} color="#942876" style={{ marginBottom: '16px' }} />
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
+              <GraduationCap size={40} color="#153F39" style={{ marginBottom: '16px' }} />
+              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', marginBottom: '10px' }}>
                 Bangalore Medical College (2005)
               </h3>
               <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>
-                Post-graduate MBBS & DDVL qualifications from BMC. Dr. Sujay M stays at the forefront of clinical dermatology and laser advances.
+                Post-graduate MBBS &amp; DDVL qualifications from BMC. Dr. Sujay M combines clinical diagnosis with continuous medical education.
               </p>
             </div>
 
             <div className="location-card-box" style={{ padding: '32px' }}>
-              <Award size={40} color="#942876" style={{ marginBottom: '16px' }} />
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
-                10,100+ Procedures Completed
+              <Award size={40} color="#C5A174" style={{ marginBottom: '16px' }} />
+              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', marginBottom: '10px' }}>
+                18+ Years Clinical Practice
               </h3>
               <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>
-                Specialized expertise in acne scar subcision, US-FDA diode laser hair reduction, growth factor hair therapy, and vitiligo punch grafting.
+                Dedicated dermatologist assessment for acne scars, pigmentation, hair loss, allergies, and doctor-supervised laser treatments.
               </p>
             </div>
 
             <div className="location-card-box" style={{ padding: '32px' }}>
               <HeartHandshake size={40} color="#942876" style={{ marginBottom: '16px' }} />
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '10px' }}>
+              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', marginBottom: '10px' }}>
                 Ethical & Transparent Pricing
               </h3>
               <p style={{ fontSize: '14px', color: '#5C5268', lineHeight: '1.6' }}>
@@ -75,7 +75,7 @@ export default function AboutUsPage({ onOpenBooking }) {
         <div className="container">
           <div className="grid-responsive-2" style={{ gap: '50px', alignItems: 'center' }}>
             <div>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '36px', color: '#2B1B4D', marginBottom: '16px' }}>
+              <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '36px', color: '#153F39', marginBottom: '16px' }}>
                 State-of-the-Art Clinical Facility
               </h2>
               <p style={{ fontSize: '16px', color: '#5C5268', lineHeight: '1.7', marginBottom: '24px' }}>

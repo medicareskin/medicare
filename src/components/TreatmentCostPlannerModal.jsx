@@ -159,7 +159,7 @@ export default function TreatmentCostPlannerModal({ isOpen, onClose, onOpenBooki
             <Calculator size={15} color="#942876" />
             TREATMENT COST & PROTOCOL PLANNER
           </span>
-          <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', color: '#2B1B4D', margin: '0 0 8px' }}>
+          <h3 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '28px', fontWeight: 650, color: '#153F39', margin: '0 0 8px' }}>
             Transparent Clinical Fee Estimator
           </h3>
           <p style={{ fontSize: '13.5px', color: '#6B5872', maxWidth: '520px', margin: '0 auto' }}>
@@ -285,7 +285,7 @@ export default function TreatmentCostPlannerModal({ isOpen, onClose, onOpenBooki
               <div style={{ fontSize: '12px', fontWeight: 700, color: '#942876', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                 Indicative Estimate Range ({sessionsCount} {sessionsCount === 1 ? 'Session' : 'Sessions'})
               </div>
-              <div style={{ fontSize: '32px', fontFamily: 'Playfair Display, serif', fontWeight: 700, color: '#2B1B4D', margin: '4px 0 0' }}>
+              <div style={{ fontSize: '32px', fontFamily: "'Fraunces', Georgia, serif", fontWeight: 650, color: '#153F39', margin: '4px 0 0' }}>
                 ₹{minEstimate.toLocaleString()} – ₹{maxEstimate.toLocaleString()}
               </div>
             </div>

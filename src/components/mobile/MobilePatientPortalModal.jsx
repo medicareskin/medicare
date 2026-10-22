@@ -210,7 +210,7 @@ export default function MobilePatientPortalModal({ isOpen, onClose, onOpenBookin
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', borderTop: '1px solid #ECE3EC', paddingTop: '12px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#2B1B4D', fontWeight: 600 }}>
                     <Calendar size={15} color="#942876" />
-                    <span>Wed, 24 Apr 2026 at 10:00 AM</span>
+                    <span>Sat, 24 Oct 2026 at 10:00 AM</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#5C5268' }}>
                     <MapPin size={15} color="#942876" />
@@ -315,7 +315,7 @@ export default function MobilePatientPortalModal({ isOpen, onClose, onOpenBookin
           {/* TAB 2: AFTERCARE PLAN & WHATSAPP MOCKUP (Screen 11) */}
           {activeTab === 'aftercare' && (
             <div>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '20px', color: '#2B1B4D', margin: '0 0 6px' }}>
+              <h2 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '20px', fontWeight: 650, color: '#153F39', margin: '0 0 6px' }}>
                 Your Aftercare Plan
               </h2>
               <p style={{ fontSize: '13px', color: '#6A5F75', margin: '0 0 16px', lineHeight: 1.45 }}>
@@ -399,7 +399,7 @@ export default function MobilePatientPortalModal({ isOpen, onClose, onOpenBookin
           {/* TAB 3: TREATMENT CRM JOURNEY (Screen 12) */}
           {activeTab === 'journey' && (
             <div>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '20px', color: '#2B1B4D', margin: '0 0 6px' }}>
+              <h2 style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: '20px', fontWeight: 650, color: '#153F39', margin: '0 0 6px' }}>
                 Your Treatment Journey
               </h2>
               <p style={{ fontSize: '13px', color: '#6A5F75', margin: '0 0 16px', lineHeight: 1.45 }}>
@@ -411,35 +411,35 @@ export default function MobilePatientPortalModal({ isOpen, onClose, onOpenBookin
                 <div style={{ position: 'relative', paddingLeft: '16px' }}>
                   <div style={{ position: 'absolute', left: '-23px', top: '2px', width: '16px', height: '16px', borderRadius: '50%', background: '#2E7D32', border: '3px solid #FFFFFF' }} />
                   <div style={{ fontSize: '13.5px', fontWeight: 800, color: '#2B1B4D' }}>Enquiry Received</div>
-                  <div style={{ fontSize: '11.5px', color: '#776D84' }}>14 Apr 2026 · Website consultation form</div>
+                  <div style={{ fontSize: '11.5px', color: '#776D84' }}>18 Oct 2026 · Website consultation form</div>
                 </div>
 
                 {/* 2. Booked */}
                 <div style={{ position: 'relative', paddingLeft: '16px' }}>
                   <div style={{ position: 'absolute', left: '-23px', top: '2px', width: '16px', height: '16px', borderRadius: '50%', background: '#2E7D32', border: '3px solid #FFFFFF' }} />
                   <div style={{ fontSize: '13.5px', fontWeight: 800, color: '#2B1B4D' }}>Consultation Booked</div>
-                  <div style={{ fontSize: '11.5px', color: '#776D84' }}>16 Apr 2026 · Slot confirmed for Wed 24 Apr</div>
+                  <div style={{ fontSize: '11.5px', color: '#776D84' }}>20 Oct 2026 · Slot confirmed for Sat 24 Oct</div>
                 </div>
 
                 {/* 3. Completed */}
                 <div style={{ position: 'relative', paddingLeft: '16px' }}>
                   <div style={{ position: 'absolute', left: '-23px', top: '2px', width: '16px', height: '16px', borderRadius: '50%', background: '#2E7D32', border: '3px solid #FFFFFF' }} />
                   <div style={{ fontSize: '13.5px', fontWeight: 800, color: '#2B1B4D' }}>Consultation Completed</div>
-                  <div style={{ fontSize: '11.5px', color: '#776D84' }}>24 Apr 2026 · Detailed evaluation with Dr. Sujay M</div>
+                  <div style={{ fontSize: '11.5px', color: '#776D84' }}>24 Oct 2026 · Detailed evaluation with Dr. Sujay M</div>
                 </div>
 
                 {/* 4. Started */}
                 <div style={{ position: 'relative', paddingLeft: '16px' }}>
                   <div style={{ position: 'absolute', left: '-23px', top: '2px', width: '16px', height: '16px', borderRadius: '50%', background: '#942876', border: '3px solid #FFFFFF' }} />
                   <div style={{ fontSize: '13.5px', fontWeight: 800, color: '#942876' }}>Treatment In Progress</div>
-                  <div style={{ fontSize: '11.5px', color: '#776D84' }}>02 May 2026 · Acne Scar Subcision & MNRF Session 1</div>
+                  <div style={{ fontSize: '11.5px', color: '#776D84' }}>28 Oct 2026 · Acne Scar Subcision & MNRF Session 1</div>
                 </div>
 
                 {/* 5. Follow-up */}
                 <div style={{ position: 'relative', paddingLeft: '16px' }}>
                   <div style={{ position: 'absolute', left: '-23px', top: '2px', width: '16px', height: '16px', borderRadius: '50%', background: '#D9D0DC', border: '3px solid #FFFFFF' }} />
                   <div style={{ fontSize: '13.5px', fontWeight: 700, color: '#776D84' }}>Follow-up Review</div>
-                  <div style={{ fontSize: '11.5px', color: '#999' }}>16 May 2026 · Progress check-in scheduled</div>
+                  <div style={{ fontSize: '11.5px', color: '#999' }}>12 Nov 2026 · Progress check-in scheduled</div>
                 </div>
 
                 {/* 6. Ongoing Care */}

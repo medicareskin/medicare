@@ -34,19 +34,19 @@ export default function PatientReviewsPage({ onOpenBooking }) {
       <div className="container">
         {/* Page Hero Header */}
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 40px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.95)', padding: '8px 20px', borderRadius: '30px', boxShadow: '0 4px 15px rgba(148, 40, 118, 0.06)', marginBottom: '14px' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.95)', padding: '8px 20px', borderRadius: '30px', boxShadow: '0 4px 15px rgba(21, 63, 57, 0.06)', marginBottom: '14px' }}>
             <div style={{ display: 'flex', gap: '2px' }}>
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={18} fill="#FFB800" stroke="none" />
+                <Star key={i} size={18} fill="#C5A174" stroke="none" />
               ))}
             </div>
-            <span style={{ fontWeight: '700', color: '#2B1B4D', fontSize: '16px' }}>5.0 Google Rating (4.9+ Star Average)</span>
+            <span style={{ fontWeight: '700', color: '#153F39', fontSize: '16px' }}>Verified Google Patient Experiences</span>
           </div>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#2B1B4D', marginBottom: '16px' }}>
-            Patient Reviews & Feedback
+          <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '42px', color: '#153F39', marginBottom: '16px' }}>
+            Patient Experiences &amp; Feedback
           </h1>
-          <p style={{ fontSize: '17px', color: '#5C5268', lineHeight: '1.7' }}>
-            Read verified, authentic testimonials from patients across Bangalore who received dermatological and aesthetic procedures at Medicare Skin Clinic.
+          <p style={{ fontSize: '17px', color: '#253532', lineHeight: '1.7' }}>
+            Read authentic comments and treatment feedback from patients who consulted Dr. (Mrs.) Sujay M at Medicare Skin &amp; Cosmetic Clinic in South Bengaluru.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function PatientReviewsPage({ onOpenBooking }) {
 
         {/* Submit Patient Review Form Card */}
         <div className="location-card-box" style={{ padding: '36px', maxWidth: '700px', margin: '0 auto' }}>
-          <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', color: '#2B1B4D', marginBottom: '8px', textAlign: 'center' }}>
+          <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '28px', color: '#153F39', marginBottom: '8px', textAlign: 'center' }}>
             Share Your Experience
           </h3>
           <p style={{ fontSize: '14px', color: '#5C5268', textAlign: 'center', marginBottom: '24px' }}>

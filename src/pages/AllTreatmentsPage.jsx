@@ -27,7 +27,7 @@ export default function AllTreatmentsPage({ onSelectCondition, onSelectTreatment
       <div className="container">
         {/* Page Hero Header */}
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 40px' }}>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '46px', color: '#2B1B4D', marginBottom: '16px' }}>
+          <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '46px', color: '#153F39', marginBottom: '16px' }}>
             Searchable Treatment Directory
           </h1>
           <p style={{ fontSize: '17px', color: '#5C5268', lineHeight: '1.7' }}>

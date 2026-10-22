@@ -299,35 +299,41 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
                 </span>
               </div>
 
-              <h1 style={{
-                fontFamily: 'Playfair Display, serif',
-                fontSize: '40px',
-                color: '#2B1B4D',
-                lineHeight: 1.22,
-                margin: '0 0 16px',
-                fontWeight: 800
+              {/* Conditional Service Gate Notice from Master Build Spec Section 07 */}
+              <div style={{
+                background: '#FFFBEB',
+                border: '1px solid #FDE68A',
+                borderRadius: '12px',
+                padding: '12px 16px',
+                marginBottom: '20px',
+                fontSize: '13px',
+                color: '#92400E',
+                lineHeight: '1.5'
               }}>
-                Q-Switched Laser Treatment for Melasma &amp; Pigmentation in Bengaluru
+                <strong>PUBLICATION STATUS: Conditional.</strong> Confirm the exact Q-switched laser machine, trained operator, current service offering, procedure policy and consent before advertising treatment availability. This content provides clinical education, not a guaranteed bookable procedure.
+              </div>
+
+              <h1 style={{
+                fontFamily: 'Fraunces, Georgia, serif',
+                fontSize: '38px',
+                color: '#153F39',
+                lineHeight: 1.24,
+                margin: '0 0 16px',
+                fontWeight: 700
+              }}>
+                Q-Switched Laser for Pigmentation and Melasma — What Patients Should Know
               </h1>
 
-              <div style={{ fontSize: '16px', fontWeight: 700, color: '#942876', marginBottom: '16px', lineHeight: 1.5 }}>
-                Dark patches, uneven skin tone or persistent pigmentation? Understand your treatment options with dermatologist-led care at Medicare Skin &amp; Cosmetic Clinic, South Bengaluru.
+              <div style={{ fontSize: '16px', fontWeight: 700, color: '#C5A174', marginBottom: '16px', lineHeight: 1.55 }}>
+                Dark patches or uneven skin tone can have different causes. Q-switched lasers may be used for selected pigment conditions following a dermatologist assessment. Melasma often requires ongoing medical skincare and sun protection; laser is not automatically the first choice, and recurrence is possible.
               </div>
 
               <p style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: 1.75, marginBottom: '14px' }}>
-                Are you noticing dark patches on your cheeks, forehead or upper lip? Do stubborn marks remain even after your acne has healed? Have you tried brightening creams but still struggle with uneven skin tone?
-              </p>
-
-              <p style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: 1.75, marginBottom: '14px' }}>
-                Facial pigmentation is a common concern among Indian women and men. Melasma, sun damage, post-acne marks and other pigmentation conditions may look similar, but they do not always require the same treatment.
-              </p>
-
-              <p style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: 1.75, marginBottom: '14px' }}>
-                At <strong>Medicare Skin &amp; Cosmetic Clinic</strong>, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru, <strong>Dr. Sujay M, MBBS, DDVL</strong>, provides dermatologist-led assessment and personalised management of pigmentation concerns.
+                Are you noticing dark patches on your cheeks, forehead or upper lip? Facial pigmentation is a common concern among Indian women and men. Melasma, sun spots, freckles, post-inflammatory pigmentation and uneven tone can look similar, but a dermatologist must distinguish them and check any changing or suspicious lesion before cosmetic treatment.
               </p>
 
               <p style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: 1.75, marginBottom: '24px' }}>
-                Q-switched laser treatment may be considered for selected patients, depending on the cause of pigmentation, skin type, previous treatment and expected benefits and risks.
+                At <strong>Medicare Skin &amp; Cosmetic Clinic</strong> near Yelachenahalli Metro Station in South Bengaluru, <strong>Dr. (Mrs.) Sujay M, MBBS, DDVL</strong>, provides diagnosis-first consultations to assess whether laser therapy or foundational medical skincare is appropriate for your skin.
               </p>
 
               {/* Action Buttons */}
@@ -434,7 +440,7 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               TREATMENT EXPLANATION
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#2B1B4D', margin: '6px 0 16px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', margin: '6px 0 16px' }}>
               What Is Q-Switched Laser Treatment?
             </h2>
             <div style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: 1.8 }}>
@@ -471,7 +477,7 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               UNDERSTANDING PIGMENTATION
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#2B1B4D', margin: '6px 0 12px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', margin: '6px 0 12px' }}>
               What Causes Dark Spots and Facial Pigmentation?
             </h2>
             <p style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: 1.65 }}>
@@ -559,7 +565,7 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               CLINICAL EVIDENCE &amp; EVALUATION
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#2B1B4D', margin: '6px 0 16px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', margin: '6px 0 16px' }}>
               Can Q-Switched Laser Help Treat Melasma?
             </h2>
             <div style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: 1.8 }}>
@@ -604,7 +610,7 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               PATIENT JOURNEY
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#2B1B4D', margin: '6px 0 28px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', margin: '6px 0 28px' }}>
               What Happens During a Q-Switched Laser Consultation and Treatment?
             </h2>
 
@@ -682,7 +688,7 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               EXPECTED OUTCOMES
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#2B1B4D', margin: '6px 0 12px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', margin: '6px 0 12px' }}>
               What Are the Potential Benefits of Q-Switched Laser?
             </h2>
             <p style={{ fontSize: '15px', color: '#5C5268', lineHeight: 1.7, marginBottom: '24px' }}>
@@ -738,7 +744,7 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               SAFETY &amp; SKIN TYPES
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#2B1B4D', margin: '6px 0 14px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', margin: '6px 0 14px' }}>
               Is Q-Switched Laser Safe for Indian Skin?
             </h2>
             <p style={{ fontSize: '15px', color: '#5C5268', lineHeight: 1.75, marginBottom: '16px' }}>
@@ -872,7 +878,7 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
               <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
                 PRICING &amp; TRANSPARENCY
               </span>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', color: '#2B1B4D', margin: '4px 0 10px' }}>
+              <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '28px', color: '#153F39', margin: '4px 0 10px' }}>
                 Q-Switched Laser Treatment Cost in Bengaluru
               </h2>
               <p style={{ fontSize: '15px', color: '#5C5268', lineHeight: 1.7, margin: '0 0 8px' }}>
@@ -916,7 +922,7 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               CLINIC ADVANTAGES
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '32px', color: '#2B1B4D', margin: '6px 0 12px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '32px', color: '#153F39', margin: '6px 0 12px' }}>
               Why Choose Medicare Skin &amp; Cosmetic Clinic?
             </h2>
           </div>
@@ -987,7 +993,7 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               PATIENT FAQS
             </span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '34px', color: '#2B1B4D', margin: '6px 0 12px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '34px', color: '#153F39', margin: '6px 0 12px' }}>
               Frequently Asked Questions
             </h2>
             <p style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: 1.6 }}>
@@ -1054,7 +1060,7 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
             padding: '36px',
             boxShadow: '0 12px 32px rgba(43, 27, 77, 0.04)'
           }}>
-            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', color: '#2B1B4D', marginBottom: '16px' }}>
+            <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '22px', color: '#153F39', marginBottom: '16px' }}>
               Explore Complementary Treatments at Medicare Skin
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
@@ -1150,7 +1156,7 @@ export default function QSwitchedLaserTreatmentPage({ onOpenBooking, onNavigateP
             boxShadow: '0 20px 50px rgba(43, 27, 77, 0.25)',
             border: '1px solid rgba(255, 255, 255, 0.12)'
           }}>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '36px', margin: '0 0 14px' }}>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '36px', margin: '0 0 14px' }}>
               Concerned About Melasma, Dark Spots or Uneven Skin Tone?
             </h2>
             <p style={{ fontSize: '16.5px', color: '#E4D5E6', maxWidth: '720px', margin: '0 auto 16px', lineHeight: 1.65 }}>

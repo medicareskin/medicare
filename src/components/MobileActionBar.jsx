@@ -32,24 +32,15 @@ export default function MobileActionBar({ onOpenBooking }) {
         href={`tel:${CLINIC_INFO.rawPhone}`}
         data-track="tap_call"
         aria-label="Call Medicare Skin Clinic"
+        className="btn-secondary btn-liquid-secondary"
         style={{
           flex: 1,
-          minHeight: '46px',
-          borderRadius: '16px',
-          background: 'rgba(255, 255, 255, 0.9)',
-          border: '1.5px solid rgba(148, 40, 118, 0.25)',
-          color: '#2B1B4D',
-          fontSize: '13.5px',
-          fontWeight: 700,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '6px',
-          textDecoration: 'none',
-          boxShadow: '0 2px 8px rgba(148, 40, 118, 0.06)'
+          minHeight: '44px',
+          padding: '10px 14px',
+          fontSize: '13px'
         }}
       >
-        <Phone size={17} color="#942876" />
+        <Phone size={15} color="#942876" />
         <span>Call</span>
       </a>
 
@@ -60,24 +51,15 @@ export default function MobileActionBar({ onOpenBooking }) {
         rel="noreferrer"
         data-track="tap_whatsapp"
         aria-label="Chat with clinic on WhatsApp"
+        className="btn-secondary btn-liquid-secondary"
         style={{
-          flex: 1,
-          minHeight: '46px',
-          borderRadius: '16px',
-          background: 'rgba(255, 255, 255, 0.9)',
-          border: '1.5px solid rgba(148, 40, 118, 0.25)',
-          color: '#2B1B4D',
-          fontSize: '13.5px',
-          fontWeight: 700,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '6px',
-          textDecoration: 'none',
-          boxShadow: '0 2px 8px rgba(148, 40, 118, 0.06)'
+          flex: 1.1,
+          minHeight: '44px',
+          padding: '10px 14px',
+          fontSize: '13px'
         }}
       >
-        <MessageCircle size={17} color="#942876" />
+        <MessageCircle size={15} color="#10B981" />
         <span>WhatsApp</span>
       </a>
 
@@ -86,24 +68,15 @@ export default function MobileActionBar({ onOpenBooking }) {
         onClick={onOpenBooking}
         data-track="tap_book"
         aria-label="Book an Appointment"
+        className="btn-primary btn-liquid-primary"
         style={{
           flex: 1.3,
-          minHeight: '46px',
-          borderRadius: '16px',
-          background: 'linear-gradient(135deg, #942876 0%, #C8509B 100%)',
-          border: 'none',
-          color: '#FFFFFF',
-          fontSize: '13.5px',
-          fontWeight: 700,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '6px',
-          cursor: 'pointer',
-          boxShadow: '0 6px 18px rgba(148, 40, 118, 0.3)'
+          minHeight: '44px',
+          padding: '10px 16px',
+          fontSize: '13.5px'
         }}
       >
-        <Calendar size={17} />
+        <Calendar size={15} />
         <span>Book</span>
       </button>
     </div>
