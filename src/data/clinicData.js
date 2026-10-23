@@ -1151,3 +1151,5 @@ export const NAV_TREATMENTS_MENU = [
   }
 ];
 
+export { TREATMENT_CLINICAL_PROFILES, getTreatmentProfile } from './treatmentClinicalProfiles';
+

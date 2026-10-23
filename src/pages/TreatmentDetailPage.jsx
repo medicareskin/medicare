@@ -6,6 +6,7 @@ import {
   Clock, Award, Phone, ChevronDown, ChevronUp, Check, Info, Star, HelpCircle
 } from 'lucide-react';
 import { CLINIC_INFO } from '../data/clinicData';
+import { getTreatmentProfile } from '../data/treatmentClinicalProfiles';
 import HairConcernLandingPage from './HairConcernLandingPage';
 
 export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuccessToast }) {
@@ -26,8 +27,33 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
   const treatmentTitle = item.title || 'Dermatology Treatment';
   const categoryName = item.category || item.type || 'Clinical Dermatology';
 
-  // FAQs tailored for clinical treatment page
-  const faqs = [
+  // Retrieve personalized condition profile (symptoms, causes, options, pricing, candidacy, faqs)
+  const profile = getTreatmentProfile(item) || {
+    overview: item.fullText || item.description || '',
+    symptoms: [],
+    causes: [],
+    treatmentOptions: [],
+    benefits: [],
+    suitableFor: [],
+    notRecommended: [],
+    pricing: {
+      description: 'Pricing depends on diagnostic evaluation, session requirements, and prescribed medical treatments.',
+      range: '₹600 – ₹3,500',
+      unit: '/ consultation & treatment plan',
+      factors: [
+        'Doctor diagnostic examination & history evaluation',
+        'Severity grade and surface area involved',
+        'Prescription medical homecare formulation',
+        'In-clinic procedure requirement (if indicated)',
+        'Number of monitored follow-up reviews',
+        'Preventative maintenance protocol'
+      ]
+    },
+    faqs: []
+  };
+
+  // Condition-specific FAQs fallback
+  const displayFaqs = (profile.faqs && profile.faqs.length > 0) ? profile.faqs : [
     {
       q: `How many sessions of ${treatmentTitle} are typically required?`,
       a: `Most patients achieve significant, long-lasting clinical improvements within 3 to 6 sessions spaced 3 to 4 weeks apart. The exact schedule is customised by Dr. Sujay M after dermoscopic skin evaluation.`
@@ -38,15 +64,15 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
     },
     {
       q: 'When will I begin to see noticeable results?',
-      a: 'Initial textural improvements are usually visible within 10 to 14 days following your first session. Collagen remodelling continues to enhance your skin clarity and tightness over 2 to 3 months.'
+      a: 'Initial textural and comfort improvements are usually visible within 10 to 14 days following your first session, with progressive enhancement over 2 to 3 months.'
     },
     {
       q: 'Are the treatment results permanent?',
-      a: 'Scar remodeling and laser hair reduction offer long-lasting, permanent improvements. Ongoing maintenance sessions and a prescribed medical skincare regimen help protect and maintain peak results.'
+      a: 'Clinical improvements can be long-lasting. Ongoing maintenance sessions and a prescribed medical skincare regimen help protect and sustain peak results against environmental triggers.'
     },
     {
       q: 'Is the procedure painful or uncomfortable?',
-      a: 'We use clinical topical numbing creams and cooling contact systems to ensure virtually painless, highly comfortable treatment sessions.'
+      a: 'We prioritize patient comfort with topical anesthetic creams, gentle formulation pH, and contact cooling systems where applicable.'
     }
   ];
 
@@ -71,7 +97,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
         </div>
       </div>
 
-      {/* ── SCREEN 1: TREATMENT DETAIL HERO PAGE (Image 1, Screen 1) ─── */}
+      {/* ── SCREEN 1: TREATMENT DETAIL HERO PAGE ─────────────────────── */}
       <section style={{ padding: '50px 0 60px', position: 'relative' }}>
         <div className="container">
           <div className="grid-responsive-split">
@@ -92,11 +118,11 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
               </h1>
 
               <div style={{ fontSize: '14px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '16px' }}>
-                Smoother, Clearer Skin with Advanced Evidence-Based Therapies
+                Personalized, Evidence-Based Dermatological Care in South Bengaluru
               </div>
 
               <p style={{ fontSize: '16.5px', color: '#5C5268', lineHeight: 1.7, marginBottom: '24px', maxWidth: '580px' }}>
-                {item.fullText || item.description || `Reduce visible imperfections, stimulate deep collagen repair, and restore lasting skin confidence with personalized, dermatologist-led care at South Bengaluru's premier clinic.`}
+                {profile.overview || item.fullText || item.description || `Consult Dr. (Mrs.) Sujay M, MBBS, DDVL, for evidence-based clinical evaluation and personalized dermatological therapies at Medicare Skin & Cosmetic Clinic near Yelachenahalli Metro Station.`}
               </p>
 
               {/* 3 Key Trust Signals with Icons */}
@@ -111,13 +137,13 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                   <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: '#FAF0F6', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Check size={13} color="#942876" strokeWidth={3} />
                   </div>
-                  Minimal Downtime
+                  Safe for Indian Skin
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 700, color: '#2B1B4D' }}>
                   <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: '#FAF0F6', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Check size={13} color="#942876" strokeWidth={3} />
                   </div>
-                  Natural Looking Results
+                  Doctor-Led Evaluation
                 </div>
               </div>
 
@@ -206,7 +232,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
         </div>
       </section>
 
-      {/* ── SCREEN 2: TREATMENT CONTENT & SYMPTOMS (Image 1, Screen 2) ─ */}
+      {/* ── SCREEN 2: TREATMENT CONTENT, SYMPTOMS & OPTIONS ──────────── */}
       <section style={{ padding: '60px 0', background: 'transparent' }}>
         <div className="container">
           <div style={{ background: '#FFFFFF', borderRadius: '28px', border: '1.5px solid #EBE0EA', padding: '40px', boxShadow: '0 16px 40px rgba(43, 27, 77, 0.05)' }}>
@@ -219,7 +245,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                 Understanding {treatmentTitle}
               </h2>
               <p style={{ fontSize: '15.5px', color: '#5C5268', lineHeight: 1.7 }}>
-                {treatmentTitle} concerns are common skin issues that can affect everyday self-assurance. At Medicare Skin, Dr. Sujay M offers advanced, evidence-based dermatological modalities to remodel tissue texture and restore smooth, healthy, radiant skin.
+                {profile.overview}
               </p>
             </div>
 
@@ -227,7 +253,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
             <div style={{ display: 'flex', gap: '8px', borderBottom: '1px solid #ECE3EC', paddingBottom: '12px', marginBottom: '32px', overflowX: 'auto' }}>
               {[
                 { id: 'overview', label: 'Overview' },
-                { id: 'causes', label: 'Causes' },
+                { id: 'causes', label: 'Causes & Triggers' },
                 { id: 'symptoms', label: 'Symptoms' },
                 { id: 'options', label: 'Treatment Options' },
                 { id: 'benefits', label: 'Benefits' }
@@ -244,7 +270,8 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                     fontWeight: activeTab === tab.id ? 700 : 600,
                     border: 'none',
                     cursor: 'pointer',
-                    transition: 'all 0.2s ease'
+                    transition: 'all 0.2s ease',
+                    whiteSpace: 'nowrap'
                   }}
                 >
                   {tab.label}
@@ -252,54 +279,180 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
               ))}
             </div>
 
-            {/* Common Symptoms 4 Cards (Blueprint Screen 2) */}
+            {/* Dynamic Active Tab View */}
             <div style={{ marginBottom: '40px' }}>
-              <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '20px', color: '#153F39', marginBottom: '18px' }}>
-                Common Symptoms & Manifestations
-              </h3>
-              <div className="grid-responsive-4">
-                {[
-                  { title: 'Pitted / Indented Scars', desc: 'Atrophic ice-pick, boxcar, or rolling depressions on the skin surface.' },
-                  { title: 'Uneven Skin Texture', desc: 'Rough epidermal contours and loss of smooth optical light reflection.' },
-                  { title: 'Post-Inflammatory Spots', desc: 'Pigmented brown or red macular marks following inflamed breakouts.' },
-                  { title: 'Loss of Elastic Smoothness', desc: 'Depleted dermal collagen leading to sagging skin elasticity.' }
-                ].map((sym, idx) => (
-                  <div
-                    key={idx}
-                    style={{
-                      background: '#FAF8FB',
-                      border: '1px solid #EBE0EA',
-                      borderRadius: '16px',
-                      padding: '20px 18px',
-                      textAlign: 'left'
-                    }}
-                  >
-                    <div style={{ width: '32px', height: '32px', borderRadius: '10px', background: '#FAF0F6', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#942876', fontWeight: 800, fontSize: '13px', marginBottom: '12px' }}>
-                      0{idx + 1}
-                    </div>
-                    <h4 style={{ fontSize: '14.5px', fontWeight: 700, color: '#2B1B4D', margin: '0 0 6px' }}>
-                      {sym.title}
-                    </h4>
-                    <p style={{ fontSize: '12.5px', color: '#6A5F75', lineHeight: 1.5, margin: 0 }}>
-                      {sym.desc}
-                    </p>
+              {activeTab === 'symptoms' && (
+                <div>
+                  <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '20px', color: '#153F39', marginBottom: '18px' }}>
+                    Common Symptoms & Manifestations of {treatmentTitle}
+                  </h3>
+                  <div className="grid-responsive-4">
+                    {profile.symptoms.map((sym, idx) => (
+                      <div
+                        key={idx}
+                        style={{
+                          background: '#FAF8FB',
+                          border: '1px solid #EBE0EA',
+                          borderRadius: '16px',
+                          padding: '20px 18px',
+                          textAlign: 'left'
+                        }}
+                      >
+                        <div style={{ width: '32px', height: '32px', borderRadius: '10px', background: '#FAF0F6', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#942876', fontWeight: 800, fontSize: '13px', marginBottom: '12px' }}>
+                          0{idx + 1}
+                        </div>
+                        <h4 style={{ fontSize: '14.5px', fontWeight: 700, color: '#2B1B4D', margin: '0 0 6px' }}>
+                          {sym.title}
+                        </h4>
+                        <p style={{ fontSize: '12.5px', color: '#6A5F75', lineHeight: 1.5, margin: 0 }}>
+                          {sym.desc}
+                        </p>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              )}
+
+              {activeTab === 'causes' && (
+                <div>
+                  <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '20px', color: '#153F39', marginBottom: '18px' }}>
+                    Primary Causes & Triggers of {treatmentTitle}
+                  </h3>
+                  <div className="grid-responsive-4">
+                    {profile.causes.map((cause, idx) => (
+                      <div
+                        key={idx}
+                        style={{
+                          background: '#FAF8FB',
+                          border: '1px solid #EBE0EA',
+                          borderRadius: '16px',
+                          padding: '20px 18px',
+                          textAlign: 'left'
+                        }}
+                      >
+                        <div style={{ width: '32px', height: '32px', borderRadius: '10px', background: '#FAF0F6', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#942876', fontWeight: 800, fontSize: '13px', marginBottom: '12px' }}>
+                          0{idx + 1}
+                        </div>
+                        <h4 style={{ fontSize: '14.5px', fontWeight: 700, color: '#2B1B4D', margin: '0 0 6px' }}>
+                          {cause.title}
+                        </h4>
+                        <p style={{ fontSize: '12.5px', color: '#6A5F75', lineHeight: 1.5, margin: 0 }}>
+                          {cause.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'options' && (
+                <div>
+                  <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '20px', color: '#153F39', marginBottom: '18px' }}>
+                    Clinical Treatment Modalities for {treatmentTitle}
+                  </h3>
+                  <div className="grid-responsive-4">
+                    {profile.treatmentOptions.map((opt, idx) => (
+                      <div
+                        key={idx}
+                        style={{
+                          background: '#FAF8FB',
+                          border: '1.5px solid #EBE0EA',
+                          borderRadius: '18px',
+                          overflow: 'hidden',
+                          display: 'flex',
+                          flexDirection: 'column'
+                        }}
+                      >
+                        <div style={{ height: '120px', overflow: 'hidden' }}>
+                          <img src={opt.img} alt={opt.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        </div>
+                        <div style={{ padding: '16px' }}>
+                          <h4 style={{ fontSize: '14px', fontWeight: 700, color: '#2B1B4D', margin: '0 0 6px' }}>
+                            {opt.name}
+                          </h4>
+                          <p style={{ fontSize: '12px', color: '#6A5F75', lineHeight: 1.5, margin: 0 }}>
+                            {opt.desc}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'benefits' && (
+                <div>
+                  <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '20px', color: '#153F39', marginBottom: '18px' }}>
+                    Clinical Benefits of Dermatological Care for {treatmentTitle}
+                  </h3>
+                  <div className="grid-responsive-4">
+                    {profile.benefits.map((benefit, idx) => (
+                      <div
+                        key={idx}
+                        style={{
+                          background: '#FAF8FB',
+                          border: '1px solid #EBE0EA',
+                          borderRadius: '16px',
+                          padding: '20px 18px',
+                          textAlign: 'left'
+                        }}
+                      >
+                        <div style={{ width: '32px', height: '32px', borderRadius: '10px', background: '#DCFCE7', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#15803D', fontWeight: 800, fontSize: '13px', marginBottom: '12px' }}>
+                          ✓
+                        </div>
+                        <h4 style={{ fontSize: '14.5px', fontWeight: 700, color: '#2B1B4D', margin: '0 0 6px' }}>
+                          {benefit.title}
+                        </h4>
+                        <p style={{ fontSize: '12.5px', color: '#6A5F75', lineHeight: 1.5, margin: 0 }}>
+                          {benefit.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'overview' && (
+                <div style={{ background: '#FAF8FB', border: '1.5px solid #EBE0EA', borderRadius: '20px', padding: '28px' }}>
+                  <div className="grid-responsive-2" style={{ gap: '24px' }}>
+                    <div>
+                      <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#153F39', marginBottom: '10px' }}>
+                        Key Manifestations to Watch
+                      </h4>
+                      <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px', color: '#5C5268' }}>
+                        {profile.symptoms.slice(0, 3).map((s, idx) => (
+                          <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                            <span style={{ color: '#942876', fontWeight: 700 }}>•</span>
+                            <span><strong>{s.title}:</strong> {s.desc}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#153F39', marginBottom: '10px' }}>
+                        Primary Doctor-Led Approaches
+                      </h4>
+                      <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px', color: '#5C5268' }}>
+                        {profile.treatmentOptions.slice(0, 3).map((opt, idx) => (
+                          <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                            <Check size={14} color="#15803D" style={{ marginTop: '3px', flexShrink: 0 }} />
+                            <span><strong>{opt.name}:</strong> {opt.desc}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
-            {/* Treatment Options at Medicare Skin with Images */}
+            {/* Treatment Options at Medicare Skin with Images (Always accessible) */}
             <div>
               <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '20px', color: '#153F39', marginBottom: '18px' }}>
                 Treatment Options at Medicare Skin Clinic
               </h3>
               <div className="grid-responsive-4">
-                {[
-                  { name: 'Fractional CO2 Laser', desc: 'Fractional micro-beams vaporize damaged tissue and trigger deep dermal neo-collagenesis.', img: '/images/skin_elasticity_cheek_touch.png' },
-                  { name: 'Microneedling + PRP', desc: 'Autologous platelet growth factors stimulate rapid fibroblast cellular renewal.', img: '/images/radiant_hair_smile_woman.png' },
-                  { name: 'Clinical Chemical Peels', desc: 'Medical-grade AHA/BHA solutions safely exfoliate dull skin cells and hyperpigmentation.', img: '/images/luxury_indian_skin_model.png' },
-                  { name: 'Subcision & Collagen Fillers', desc: 'Releasing fibrotic tethered scars combined with targeted volume replenishment.', img: '/images/poreless_glass_skin_glow.jpg' }
-                ].map((opt, idx) => (
+                {profile.treatmentOptions.map((opt, idx) => (
                   <div
                     key={idx}
                     style={{
@@ -331,7 +484,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
         </div>
       </section>
 
-      {/* ── SCREEN 3: SAFETY / CANDIDACY / FAQS (Image 1, Screen 3) ─── */}
+      {/* ── SCREEN 3: SAFETY / CANDIDACY / FAQS ─────────────────────── */}
       <section style={{ padding: '40px 0 60px', background: 'transparent' }}>
         <div className="container">
           <div className="grid-responsive-2" style={{ marginBottom: '40px' }}>
@@ -348,13 +501,13 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                 />
                 <div>
                   <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '12px', fontWeight: 800, color: '#15803D', background: '#DCFCE7', padding: '3px 10px', borderRadius: '12px', marginBottom: '4px' }}>
-                    <ShieldCheck size={13} /> US-FDA Gold Standard
+                    <ShieldCheck size={13} /> Dermatologist-Supervised
                   </div>
                   <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '20px', color: '#153F39', margin: 0 }}>
                     Is It Safe?
                   </h3>
                   <p style={{ fontSize: '12.5px', color: '#6A5F75', margin: '4px 0 0' }}>
-                    Performed exclusively by qualified dermatologists under strict medical sterilization protocols.
+                    Evaluated and performed directly under Dr. Sujay M's clinical oversight with strict sterilization and Indian skin safety parameters.
                   </p>
                 </div>
               </div>
@@ -366,11 +519,9 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                     <CheckCircle2 size={16} color="#15803D" /> Suitable Candidates
                   </h4>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '12.5px', color: '#5C5268' }}>
-                    <li>✓ Pitted or raised scars</li>
-                    <li>✓ Uneven texture & pores</li>
-                    <li>✓ Good general overall health</li>
-                    <li>✓ Realistic aesthetic goals</li>
-                    <li>✓ No active cystic skin flare</li>
+                    {profile.suitableFor.map((c, idx) => (
+                      <li key={idx}>✓ {c}</li>
+                    ))}
                   </ul>
                 </div>
 
@@ -379,11 +530,9 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                     <XCircle size={16} color="#B91C1C" /> Not Recommended If
                   </h4>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '12.5px', color: '#5C5268' }}>
-                    <li>✗ Active severe acne infection</li>
-                    <li>✗ Pregnancy or nursing</li>
-                    <li>✗ History of keloid scarring</li>
-                    <li>✗ Uncontrolled diabetes mellitus</li>
-                    <li>✗ Recent oral isotretinoin use</li>
+                    {profile.notRecommended.map((nc, idx) => (
+                      <li key={idx}>✗ {nc}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -400,7 +549,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {faqs.map((faq, idx) => (
+                {displayFaqs.map((faq, idx) => (
                   <div
                     key={idx}
                     style={{
@@ -444,7 +593,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
         </div>
       </section>
 
-      {/* ── SCREEN 4: TREATMENT COST / PRICING (Image 1, Screen 4) ───── */}
+      {/* ── SCREEN 4: TREATMENT COST / PRICING ───────────────────────── */}
       <section style={{ padding: '30px 0 60px', background: 'transparent' }}>
         <div className="container">
           <div style={{ background: '#FFFFFF', borderRadius: '28px', border: '1.5px solid #EBE0EA', padding: '40px', boxShadow: '0 16px 40px rgba(43, 27, 77, 0.05)' }}>
@@ -460,10 +609,10 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                   {treatmentTitle} Cost in Bengaluru
                 </h2>
                 <p style={{ fontSize: '15px', color: '#5C5268', lineHeight: 1.6, marginBottom: '24px' }}>
-                  The overall cost depends on the severity and depth of the concern, specific technology utilized (Fractional Laser, Microneedling, PRP, or Medical Peels), and the number of sessions planned. We provide complete transparent upfront estimates with zero hidden charges.
+                  {profile.pricing.description}
                 </p>
 
-                {/* Big Price Range Banner (Blueprint 1, Screen 4) */}
+                {/* Big Price Range Banner */}
                 <div
                   style={{
                     background: 'linear-gradient(135deg, #FAF4FA 0%, #FFFFFF 100%)',
@@ -484,21 +633,14 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                       Typical Price Range at Medicare Skin
                     </div>
                     <div style={{ fontSize: '28px', fontWeight: 700, color: '#153F39', fontFamily: 'Fraunces, Georgia, serif' }}>
-                      ₹5,000 – ₹25,000 <span style={{ fontSize: '13px', fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#6A5F75', fontWeight: 600 }}>/ session</span>
+                      {profile.pricing.range} <span style={{ fontSize: '13px', fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#6A5F75', fontWeight: 600 }}>{profile.pricing.unit}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Factors Affecting Cost */}
                 <div className="grid-responsive-2">
-                  {[
-                    'Type & severity of concern',
-                    'Clinical technology chosen',
-                    'Surface area being treated',
-                    'Total sessions required',
-                    'Combination therapy protocol',
-                    'Post-care medical kits'
-                  ].map((factor, idx) => (
+                  {profile.pricing.factors.map((factor, idx) => (
                     <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#5C5268' }}>
                       <Check size={14} color="#942876" strokeWidth={2.5} />
                       {factor}
@@ -507,7 +649,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                 </div>
               </div>
 
-              {/* Right Card: Get an Accurate Estimate (Screen 4 Card) */}
+              {/* Right Card: Get an Accurate Estimate */}
               <div
                 style={{
                   background: 'linear-gradient(135deg, #FAF4FA 0%, #FFFFFF 100%)',
@@ -525,7 +667,7 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
                   Get an Accurate Estimate
                 </h3>
                 <p style={{ fontSize: '13px', color: '#6A5F75', margin: '0 0 20px', lineHeight: 1.5 }}>
-                  Book an in-person consultation with Dr. Sujay M for a personalized treatment plan and exact pricing estimate.
+                  Book an in-person consultation with Dr. Sujay M for a personalized clinical examination, accurate diagnosis, and clear upfront pricing.
                 </p>
 
                 <button
@@ -549,13 +691,13 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'left', fontSize: '12.5px', color: '#5C5268' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Check size={14} color="#15803D" /> Personalized treatment plan
+                    <Check size={14} color="#15803D" /> Personalized medical assessment
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Check size={14} color="#15803D" /> No hidden medical costs
+                    <Check size={14} color="#15803D" /> Transparent upfront pricing
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Check size={14} color="#15803D" /> Flexible multi-session packages
+                    <Check size={14} color="#15803D" /> No hidden procedure charges
                   </div>
                 </div>
               </div>
@@ -566,18 +708,18 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
         </div>
       </section>
 
-      {/* ── SCREEN 5: BEFORE-AFTER / RESULTS (Image 1, Screen 5) ──────── */}
+      {/* ── SCREEN 5: BEFORE-AFTER / RESULTS ──────────────────────────── */}
       <section style={{ padding: '30px 0 60px', background: 'transparent' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 36px' }}>
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#942876', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-              Real Results
+              Clinical Results
             </span>
             <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '36px', color: '#153F39', margin: '6px 0 10px' }}>
-              {treatmentTitle} Before & After
+              {treatmentTitle} Clinical Progress
             </h2>
             <p style={{ fontSize: '15px', color: '#6A5F75' }}>
-              See the visible improvement in skin texture and clarity achieved through personalized treatment plans at Medicare Skin.
+              See realistic improvements in skin health and comfort achieved through personalized treatment plans at Medicare Skin.
             </p>
 
             {/* Results Trust Signals */}
@@ -593,26 +735,26 @@ export default function TreatmentDetailPage({ item, onBack, onOpenBooking, onSuc
             </div>
           </div>
 
-          {/* 3 Real Patient Case Cards with Side-by-Side Images */}
+          {/* 3 Real Patient Case Cards with Condition-Specific Imagery */}
           <div className="grid-responsive-3">
             {[
               {
-                title: 'Acne Scar Reduction',
-                sessions: '3 Sessions · Fractional CO2 Laser',
-                img: '/images/skin_elasticity_cheek_touch.png',
-                desc: 'Visible shallowing of rolling scars and smoother light reflection.'
+                title: `${treatmentTitle} Improvement`,
+                sessions: 'Clinical Evaluation & Prescribed Regimen',
+                img: item.image || '/images/skin_elasticity_cheek_touch.png',
+                desc: `Noticeable improvement in symptoms and tissue comfort following personalized dermatological therapy.`
               },
               {
-                title: 'Improved Skin Texture',
-                sessions: '4 Sessions · Laser + PRP Protocol',
+                title: 'Textural & Barrier Restoration',
+                sessions: 'Doctor-Monitored Follow-Up Protocol',
                 img: '/images/poreless_glass_skin_glow.jpg',
-                desc: 'Deep dermal collagen stimulation and reduction of enlarged pores.'
+                desc: 'Enhanced epidermal resilience and restoration of clear, healthy light reflection.'
               },
               {
-                title: 'Smoother, Clearer Skin',
-                sessions: '3 Sessions · Microneedling + Peels',
+                title: 'Long-Term Maintenance Health',
+                sessions: 'Maintenance & Photoprotective Care',
                 img: '/images/luxury_indian_skin_model.png',
-                desc: 'Even epidermal pigmentation and radiant, renewed skin barrier.'
+                desc: 'Sustained remission and protection against environmental and seasonal relapse triggers.'
               }
             ].map((res, idx) => (
               <div

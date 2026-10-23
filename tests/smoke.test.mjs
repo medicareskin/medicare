@@ -84,3 +84,42 @@ test('Master clinical content pack is populated with 10 articles and citations',
   assert.match(content, /dermnetnz\.org/);
   assert.match(content, /pubmed\.ncbi\.nlm\.nih\.gov/);
 });
+
+test('Skin conditions have unique, condition-specific symptoms, treatments and pricing', () => {
+  const profileFile = file('src/data/treatmentClinicalProfiles.js');
+  
+  // Melasma checks
+  assert.match(profileFile, /'melasma-skin':/);
+  assert.match(profileFile, /Symmetrical Facial Patches/);
+  assert.doesNotMatch(profileFile, /'melasma-skin':[\s\S]*?Pitted \/ Indented Scars/);
+  assert.match(profileFile, /'melasma-skin':[\s\S]*?Low-Fluence Q-Switched Toning/);
+  assert.match(profileFile, /'melasma-skin':[\s\S]*?₹2,500 – ₹6,000/);
+
+  // Vitiligo checks
+  assert.match(profileFile, /'vitiligo-skin':/);
+  assert.match(profileFile, /Chalky-White Macules/);
+  assert.match(profileFile, /Targeted Phototherapy \(NB-UVB\)/);
+  assert.match(profileFile, /'vitiligo-skin':[\s\S]*?₹800 – ₹2,500/);
+  assert.doesNotMatch(profileFile, /'vitiligo-skin':[\s\S]*?Fractional Laser, Microneedling, PRP/);
+
+  // Sagging Skin checks
+  assert.match(profileFile, /'sagging-skin':/);
+  assert.match(profileFile, /Jowl Sagging & Softened Jawline/);
+  assert.match(profileFile, /Non-Surgical RF Skin Tightening/);
+  assert.match(profileFile, /'sagging-skin':[\s\S]*?₹8,000 – ₹20,000/);
+  assert.doesNotMatch(profileFile, /'sagging-skin':[\s\S]*?Pitted \/ Indented Scars/);
+
+  // Acne Scars checks
+  assert.match(profileFile, /'acne-scar-skin':/);
+  assert.match(profileFile, /Ice-Pick & Boxcar Depressions/);
+  assert.match(profileFile, /Surgical Subcision/);
+
+  // TreatmentDetailPage dynamic checks
+  const pageFile = file('src/pages/TreatmentDetailPage.jsx');
+  assert.match(pageFile, /getTreatmentProfile/);
+  assert.match(pageFile, /profile\.symptoms\.map/);
+  assert.match(pageFile, /profile\.treatmentOptions\.map/);
+  assert.match(pageFile, /profile\.pricing\.description/);
+  assert.match(pageFile, /profile\.pricing\.range/);
+  assert.doesNotMatch(pageFile, /Pitted \/ Indented Scars/);
+});
