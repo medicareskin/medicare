@@ -1,0 +1,26 @@
+# Developer go-live acceptance
+
+- [ ] Correct clinic NAP and doctor identity approved in `src/lib/site.ts`.
+- [ ] Authentic doctor, clinic and equipment photos replace all labelled placeholders.
+- [ ] Doctor registration and equipment approval claims checked against documents.
+- [ ] Each indexed medical page clinician-reviewed; factual risks and benefits approved.
+- [ ] Correct Next.js runtime supported by target Vercel deployment.
+- [ ] Apply `supabase/001_appointments.sql`; enable restricted staff DB access.
+- [ ] Configure production `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, Turnstile site/secret keys.
+- [ ] Test real form submission; verify DB insert once and no double submit; successful status says *request*, never confirmed.
+- [ ] Test CAPTCHA failure, invalid payload, invalid dates, cross-origin request, API outages and unavailable backend.
+- [ ] Configure Upstash Redis REST keys and HMAC secret for built-in 5/hour IP-hash rate limiting. Also configure Vercel WAF and monitor abuse; otherwise the endpoint fails closed.
+- [ ] Provide privacy officer-approved data retention, deletion/access process, incident response and consent logs.
+- [ ] Optional official WhatsApp Business messaging needs explicit patient opt-in and approved integration.
+- [ ] Setup analytics consent and optional GA4; prevent medical/booking details from reaching analytics/ad pixels.
+- [ ] No unverified Google ratings, patient-count metrics or before-and-after photos.
+- [ ] Audit treatment availability flag and approve noindex drafts.
+- [ ] Create 301 redirect map from existing `.com`/`.in` domains ONLY after ownership and URL data are confirmed.
+- [ ] Keep all preview deployments `noindex`/protected; production must set `VERCEL_ENV=production`, site URL, and explicit indexing flag.
+- [ ] Test raw HTML, canonical tags, XML sitemap, robots, Google Search Console rendering and schema validators.
+- [ ] Run real Lighthouse/PageSpeed and CrUX checks; targets LCP <=2.5s, INP <=200ms, CLS <=0.1 at 75th percentile.
+- [ ] WCAG 2.2 AA tests including focus order, screen reader labels, contrast, keyboard booking and menu, responsive zoom.
+- [ ] Mobile screenshots at 360/390, tablet 768/1024, desktop 1440; no clipping or sideways scroll.
+- [ ] Verify correct contact links, map pin and opening hours; test device calling and WhatsApp.
+- [ ] Setup alarms for broken forms, API errors, security violations, uptime and backups.
+- [ ] Clinical/marketing/legal sign-off recorded before deployment.

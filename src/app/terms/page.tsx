@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import {meta} from '@/lib/metadata';
+export const metadata:Metadata=meta('Website Terms (Draft)','Website terms requiring clinic and legal review.','/terms/',false);
+export default function Terms(){return <section className="container section prose"><h1>Website Terms</h1><p className="note">Legal draft. Not approved for production until local counsel verifies policies for appointments, cancellations, refund information, medical disclaimers, and electronic communications.</p><p>The website contains educational material. Online appointment requests require staff confirmation. Treatment decisions follow a professional consultation.</p></section>}
