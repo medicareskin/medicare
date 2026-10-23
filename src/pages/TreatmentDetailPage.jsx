@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BookingForm from '../components/BookingForm';
+import BookingForm from '../components/BookingForm.jsx';
 import LocationMapSection from '../components/LocationMapSection';
 import { 
   ArrowLeft, CheckCircle2, XCircle, ShieldCheck, Sparkles, Calendar, 

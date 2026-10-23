@@ -1,5 +1,5 @@
 import React from 'react';
-import BookingForm from '../components/BookingForm';
+import BookingForm from '../components/BookingForm.jsx';
 import { CLINIC_INFO } from '../data/clinicData';
 import { Calendar, ShieldCheck, Clock, MapPin, Phone } from 'lucide-react';
 

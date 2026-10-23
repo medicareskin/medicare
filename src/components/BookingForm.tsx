@@ -32,3 +32,5 @@ export function BookingForm(){const [v,setV]=useState<FormState>(initial);const 
  </form>}
  </div>;
 }
+
+export default BookingForm;
