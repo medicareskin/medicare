@@ -1,0 +1,29 @@
+MEDICARE SKIN & COSMETIC CLINIC
+CLINICAL CONTENT APPROVAL & RELEASE GATE SIGNOFF
+
+Doctor Name: Dr. (Mrs.) Sujay M
+Medical Qualifications: MBBS, DDVL
+Registration Number: [Enter KMC Registration Number]
+Clinic Location: Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Main Road, Bengaluru 560078
+
+I hereby confirm that I have reviewed the clinical content, treatment descriptions, safety information,
+precautions, and patient FAQs for the 10 published treatment landing pages at www.medicareskin.com:
+
+1. Pigmentation Treatment (/treatments/skin/pigmentation-treatment/)
+2. Q-Switched Laser Consultation (/treatments/laser/q-switched-laser/)
+3. Laser Hair Reduction (/treatments/laser/laser-hair-reduction/)
+4. Hair Loss Treatment (/treatments/hair/hair-loss-treatment/)
+5. HydraFacial / Hydrodermabrasion (/treatments/aesthetics/hydrafacial/)
+6. Chemical Peels (/treatments/skin/chemical-peels/)
+7. PRP vs GFC Hair Treatment (/treatments/hair/prp-gfc/)
+8. Eczema Treatment (/treatments/medical-dermatology/eczema/)
+9. Psoriasis Treatment (/treatments/medical-dermatology/psoriasis/)
+10. Vitiligo Treatment (/treatments/medical-dermatology/vitiligo/)
+
+I confirm:
+- The descriptions are medically responsible and aligned with clinical dermatology standards.
+- Risk disclosures and limitations for Indian skin tones are accurately represented.
+- The clinic contact number (+91 92428 55707) and physical address are accurate.
+
+Clinician Signature: ___________________________
+Date: ___________________________

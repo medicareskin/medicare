@@ -1,0 +1,17 @@
+MEDICARE SKIN & COSMETIC CLINIC
+LEGAL, PRIVACY & COMPLIANCE SIGNOFF
+
+Entity: Medicare Skin & Cosmetic Clinic
+Domain: https://www.medicareskin.com
+Address: Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru 560078
+
+I hereby confirm that the website privacy policy, terms of service, medical disclaimer, and appointment request handling procedures have been reviewed and approved for production release:
+
+1. Privacy Policy (/privacy-policy/): Accurately reflects data collection, patient confidentiality, and non-disclosure of medical symptoms to third-party ad networks.
+2. Medical Disclaimer (/medical-disclaimer/): Clarifies that website content is educational and does not constitute a doctor-patient relationship until an in-person consultation occurs.
+3. Appointment Booking Flow: Confirms that form submissions represent consultation requests rather than automatically confirmed appointments, and patient contact data is handled securely.
+4. Consent & Tracking: User analytics consent banner is in place and honors user choices before setting tracking cookies.
+
+Authorized Signatory: ___________________________
+Title: ___________________________
+Date: ___________________________
