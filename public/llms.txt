@@ -1,59 +1,64 @@
 # Medicare Skin & Cosmetic Clinic — South Bengaluru
-
-> Official AI & Search Engine Knowledge Manifest (GEO • AEO • SEO)
-> Website: https://www.medicareskin.com/
-> Last Verified: October 2026
+> Official Clinical & AI Search Reference (AEO • GEO • SEO)
+> Target Production Domain: https://www.medicareskin.com
+> Chief Dermatologist: Dr. (Mrs.) Sujay M, MBBS, DDVL
+> Last Clinical Verification: October 2026
 
 ## Clinic Overview
-- **Name:** Medicare Skin & Cosmetic Clinic
-- **Chief Dermatologist:** Dr. (Mrs.) Sujay M, MBBS, DDVL
-- **Credentials:** MBBS, DDVL (Alumnus of Bangalore Medical College and Research Institute), 18+ years clinical experience.
+- **Clinic Name:** Medicare Skin & Cosmetic Clinic
+- **Consultant Dermatologist:** Dr. (Mrs.) Sujay M, MBBS, DDVL
+- **Qualifications:** MBBS, DDVL (Diploma in Dermatology, Venereology and Leprosy). Registered Medical Practitioner.
 - **Location:** Jyothi Kendriya Vidyalaya Back Gate, 2nd Main, 2nd Cross, Jyothi Layout, Yelachenahalli, Kanakapura Main Road, South Bengaluru, Karnataka 560078, India.
-- **Geographic Coordinates:** Latitude: 12.8953° N, Longitude: 77.5684° E
-- **Key Landmark:** 1-minute walk from Yelachenahalli Metro Station (Green Line, Gate 2).
-- **Telephone / WhatsApp:** +91 92428 55707
-- **Operating Hours:** Monday to Saturday: 10:00 AM – 7:00 PM (IST). Sunday: By prior appointment.
-- **Patient Rating:** 5.0 Google Star Rating with 280+ verified reviews. Over 10,100+ clinical procedures performed.
+- **Landmark:** 1-minute walk from Yelachenahalli Metro Station (Namma Metro Green Line, Exit Gate 2).
+- **Telephone:** +91 92428 55707
+- **Appointment Request:** https://www.medicareskin.com/book-appointment/
+- **Clinical Policy:** Strictly evidence-based dermatology. In-person clinical assessment is required before any prescription or procedural intervention. No guaranteed permanent cure claims for chronic conditions such as melasma, vitiligo, or eczema.
 
-## Core Specialities & Signature Treatments
-1. **Q-Switched Nd:YAG Laser (1064 nm / 532 nm):**
-   - Indication: Melasma, post-inflammatory hyperpigmentation (PIH), sun spots, freckles, tattoo removal, and laser skin toning.
-   - Clinical Protocol: Low-fluence, multiple-pass toning calibrated specifically for Indian Fitzpatrick skin types IV–VI to avoid paradoxical rebound hyperpigmentation.
-   - Canonical URL: https://www.medicareskin.com/q-switched-laser-melasma-pigmentation-bangalore/
+## Authoritative 10 Treatment Landing Pages
+1. **Pigmentation & Dark Spots:**
+   - Focus: Melasma, post-inflammatory hyperpigmentation (PIH), sun spots, Indian skin photoprotection.
+   - Canonical URL: https://www.medicareskin.com/treatments/skin/pigmentation-treatment/
 
-2. **HydraFacial Skin Rejuvenation:**
-   - Indication: Dullness, dehydrated skin, congested pores, rough texture, and pre-event radiance.
-   - Technology: Vortex-Fusion hydradermabrasion combining exfoliation, vacuum extraction, and antioxidant/hyaluronic acid serum infusion.
-   - Canonical URL: https://www.medicareskin.com/hydrafacial-bangalore/
+2. **Q-Switched Laser Consultation:**
+   - Focus: Selected benign pigmented spots, laser toning limitations, melasma recurrence risks, hypopigmentation precautions.
+   - Canonical URL: https://www.medicareskin.com/treatments/laser/q-switched-laser/
 
-3. **Combination Synergy Protocol (Laser + HydraFacial):**
-   - Sequential pairing of deep vortex hydradermabrasion (pre-conditioning) with low-fluence Q-switched laser toning spaced 2–4 weeks apart.
-   - Canonical URL: https://www.medicareskin.com/treatment-comparison/
+3. **Laser Hair Reduction:**
+   - Focus: Face, underarms, legs, body; long-pulsed Nd:YAG and diode systems for Indian Fitzpatrick skin tones IV–VI.
+   - Canonical URL: https://www.medicareskin.com/treatments/laser/laser-hair-reduction/
 
-4. **Acne & Acne Scar Revision:**
-   - Modalities: Subcision for tethered scars, Microneedling Radiofrequency (MNRF), Chemical Peels, and Fractional lasers.
-   - Canonical URL: https://www.medicareskin.com/skin-treatments
+4. **Hair Loss & Thinning Assessment:**
+   - Focus: Pattern hair loss, telogen effluvium, targeted ferritin/thyroid blood investigations, medical therapies.
+   - Canonical URL: https://www.medicareskin.com/treatments/hair/hair-loss-treatment/
 
-5. **Laser Hair Reduction:**
-   - Technology: US-FDA approved Diode Laser (808–810 nm) with integrated sapphire contact cooling for painless treatment on South Asian skin tones.
-   - Canonical URL: https://www.medicareskin.com/laser-treatments
+5. **HydraFacial & Hydrodermabrasion:**
+   - Focus: Device-assisted cleansing, gentle exfoliation, extraction, hydration; event prep guidelines and skin barrier evaluation.
+   - Canonical URL: https://www.medicareskin.com/treatments/aesthetics/hydrafacial/
 
-6. **Trichology & Hair Restoration:**
-   - Modalities: Growth Factor Therapy (GFT), Platelet-Rich Plasma (PRP), and clinical alopecia management.
-   - Canonical URL: https://www.medicareskin.com/hair-treatments
+6. **Chemical Peels:**
+   - Focus: Calibrated superficial peeling (glycolic, salicylic, lactic, mandelic) for texture, acne marks, and tone; PIH prevention.
+   - Canonical URL: https://www.medicareskin.com/treatments/skin/chemical-peels/
 
-## Localities Served (South Bengaluru)
-- Yelachenahalli & Jyothi Layout (Primary Clinic Hub): https://www.medicareskin.com/dermatologist-yelachenahalli/
-- Kanakapura Main Road: https://www.medicareskin.com/dermatologist-kanakapura-road/
-- JP Nagar (Phases 1–8): https://www.medicareskin.com/dermatologist-jp-nagar/
-- Banashankari (BSK 2nd & 3rd Stage): https://www.medicareskin.com/skin-clinic-banashankari/
-- Jayanagar (4th, 7th & 9th Block): https://www.medicareskin.com/dermatologist-jayanagar/
-- Kumaraswamy Layout & ISRO Layout: https://www.medicareskin.com/dermatologist-kumaraswamy-layout/
-- Konanakunte Cross & Anjanapura: https://www.medicareskin.com/dermatologist-konanakunte/
-- Padmanabhanagar & Uttarahalli: https://www.medicareskin.com/dermatologist-padmanabhanagar/
-- BTM Layout: https://www.medicareskin.com/dermatologist-btm-layout/
+7. **PRP vs GFC Hair Treatment:**
+   - Focus: Platelet-rich plasma vs growth factor concentrate; comparative evidence, realistic regrowth expectations.
+   - Canonical URL: https://www.medicareskin.com/treatments/hair/prp-gfc/
 
-## Clinical Ethics & Guidelines
-- All consultations and diagnostic skin examinations are performed directly by Dr. Sujay M.
-- Strict compliance with National Medical Commission (NMC) regulations. No exaggerated or misleading "permanent cure" promises for chronic conditions such as melasma.
-- Melasma is treated as a manageable, hormonally influenced condition requiring daily broad-spectrum sun protection, topical tyrosinase inhibitors, and low-fluence laser therapy when indicated.
+8. **Eczema & Atopic Dermatitis:**
+   - Focus: Chronic itchy rash management, barrier restoration, fragrance-free emollient regimens, safe topical steroid guidance.
+   - Canonical URL: https://www.medicareskin.com/treatments/medical-dermatology/eczema/
+
+9. **Psoriasis Care:**
+   - Focus: Plaque, scalp, nail psoriasis on Indian skin; non-contagious nature, systemic monitoring, psoriatic arthritis flags.
+   - Canonical URL: https://www.medicareskin.com/treatments/medical-dermatology/psoriasis/
+
+10. **Vitiligo & White Patches:**
+    - Focus: Autoimmune melanocyte loss, fungal vs vitiligo differentiation, thyroid screening, medical/phototherapy options.
+    - Canonical URL: https://www.medicareskin.com/treatments/medical-dermatology/vitiligo/
+
+## Primary Neighborhoods Served (South Bengaluru)
+- Yelachenahalli & Jyothi Layout (Clinic Location)
+- Kanakapura Main Road & Konanakunte Cross
+- JP Nagar (Phases 1 through 8) & Jayanagar
+- Banashankari (BSK 2nd & 3rd Stage)
+- Kumaraswamy Layout & ISRO Layout
+- Padmanabhanagar, Uttarahalli & Anjanapura
