@@ -2,14 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Maximize2, X, Calendar, Sparkles, Layers } from 'lucide-react';
 
 const SLIDE_IMAGES = [
-  { id: 1, src: "/images/cat_laser_care.jpg", title: "Advanced Laser Treatment Suite", tag: "US-FDA Laser Care", desc: "Equipped with state-of-the-art cooling dermatological lasers" },
+  { id: 1, src: "/images/cat_laser_care.jpg", title: "Advanced Laser Treatment Suite", tag: "Dermatological Laser Suite", desc: "Equipped with state-of-the-art cooling dermatological lasers" },
   { id: 2, src: "/images/dr_sujaya.jpeg", title: "Dr. Sujay M Clinical Consultation", tag: "Expert Clinical Care", desc: "Private diagnostic chamber for in-depth trichology & skin analysis" },
   { id: 3, src: "/images/hero_slide_2_acne.jpg", title: "Acne Scar Revision & Subcision", tag: "Targeted Revision", desc: "Precision dermal remodeling with minimal downtime" },
   { id: 4, src: "/images/hero_slide_3_hair.jpg", title: "Growth Factor Scalp Therapy Suite", tag: "Hair Restoration", desc: "Sterile biotherapy suite for autologous and peptide hair stimulation" },
   { id: 5, src: "/slide-img/Scar Treatment.jpg", title: "Acne Scar Resurfacing Session", tag: "Dermabrasion", desc: "Multi-modal microneedling radiofrequency & fractional resurfacing" },
   { id: 6, src: "/slide-img/Skin Allergies 1.jpg", title: "Clinical Patch Testing & Allergy Care", tag: "Allergy Diagnostics", desc: "Standardized allergen battery tests and therapeutic eczema protocols" },
   { id: 7, src: "/slide-img/Skin Infections 1.jpg", title: "Dermatological Diagnosis & Care", tag: "Clinical Science", desc: "Evidence-based medical dermatology for infections & rashes" },
-  { id: 8, src: "/images/laser_device_console.jpg", title: "US-FDA Diode Hair Removal Suite", tag: "Laser Tech", desc: "Pain-free contact chilled laser treatments for all skin types" },
+  { id: 8, src: "/images/laser_device_console.jpg", title: "Precision Diode Hair Removal Suite", tag: "Chilled Laser Tech", desc: "Contact chilled laser treatments tailored for South Asian skin types" },
   { id: 9, src: "/slide-img/13ccee217da9f1337ade58831c6f2fd3.jpg", title: "Medical Chemical Peel & Glow Suite", tag: "Cosmetic Glow", desc: "Customized organic AHA/BHA peels for pigmentation and glow" },
   { id: 10, src: "/images/hydrafacial_procedure.jpg", title: "HydraFacial Vortex Infusion Chamber", tag: "Skin Hydration", desc: "Deep pore suction & multi-stage antioxidant hydration" },
   { id: 11, src: "/slide-img/5e08dab87e8917ce313789c4ee7df0ba.jpg", title: "Sterile Minor Procedure Room", tag: "Hygiene Standard", desc: "Hospital-grade sterilization with HEPA filtration" },

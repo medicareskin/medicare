@@ -21,10 +21,13 @@ export default function MobileActionBar({ onOpenBooking }) {
         WebkitBackdropFilter: 'blur(24px) saturate(200%)',
         borderTop: '1.5px solid rgba(148, 40, 118, 0.18)',
         boxShadow: '0 -6px 24px rgba(43, 27, 77, 0.08), inset 0 1.5px 2px rgba(255, 255, 255, 1)',
-        padding: '10px 16px',
+        width: '100%',
+        maxWidth: '100vw',
+        boxSizing: 'border-box',
+        padding: '8px 12px',
         alignItems: 'center',
-        justifyContent: 'space-around',
-        gap: '10px'
+        justifyContent: 'space-between',
+        gap: '8px'
       }}
     >
       {/* Call Action */}
@@ -34,13 +37,19 @@ export default function MobileActionBar({ onOpenBooking }) {
         aria-label="Call Medicare Skin Clinic"
         className="btn-secondary btn-liquid-secondary"
         style={{
-          flex: 1,
+          flex: '1 1 0',
+          minWidth: 0,
           minHeight: '44px',
-          padding: '10px 14px',
-          fontSize: '13px'
+          padding: '8px 8px',
+          fontSize: '12.5px',
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '5px',
+          whiteSpace: 'nowrap'
         }}
       >
-        <Phone size={15} color="#942876" />
+        <Phone size={15} color="#942876" style={{ flexShrink: 0 }} />
         <span>Call</span>
       </a>
 
@@ -53,13 +62,19 @@ export default function MobileActionBar({ onOpenBooking }) {
         aria-label="Chat with clinic on WhatsApp"
         className="btn-secondary btn-liquid-secondary"
         style={{
-          flex: 1.1,
+          flex: '1.1 1 0',
+          minWidth: 0,
           minHeight: '44px',
-          padding: '10px 14px',
-          fontSize: '13px'
+          padding: '8px 8px',
+          fontSize: '12.5px',
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '5px',
+          whiteSpace: 'nowrap'
         }}
       >
-        <MessageCircle size={15} color="#10B981" />
+        <MessageCircle size={15} color="#10B981" style={{ flexShrink: 0 }} />
         <span>WhatsApp</span>
       </a>
 
@@ -70,13 +85,19 @@ export default function MobileActionBar({ onOpenBooking }) {
         aria-label="Book an Appointment"
         className="btn-primary btn-liquid-primary"
         style={{
-          flex: 1.3,
+          flex: '1.2 1 0',
+          minWidth: 0,
           minHeight: '44px',
-          padding: '10px 16px',
-          fontSize: '13.5px'
+          padding: '8px 10px',
+          fontSize: '12.5px',
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '5px',
+          whiteSpace: 'nowrap'
         }}
       >
-        <Calendar size={15} />
+        <Calendar size={15} style={{ flexShrink: 0 }} />
         <span>Book</span>
       </button>
     </div>

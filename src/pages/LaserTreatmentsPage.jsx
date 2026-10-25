@@ -11,12 +11,12 @@ export default function LaserTreatmentsPage({ onSelectCondition, onSelectTreatme
 
   const laserFaqs = [
     {
-      q: "Is laser hair reduction completely safe for South Asian / Indian skin tones?",
-      a: "Yes. Our triple-wavelength diode platform combines 808nm and 1064nm wavelengths, which bypass epidermal melanin and target solely the deeper hair root bulb. Combined with active sapphire contact cooling at 0°C, the skin surface is shielded against burns or post-inflammatory hyperpigmentation (PIH)."
+      q: "What is the safety profile of laser hair reduction for Indian skin tones?",
+      a: "When performed under dermatologist supervision with calibrated long-pulsed diode or Nd:YAG wavelengths, laser hair reduction has an established safety profile for darker Fitzpatrick skin phototypes. Contact cooling protects the epidermis, while energy is selectively delivered to follicular melanin. Mild temporary erythema is common; strict adherence to sun avoidance and post-procedure care minimizes the risk of pigmentary changes."
     },
     {
-      q: "How many sessions are necessary for permanent hair reduction?",
-      a: "Because hair grows in cyclical phases (Anagen, Catagen, Telogen), lasers only destroy follicles in active Anagen growth. Typically 6 to 8 sessions spaced 4 to 6 weeks apart result in up to 90-95% permanent reduction."
+      q: "How many sessions are typically recommended for significant hair reduction?",
+      a: "Because hair follicles cycle through Anagen (growth), Catagen (regression), and Telogen (resting) phases, lasers primarily target actively growing Anagen follicles. Most patients undergo 6 to 8 sessions scheduled 4 to 6 weeks apart, achieving substantial long-term reduction. Maintenance sessions may occasionally be required."
     },
     {
       q: "Does the treatment hurt?",

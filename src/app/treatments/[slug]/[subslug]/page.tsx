@@ -12,13 +12,13 @@ import {CTA, Breadcrumbs, PhotoSlot} from '@/components/Elements';
 import {site, waLink, indexingEnabled} from '@/lib/site';
 
 export function generateStaticParams() {
-  const params: {category: string; slug: string}[] = [];
+  const params: {slug: string; subslug: string}[] = [];
   for (const t of treatments) {
     const catSlug = categoryToSlug(t.category);
-    params.push({category: catSlug, slug: t.slug});
+    params.push({slug: catSlug, subslug: t.slug});
     if (t.aliases) {
       for (const alias of t.aliases) {
-        params.push({category: catSlug, slug: alias});
+        params.push({slug: catSlug, subslug: alias});
       }
     }
   }
@@ -28,9 +28,9 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{category: string; slug: string}>;
+  params: Promise<{slug: string; subslug: string}>;
 }): Promise<Metadata> {
-  const {category, slug} = await params;
+  const {slug: category, subslug: slug} = await params;
   const t = getTreatment(category, slug);
   if (!t) return {};
   const article = getClinicalArticle(category, t.slug);
@@ -42,9 +42,9 @@ export async function generateMetadata({
 export default async function CategoryTreatmentPage({
   params,
 }: {
-  params: Promise<{category: string; slug: string}>;
+  params: Promise<{slug: string; subslug: string}>;
 }) {
-  const {category, slug} = await params;
+  const {slug: category, subslug: slug} = await params;
   const t = getTreatment(category, slug);
   if (!t || (!t.available && indexingEnabled())) notFound();
 

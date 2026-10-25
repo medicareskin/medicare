@@ -8,7 +8,7 @@ test('Core routes and booking backend present', () => {
   for (const p of [
     'src/app/page.tsx',
     'src/app/treatments/[slug]/page.tsx',
-    'src/app/treatments/[category]/[slug]/page.tsx',
+    'src/app/treatments/[slug]/[subslug]/page.tsx',
     'src/app/book-appointment/page.tsx',
     'src/app/api/appointment-requests/route.ts',
     'supabase/001_appointments.sql',
