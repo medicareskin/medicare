@@ -400,7 +400,7 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
             marginBottom: '14px',
             boxShadow: '0 4px 14px rgba(148, 40, 118, 0.08)'
           }}>
-            📍 South Bangalore Local Dermatology &amp; Laser Hub
+            South Bangalore Local Dermatology &amp; Laser Hub
           </span>
           <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '38px', color: '#153F39', marginBottom: '14px', lineHeight: '1.25' }}>
             {currentLocality.headline}
@@ -428,7 +428,7 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
                 fontWeight: selectedLocality === loc.id ? '700' : '500'
               }}
             >
-              📍 {loc.name}
+              {loc.name}
             </button>
           ))}
         </div>

@@ -135,7 +135,7 @@ const PATIENT_STORIES = GOOGLE_REVIEWS.map((rev) => ({
   name: rev.name || rev.author || 'Verified Patient',
   role: rev.role || 'Google Verified Review',
   text: rev.text,
-  avatar: rev.avatar || '⭐',
+  avatar: rev.avatar || 'P',
   stars: rev.rating || 5,
   treatment: rev.treatment || rev.tag || 'Dermatology Care'
 }));
@@ -156,7 +156,7 @@ const BLOG_ARTICLES = [
     title: 'Pre-Event & Bridal Beauty Countdown: Clinical Timeline',
     date: 'Oct 21, 2026',
     readTime: '7 min read',
-    image: '/images/bridal_beauty_radiance.jpg',
+    image: '/images/glass_skin_radiance.jpg',
     tag: 'beauty'
   },
   {
@@ -435,7 +435,7 @@ export default function MobileHomeView({
               <div className="mob-trust-icon-box">
                 <Star size={18} fill="#C5A174" color="#C5A174" />
               </div>
-              <span className="mob-trust-label">5.0 ★ Google Rating</span>
+              <span className="mob-trust-label">5.0/5.0 Google Rating</span>
             </div>
 
             <div className="mob-trust-item">
@@ -480,6 +480,120 @@ export default function MobileHomeView({
             <div className="mob-qf-desc">Estimate session fees, area options & transparent package costs.</div>
           </div>
           <ChevronRight size={18} className="mob-qf-arrow" />
+        </div>
+      </section>
+
+      {/* ───────────────────────────────────────────────────────────
+          SCREEN 2: YOUR CONSULTING DERMATOLOGIST (Dr. Sujay M)
+      ──────────────────────────────────────────────────────────── */}
+      <section className="mob-doctor-section" id="consulting-dermatologist">
+        <div className="mob-doctor-card">
+          <div className="mob-doctor-photo-wrap">
+            <img
+              src="/images/dr_sujaya.jpeg"
+              alt="Dr. (Mrs.) Sujay M - MBBS, DDVL"
+              className="mob-doctor-photo"
+              onError={(e) => { e.target.src = "/images/DR%20SUJAYA.jpeg"; }}
+            />
+            <div className="mob-doc-badge-floating">
+              <Award size={15} />
+              <span>18+ Years Senior Practice</span>
+            </div>
+          </div>
+
+          <div className="mob-doctor-header">
+            <div className="mob-doc-chip">
+              <CheckCircle2 size={13} />
+              <span>YOUR CONSULTING DERMATOLOGIST</span>
+            </div>
+            <h2 className="mob-doctor-name">Dr. (Mrs.) Sujay M</h2>
+            <div className="mob-doctor-creds">MBBS, DDVL · Consultant Dermatologist &amp; Dermatosurgeon</div>
+            <p style={{ fontSize: '0.86rem', lineHeight: 1.55, color: '#3A284C', margin: '12px 0 8px', textAlign: 'left' }}>
+              With over 18 years of clinical experience across South Bengaluru, Dr. Sujay M specializes in root-cause acne management, scar remodeling, resistant pigmentation, and female/male hair thinning.
+            </p>
+            <p style={{ fontSize: '0.84rem', lineHeight: 1.55, color: '#5A4660', margin: '0 0 14px', textAlign: 'left' }}>
+              At Medicare Skin Clinic, you are never handed off to non-medical staff for diagnosis. Dr. Sujay personally reviews your medical history, hormonal panels, and lifestyle factors to craft an ethical, evidence-based care plan.
+            </p>
+          </div>
+
+          {/* 4 Credential Bullets in Frosted Pills */}
+          <div className="mob-doctor-bullets">
+            <div className="mob-doc-bullet">
+              <Award size={18} className="mob-bullet-icon" />
+              <div>
+                <strong>18+ Years Clinical Experience</strong>
+                <span>Senior consultant in South Bengaluru</span>
+              </div>
+            </div>
+
+            <div className="mob-doc-bullet">
+              <ShieldCheck size={18} className="mob-bullet-icon" />
+              <div>
+                <strong>MBBS, DDVL Certified</strong>
+                <span>Direct diagnosis by Dr. Sujay M</span>
+              </div>
+            </div>
+
+            <div className="mob-doc-bullet">
+              <Sparkles size={18} className="mob-bullet-icon" />
+              <div>
+                <strong>Advanced Laser Expertise</strong>
+                <span>Specialized in scar revision and toning</span>
+              </div>
+            </div>
+
+            <div className="mob-doc-bullet">
+              <UserCheck size={18} className="mob-bullet-icon" />
+              <div>
+                <strong>Patient-First Ethos</strong>
+                <span>Zero commercial packages; root-cause care</span>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '16px', width: '100%' }}>
+            <a
+              href="/doctors/dr-sujay-m/"
+              className="mob-btn-outline"
+              style={{
+                width: '100%',
+                padding: '12px 16px',
+                textAlign: 'center',
+                textDecoration: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                borderRadius: '14px',
+                border: '1.5px solid #9C2278',
+                color: '#9C2278',
+                fontWeight: 700,
+                fontSize: '0.88rem',
+                background: '#FFFFFF'
+              }}
+            >
+              <span>Read Doctor Biography &amp; Credentials</span>
+              <ArrowRight size={16} />
+            </a>
+
+            <button
+              className="mob-btn-primary"
+              onClick={onOpenBooking}
+              style={{ width: '100%' }}
+            >
+              <Calendar size={18} />
+              <span>Book Consultation With Dr. Sujay</span>
+              <ArrowRight size={18} />
+            </button>
+          </div>
+
+          {/* Doctor Quote Card */}
+          <div className="mob-doctor-quote-box">
+            <p className="mob-doc-quote-text">
+              “My philosophy is root-cause medical care first. We personalize every protocol to restore skin health and confidence without commercial pressure.”
+            </p>
+            <div className="mob-doc-quote-author">— Dr. Sujay M</div>
+          </div>
         </div>
       </section>
 
@@ -662,90 +776,7 @@ export default function MobileHomeView({
         </div>
       </section>
 
-      {/* ───────────────────────────────────────────────────────────
-          SCREEN 5: DOCTOR PROFILE (Dr. Sujay M - Real Photo)
-      ──────────────────────────────────────────────────────────── */}
-      <section className="mob-doctor-section">
-        <div className="mob-doctor-card">
-          <div className="mob-doctor-photo-wrap">
-            <img
-              src="/images/dr_sujaya.jpeg"
-              alt="Dr. (Mrs.) Sujay M - MBBS, DDVL"
-              className="mob-doctor-photo"
-              onError={(e) => { e.target.src = "/images/DR%20SUJAYA.jpeg"; }}
-            />
-            <div className="mob-doc-badge-floating">
-              <Award size={15} />
-              <span>18+ Years Senior Practice</span>
-            </div>
-          </div>
 
-          <div className="mob-doctor-header">
-            <div className="mob-doc-chip">
-              <CheckCircle2 size={13} />
-              <span>Senior Consultant Dermatologist</span>
-            </div>
-            <h2 className="mob-doctor-name">Dr. (Mrs.) Sujay M</h2>
-            <div className="mob-doctor-creds">MBBS, DDVL (Dermatology)</div>
-            <div className="mob-doctor-role">
-              Bangalore Medical College Alumnus (2005)
-            </div>
-          </div>
-
-          {/* 4 Credential Bullets in Frosted Pills */}
-          <div className="mob-doctor-bullets">
-            <div className="mob-doc-bullet">
-              <Award size={18} className="mob-bullet-icon" />
-              <div>
-                <strong>18+ Years Clinical Experience</strong>
-                <span>Senior consultant in South Bengaluru</span>
-              </div>
-            </div>
-
-            <div className="mob-doc-bullet">
-              <ShieldCheck size={18} className="mob-bullet-icon" />
-              <div>
-                <strong>MBBS, DDVL Certified</strong>
-                <span>Postgraduate from Bangalore Medical College</span>
-              </div>
-            </div>
-
-            <div className="mob-doc-bullet">
-              <Sparkles size={18} className="mob-bullet-icon" />
-              <div>
-                <strong>Advanced Laser Expertise</strong>
-                <span>Specialized in diode lasers and scar revision</span>
-              </div>
-            </div>
-
-            <div className="mob-doc-bullet">
-              <UserCheck size={18} className="mob-bullet-icon" />
-              <div>
-                <strong>Patient-First Ethos</strong>
-                <span>Zero commercial packages; root-cause diagnosis</span>
-              </div>
-            </div>
-          </div>
-
-          <button
-            className="mob-btn-primary"
-            onClick={onOpenBooking}
-            style={{ width: '100%', marginTop: '16px' }}
-          >
-            <Calendar size={18} />
-            <span>Consult with Dr. Sujay M</span>
-            <ArrowRight size={18} />
-          </button>
-
-          {/* Doctor Quote Card */}
-          <div className="mob-doctor-quote-box">
-            <p className="mob-doc-quote-text">
-              “My philosophy is root-cause medical care first. We personalize every protocol to restore skin health and confidence without commercial pressure.”
-            </p>
-            <div className="mob-doc-quote-author">— Dr. Sujay M</div>
-          </div>
-        </div>
-      </section>
 
       {/* ───────────────────────────────────────────────────────────
           SCREEN 6: PATIENT REVIEWS (All 14 Google Verified Reviews)
@@ -949,7 +980,7 @@ export default function MobileHomeView({
         <div className="mob-blog-filter-pills" style={{ overflowX: 'auto', display: 'flex', gap: '8px', paddingBottom: '4px' }}>
           {[
             { id: 'all', label: 'All' },
-            { id: 'beauty', label: '✨ Beauty' },
+            { id: 'beauty', label: 'Beauty' },
             { id: 'laser', label: 'Laser' },
             { id: 'aesthetics', label: 'Glow' },
             { id: 'skin', label: 'Skin' },

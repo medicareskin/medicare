@@ -9,7 +9,7 @@ export default function GalleryPage({ onOpenBooking }) {
         {/* Page Hero Header */}
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 50px' }}>
           <span style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.95)', color: '#942876', padding: '6px 18px', borderRadius: '30px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '12px', boxShadow: '0 4px 14px rgba(148, 40, 118, 0.06)' }}>
-            📷 Visual Showcase
+            Visual Showcase
           </span>
           <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '46px', color: '#153F39', marginBottom: '16px' }}>
             Clinic & Facility Gallery

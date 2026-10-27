@@ -115,7 +115,7 @@ export default async function CategoryTreatmentPage({
             {article?.quickAnswer && (
               <div className="quick-answer-box">
                 <div className="quick-answer-badge">
-                  <span className="badge-tag">⚡ Quick Clinical Summary</span>
+                  <span className="badge-tag">Quick Clinical Summary</span>
                   <span className="badge-geo">Yelachenahalli · South Bengaluru</span>
                 </div>
                 <h3 className="quick-answer-question">{article.quickAnswer.question}</h3>

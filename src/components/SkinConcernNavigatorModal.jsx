@@ -7,12 +7,12 @@ const QUESTIONS = [
     title: "What is your primary dermatological or hair concern?",
     subtitle: "Select the area you would like Dr. Sujay M to evaluate",
     options: [
-      { id: "acne-active", label: "Active Acne & Pimples", icon: "🔴", desc: "Breakouts, whiteheads, blackheads, inflammation" },
-      { id: "acne-scars", label: "Acne Scars & Enlarged Pores", icon: "✨", desc: "Ice-pick, boxcar, rolling scars, uneven texture" },
-      { id: "pigmentation", label: "Pigmentation & Melasma", icon: "☀️", desc: "Dark spots, sun damage, hormonal brown patches" },
-      { id: "hair-loss", label: "Hair Fall & Scalp Thinning", icon: "💇", desc: "Excessive shedding, patchy loss, receding crown" },
-      { id: "laser-hair", label: "Unwanted Facial or Body Hair", icon: "⚡", desc: "Permanent hair reduction with US-FDA cooling laser" },
-      { id: "medical-derm", label: "Skin Allergies, Eczema or Psoriasis", icon: "🩺", desc: "Itching, rashes, flaking, chronic skin conditions" }
+      { id: "acne-active", label: "Active Acne & Pimples", icon: "•", desc: "Breakouts, whiteheads, blackheads, inflammation" },
+      { id: "acne-scars", label: "Acne Scars & Enlarged Pores", icon: "•", desc: "Ice-pick, boxcar, rolling scars, uneven texture" },
+      { id: "pigmentation", label: "Pigmentation & Melasma", icon: "•", desc: "Dark spots, sun damage, hormonal brown patches" },
+      { id: "hair-loss", label: "Hair Fall & Scalp Thinning", icon: "•", desc: "Excessive shedding, patchy loss, receding crown" },
+      { id: "laser-hair", label: "Unwanted Facial or Body Hair", icon: "•", desc: "Permanent hair reduction with US-FDA cooling laser" },
+      { id: "medical-derm", label: "Skin Allergies, Eczema or Psoriasis", icon: "•", desc: "Itching, rashes, flaking, chronic skin conditions" }
     ]
   },
   {
@@ -20,10 +20,10 @@ const QUESTIONS = [
     title: "How long have you experienced this concern?",
     subtitle: "Understanding chronicity helps determine the appropriate therapeutic tier",
     options: [
-      { id: "acute", label: "Recent onset (Less than 1 month)", icon: "⏱️", desc: "Sudden flare-up or acute seasonal reaction" },
-      { id: "subacute", label: "1 to 6 months", icon: "📅", desc: "Persistent or gradually worsening over recent months" },
-      { id: "chronic", label: "6 months to 2 years", icon: "🗓️", desc: "Long-standing concern requiring structured medical plan" },
-      { id: "recurrent", label: "2+ years / Recurring cycles", icon: "🔄", desc: "Stubborn condition with periodic relapses" }
+      { id: "acute", label: "Recent onset (Less than 1 month)", icon: "•", desc: "Sudden flare-up or acute seasonal reaction" },
+      { id: "subacute", label: "1 to 6 months", icon: "•", desc: "Persistent or gradually worsening over recent months" },
+      { id: "chronic", label: "6 months to 2 years", icon: "•", desc: "Long-standing concern requiring structured medical plan" },
+      { id: "recurrent", label: "2+ years / Recurring cycles", icon: "•", desc: "Stubborn condition with periodic relapses" }
     ]
   },
   {
@@ -31,11 +31,11 @@ const QUESTIONS = [
     title: "Which symptoms are most noticeable right now?",
     subtitle: "Identifies clinical priority for rapid comfort and long-term resolution",
     options: [
-      { id: "sym-breakouts", label: "Active inflammation & tenderness", icon: "💥", desc: "Sore pimples, redness, active pus lesions" },
-      { id: "sym-darkness", label: "Uneven discoloration & dark marks", icon: "🌑", desc: "Post-inflammatory hyperpigmentation or melasma" },
-      { id: "sym-shedding", label: "Severe shedding during washing/brushing", icon: "🚿", desc: "Noticeable hair volume loss and visible scalp" },
-      { id: "sym-texture", label: "Pitted scars & rough skin depth", icon: "〰️", desc: "Dermal indentation that doesn't smooth with makeup" },
-      { id: "sym-itching", label: "Intense itching, burning or flaking", icon: "🔥", desc: "Discomfort triggered by temperature or skincare" }
+      { id: "sym-breakouts", label: "Active inflammation & tenderness", icon: "•", desc: "Sore pimples, redness, active pus lesions" },
+      { id: "sym-darkness", label: "Uneven discoloration & dark marks", icon: "•", desc: "Post-inflammatory hyperpigmentation or melasma" },
+      { id: "sym-shedding", label: "Severe shedding during washing/brushing", icon: "•", desc: "Noticeable hair volume loss and visible scalp" },
+      { id: "sym-texture", label: "Pitted scars & rough skin depth", icon: "•", desc: "Dermal indentation that doesn't smooth with makeup" },
+      { id: "sym-itching", label: "Intense itching, burning or flaking", icon: "•", desc: "Discomfort triggered by temperature or skincare" }
     ]
   },
   {
@@ -43,11 +43,11 @@ const QUESTIONS = [
     title: "What treatments have you tried previously?",
     subtitle: "Helps avoid duplicated therapies and guides advanced prescription",
     options: [
-      { id: "prior-none", label: "None yet / First time consulting a specialist", icon: "🌱", desc: "Looking for an expert first-line medical opinion" },
-      { id: "prior-otc", label: "Over-the-counter serums & home remedies", icon: "🧴", desc: "Salicylic acid, niacinamide, oils, commercial creams" },
-      { id: "prior-salon", label: "Beauty parlour facials or salon treatments", icon: "💆", desc: "Temporary glow without clinical root-cause diagnosis" },
-      { id: "prior-rx", label: "Doctor-prescribed oral/topical medications", icon: "💊", desc: "Partial relief; seeking specialized intervention" },
-      { id: "prior-procs", label: "Prior in-clinic lasers, peels or microneedling", icon: "🔬", desc: "Need advanced revision or maintenance care" }
+      { id: "prior-none", label: "None yet / First time consulting a specialist", icon: "•", desc: "Looking for an expert first-line medical opinion" },
+      { id: "prior-otc", label: "Over-the-counter serums & home remedies", icon: "•", desc: "Salicylic acid, niacinamide, oils, commercial creams" },
+      { id: "prior-salon", label: "Beauty parlour facials or salon treatments", icon: "•", desc: "Temporary glow without clinical root-cause diagnosis" },
+      { id: "prior-rx", label: "Doctor-prescribed oral/topical medications", icon: "•", desc: "Partial relief; seeking specialized intervention" },
+      { id: "prior-procs", label: "Prior in-clinic lasers, peels or microneedling", icon: "•", desc: "Need advanced revision or maintenance care" }
     ]
   },
   {
@@ -55,10 +55,10 @@ const QUESTIONS = [
     title: "What is your primary treatment objective?",
     subtitle: "Aligns your personal timeline with clinical expectations",
     options: [
-      { id: "goal-rapid", label: "Fast symptomatic relief & calm skin", icon: "🎯", desc: "Stop active breakouts, itching, or sudden hair fall" },
-      { id: "goal-cure", label: "Permanent clinical correction of root cause", icon: "💎", desc: "Dermal remodeling, scar release, long-term stabilization" },
-      { id: "goal-aesthetic", label: "Aesthetic enhancement, glow & even tone", icon: "✨", desc: "Radiant, youthful complexion for upcoming events/life" },
-      { id: "goal-prevent", label: "Preventative dermatology & long-term health", icon: "🛡️", desc: "Barrier repair, anti-aging, and UV protection maintenance" }
+      { id: "goal-rapid", label: "Fast symptomatic relief & calm skin", icon: "•", desc: "Stop active breakouts, itching, or sudden hair fall" },
+      { id: "goal-cure", label: "Permanent clinical correction of root cause", icon: "•", desc: "Dermal remodeling, scar release, long-term stabilization" },
+      { id: "goal-aesthetic", label: "Aesthetic enhancement, glow & even tone", icon: "•", desc: "Radiant, youthful complexion for upcoming events/life" },
+      { id: "goal-prevent", label: "Preventative dermatology & long-term health", icon: "•", desc: "Barrier repair, anti-aging, and UV protection maintenance" }
     ]
   },
   {
@@ -66,8 +66,8 @@ const QUESTIONS = [
     title: "What is your preferred consultation mode?",
     subtitle: "Medicare Clinic is conveniently located near Yelachenahalli Metro",
     options: [
-      { id: "mode-clinic", label: "In-Clinic Consultation (Yelachenahalli, South Bengaluru)", icon: "🏥", desc: "Full dermoscopic imaging, physical examination, procedure booking" },
-      { id: "mode-video", label: "Online Video Dermatological Assessment", icon: "📱", desc: "Initial clinical review and medical prescription from home" }
+      { id: "mode-clinic", label: "In-Clinic Consultation (Yelachenahalli, South Bengaluru)", icon: "•", desc: "Full dermoscopic imaging, physical examination, procedure booking" },
+      { id: "mode-video", label: "Online Video Dermatological Assessment", icon: "•", desc: "Initial clinical review and medical prescription from home" }
     ]
   }
 ];

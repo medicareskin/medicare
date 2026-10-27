@@ -265,7 +265,7 @@ const SKIN_JOURNAL_ARTICLES = [
     title: 'Pre-Event & Bridal Beauty Countdown: Clinical Timeline',
     date: 'Oct 21, 2026',
     readTime: '7 min read',
-    image: '/images/bridal_beauty_radiance.jpg',
+    image: '/images/glass_skin_radiance.jpg',
     tab: 'blog',
     excerpt: 'A month-by-month clinical preparation guide for brides and event attendees in Bengaluru to look camera-ready without risking purging or redness.'
   },
@@ -1155,7 +1155,7 @@ export default function DesktopHomeView({
           }}>
             {[
               { id: 'all', label: 'All Articles' },
-              { id: 'beauty', label: '✨ Beauty & Skin Radiance' },
+              { id: 'beauty', label: 'Beauty & Skin Radiance' },
               { id: 'laser', label: 'Laser & Melasma' },
               { id: 'aesthetics', label: 'Aesthetics & Glow' },
               { id: 'skincare', label: 'Clinical Skin Care' },
@@ -1209,7 +1209,7 @@ export default function DesktopHomeView({
                       border: art.filterTag === 'beauty' ? '1px solid #C5A174' : 'none'
                     }}
                   >
-                    {art.filterTag === 'beauty' ? '✨ ' + art.category : art.category}
+                    {art.category}
                   </span>
                 </div>
                 <div className="desk-journal-content">
@@ -1242,7 +1242,7 @@ export default function DesktopHomeView({
             border: '1px solid rgba(197, 161, 116, 0.35)'
           }}>
             <span style={{ fontSize: '12px', fontWeight: 800, color: '#153F39', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
-              ✨ Trending Topics:
+              Trending Topics:
             </span>
             <button
               onClick={() => navigateToTab('blog')}

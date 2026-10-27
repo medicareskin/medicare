@@ -503,7 +503,7 @@ export const LASER_TREATMENTS = [
     title: "Q-Switched Laser for Melasma & Pigmentation",
     category: "Laser",
     image: "/images/q-switched-laser-pigmentation-treatment-bangalore.webp",
-    equipmentImage: "/images/q-switched-laser-equipment-medicareskin.webp",
+    equipmentImage: "/images/q-switched-laser-pigmentation-treatment-bangalore.webp",
     summary: "Gold-standard nanosecond laser toning for stubborn facial melasma, dark spots, sun tan, freckles & PIH.",
     fullText: "Low-fluence 1064nm Q-switched Nd:YAG laser toning gently shatters epidermal and dermal melanin clusters through photoacoustic shockwaves. Specially calibrated for safe, non-rebound results on Indian skin (Fitzpatrick IV–VI) by Dr. (Mrs.) Sujay M.",
     url: "/q-switched-laser-melasma-pigmentation-bangalore/"
@@ -530,7 +530,7 @@ export const LASER_TREATMENTS = [
     title: "Q-Switched Nd:YAG Laser Toning",
     category: "Laser",
     image: "/images/q-switched-laser-pigmentation-treatment-bangalore.webp",
-    equipmentImage: "/images/q-switched-laser-equipment-medicareskin.webp",
+    equipmentImage: "/images/q-switched-laser-pigmentation-treatment-bangalore.webp",
     summary: "Laser depigmentation for stubborn melasma, sun tan, freckles & dark spots.",
     fullText: "Nanosecond pulse Q-Switched laser selectively shatters epidermal and dermal melanin clusters into microscopic particles with zero downtime."
   },
@@ -688,7 +688,7 @@ export const BLOG_POSTS = [
     date: "October 21, 2026",
     author: "Dr. (Mrs.) Sujay M (MBBS, DDVL)",
     readTime: "7 min read",
-    image: "/images/bridal_beauty_radiance.jpg",
+    image: "/images/glass_skin_radiance.jpg",
     treatmentTab: "cosmetic",
     treatmentLink: "/cosmetic-treatments",
     excerpt: "Planning for a wedding, festive celebration, or photoshoot in Bengaluru? Here is the month-by-month dermatologist guide to safe, glowing beauty treatments without risking last-minute purging or redness.",

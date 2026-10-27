@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CLINIC_INFO } from '../data/clinicData';
 import { Calendar, CheckCircle2, ShieldCheck, Clock, User, Phone as PhoneIcon, Sparkles, ChevronDown } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function BookingForm({ onSuccessToast, singleCardMode = false, preSelectedConcern = '' }) {
   const [formData, setFormData] = useState({
@@ -63,192 +64,356 @@ export default function BookingForm({ onSuccessToast, singleCardMode = false, pr
 
   return (
     <section className="booking-overview-section" id="booking-section">
-      <div className="container">
-        <div className={isStandalone ? "booking-standalone-wrap" : "booking-grid"} style={isStandalone ? { maxWidth: '620px', margin: '0 auto' } : {}}>
-          {/* Ultra-Crisp Booking Form Card */}
-          <div className="booking-card liquid-glass-card" style={isStandalone ? { width: '100%', margin: '0 auto' } : {}}>
-            <h2 className="booking-form-title">
-              {preSelectedConcern ? `Request Consultation for ${preSelectedConcern}` : 'Request a Dermatologist Consultation'}
-            </h2>
-            <p style={{ fontSize: '13.5px', color: '#5C5268', marginBottom: '18px', lineHeight: '1.5' }}>
-              Choose a concern to help us direct your enquiry. You can also request without selecting a concern. Select a preferred time; the clinic will confirm your appointment.
-            </p>
+      <div className="container" style={{ maxWidth: '780px', margin: '0 auto' }}>
+        <div 
+          className="booking-reference-card"
+          style={{
+            background: '#FFFFFF',
+            borderRadius: '24px',
+            padding: '32px 34px',
+            border: '1px solid var(--magenta-border)',
+            boxShadow: '0 12px 36px rgba(43, 14, 76, 0.06)',
+          }}
+        >
+          <h2 
+            style={{
+              fontFamily: 'var(--font-serif), Georgia, serif',
+              fontSize: 'clamp(2rem, 3.4vw, 2.6rem)',
+              fontWeight: 700,
+              color: '#7A1E60',
+              margin: '0 0 24px',
+              letterSpacing: '-0.01em',
+            }}
+          >
+            Book Your Appointment
+          </h2>
 
-            {submitted ? (
-              <div style={{ textAlign: 'center', padding: '36px 12px' }}>
-                <CheckCircle2 size={64} style={{ color: '#153F39', margin: '0 auto 16px' }} />
-                <h3 style={{ color: '#153F39', fontSize: '24px', marginBottom: '12px' }}>
-                  Request Received
-                </h3>
-                <p style={{ color: '#253532', fontSize: '15px', marginBottom: '16px', fontWeight: '600' }}>
-                  Your request has been received. This is not a confirmed appointment.
-                </p>
-                <p style={{ color: '#5C5268', fontSize: '14.5px', marginBottom: '16px' }}>
-                  The clinic will contact you at <strong>{formData.phone}</strong> to confirm availability for <strong>{formData.date || 'your preferred date'}</strong> at <strong>{formData.time}</strong>.
-                </p>
-                <p style={{ fontSize: '12.5px', color: '#7E728C', marginBottom: '24px' }}>
-                  Medicare Skin &amp; Cosmetic Clinic · Near Yelachenahalli Metro Station · Phone: +91 92428 55707
-                </p>
-                <button
-                  className="btn-primary liquid-glass-btn"
-                  onClick={() => {
-                    setSubmitted(false);
-                    setFormData({
-                      name: '',
-                      phone: '',
-                      date: '',
-                      time: '10 AM to 10:30 AM',
-                      concerns: []
-                    });
-                  }}
-                >
-                  Submit Another Request
-                </button>
+          {submitted ? (
+            <div style={{ textAlign: 'center', padding: '36px 12px' }}>
+              <div 
+                style={{
+                  display: 'inline-block',
+                  fontSize: '0.78rem',
+                  fontWeight: 800,
+                  letterSpacing: '0.08em',
+                  color: '#7A1E60',
+                  background: 'rgba(122, 30, 96, 0.1)',
+                  padding: '6px 16px',
+                  borderRadius: '9999px',
+                  marginBottom: '14px',
+                }}
+              >
+                REQUEST RECORDED
               </div>
-            ) : (
-              <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label className="form-label">Name</label>
+              <h3 style={{ color: '#7A1E60', fontSize: '24px', marginBottom: '12px', fontWeight: 700 }}>
+                Request Received
+              </h3>
+              <p style={{ color: '#2B1B4D', fontSize: '15px', marginBottom: '16px', fontWeight: '600' }}>
+                Your request has been received. This is not a confirmed appointment.
+              </p>
+              <p style={{ color: '#5C5268', fontSize: '14.5px', marginBottom: '16px' }}>
+                The clinic will contact you at <strong>{formData.phone}</strong> to confirm availability for <strong>{formData.date || 'your preferred date'}</strong> at <strong>{formData.time}</strong>.
+              </p>
+              <button
+                type="button"
+                className="btn-primary"
+                style={{
+                  background: 'linear-gradient(135deg, #7A1E60 0%, #4A0E38 100%)',
+                  padding: '12px 28px',
+                  borderRadius: '9999px',
+                  border: 'none',
+                  color: '#FFFFFF',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                }}
+                onClick={() => {
+                  setSubmitted(false);
+                  setFormData({
+                    name: '',
+                    phone: '',
+                    date: '',
+                    time: '10 AM to 10:30 AM',
+                    concerns: []
+                  });
+                }}
+              >
+                Submit Another Request
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              {/* Row 1: Name and Phone number */}
+              <div 
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                  gap: '20px',
+                  marginBottom: '20px',
+                }}
+              >
+                <div>
+                  <label 
+                    style={{
+                      display: 'block',
+                      fontSize: '0.92rem',
+                      fontWeight: 600,
+                      color: '#5C5268',
+                      marginBottom: '8px',
+                    }}
+                  >
+                    Name
+                  </label>
                   <input
                     type="text"
-                    className="form-control liquid-input"
+                    required
                     placeholder="Enter your full name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
+                    style={{
+                      width: '100%',
+                      height: '46px',
+                      padding: '10px 16px',
+                      background: '#FFFFFF',
+                      border: '1px solid #D8CCC5',
+                      borderRadius: '8px',
+                      fontSize: '0.95rem',
+                      color: '#2B1B4D',
+                      outline: 'none',
+                      boxSizing: 'border-box',
+                    }}
                   />
                 </div>
 
-                <div className="form-group">
-                  <label className="form-label">Phone number</label>
+                <div>
+                  <label 
+                    style={{
+                      display: 'block',
+                      fontSize: '0.92rem',
+                      fontWeight: 600,
+                      color: '#5C5268',
+                      marginBottom: '8px',
+                    }}
+                  >
+                    Phone number
+                  </label>
                   <input
                     type="tel"
-                    className="form-control liquid-input"
-                    placeholder="+91 98765 43210"
+                    required
+                    placeholder="10-digit mobile number"
+                    maxLength={10}
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    required
+                    style={{
+                      width: '100%',
+                      height: '46px',
+                      padding: '10px 16px',
+                      background: '#FFFFFF',
+                      border: '1px solid #D8CCC5',
+                      borderRadius: '8px',
+                      fontSize: '0.95rem',
+                      color: '#2B1B4D',
+                      outline: 'none',
+                      boxSizing: 'border-box',
+                    }}
                   />
                 </div>
+              </div>
 
-                <div className="form-row">
-                  <div className="form-group">
-                    <label className="form-label">Select Appointment Date</label>
-                    <input
-                      type="date"
-                      className="form-control liquid-input"
-                      value={formData.date}
-                      onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <label className="form-label">Select Appointment Time</label>
-                    <select
-                      className="form-control liquid-input"
-                      value={formData.time}
-                      onChange={(e) => setFormData({ ...formData, time: e.target.value })}
-                    >
-                      <option>10 AM to 10:30 AM</option>
-                      <option>10:30 AM to 11 AM</option>
-                      <option>11 AM to 11:30 AM</option>
-                      <option>11:30 AM to 12 PM</option>
-                      <option>4 PM to 4:30 PM</option>
-                      <option>5 PM to 5:30 PM</option>
-                      <option>6 PM to 6:30 PM</option>
-                      <option>7 PM to 7:30 PM</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="form-group" style={{ marginBottom: '20px' }}>
-                  <label className="form-label" style={{ fontSize: '14px', fontWeight: '700', color: '#2B1B4D', marginBottom: '8px', display: 'block' }}>
-                    Your Concern
-                  </label>
-                  
-                  {/* Slide-Down Trigger Button */}
-                  <button
-                    type="button"
-                    className="concern-dropdown-trigger"
-                    onClick={() => setIsConcernDropdownOpen(!isConcernDropdownOpen)}
+              {/* Row 2: Select Appointment Date and Select Appointment Time */}
+              <div 
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                  gap: '20px',
+                  marginBottom: '26px',
+                }}
+              >
+                <div>
+                  <label 
+                    style={{
+                      display: 'block',
+                      fontSize: '0.92rem',
+                      fontWeight: 600,
+                      color: '#5C5268',
+                      marginBottom: '8px',
+                    }}
                   >
-                    <div className="concern-trigger-text">
-                      <span style={{ fontWeight: '600', color: '#2B1B4D', fontSize: '14px' }}>
-                        {formData.concerns.length > 0
-                          ? `${formData.concerns.length} Concern${formData.concerns.length > 1 ? 's' : ''} Selected`
-                          : 'Select Skin or Hair Concerns'}
-                      </span>
-                      {formData.concerns.length > 0 && (
-                        <span className="concern-selected-badge">
-                          {formData.concerns.join(', ')}
-                        </span>
-                      )}
-                    </div>
-                    <ChevronDown
-                      size={18}
-                      style={{
-                        transform: isConcernDropdownOpen ? 'rotate(180deg)' : 'none',
-                        transition: 'transform 0.25s ease',
-                        color: '#942876',
-                        flexShrink: 0
-                      }}
-                    />
-                  </button>
-
-                  {/* Slide Down Collapsible Box */}
-                  <div className={`concern-slidedown-content ${isConcernDropdownOpen ? 'open' : ''}`}>
-                    <div className="concerns-glass-pills">
-                      {displayedConcerns.map((concern) => {
-                        const isSelected = formData.concerns.includes(concern);
-                        return (
-                          <label
-                            key={concern}
-                            className={`concern-checkbox-pill ${isSelected ? 'selected' : ''}`}
-                            onClick={(e) => {
-                              e.preventDefault();
-                              handleCheckboxChange(concern);
-                            }}
-                          >
-                            <input
-                              type="checkbox"
-                              checked={isSelected}
-                              readOnly
-                              style={{ accentColor: '#942876', width: '17px', height: '17px', cursor: 'pointer', flexShrink: 0 }}
-                            />
-                            <span style={{ fontSize: '14.5px', fontWeight: isSelected ? '700' : '600' }}>
-                              {concern}
-                            </span>
-                          </label>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-
-                <div style={{ margin: '14px 0 16px', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                  <input
-                    type="checkbox"
-                    id="consent-check"
-                    required
-                    defaultChecked
-                    style={{ marginTop: '3px', accentColor: '#153F39', cursor: 'pointer' }}
-                  />
-                  <label htmlFor="consent-check" style={{ fontSize: '12.5px', color: '#5C5268', cursor: 'pointer', lineHeight: '1.4' }}>
-                    I agree to Medicare Skin contacting me via phone or message to process this appointment request. Marketing communication is optional.
+                    Select Appointment Date
                   </label>
+                  <input
+                    type="date"
+                    required
+                    value={formData.date}
+                    onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                    style={{
+                      width: '100%',
+                      height: '46px',
+                      padding: '10px 16px',
+                      background: '#FFFFFF',
+                      border: '1px solid #D8CCC5',
+                      borderRadius: '8px',
+                      fontSize: '0.95rem',
+                      color: '#2B1B4D',
+                      outline: 'none',
+                      boxSizing: 'border-box',
+                    }}
+                  />
                 </div>
 
+                <div>
+                  <label 
+                    style={{
+                      display: 'block',
+                      fontSize: '0.92rem',
+                      fontWeight: 600,
+                      color: '#5C5268',
+                      marginBottom: '8px',
+                    }}
+                  >
+                    Select Appointment Time
+                  </label>
+                  <select
+                    value={formData.time}
+                    onChange={(e) => setFormData({ ...formData, time: e.target.value })}
+                    style={{
+                      width: '100%',
+                      height: '46px',
+                      padding: '10px 16px',
+                      background: '#FFFFFF',
+                      border: '1px solid #D8CCC5',
+                      borderRadius: '8px',
+                      fontSize: '0.95rem',
+                      color: '#2B1B4D',
+                      outline: 'none',
+                      boxSizing: 'border-box',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <option>10 AM to 10:30 AM</option>
+                    <option>10:30 AM to 11 AM</option>
+                    <option>11 AM to 11:30 AM</option>
+                    <option>11:30 AM to 12 PM</option>
+                    <option>4 PM to 4:30 PM</option>
+                    <option>5 PM to 5:30 PM</option>
+                    <option>6 PM to 6:30 PM</option>
+                    <option>7 PM to 7:30 PM</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Section 3: Your Concern Checkboxes matching user reference */}
+              <div style={{ marginBottom: '28px' }}>
+                <label 
+                  style={{
+                    display: 'block',
+                    fontSize: '0.92rem',
+                    fontWeight: 600,
+                    color: '#5C5268',
+                    marginBottom: '14px',
+                  }}
+                >
+                  Your Concern
+                </label>
+
+                <div 
+                  style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '14px 24px',
+                  }}
+                >
+                  {displayedConcerns.map((concern) => {
+                    const isChecked = formData.concerns.includes(concern);
+                    return (
+                      <label
+                        key={concern}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '8px',
+                          fontSize: '0.92rem',
+                          color: '#4A4353',
+                          fontWeight: isChecked ? 600 : 500,
+                          cursor: 'pointer',
+                          userSelect: 'none',
+                        }}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={isChecked}
+                          onChange={() => handleCheckboxChange(concern)}
+                          style={{
+                            width: '18px',
+                            height: '18px',
+                            accentColor: '#7A1E60',
+                            cursor: 'pointer',
+                          }}
+                        />
+                        <span>{concern}</span>
+                      </label>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div style={{ margin: '14px 0 20px', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                <input
+                  type="checkbox"
+                  id="consent-check"
+                  required
+                  defaultChecked
+                  style={{ marginTop: '3px', accentColor: '#7A1E60', cursor: 'pointer' }}
+                />
+                <label htmlFor="consent-check" style={{ fontSize: '13px', color: '#5C5268', lineHeight: '1.45', cursor: 'pointer' }}>
+                  I understand this submission is a consultation request and <strong>not a confirmed appointment</strong> until verified by clinic staff.
+                </label>
+              </div>
+
+              <div style={{ display: 'flex', gap: '14px', alignItems: 'center', flexWrap: 'wrap' }}>
                 <button
                   type="submit"
-                  className="btn-primary liquid-glass-btn"
                   disabled={submitting}
-                  style={{ width: '100%', justifyContent: 'center', marginTop: '6px', background: '#153F39' }}
+                  style={{
+                    background: 'linear-gradient(135deg, #7A1E60 0%, #4A0E38 100%)',
+                    color: '#FFFFFF',
+                    border: 'none',
+                    borderRadius: '9999px',
+                    padding: '13px 32px',
+                    fontSize: '0.94rem',
+                    fontWeight: 750,
+                    cursor: submitting ? 'not-allowed' : 'pointer',
+                    boxShadow: '0 6px 20px rgba(122, 30, 96, 0.28)',
+                  }}
                 >
-                  <Sparkles size={18} /> {submitting ? 'Submitting Request...' : 'Request a Dermatologist Consultation'}
+                  {submitting ? 'Submitting...' : 'Book Your Appointment →'}
                 </button>
-              </form>
-            )}
-          </div>
+
+                <a
+                  href={`https://wa.me/${CLINIC_INFO.whatsappNumber}?text=${encodeURIComponent(`Hi Dr. Sujay M / Medicare Skin Clinic, I would like to book a dermatologist appointment for ${formData.name || 'a consultation'} on ${formData.date || 'upcoming date'} (${formData.time}). Concerns: ${formData.concerns.join(', ') || 'Dermatology consultation'}.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    background: '#FFFFFF',
+                    border: '1.5px solid #25D366',
+                    color: '#128C7E',
+                    borderRadius: '9999px',
+                    padding: '11px 22px',
+                    fontSize: '0.88rem',
+                    fontWeight: 750,
+                    textDecoration: 'none',
+                    boxShadow: '0 4px 12px rgba(37, 211, 102, 0.15)',
+                  }}
+                >
+                  <WhatsAppIcon size={18} color="#25D366" />
+                  <span>Fast-Track on WhatsApp</span>
+                </a>
+              </div>
+            </form>
+          )}
+        </div>
 
           {/* Overview Content & Statistics (Hidden in single card mode) */}
           {!isStandalone && (
@@ -288,7 +453,6 @@ export default function BookingForm({ onSuccessToast, singleCardMode = false, pr
             </div>
           )}
         </div>
-      </div>
     </section>
   );
 }

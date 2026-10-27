@@ -654,7 +654,7 @@ export default function MobileSmartBookingModal({ isOpen, onClose, onSuccessToas
               </div>
 
               <div style={{ background: '#FAF6FA', borderRadius: '12px', padding: '12px', marginBottom: '20px', fontSize: '12px', color: '#6A5F75' }}>
-                🔒 <strong>Privacy Assured:</strong> Your data is strictly encrypted and used only for clinic appointment confirmation. No spam or commercial sharing.
+                <strong>Privacy Assured:</strong> Your data is strictly encrypted and used only for clinic appointment confirmation. No spam or commercial sharing.
               </div>
 
               <button

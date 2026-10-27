@@ -80,12 +80,12 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
   ];
 
   const quickTopics = [
-    { label: '✨ Glass Skin Radiance', query: 'glass skin' },
-    { label: '👰 Bridal Countdown', query: 'bridal' },
-    { label: '🌿 Peels vs Bleach', query: 'bleach' },
-    { label: '💎 Collagen & Anti-Ageing', query: 'collagen' },
-    { label: '🔬 Melasma Laser', query: 'melasma' },
-    { label: '💧 HydraFacial Glow', query: 'hydrafacial' }
+    { label: 'Glass Skin Radiance', query: 'glass skin' },
+    { label: 'Bridal Countdown', query: 'bridal' },
+    { label: 'Peels vs Bleach', query: 'bleach' },
+    { label: 'Collagen & Anti-Ageing', query: 'collagen' },
+    { label: 'Melasma Laser', query: 'melasma' },
+    { label: 'HydraFacial Glow', query: 'hydrafacial' }
   ];
 
   const filteredPosts = BLOG_POSTS.filter(post => {
@@ -187,7 +187,7 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
                   boxShadow: isActive ? '0 6px 18px rgba(21, 63, 57, 0.25)' : '0 2px 6px rgba(0, 0, 0, 0.03)'
                 }}
               >
-                {cat === 'Beauty & Skin Radiance' ? '✨ Beauty & Skin Radiance' : cat}
+                {cat}
               </button>
             );
           })}
@@ -341,7 +341,7 @@ export default function BlogPage({ onOpenBooking, onNavigatePage, onSelectTreatm
                     textTransform: 'uppercase',
                     boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                   }}>
-                    {post.category === 'Beauty & Skin Radiance' ? '✨ Beauty & Radiance' : post.category}
+                    {post.category}
                   </span>
                 </div>
 

@@ -20,12 +20,13 @@ export default function LegalPage({ type = 'privacy' }) {
         <div className="location-card-box" style={{ padding: '36px', fontSize: '15px', color: '#5C5268', lineHeight: '1.8' }}>
           {type === 'privacy' && (
             <>
+
               <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>1. Patient Information Protection</h3>
               <p style={{ marginBottom: '16px' }}>
-                At Medicare Skin & Cosmetic Clinic, we prioritize patient confidentiality. Any personal data collected via our website appointment form (including name, phone number, and skin concern details) is strictly used for medical triage and booking confirmation by Dr. Sujay M's staff.
+                At Medicare Skin &amp; Cosmetic Clinic, we prioritize patient confidentiality. Any personal data collected via our website appointment form (including name, phone number, and skin concern details) is strictly used for medical triage and booking confirmation by Dr. Sujay M's staff.
               </p>
 
-              <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>2. Data Security & Storage</h3>
+              <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>2. Data Security &amp; Storage</h3>
               <p style={{ marginBottom: '16px' }}>
                 We do not sell, rent, or trade your contact information to any third-party marketing companies. Patient data is encrypted and securely handled in compliance with medical privacy guidelines.
               </p>

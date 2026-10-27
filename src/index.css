@@ -1,31 +1,30 @@
 :root {
-  /* Master Build Spec v1.0 Section 02 Brand Tokens */
-  --primary-teal: #153F39;
-  --secondary-slate: #34465B;
-  --accent-gold: #C5A174;
-  --bg-ivory: #F8F6F2;
+  /* Medicare Skin & Cosmetic Clinic Brand Tokens from Official Logo */
+  --primary-teal: #2B0E4C; /* Aliased to brand royal purple to purge green */
+  --primary-navy: #2B0E4C;
+  --primary-purple: #2B0E4C;
+  --secondary-slate: #433654;
+  --accent-gold: #9C2278; /* Aliased to brand orchid magenta */
+  --accent-magenta: #9C2278;
+  --accent-rose: #B8288E;
+  --accent-light: #FAF8FD;
+  --accent-cream: #FAF6FD;
+  --bg-ivory: #FAF8FD;
   --pure-white: #FFFFFF;
-  --text-charcoal: #253532;
+  --text-charcoal: #1F1133;
+  --text-dark: #1F1133;
+  --text-muted: #645577;
+  --text-light: #8B7E9C;
+  --white: #FFFFFF;
+  --border-light: #E8DFEF;
+  --bg-gradient: linear-gradient(135deg, #FAF8FD 0%, #FFFFFF 100%);
 
   --font-heading: 'Fraunces', Georgia, serif;
   --font-sans: 'Manrope', Arial, Helvetica, sans-serif;
 
-  /* Theme mappings mapped to verified brand palette */
-  --primary-navy: #153F39;
-  --primary-purple: #34465B;
-  --accent-magenta: #153F39;
-  --accent-rose: #C5A174;
-  --accent-light: #F8F6F2;
-  --accent-cream: #F8F6F2;
-  --bg-gradient: linear-gradient(135deg, #F8F6F2 0%, #FFFFFF 100%);
-  --text-dark: #253532;
-  --text-muted: #5C655D;
-  --text-light: #7E7288;
-  --white: #FFFFFF;
-  --border-light: #EBE4D8;
-  --shadow-sm: 0 4px 15px rgba(21, 63, 57, 0.05);
-  --shadow-md: 0 10px 30px rgba(21, 63, 57, 0.08);
-  --shadow-lg: 0 20px 40px rgba(21, 63, 57, 0.12);
+  --shadow-sm: 0 4px 15px rgba(43, 14, 76, 0.05);
+  --shadow-md: 0 10px 30px rgba(43, 14, 76, 0.08);
+  --shadow-lg: 0 20px 40px rgba(43, 14, 76, 0.12);
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 24px;
@@ -1757,9 +1756,9 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 13px;
-  color: #4A3A54;
-  font-weight: 500;
+  font-size: 13.5px;
+  color: #2B1B4D;
+  font-weight: 600;
 }
 
 .footer-badge-icon {
@@ -1814,8 +1813,9 @@ body {
   padding: 0;
   margin: 0;
   cursor: pointer;
-  color: #5C4D68;
-  font-size: 13.5px;
+  color: #2B1B4D;
+  font-weight: 550;
+  font-size: 14px;
   line-height: 1.45;
   text-align: left;
   transition: all 0.2s ease;
@@ -1828,6 +1828,7 @@ body {
 .footer-links-list a:hover {
   color: #942876;
   transform: translateX(3px);
+  text-decoration: underline;
 }
 
 /* Contact List */
@@ -1838,14 +1839,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-size: 13.5px;
+  font-size: 14px;
 }
 
 .footer-contact-list li {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  color: #5C4D68;
+  color: #2B1B4D;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -1865,13 +1867,14 @@ body {
 
 .footer-contact-list a {
   color: #2B1B4D;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer-contact-list a:hover {
   color: #942876;
+  text-decoration: underline;
 }
 
 .footer-social-wrap {
@@ -6366,6 +6369,52 @@ body {
 .flyout-subitem-link:hover .subitem-action {
   color: #8B096C !important;
   transform: translateX(3px) !important;
+}
+
+/* AUTHENTIC PHOTO SLOTS */
+.authentic-photo-slot {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(43, 14, 76, 0.08);
+  border: 1px solid rgba(43, 14, 76, 0.08);
+  background: #FFFFFF;
+}
+.authentic-photo-slot.portrait {
+  min-height: 440px;
+  max-height: 520px;
+}
+.authentic-photo-slot.wide {
+  min-height: 320px;
+}
+.authentic-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.authentic-photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 20px;
+  background: linear-gradient(to top, rgba(29, 7, 54, 0.88) 0%, rgba(29, 7, 54, 0) 100%);
+  color: #FFFFFF;
+}
+.caption-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #F8D3EF;
+  margin-bottom: 3px;
+}
+.caption-title {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
 

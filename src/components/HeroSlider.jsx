@@ -352,7 +352,7 @@ export default function HeroSlider({ onOpenBooking }) {
                       gap: '6px'
                     }}
                   >
-                    <span>🚆 <strong>Location Cue:</strong> Near Yelachenahalli Metro Station, South Bengaluru</span>
+                    <span><strong>Location Cue:</strong> Near Yelachenahalli Metro Station, South Bengaluru</span>
                   </div>
                 </div>
               </div>
