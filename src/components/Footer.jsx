@@ -27,11 +27,11 @@ export default function Footer({ onOpenBooking, onTabChange }) {
             <div className="footer-badges-list">
               <div className="footer-badge-item">
                 <ShieldCheck size={16} className="footer-badge-icon" />
-                <span>US-FDA Approved Laser Systems</span>
+                <span>US-FDA Cleared Laser Systems</span>
               </div>
               <div className="footer-badge-item">
                 <Award size={16} className="footer-badge-icon" />
-                <span>100% Medically Supervised Procedures</span>
+                <span>Doctor-Supervised Clinical Procedures</span>
               </div>
               <div className="footer-badge-item">
                 <CheckCircle2 size={16} className="footer-badge-icon" />

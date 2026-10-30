@@ -27,9 +27,9 @@ const FAQS: FaqItem[] = [
   {
     id: 'faq-3',
     num: '03',
-    question: 'Is Laser Hair Removal permanent and safe for Indian skin tones?',
+    question: 'Is Laser Hair Reduction permanent and safe for Indian skin tones?',
     answer:
-      'Yes! Our clinic utilizes US-FDA approved Diode Laser technology operating at 808nm wavelength with integrated sapphire contact cooling. It selectively targets melanin in hair follicles safely without affecting surrounding skin, delivering 85%-95% permanent reduction over 6 to 8 sessions.'
+      'Laser hair reduction achieves significant long-term reduction (typically 70% to 90% over a recommended series of 6 to 8 sessions). Our clinic utilizes US-FDA cleared Diode Laser technology operating at 808nm with integrated sapphire contact cooling, specifically calibrated to protect Indian skin phototypes (Fitzpatrick III to V) while targeting melanin in actively growing follicles.'
   },
   {
     id: 'faq-4',

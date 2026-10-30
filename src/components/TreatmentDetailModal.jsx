@@ -37,7 +37,7 @@ export default function TreatmentDetailModal({ item, onClose, onOpenBooking }) {
             <ShieldCheck size={18} color="#942876" /> Treatment Highlights:
           </div>
           <ul style={{ paddingLeft: '24px', fontSize: '13px', color: '#5C5268', lineHeight: '1.6' }}>
-            <li>US-FDA approved equipment and sterilisation protocols</li>
+            <li>US-FDA cleared equipment and sterilisation protocols</li>
             <li>Customized to individual skin types and concerns</li>
             <li>Minimal downtime with comprehensive pre & post care guidance</li>
           </ul>

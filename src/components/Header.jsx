@@ -54,7 +54,7 @@ export default function Header({ currentTab, setCurrentTab, onOpenBooking, onSel
         category: item.tab || 'skin',
         description: item.desc || `Expert dermatological treatment for ${item.name} at Medicare Skin Clinic Bangalore.`,
         procedures: [item.name, 'Clinical Evaluation', 'Customized Treatment Plan'],
-        benefits: ['Personalized protocol by Dr. (Mrs.) Sujay M, MBBS, DDVL', 'US-FDA approved technology', 'Visible long-term results'],
+        benefits: ['Personalized protocol by Dr. (Mrs.) Sujay M, MBBS, DDVL', 'US-FDA cleared technology', 'Visible long-term results'],
         results: 'Noticeable clinical improvement with evidence-based dermatological care.',
         downtime: 'Zero to minimal downtime',
         sessions: '1 to 4 sessions as per severity'

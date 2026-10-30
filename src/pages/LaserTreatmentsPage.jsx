@@ -48,13 +48,13 @@ export default function LaserTreatmentsPage({ onSelectCondition, onSelectTreatme
             marginBottom: '16px'
           }}>
             <Zap size={14} color="#8B096C" />
-            US-FDA APPROVED TRIPLE-WAVELENGTH LASER SUITES
+            US-FDA CLEARED MEDICAL LASER SUITES
           </span>
           <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '46px', color: '#153F39', marginBottom: '16px', lineHeight: '1.18' }}>
             Advanced Laser Dermatology &amp; Hair Reduction
           </h1>
           <p style={{ fontSize: '17px', color: '#4E4158', lineHeight: '1.7' }}>
-            Experience 100% medically supervised laser procedures customized specifically for Indian skin types. From painless diode hair reduction to Dermatrix RF scar remodeling and Q-switched pigment toning.
+            Experience doctor-supervised laser procedures customized specifically for Indian skin types (Fitzpatrick III-V). From chilled diode hair reduction to Dermatrix RF scar remodeling and Q-switched pigment toning.
           </p>
         </div>
 

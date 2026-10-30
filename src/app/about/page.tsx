@@ -114,7 +114,7 @@ export default function About() {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem' }}>
                 <span style={{ color: 'var(--magenta)', fontWeight: 'bold' }}>✓</span>
-                <span>US FDA Approved Q-Switched &amp; Laser Technology</span>
+                <span>US-FDA Cleared Q-Switched &amp; Diode Laser Systems</span>
               </div>
             </div>
             <Link href="/contact/" className="btn outline">

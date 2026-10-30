@@ -20,15 +20,19 @@ export default function LegalPage({ type = 'privacy' }) {
         <div className="location-card-box" style={{ padding: '36px', fontSize: '15px', color: '#5C5268', lineHeight: '1.8' }}>
           {type === 'privacy' && (
             <>
-
               <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>1. Patient Information Protection</h3>
               <p style={{ marginBottom: '16px' }}>
-                At Medicare Skin &amp; Cosmetic Clinic, we prioritize patient confidentiality. Any personal data collected via our website appointment form (including name, phone number, and skin concern details) is strictly used for medical triage and booking confirmation by Dr. Sujay M's staff.
+                At Medicare Skin &amp; Cosmetic Clinic (https://www.medicareskin.com), we prioritize patient confidentiality. Any personal data collected via our website appointment form (including name, phone number, and skin concern details) is strictly used for medical triage and booking confirmation by Dr. (Mrs.) Sujay M's clinical staff.
               </p>
 
               <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>2. Data Security &amp; Storage</h3>
               <p style={{ marginBottom: '16px' }}>
-                We do not sell, rent, or trade your contact information to any third-party marketing companies. Patient data is encrypted and securely handled in compliance with medical privacy guidelines.
+                We do not sell, rent, or trade your contact information to any third-party marketing companies. Patient data is encrypted and securely handled in compliance with medical privacy guidelines and Indian healthcare confidentiality standards.
+              </p>
+
+              <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>3. Official Contact</h3>
+              <p style={{ marginBottom: '16px' }}>
+                For data access or privacy questions, contact our administration desk at <strong>medicareskin.cosmeticclinic@gmail.com</strong> or call <strong>+91 92428 55707</strong>.
               </p>
             </>
           )}
@@ -37,19 +41,24 @@ export default function LegalPage({ type = 'privacy' }) {
             <>
               <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>1. Website Terms of Use</h3>
               <p style={{ marginBottom: '16px' }}>
-                By accessing medicareskin.in, you agree to comply with our terms. All content, images, and treatment descriptions are the intellectual property of Medicare Skin Clinic.
+                By accessing https://www.medicareskin.com, you agree to comply with our terms. All educational content, images, and clinical descriptions are the intellectual property of Medicare Skin &amp; Cosmetic Clinic.
               </p>
 
               <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>2. Medical Information Scope</h3>
               <p style={{ marginBottom: '16px' }}>
-                Information on this website is for educational purposes and should not be substituted for direct medical diagnosis by a qualified physician.
+                Information on this website is for educational purposes and should not be substituted for direct in-person medical diagnosis by a qualified physician. An online inquiry does not constitute a doctor-patient relationship until an in-clinic consultation with Dr. Sujay M.
+              </p>
+
+              <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>3. Standardized Clinic Communication</h3>
+              <p style={{ marginBottom: '16px' }}>
+                All official clinic communications and appointment verifications are conducted via our official telephone (+91 92428 55707) and email: <strong>medicareskin.cosmeticclinic@gmail.com</strong>.
               </p>
             </>
           )}
 
           {type === 'cancellation' && (
             <>
-              <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>Appointment Rescheduling & Cancellation</h3>
+              <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>Appointment Rescheduling &amp; Cancellation</h3>
               <p style={{ marginBottom: '16px' }}>
                 If you need to reschedule or cancel your consultation with Dr. Sujay M, please inform our reception desk at least 2 hours prior to your scheduled slot by calling <strong>+91 92428 55707</strong>.
               </p>
@@ -58,9 +67,9 @@ export default function LegalPage({ type = 'privacy' }) {
 
           {type === 'disclaimer' && (
             <>
-              <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>Medical & Procedure Outcome Statement</h3>
+              <h3 style={{ color: '#2B1B4D', marginBottom: '12px' }}>Medical &amp; Procedure Outcome Statement</h3>
               <p style={{ marginBottom: '16px' }}>
-                Individual results for skin procedures, laser hair reduction, and hair growth factor therapy vary depending on skin tone, hair density, genetics, and adherence to post-treatment medical instructions.
+                Individual results for dermatological treatments, chemical peels, and laser hair reduction vary depending on skin phototype (Fitzpatrick III–V), hair density, genetics, and adherence to post-treatment medical instructions. No permanent cures or absolute guarantees are made.
               </p>
             </>
           )}

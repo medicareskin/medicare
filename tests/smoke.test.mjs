@@ -123,3 +123,26 @@ test('Skin conditions have unique, condition-specific symptoms, treatments and p
   assert.match(pageFile, /profile\.pricing\.range/);
   assert.doesNotMatch(pageFile, /Pitted \/ Indented Scars/);
 });
+
+test('Terms and legal policies are clinic-specific with standardized contact', () => {
+  const terms = file('src/app/terms/page.tsx');
+  assert.match(terms, /medicareskin\.cosmeticclinic@gmail\.com/);
+  assert.match(terms, /\+91 92428 55707/);
+  assert.match(terms, /Dr\. \(Mrs\.\) Sujay M/);
+  assert.match(terms, /Yelachenahalli Metro Station/);
+});
+
+test('next.config.ts contains 301 redirects for legacy URLs', () => {
+  const config = file('next.config.ts');
+  assert.match(config, /q-switched-laser-melasma-pigmentation-bangalore/);
+  assert.match(config, /hydrafacial-bangalore/);
+  assert.match(config, /laser-hair-removal/);
+  assert.match(config, /prp-hair/);
+});
+
+test('Prohibited legacy claims are eliminated', () => {
+  const clinicData = file('src/data/clinicData.js');
+  assert.doesNotMatch(clinicData, /US-FDA approved/);
+  assert.doesNotMatch(clinicData, /permanent reduction in 4-6 sessions/);
+  assert.doesNotMatch(clinicData, /plant based enzymes/);
+});

@@ -226,12 +226,12 @@ const BLOG_ARTICLES = [
 
 const FAQS = [
   {
-    q: 'Are the treatments safe?',
-    a: 'Yes, 100%. All procedures are conducted or directly supervised by Dr. Sujay M utilizing US-FDA approved technologies under rigorous clinical sterilization protocols.'
+    q: 'How safe are clinical procedures at Medicare Skin?',
+    a: 'All clinical treatments are conducted or directly supervised by Dr. (Mrs.) Sujay M utilizing US-FDA cleared technologies and strict medical sterilization protocols, calibrated carefully for Indian skin types (Fitzpatrick III-V) to prevent pigmentary complications.'
   },
   {
     q: 'How many sessions are required for acne scars or laser?',
-    a: 'Acne scars typically require 4–6 combination sessions (subcision + MNRF), while laser hair reduction needs 6–8 sessions for optimal permanent follicle reduction.'
+    a: 'Acne scars typically require 4–6 combination sessions (subcision + MNRF), while laser hair reduction needs 6–8 sessions for optimal long-term follicle reduction.'
   },
   {
     q: 'Do you have dedicated parking available?',

@@ -15,7 +15,7 @@ const LOCATIONS = [
 const TREATMENT_DEPARTMENTS = [
   { name: 'Skin Care', desc: 'Acne, Scars, Melasma & Pigmentation', href: '/treatments/?category=Skin' },
   { name: 'Hair Therapies', desc: 'Hair Fall, Thinning & Follicle Diagnostics', href: '/treatments/?category=Hair' },
-  { name: 'US FDA Lasers', desc: 'Laser Hair Reduction & Q-Switched Toning', href: '/treatments/?category=Laser' },
+  { name: 'Medical Lasers', desc: 'Laser Hair Reduction & Q-Switched Toning', href: '/treatments/?category=Laser' },
   { name: 'Aesthetics & Medi-Facials', desc: 'HydraFacial, Glow & Chemical Peels', href: '/treatments/?category=Aesthetics' },
   { name: 'Medical Dermatology', desc: 'Eczema, Psoriasis, Allergies & Vitiligo', href: '/treatments/?category=Medical%20Dermatology' }
 ];

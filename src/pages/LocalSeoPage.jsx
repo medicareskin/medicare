@@ -51,8 +51,8 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
       whyUs: [
         'Direct 1-minute walk from Yelachenahalli Metro Station with dedicated parking',
         'Led by Dr. Sujay M (MBBS, DDVL) with 18+ years clinical excellence',
-        'US-FDA approved laser technology calibrated for South Asian skin tones',
-        'Over 10,100+ proven procedures with 5.0 Google Star Rating'
+        'US-FDA cleared laser technology calibrated for South Asian skin tones',
+        'Direct, doctor-led clinical evaluations with 18+ years specialized expertise'
       ],
       localFaqs: [
         {
@@ -90,13 +90,13 @@ export default function LocalSeoPage({ initialLocality = 'kanakapura-road', onOp
       whyUs: [
         'Prime location on Kanakapura Main Road with ample parking & metro access',
         '18+ Years of dermatological experience by Dr. Sujay M (Bangalore Medical College)',
-        'US-FDA approved laser technology for all Indian skin types',
-        'Over 10,100+ procedures successfully completed with 5.0 Google Rating'
+        'US-FDA cleared laser technology for all Indian skin types',
+        'Direct doctor diagnosis and patient-tailored clinical care'
       ],
       localFaqs: [
         {
           q: 'Why choose Medicare Skin Clinic on Kanakapura Road?',
-          a: 'Dr. Sujay M offers honest, doctor-led clinical dermatology without commercial pressure. With 18+ years of expertise and US-FDA approved lasers, patients receive personalized, medically sound treatments on Kanakapura Road.'
+          a: 'Dr. Sujay M offers honest, doctor-led clinical dermatology without commercial pressure. With 18+ years of expertise and US-FDA cleared lasers, patients receive personalized, medically sound treatments on Kanakapura Road.'
         },
         {
           q: 'How do I reach the clinic from NICE Road junction on Kanakapura Road?',

@@ -81,7 +81,7 @@ export default function CosmeticTreatmentsPage({ onSelectCondition, onSelectTrea
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
             {[
               { title: 'Medical Chemical Peels', desc: 'Custom lactic, glycolic, and TCA peels to eliminate superficial sun damage and impart deep dermal glow.' },
-              { title: 'Hyaluronic Dermal Fillers', desc: 'Restore under-eye hollows, nasolabial folds, and cheek contours using US-FDA approved biocompatible gel.' },
+              { title: 'Hyaluronic Dermal Fillers', desc: 'Restore under-eye hollows, nasolabial folds, and cheek contours using clinically certified biocompatible hyaluronic acid gels.' },
               { title: 'Anti-Wrinkle Injections', desc: 'Precise micro-doses to relax forehead frown lines, crow’s feet, and neck bands while preserving natural emotion.' },
               { title: 'Non-Surgical Thread Lifts', desc: 'Absorbable PDO lifting threads to define the jawline and elevate sagging jowls without incisions or scars.' }
             ].map((p, idx) => (

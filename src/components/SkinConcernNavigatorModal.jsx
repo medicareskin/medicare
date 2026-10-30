@@ -138,13 +138,13 @@ export default function SkinConcernNavigatorModal({ isOpen, onClose, onOpenBooki
         };
       case 'laser-hair':
         return {
-          title: "US-FDA Diode Triple Wavelength Laser Reduction",
+          title: "Medical Diode Laser Hair Reduction",
           recommendations: [
-            "Contact-cooled chilled tip for pain-free treatment on Indian skin types (Fitzpatrick IV-V)",
-            "Targeting follicle growth phase (Anagen) across 4 to 6 scheduled sessions",
+            "Contact-cooled chilled sapphire tip for safe, comfortable treatment on Indian skin types (Fitzpatrick III-V)",
+            "Targeting follicle growth phase (Anagen) across 6 to 8 scheduled sessions",
             "Safe for face, chin, underarms, arms, legs, and full body with zero downtime"
           ],
-          clinicalNote: "Our US-FDA approved diode laser safely bypasses surface melanin while thermally disabling the deeper hair bulb."
+          clinicalNote: "Our US-FDA cleared diode laser safely protects surface melanin with active contact chilling while thermally disabling the deeper hair bulb."
         };
       case 'medical-derm':
         return {

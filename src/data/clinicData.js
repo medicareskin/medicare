@@ -90,7 +90,7 @@ export const FEATURED_TREATMENTS = [
     id: "laser-hair",
     title: "Laser Hair Removal",
     image: "/images/cat_laser_care.jpg",
-    description: "US-FDA approved painless diode laser technology for permanent facial and body hair reduction."
+    description: "US-FDA cleared diode laser technology with integrated contact cooling for long-term facial and body hair reduction."
   },
   {
     id: "chemical-peels",
@@ -377,15 +377,15 @@ export const HAIR_CONDITIONS = [
     title: "Laser Hair Reduction",
     category: "Hair",
     image: "/images/imageye___-_imgi_12_Laser-Hair-Removal.webp",
-    summary: "Painless 808nm diode laser hair reduction with contact chilling for face and body.",
-    fullText: "US-FDA approved diode laser selectively destroys hair melanin in roots, offering 85%-95% permanent reduction in 4-6 sessions."
+    summary: "808nm diode laser hair reduction with contact chilling for face and body.",
+    fullText: "US-FDA cleared diode laser selectively targets hair melanin with active epidermal cooling, providing 70% to 90% long-term reduction over 6 to 8 sessions."
   },
   {
     id: "unwanted-facial-hair-treatment",
     title: "Unwanted Facial Hair Treatment",
     category: "Hair",
     image: "/images/imageye___-_imgi_28_Laser-Hair-Reductions.webp",
-    summary: "Chin, lip, and facial hair permanently reduced with PCOS hormonal evaluation & diode laser.",
+    summary: "Chin, lip, and facial hair long-term reduction with PCOS hormonal evaluation & diode laser.",
     fullText: "Unwanted facial hair caused by hirsutism or PCOS is treated with diode laser hair reduction and medical hormonal assessment."
   },
   {
@@ -422,7 +422,7 @@ export const COSMETIC_TREATMENTS = [
     category: "Cosmetic",
     image: "/images/imageye___-_imgi_8_Botox-and-Fillers-1.webp",
     summary: "Hyaluronic acid volumetric fillers for cheek contouring, lip plumping, and under-eye tear troughs.",
-    fullText: "US-FDA approved hyaluronic acid fillers restore lost facial volume, smooth smile lines, and contour cheeks and jawline instantly."
+    fullText: "Biocompatible hyaluronic acid fillers to restore lost facial volume, soften lines, and support facial contours."
   },
   {
     id: "anti-wrinkle-injections-cosmetic",
@@ -454,7 +454,7 @@ export const COSMETIC_TREATMENTS = [
     category: "Cosmetic",
     image: "/images/imageye___-_imgi_12_Laser-Hair-Removal.webp",
     summary: "Advanced laser toning, diode hair reduction, and fractional scar resurfacing.",
-    fullText: "State-of-the-art medical laser technology for permanent hair reduction, melasma toning, and acne scar revision under senior doctor supervision."
+    fullText: "State-of-the-art medical laser technology for long-term hair reduction, melasma toning, and acne scar revision under senior doctor supervision."
   },
   {
     id: "acne-laser-treatment-cosmetic",
@@ -513,7 +513,7 @@ export const LASER_TREATMENTS = [
     title: "Diode Laser Hair Reduction",
     category: "Laser",
     image: "/images/imageye___-_imgi_12_Laser-Hair-Removal.webp",
-    summary: "US-FDA diode laser for 85%-95% permanent hair reduction on face & body.",
+    summary: "US-FDA cleared diode laser for long-term hair reduction on face & body.",
     fullText: "State-of-the-art 808nm Diode Laser with integrated contact chilling tip selectively destroys hair follicles while cooling surrounding skin."
   },
   {
@@ -953,7 +953,7 @@ export const WHY_CHOOSE_US = [
   },
   {
     icon: "Award",
-    title: "US-FDA Approved Technology",
+    title: "US-FDA Cleared Technology",
     desc: "State-of-the-art diode laser systems, fractional RF microneedling, and clinical peels engineered for South Asian skin tones."
   },
   {
@@ -970,8 +970,8 @@ export const WHY_CHOOSE_US = [
 
 export const FAQS = [
   {
-    question: "Is Laser Hair Removal permanent and safe for Indian skin?",
-    answer: "Yes! Our clinic utilizes US-FDA approved Diode Laser technology operating at 808nm wavelength with integrated contact cooling. It selectively targets melanin in hair roots safely without affecting surrounding skin, offering 85%-95% permanent reduction."
+    question: "Is Laser Hair Reduction permanent and safe for Indian skin?",
+    answer: "Laser hair reduction achieves significant long-term reduction (typically 70% to 90% over a recommended series of 6 to 8 sessions). Our clinic utilizes US-FDA cleared Diode Laser technology operating with integrated sapphire contact cooling, specifically calibrated to protect Indian skin phototypes (Fitzpatrick III to V) while targeting melanin in actively growing follicles."
   },
   {
     question: "What is the recovery time after Acne Scar Subcision?",
@@ -1112,8 +1112,8 @@ export const NAV_TREATMENTS_MENU = [
       { name: 'Brittle Hair', slug: 'brittle-hair', tab: 'hair', desc: 'Keratin peptide infusion & cuticle repair' },
       { name: 'Unwanted Facial Hair', slug: 'unwanted-facial-hair', tab: 'laser', desc: 'Painless chilled diode laser reduction' },
       { name: 'Growth Factor Therapy', slug: 'growth-factor-therapy', tab: 'hair', desc: 'Autologous platelet GFC & PRP biotherapy' },
-      { name: 'Laser Hair Reduction', slug: 'laser-hair-reduction', tab: 'laser', desc: 'Permanent face & body diode laser' },
-      { name: 'Electrolysis', slug: 'electrolysis', tab: 'hair', desc: 'Precision permanent follicular epilation' }
+      { name: 'Laser Hair Reduction', slug: 'laser-hair-reduction', tab: 'laser', desc: 'Long-term face & body diode laser' },
+      { name: 'Electrolysis', slug: 'electrolysis', tab: 'hair', desc: 'Precision follicular epilation' }
     ]
   },
   {
@@ -1132,7 +1132,7 @@ export const NAV_TREATMENTS_MENU = [
       { name: 'Thread Lifting', slug: 'thread-lifting', tab: 'cosmetic', desc: 'Absorbable PDO threads for jawline contouring' },
       { name: 'Diagnostic Skin Biopsies For Histopathology', slug: 'diagnostic-skin-biopsies-for-histopathology', tab: 'skin', desc: 'Microscopic analysis for definitive diagnosis' },
       { name: 'Laser For Pigmentation Removal', slug: 'laser-for-pigmentation-removal', tab: 'laser', desc: 'Selective photothermolysis for sun spots & freckles' },
-      { name: 'Laser Hair Reduction', slug: 'laser-hair-reduction-aesthetic', tab: 'laser', desc: 'Chilled diode laser for permanent hair reduction' }
+      { name: 'Laser Hair Reduction', slug: 'laser-hair-reduction-aesthetic', tab: 'laser', desc: 'Chilled diode laser for long-term hair reduction' }
     ]
   },
   {

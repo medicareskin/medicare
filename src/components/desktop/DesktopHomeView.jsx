@@ -128,12 +128,12 @@ const OUR_TREATMENTS = [
     title: 'Laser Hair Removal',
     url: '/hair-care/',
     fullUrl: 'https://medicareskin.com/hair-care/',
-    desc: 'US-FDA approved painless diode laser technology with contact cooling for permanent face and body hair reduction.',
+    desc: 'US-FDA cleared diode laser technology with contact cooling for long-term face and body hair reduction.',
     image: '/images/cat_laser_care.jpg',
     tag: 'Diode Laser Tech',
     tab: 'laser',
     category: 'Laser Services',
-    summary: 'US-FDA approved painless diode laser technology for permanent facial and body hair reduction.'
+    summary: 'US-FDA cleared diode laser technology for long-term facial and body hair reduction.'
   },
   {
     id: 'chemical-peels',
@@ -359,8 +359,8 @@ const HOME_FAQS = [
     a: "HydraFacial is a medical device treatment combining vortex vacuum suction, gentle salicylic/glycolic chemical exfoliation, painless extraction, and concentrated antioxidant-peptide infusion. Unlike salon facials that involve manual steaming, physical pinching, and abrasive scrubs that can cause micro-tears or broken capillaries, HydraFacial uses calibrated fluidics to purify pores and restore dewy hydration with zero downtime."
   },
   {
-    q: "Is Laser Hair Removal permanent and safe for Indian skin tones?",
-    a: "Yes! Our clinic utilizes US-FDA approved Diode Laser technology operating at 808nm wavelength with integrated sapphire contact cooling. It selectively targets melanin in hair follicles safely without affecting surrounding skin, delivering 85%-95% permanent reduction over 6 to 8 sessions."
+    q: "Is Laser Hair Reduction permanent and safe for Indian skin tones?",
+    a: "Laser hair reduction achieves significant long-term reduction (typically 70% to 90% over a recommended course of 6 to 8 sessions). Our clinic utilizes US-FDA cleared Diode Laser technology operating at 808nm with integrated sapphire contact cooling, specifically calibrated to protect Indian skin phototypes (Fitzpatrick III to V) while targeting melanin in actively growing follicles."
   },
   {
     q: "What is the expected recovery time after Acne Scar Subcision?",
