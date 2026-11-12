@@ -26,22 +26,22 @@ const HERO_SLIDES: HeroSlide[] = [
   {
     id: 'radiant-flagship',
     image: '/images/hero_flagship_radiant_model.jpg',
-    alt: 'Healthy Skin, Beautiful You - Medicare Skin & Cosmetic Clinic South Bengaluru',
-    titleNavy: 'Healthy Skin,',
-    titleBerry: 'Beautiful You.',
+    alt: 'Dermatologist-Led Skin, Hair and Laser Care - Medicare Skin and Cosmetic Clinic South Bengaluru',
+    titleNavy: 'Dermatologist-Led Care,',
+    titleBerry: 'South Bengaluru.',
     highlights: [
-      '18+ Years Dedicated Clinical Experience',
-      '10,000+ Treated Patients in South Bengaluru',
-      'Affordable & Clinically Proven Protocols'
+      '18+ Years Dedicated Clinical Experience — Dr. Sujay M (MBBS, DDVL)',
+      'Personalised Care for Acne, Melasma, Scars, Hair Loss & Laser',
+      'Convenient South Bengaluru Practice near Yelachenahalli Metro'
     ],
     btnPrimary: {
-      text: 'Book an Appointment',
+      text: 'Book Dermatologist Consultation',
       href: '/book-appointment/'
     },
-    whatsappText: 'Hello Medicare Skin Clinic, I would like to book an appointment with Dr. Sujay M.',
-    mobileHeadline: 'Healthy Skin, Beautiful You',
-    mobileSub: '18+ Years Dedicated Clinical Experience',
-    tag: 'Doctor-Led Clinic'
+    whatsappText: 'Hello Medicare Skin Clinic, I would like to book a dermatologist consultation with Dr. Sujay M.',
+    mobileHeadline: 'Dermatologist-Led Care · South Bengaluru',
+    mobileSub: 'Dr. Sujay M, MBBS, DDVL · Near Yelachenahalli Metro',
+    tag: 'EXPERT DERMATOLOGY IN SOUTH BENGALURU'
   },
   {
     id: 'clear-complexion-acne',
@@ -87,21 +87,21 @@ const HERO_SLIDES: HeroSlide[] = [
     id: 'clinical-laser-perfection',
     image: '/images/hero_laser_woman.jpg',
     alt: 'US-FDA Laser Reduction and Skin Toning - Medicare Clinic',
-    titleNavy: 'Clinical Precision,',
-    titleBerry: 'Permanent Smooth.',
+    titleNavy: 'Clinical Laser,',
+    titleBerry: 'Long-Term Reduction.',
     highlights: [
-      'US-FDA Triple-Wavelength Painless Laser Reduction',
-      'Targeted Follicle & Deep Melanin Breakdown',
-      'Certified Safe for Indian Skin (Fitzpatrick IV-VI)'
+      'US-FDA Cleared Triple-Wavelength Laser Technology',
+      'Targeted Follicle Assessment & Deep Pigment Care',
+      'Dermatologist-Calibrated Parameters for Indian Skin (Fitzpatrick IV-VI)'
     ],
     btnPrimary: {
       text: 'Discover Laser Treatments',
       href: '/treatments/laser/laser-hair-reduction/'
     },
-    whatsappText: 'Hello Medicare Skin Clinic, I would like to enquire about US-FDA Laser Reduction.',
-    mobileHeadline: 'Painless US-FDA Laser Care',
-    mobileSub: 'Permanent Smooth Skin & Deep Pigment Toning',
-    tag: 'US-FDA Lasers'
+    whatsappText: 'Hello Medicare Skin Clinic, I would like to enquire about US-FDA Cleared Laser Reduction.',
+    mobileHeadline: 'US-FDA Cleared Laser Hair Reduction',
+    mobileSub: 'Dermatologist-Led Long-Term Hair Reduction',
+    tag: 'Laser Dermatology'
   },
   {
     id: 'renewed-texture-peels',
@@ -116,7 +116,7 @@ const HERO_SLIDES: HeroSlide[] = [
     ],
     btnPrimary: {
       text: 'Explore Clinical Peels',
-      href: '/treatments/skin/chemical-peel/'
+      href: '/treatments/skin/chemical-peels/'
     },
     whatsappText: 'Hello Medicare Skin Clinic, I would like to know more about Dermatologist Peels.',
     mobileHeadline: 'Renewed Texture & Tone',
@@ -130,18 +130,18 @@ const HERO_SLIDES: HeroSlide[] = [
     titleNavy: 'Doctor-Led Care,',
     titleBerry: 'Lasting Results.',
     highlights: [
-      'Personal 1-on-1 Consultation with Dr. Sujay M (MBBS, DVD)',
+      'Personal 1-on-1 Consultation with Dr. Sujay M (MBBS, DDVL)',
       'Comprehensive Dermoscopic & Scalp Evaluation',
       'Affordable Clinical Excellence in South Bengaluru'
     ],
     btnPrimary: {
       text: 'Consult Dr. Sujay M',
-      href: '/doctor/'
+      href: '/doctors/dr-sujay-m/'
     },
     whatsappText: 'Hello Medicare Skin Clinic, I would like to schedule a consultation with Dr. Sujay M.',
     mobileHeadline: 'Doctor-Led Clinical Excellence',
-    mobileSub: 'Direct consultation with Dr. Sujay M (MBBS, DVD)',
-    tag: 'Dr. Sujay M (DVD)'
+    mobileSub: 'Direct consultation with Dr. Sujay M (MBBS, DDVL)',
+    tag: 'Dr. Sujay M (MBBS, DDVL)'
   }
 ];
 
@@ -193,9 +193,9 @@ const MOBILE_PROTOCOLS = [
   },
   {
     id: 'laser-hair',
-    title: 'Permanent Laser',
+    title: 'Laser Hair Reduction',
     category: 'Lasers',
-    tag: 'US-FDA Painless',
+    tag: 'US-FDA Cleared',
     price: 'Starts at ₹1999',
     image: '/images/slide_laser_new.jpg',
     href: '/treatments/laser/laser-hair-reduction/'
@@ -257,7 +257,7 @@ export function BigHeroSlider() {
   return (
     <section
       className="hero-reference-slider-section hero-classic-banner"
-      aria-label="Medicare Skin & Cosmetic Clinic - Healthy Skin, Beautiful You"
+      aria-label="Medicare Skin & Cosmetic Clinic - Dermatologist-Led Care South Bengaluru"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >

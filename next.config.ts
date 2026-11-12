@@ -119,6 +119,46 @@ const nextConfig: NextConfig = {
         destination: '/book-appointment/',
         permanent: true,
       },
+      {
+        source: '/faq',
+        destination: '/faqs/',
+        permanent: true,
+      },
+      {
+        source: '/faq/',
+        destination: '/faqs/',
+        permanent: true,
+      },
+      {
+        source: '/medical-editorial-policy',
+        destination: '/editorial-policy/',
+        permanent: true,
+      },
+      {
+        source: '/medical-editorial-policy/',
+        destination: '/editorial-policy/',
+        permanent: true,
+      },
+      {
+        source: '/treatments/skin/vitiligo-treatment',
+        destination: '/treatments/medical-dermatology/vitiligo/',
+        permanent: true,
+      },
+      {
+        source: '/treatments/skin/vitiligo-treatment/',
+        destination: '/treatments/medical-dermatology/vitiligo/',
+        permanent: true,
+      },
+      {
+        source: '/treatments/skin/skin-tightening-rf',
+        destination: '/treatments/aesthetics/mnrf/',
+        permanent: true,
+      },
+      {
+        source: '/treatments/skin/skin-tightening-rf/',
+        destination: '/treatments/aesthetics/mnrf/',
+        permanent: true,
+      },
     ];
   },
 };

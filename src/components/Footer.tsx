@@ -59,7 +59,7 @@ export function Footer() {
             <Link href="/#patient-experiences">Patient Reviews &amp; Stories</Link>
             <Link href="/journal/">Clinical Dermatology Blog</Link>
             <Link href="/locations/yelachenahalli/">Areas We Serve (South BLR)</Link>
-            <Link href="/#faqs">Pricing &amp; Clinic FAQs</Link>
+            <Link href="/faqs/">Pricing &amp; Clinic FAQs</Link>
           </div>
         </div>
 
@@ -73,8 +73,8 @@ export function Footer() {
             <Link href="/treatments/laser/laser-hair-reduction/">Laser Hair Removal</Link>
             <Link href="/treatments/skin/chemical-peels/">Chemical Peels &amp; Renewal</Link>
             <Link href="/treatments/aesthetics/dermal-fillers/">Dermal Fillers &amp; Botox</Link>
-            <Link href="/treatments/skin/skin-tightening-rf/">Skin Tightening (RF)</Link>
-            <Link href="/treatments/skin/vitiligo-treatment/">Vitiligo Surgical Grafting</Link>
+            <Link href="/treatments/aesthetics/mnrf/">Skin Tightening (MNRF)</Link>
+            <Link href="/treatments/medical-dermatology/vitiligo/">Vitiligo Surgical Grafting</Link>
           </div>
         </div>
 
@@ -183,6 +183,7 @@ export function Footer() {
         <div className="footer-policy-links">
           <Link href="/privacy-policy/">Privacy Policy</Link>
           <Link href="/terms/">Terms &amp; Conditions</Link>
+          <Link href="/editorial-policy/">Editorial Policy</Link>
           <Link href="/cancellation-policy/">Cancellation Policy</Link>
           <Link href="/medical-disclaimer/">Medical Disclaimer</Link>
         </div>

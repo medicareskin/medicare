@@ -18,6 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/patient-information/',
     '/medical-disclaimer/',
     '/treatment-cost-guide/',
+    '/laser-vs-hydrafacial/',
+    '/editorial-policy/',
+    '/cancellation-policy/',
+    '/faqs/',
     '/terms/',
     '/privacy-policy/',
   ];
@@ -30,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const filtered = [...paths, ...treatmentUrls, ...articleUrls];
   return filtered.map((p) => ({
     url: `${site.url}${p}`,
-    lastModified: new Date('2026-10-30'),
+    lastModified: new Date('2026-11-12'),
     changeFrequency: 'monthly' as const,
     priority: p === '/' ? 1.0 : p.startsWith('/treatments/') ? 0.8 : 0.6,
   }));

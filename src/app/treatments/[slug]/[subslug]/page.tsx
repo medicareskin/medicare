@@ -72,7 +72,7 @@ export default async function CategoryTreatmentPage({
         honorificPrefix: 'Dr.',
         description: 'MBBS, DDVL · Senior Consultant Dermatologist at Medicare Skin & Cosmetic Clinic',
       },
-      lastReviewed: '2026-10-23',
+      lastReviewed: '2026-11-12',
     },
     breadcrumbs(parts.map((x) => ({name: x.label, path: x.href}))),
   ];
