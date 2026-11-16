@@ -28,7 +28,7 @@ interface HeroSlide {
 const HERO_SLIDES: HeroSlide[] = [
   {
     id: 'clinical-skin-health',
-    image: '/images/hero_flagship_radiant_model.jpg',
+    image: '/images/hero_flagship_radiance_luxury.jpg',
     alt: 'Advanced Clinical Skin Health and Evidence-Based Dermatology - Medicare Skin',
     titleLead: 'Radiant Skin Health,',
     titleAccent: 'Evidence-Based Care.',
@@ -51,7 +51,7 @@ const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: 'hair-vitality',
-    image: '/images/hero_happy_patient_woman.jpg',
+    image: '/images/hero_hair_radiance_luxury.jpg',
     alt: 'Clinical Hair Loss Assessment and Growth Factor Therapy - Medicare Skin Clinic',
     titleLead: 'Lustrous Hair,',
     titleAccent: 'Scalp Vitality.',
