@@ -11,6 +11,8 @@ import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import { ConditionsCarousel } from '@/components/ConditionsCarousel';
 import { TransformationReveal } from '@/components/TransformationReveal';
 import { PatientExperiences } from '@/components/PatientExperiences';
+import { InteractiveConcernNavigator } from '@/components/InteractiveConcernNavigator';
+import { TreatmentCostPlanner } from '@/components/TreatmentCostPlanner';
 import { LocationSection } from '@/components/LocationSection';
 import { FAQSection } from '@/components/FAQSection';
 
@@ -182,11 +184,17 @@ export default function Home() {
       {/* Health Conditions Carousel matching User Reference Image 5 */}
       <ConditionsCarousel />
 
+      {/* Interactive Concern Navigator: Clinical Guidance tailored to Indian Skin */}
+      <InteractiveConcernNavigator />
+
       {/* Transformation Reveal Story Slider (using provided slide img) */}
       <TransformationReveal />
 
       {/* Patient Experiences matching User Reference Image 2 */}
       <PatientExperiences />
+
+      {/* Transparent Treatment Cost Planner & Estimator */}
+      <TreatmentCostPlanner />
 
       {/* Care That Starts With Your Concern */}
       <section className="container section">
@@ -289,6 +297,13 @@ export default function Home() {
 
         <div className="cards three" style={{ marginTop: '28px' }}>
           <div className="card">
+            <div style={{ borderRadius: '12px', overflow: 'hidden', marginBottom: '14px', height: '180px' }}>
+              <img
+                src="/images/q_switched_procedure.jpg"
+                alt="Q-Switched Nd:YAG Laser Melasma Procedure"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
             <span className="eyebrow-pill">PIGMENTATION &amp; MELASMA</span>
             <h3 style={{ marginTop: '8px' }}>Q-Switched Nd:YAG Laser</h3>
             <p style={{ fontSize: '0.88rem', color: 'var(--muted)', marginTop: '6px' }}>
@@ -300,6 +315,13 @@ export default function Home() {
           </div>
 
           <div className="card">
+            <div style={{ borderRadius: '12px', overflow: 'hidden', marginBottom: '14px', height: '180px' }}>
+              <img
+                src="/images/hydrafacial_procedure.jpg"
+                alt="Medical-Grade HydraFacial Procedure"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
             <span className="eyebrow-pill">PORE CLEANSING &amp; HYDRATION</span>
             <h3 style={{ marginTop: '8px' }}>Medical-Grade HydraFacial</h3>
             <p style={{ fontSize: '0.88rem', color: 'var(--muted)', marginTop: '6px' }}>
@@ -311,6 +333,13 @@ export default function Home() {
           </div>
 
           <div className="card">
+            <div style={{ borderRadius: '12px', overflow: 'hidden', marginBottom: '14px', height: '180px' }}>
+              <img
+                src="/images/laser_device_console.jpg"
+                alt="Microneedling RF Device Console"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
             <span className="eyebrow-pill">SCAR REMODELING</span>
             <h3 style={{ marginTop: '8px' }}>Microneedling RF (MNRF)</h3>
             <p style={{ fontSize: '0.88rem', color: 'var(--muted)', marginTop: '6px' }}>
@@ -326,6 +355,69 @@ export default function Home() {
           <Link className="btn outline" href="/technology/">
             Explore Our Technology &amp; Safety Standards →
           </Link>
+        </div>
+      </section>
+
+      {/* Physical Practice & Clinical Environment Showcase */}
+      <section className="section soft" id="clinic-facility">
+        <div className="container">
+          <SectionHeading
+            label="CLINICAL ENVIRONMENT"
+            title="Designed for Patient Comfort, Hygiene &amp; Confidentiality"
+            description="Directly located opposite Yelachenahalli Metro Station (Pillar 100). Step inside our modern, sanitized dermatology suites equipped with US-FDA cleared energy devices."
+          />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', marginTop: '28px' }}>
+            <div style={{ background: '#FFFFFF', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--border)', boxShadow: '0 4px 16px rgba(0,0,0,0.04)' }}>
+              <div style={{ height: '210px', overflow: 'hidden' }}>
+                <img
+                  src="/images/clinic_interior_reception.jpg"
+                  alt="Medicare Skin Consultation Suite &amp; Reception"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+              <div style={{ padding: '20px' }}>
+                <span className="eyebrow-pill">RECEPTION &amp; WAITING</span>
+                <h3 style={{ fontSize: '1.15rem', marginTop: '8px', color: 'var(--ink)' }}>Private Consultation Suites</h3>
+                <p style={{ fontSize: '0.88rem', color: 'var(--muted)', marginTop: '6px', lineHeight: 1.5 }}>
+                  Spacious, air-conditioned patient waiting area with dedicated consultation rooms ensuring complete dermatological confidentiality.
+                </p>
+              </div>
+            </div>
+
+            <div style={{ background: '#FFFFFF', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--border)', boxShadow: '0 4px 16px rgba(0,0,0,0.04)' }}>
+              <div style={{ height: '210px', overflow: 'hidden' }}>
+                <img
+                  src="/images/laser_device_console.jpg"
+                  alt="Medicare Skin Laser &amp; Procedure Suite"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+              <div style={{ padding: '20px' }}>
+                <span className="eyebrow-pill">PROCEDURE SUITE</span>
+                <h3 style={{ fontSize: '1.15rem', marginTop: '8px', color: 'var(--ink)' }}>Calibrated Laser Workstations</h3>
+                <p style={{ fontSize: '0.88rem', color: 'var(--muted)', marginTop: '6px', lineHeight: 1.5 }}>
+                  Hospital-grade sterile procedure room equipped with Q-switched Nd:YAG, MNRF, and chilled-contact diode hair reduction technologies.
+                </p>
+              </div>
+            </div>
+
+            <div style={{ background: '#FFFFFF', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--border)', boxShadow: '0 4px 16px rgba(0,0,0,0.04)' }}>
+              <div style={{ height: '210px', overflow: 'hidden' }}>
+                <img
+                  src="/images/clinic_location_facade.jpg"
+                  alt="Medicare Skin Clinic Landmark opposite Yelachenahalli Metro Pillar 100"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+              <div style={{ padding: '20px' }}>
+                <span className="eyebrow-pill">LANDMARK &amp; TRANSIT</span>
+                <h3 style={{ fontSize: '1.15rem', marginTop: '8px', color: 'var(--ink)' }}>Opp. Yelachenahalli Metro (Pillar 100)</h3>
+                <p style={{ fontSize: '0.88rem', color: 'var(--muted)', marginTop: '6px', lineHeight: 1.5 }}>
+                  Easily accessible on 100 Feet Ring Road / Kanakapura Main Road with dedicated patient parking and barrier-free access.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

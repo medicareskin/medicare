@@ -37,8 +37,8 @@ export default async function ArticlePage({
     headline: article.title,
     description: article.summary,
     url: `${site.url}/journal/${slug}/`,
-    datePublished: article.published || '2026-11-12',
-    dateModified: article.reviewed || '2026-11-12',
+    datePublished: article.published || '2026-11-16',
+    dateModified: article.reviewed || '2026-11-16',
     author: {
       '@type': 'Person',
       name: article.author || 'Dr. (Mrs.) Sujay M',
@@ -118,13 +118,28 @@ export default async function ArticlePage({
           </div>
           <div style={{ color: '#D1D5DB' }}>|</div>
           <div>
-            <strong>Last Reviewed:</strong> {article.reviewed || '12 November 2026'}
+            <strong>Last Reviewed:</strong> {article.reviewed || '16 November 2026'}
           </div>
           <div style={{ color: '#D1D5DB' }}>|</div>
           <div>
             <strong>Clinic:</strong> Medicare Skin, South Bengaluru
           </div>
         </div>
+
+        {article.image && (
+          <div style={{ margin: '1.75rem 0 0.5rem', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E5E7EB', boxShadow: '0 4px 16px rgba(0,0,0,0.04)' }}>
+            <img
+              src={article.image}
+              alt={article.imageAlt || article.title}
+              style={{ width: '100%', height: 'auto', maxHeight: '420px', objectFit: 'cover', display: 'block' }}
+            />
+            {article.imageAlt && (
+              <div style={{ padding: '8px 16px', background: '#F9FAFB', fontSize: '0.8rem', color: '#6B7280', borderTop: '1px solid #E5E7EB' }}>
+                Clinical Visual: {article.imageAlt} &bull; Medicare Skin Clinic Bengaluru
+              </div>
+            )}
+          </div>
+        )}
 
         {!article.approved && (
           <div

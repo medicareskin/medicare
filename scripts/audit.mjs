@@ -23,7 +23,10 @@ const paths = [
   "/faqs/",
   "/journal/",
   "/journal/prp-vs-gfc-hair-loss/",
-  "/journal/winter-dry-skin-barrier-repair-bengaluru/"
+  "/journal/winter-dry-skin-barrier-repair-bengaluru/",
+  "/journal/subcision-vs-mnrf-acne-scars/",
+  "/journal/dandruff-vs-scalp-psoriasis/",
+  "/journal/pre-bridal-dermatology-timeline-bengaluru/"
 ];
 
 console.log(`Auditing target origin: ${origin}\n`);

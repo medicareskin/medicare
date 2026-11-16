@@ -6,7 +6,7 @@ import { indexingEnabled } from '@/lib/site';
 
 export const metadata: Metadata = meta(
   'Skin & Hair Health Journal | Medicare Skin Bengaluru',
-  'Evidence-based patient dermatology guides on melasma, acne scar remodelling, laser hair reduction, PRP vs GFC, and winter skin barrier care. Medically reviewed by Dr. Sujay M (MBBS, DDVL).',
+  'Evidence-based patient dermatology guides on melasma, acne scar remodelling, laser hair reduction, PRP vs GFC, subcision vs MNRF, and scalp psoriasis. Medically reviewed by Dr. Sujay M (MBBS, DDVL).',
   '/journal/'
 );
 
@@ -36,18 +36,31 @@ export default function JournalPage() {
           {visibleArticles.map((article) => (
             <article
               key={article.slug}
-              className="card"
+              className="card journal-card-item"
               style={{
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                padding: '28px',
+                padding: '0',
                 borderRadius: '16px',
                 border: '1px solid #E5E7EB',
-                background: '#FFFFFF'
+                background: '#FFFFFF',
+                overflow: 'hidden',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.03)'
               }}
             >
-              <div>
+              {article.image && (
+                <div style={{ width: '100%', height: '185px', overflow: 'hidden', background: '#F3F4F6' }}>
+                  <img
+                    src={article.image}
+                    alt={article.imageAlt || article.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    loading="lazy"
+                  />
+                </div>
+              )}
+
+              <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
                   <span
                     style={{
@@ -74,32 +87,32 @@ export default function JournalPage() {
                   </Link>
                 </h2>
 
-                <p style={{ fontSize: '0.95rem', color: '#4B5563', lineHeight: '1.6', marginBottom: '16px' }}>
+                <p style={{ fontSize: '0.92rem', color: '#4B5563', lineHeight: '1.6', marginBottom: '16px' }}>
                   {article.summary}
                 </p>
-              </div>
 
-              <div style={{ paddingTop: '16px', borderTop: '1px solid #F3F4F6', marginTop: 'auto' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div>
-                    <p style={{ margin: 0, fontSize: '0.8rem', fontWeight: 600, color: '#1F2937' }}>
-                      {article.author || 'Dr. (Mrs.) Sujay M'}
-                    </p>
-                    <time dateTime={article.published} style={{ fontSize: '0.75rem', color: '#9CA3AF' }}>
-                      Updated: {article.published || '12 November 2026'}
-                    </time>
+                <div style={{ paddingTop: '16px', borderTop: '1px solid #F3F4F6', marginTop: 'auto' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div>
+                      <p style={{ margin: 0, fontSize: '0.8rem', fontWeight: 600, color: '#1F2937' }}>
+                        {article.author || 'Dr. (Mrs.) Sujay M'}
+                      </p>
+                      <time dateTime={article.published} style={{ fontSize: '0.75rem', color: '#9CA3AF' }}>
+                        Updated: {article.published || '16 November 2026'}
+                      </time>
+                    </div>
+                    <Link
+                      href={`/journal/${article.slug}/`}
+                      style={{
+                        fontSize: '0.85rem',
+                        fontWeight: 700,
+                        color: 'var(--brand-primary, #153F39)',
+                        textDecoration: 'none'
+                      }}
+                    >
+                      Read Guide &rarr;
+                    </Link>
                   </div>
-                  <Link
-                    href={`/journal/${article.slug}/`}
-                    style={{
-                      fontSize: '0.85rem',
-                      fontWeight: 700,
-                      color: 'var(--brand-primary, #153F39)',
-                      textDecoration: 'none'
-                    }}
-                  >
-                    Read Guide &rarr;
-                  </Link>
                 </div>
               </div>
             </article>

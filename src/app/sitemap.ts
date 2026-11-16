@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const filtered = [...paths, ...treatmentUrls, ...articleUrls];
   return filtered.map((p) => ({
     url: `${site.url}${p}`,
-    lastModified: new Date('2026-11-12'),
+    lastModified: new Date('2026-11-16'),
     changeFrequency: 'monthly' as const,
     priority: p === '/' ? 1.0 : p.startsWith('/treatments/') ? 0.8 : 0.6,
   }));

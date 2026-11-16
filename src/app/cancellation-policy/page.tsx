@@ -127,7 +127,7 @@ export default function CancellationPolicyPage() {
 
       <footer style={{ marginTop: '3rem', padding: '20px', borderTop: '1px solid #E5E7EB' }}>
         <p className="micro" style={{ margin: 0, color: '#6B7280' }}>
-          Last Updated: 12 November 2026 &bull; Medicare Skin &amp; Cosmetic Clinic, near Yelachenahalli Metro Station, Bengaluru 560078.
+          Last Updated: 16 November 2026 &bull; Medicare Skin &amp; Cosmetic Clinic, near Yelachenahalli Metro Station, Bengaluru 560078.
         </p>
       </footer>
     </article>

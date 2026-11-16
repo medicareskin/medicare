@@ -113,7 +113,7 @@ export default function EditorialPolicyPage() {
 
       <footer style={{ marginTop: '3rem', padding: '24px', background: '#F9FAFB', borderRadius: '12px', border: '1px solid #E5E7EB' }}>
         <p className="micro" style={{ margin: 0, color: '#6B7280' }}>
-          <strong>Policy Status:</strong> Active &bull; Published: 12 November 2026 &bull; Supervised by Dr. (Mrs.) Sujay M (MBBS, DDVL) &bull; Medicare Skin &amp; Cosmetic Clinic, Bengaluru.
+          <strong>Policy Status:</strong> Active &bull; Published: 16 November 2026 &bull; Supervised by Dr. (Mrs.) Sujay M (MBBS, DDVL) &bull; Medicare Skin &amp; Cosmetic Clinic, Bengaluru.
         </p>
       </footer>
     </article>

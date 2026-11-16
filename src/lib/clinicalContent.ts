@@ -250,7 +250,7 @@ export const clinicalArticles: Record<string, ClinicalArticle> = {
     "clinic": "Medicare Skin & Cosmetic Clinic",
     "location": "Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru 560078",
     "phone": "+91 92428 55707",
-    "date": "October 2026"
+    "date": "16 November 2026"
   }
 },
   'laser/q-switched-laser': {
@@ -404,7 +404,7 @@ export const clinicalArticles: Record<string, ClinicalArticle> = {
     "clinic": "Medicare Skin & Cosmetic Clinic",
     "location": "Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru 560078",
     "phone": "+91 92428 55707",
-    "date": "October 2026"
+    "date": "16 November 2026"
   }
 },
   'laser/laser-hair-reduction': {
@@ -546,7 +546,7 @@ export const clinicalArticles: Record<string, ClinicalArticle> = {
     "clinic": "Medicare Skin & Cosmetic Clinic",
     "location": "Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru 560078",
     "phone": "+91 92428 55707",
-    "date": "October 2026"
+    "date": "16 November 2026"
   }
 },
   'hair/hair-loss-treatment': {
@@ -693,7 +693,7 @@ export const clinicalArticles: Record<string, ClinicalArticle> = {
     "clinic": "Medicare Skin & Cosmetic Clinic",
     "location": "Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru 560078",
     "phone": "+91 92428 55707",
-    "date": "October 2026"
+    "date": "16 November 2026"
   }
 },
   'aesthetics/hydrafacial': {
@@ -843,7 +843,7 @@ export const clinicalArticles: Record<string, ClinicalArticle> = {
     "clinic": "Medicare Skin & Cosmetic Clinic",
     "location": "Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru 560078",
     "phone": "+91 92428 55707",
-    "date": "October 2026"
+    "date": "16 November 2026"
   }
 },
   'skin/chemical-peels': {
@@ -995,7 +995,7 @@ export const clinicalArticles: Record<string, ClinicalArticle> = {
     "clinic": "Medicare Skin & Cosmetic Clinic",
     "location": "Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru 560078",
     "phone": "+91 92428 55707",
-    "date": "October 2026"
+    "date": "16 November 2026"
   }
 },
   'hair/prp-gfc': {
@@ -1151,7 +1151,7 @@ export const clinicalArticles: Record<string, ClinicalArticle> = {
     "clinic": "Medicare Skin & Cosmetic Clinic",
     "location": "Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru 560078",
     "phone": "+91 92428 55707",
-    "date": "October 2026"
+    "date": "16 November 2026"
   }
 },
   'medical-dermatology/eczema': {
@@ -1300,7 +1300,7 @@ export const clinicalArticles: Record<string, ClinicalArticle> = {
     "clinic": "Medicare Skin & Cosmetic Clinic",
     "location": "Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru 560078",
     "phone": "+91 92428 55707",
-    "date": "October 2026"
+    "date": "16 November 2026"
   }
 },
   'medical-dermatology/psoriasis': {
@@ -1457,7 +1457,7 @@ export const clinicalArticles: Record<string, ClinicalArticle> = {
     "clinic": "Medicare Skin & Cosmetic Clinic",
     "location": "Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru 560078",
     "phone": "+91 92428 55707",
-    "date": "October 2026"
+    "date": "16 November 2026"
   }
 },
   'medical-dermatology/vitiligo': {
@@ -1621,7 +1621,7 @@ export const clinicalArticles: Record<string, ClinicalArticle> = {
     "clinic": "Medicare Skin & Cosmetic Clinic",
     "location": "Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru 560078",
     "phone": "+91 92428 55707",
-    "date": "October 2026"
+    "date": "16 November 2026"
   }
 },
 };

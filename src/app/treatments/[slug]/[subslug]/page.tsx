@@ -72,7 +72,7 @@ export default async function CategoryTreatmentPage({
         honorificPrefix: 'Dr.',
         description: 'MBBS, DDVL · Senior Consultant Dermatologist at Medicare Skin & Cosmetic Clinic',
       },
-      lastReviewed: '2026-11-12',
+      lastReviewed: '2026-11-16',
     },
     breadcrumbs(parts.map((x) => ({name: x.label, path: x.href}))),
   ];
@@ -281,7 +281,7 @@ export default async function CategoryTreatmentPage({
                 Dermatology (AAD) guidance and Indian skin epidemiology. Treatment is customized after in-person
                 examination at our clinic near Yelachenahalli Metro Station, Kanakapura Road, Bengaluru.
               </p>
-              <p className="micro muted">Last clinical review: October 2026 · Clinical registration verified</p>
+              <p className="micro muted">Last clinical review: 16 November 2026 · Clinical registration verified</p>
             </section>
 
             {article?.references && article.references.length > 0 && (

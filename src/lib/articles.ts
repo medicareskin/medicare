@@ -13,6 +13,8 @@ export type Article = {
   published: string;
   reviewed: string;
   approved: boolean;
+  image?: string;
+  imageAlt?: string;
   sections: ArticleSection[];
   keyTakeaways: string[];
   references?: { title: string; url?: string }[];
@@ -27,9 +29,11 @@ export const articles: Article[] = [
     category: 'Pigmentation & Melasma',
     readingTime: '5 min read',
     author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
-    published: '2026-11-12',
-    reviewed: '2026-11-12',
+    published: '2026-11-16',
+    reviewed: '2026-11-16',
     approved: true,
+    image: '/images/q-switched-laser-pigmentation-treatment-bangalore.webp',
+    imageAlt: 'Melasma and Sun Protection for Indian Skin Phototypes',
     keyTakeaways: [
       'Melasma is a chronic, relapsing condition triggered by UV, visible light, heat, and hormonal shifts.',
       'Standard SPF protects against UVB and UVA, but tinted sunscreens with iron oxides are required to shield against visible high-energy light.',
@@ -70,9 +74,11 @@ export const articles: Article[] = [
     category: 'Acne & Scars',
     readingTime: '6 min read',
     author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
-    published: '2026-11-12',
-    reviewed: '2026-11-12',
+    published: '2026-11-16',
+    reviewed: '2026-11-16',
     approved: true,
+    image: '/images/imageye___-_imgi_11_acne-scar-treatment.webp',
+    imageAlt: 'Acne Scars versus Post-Inflammatory Hyperpigmentation Marks',
     keyTakeaways: [
       'Post-inflammatory hyperpigmentation (PIH) is a flat pigmentary change, whereas genuine scars involve dermal collagen destruction or fibrotic tethering.',
       'Surface chemical peels and topical brightening agents improve flat dark marks but cannot elevate indented scars.',
@@ -112,9 +118,11 @@ export const articles: Article[] = [
     category: 'Laser Dermatology',
     readingTime: '5 min read',
     author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
-    published: '2026-11-12',
-    reviewed: '2026-11-12',
+    published: '2026-11-16',
+    reviewed: '2026-11-16',
     approved: true,
+    image: '/images/slide_laser_new.jpg',
+    imageAlt: 'Laser Hair Reduction Device for Indian Skin Types',
     keyTakeaways: [
       'Indian skin has high concentrations of epidermal melanin, requiring longer wavelengths (808nm/1064nm) to bypass the surface and reach the follicle.',
       'Laser hair reduction achieves permanent hair reduction, not 100% permanent hair removal in a single session; 6 to 8 sessions are standard.',
@@ -151,9 +159,11 @@ export const articles: Article[] = [
     category: 'Aesthetics',
     readingTime: '5 min read',
     author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
-    published: '2026-11-12',
-    reviewed: '2026-11-12',
+    published: '2026-11-16',
+    reviewed: '2026-11-16',
     approved: true,
+    image: '/images/hydrafacial_procedure.jpg',
+    imageAlt: 'Medical Grade HydraFacial Treatment Procedure',
     keyTakeaways: [
       'HydraFacial uses a patented vortex tip for gentle exfoliation and automated vacuum extraction without skin tearing.',
       'Salon facials that employ aggressive manual extraction often cause broken capillaries, post-acne marks, and follicular rupture.',
@@ -190,9 +200,11 @@ export const articles: Article[] = [
     category: 'Hair Care',
     readingTime: '6 min read',
     author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
-    published: '2026-11-12',
-    reviewed: '2026-11-12',
+    published: '2026-11-16',
+    reviewed: '2026-11-16',
     approved: true,
+    image: '/images/slide_hair_new.jpg',
+    imageAlt: 'PRP and GFC Hair Restoration Therapy',
     keyTakeaways: [
       'Both PRP and GFC are autologous blood-derived biological therapies designed to nourish miniaturizing hair follicles.',
       'PRP delivers live platelets in plasma that activate and release growth factors in the scalp tissue.',
@@ -233,9 +245,11 @@ export const articles: Article[] = [
     category: 'Medical Dermatology',
     readingTime: '5 min read',
     author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
-    published: '2026-11-12',
-    reviewed: '2026-11-12',
+    published: '2026-11-16',
+    reviewed: '2026-11-16',
     approved: true,
+    image: '/images/poreless_glass_skin_glow.jpg',
+    imageAlt: 'Winter Skin Barrier Repair and Ceramide Skincare',
     keyTakeaways: [
       'Bengaluru winters cause sudden drops in ambient humidity, leading to increased transepidermal water loss (TEWL) and barrier breakdown.',
       'Hot water showers strip natural ceramides and cholesterol from the stratum corneum, exacerbating xerosis and atopic eczema flares.',
@@ -268,6 +282,138 @@ export const articles: Article[] = [
     ]
   },
   {
+    slug: 'subcision-vs-mnrf-acne-scars',
+    title: 'Subcision vs. MNRF for Acne Scars: Which Protocol Works Best for Indian Skin?',
+    summary:
+      'Why releasing fibrotic tethering with Nokor subcision must precede microneedling radiofrequency to lift rolling and boxcar acne scars effectively.',
+    category: 'Acne & Scar Remodeling',
+    readingTime: '6 min read',
+    author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
+    published: '2026-11-16',
+    reviewed: '2026-11-16',
+    approved: true,
+    image: '/images/slide_scar_model_new.jpg',
+    imageAlt: 'Subcision vs MNRF for Deep Pitted Acne Scars',
+    keyTakeaways: [
+      'Rolling scars are tethered downwards to subcutaneous fascia; energy devices alone cannot lift them without prior surgical subcision.',
+      'Subcision physically severs the fibrous anchor, creating a controlled pocket where fresh collagen and blood clots can elevate the scar bed.',
+      'Microneedling RF (MNRF) provides dermal coagulation that tightens the skin and resurfaces shallower boxcar borders.',
+      'Combining subcision with MNRF yields up to 60-70% visible textural improvement over 4 to 6 sessions on Indian skin phototypes.'
+    ],
+    sections: [
+      {
+        title: 'Why Do Acne Scars Form Tethered Depressions?',
+        body:
+          'During severe inflammatory cystic acne, polymorphonuclear neutrophils release destructive enzymes that melt surrounding dermal collagen. As the body heals the rupture, dense disorganized fibrous scar tissue forms. In rolling scars, these bands act like tent pegs, pulling the epidermis downward against the underlying fat layer and creating visible undulating craters that shadow under overhead lighting.'
+      },
+      {
+        title: 'What Happens During Nokor Needle Subcision?',
+        body:
+          'Subcision is a minor dermatosurgical procedure performed under local infiltration anesthesia. Dr. Sujay M introduces a specialized tri-beveled Nokor needle horizontally beneath the scar plane. Moving the needle in a fan-like motion cleanly severs the fibrotic tethers. You feel a distinct "popping" sensation as the bands release, instantly lifting the skin base. A controlled micro-hematoma forms beneath the floor, acting as a biological spacer while fibroblasts deposit new collagen.'
+      },
+      {
+        title: 'Why Microneedling Radiofrequency (MNRF) Completes the Remodeling',
+        body:
+          'While subcision frees the tethered base, Microneedling RF targets the perimeter walls and surrounding textural irregularities. Insulated micro-needles penetrate 1.5mm to 3.5mm into the reticular dermis, delivering controlled thermal pulses without overheating the superficial melanin-bearing epidermis. This makes MNRF exceptionally safe for Indian skin, eliminating the high PIH risk associated with aggressive fully-ablative CO2 lasers.'
+      }
+    ],
+    references: [
+      {
+        title: 'Journal of Cutaneous and Aesthetic Surgery — Subcision and Microneedling in Atrophic Acne Scars'
+      },
+      {
+        title: 'Dermatologic Surgery — Safety and Efficacy of Fractional Radiofrequency in Asian Skin'
+      }
+    ]
+  },
+  {
+    slug: 'dandruff-vs-scalp-psoriasis',
+    title: 'Dandruff, Scalp Psoriasis or Seborrheic Dermatitis? How a Dermatologist Tells the Difference',
+    summary:
+      'Learn how to distinguish ordinary dry scalp flakes from chronic inflammatory seborrheic dermatitis and autoimmune scalp psoriasis.',
+    category: 'Scalp & Hair Care',
+    readingTime: '5 min read',
+    author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
+    published: '2026-11-16',
+    reviewed: '2026-11-16',
+    approved: true,
+    image: '/images/imageye___-_imgi_30_Dandruff.webp',
+    imageAlt: 'Dandruff versus Scalp Psoriasis and Seborrheic Dermatitis',
+    keyTakeaways: [
+      'Simple dandruff presents as loose, white flakes without significant erythema; seborrheic dermatitis features greasy yellowish scales with inflamed scalp.',
+      'Scalp psoriasis produces thick, well-demarcated silvery-white plaques that frequently extend beyond the hairline onto the forehead or behind the ears.',
+      'Scraping or aggressively peeling psoriasis scales causes Auspitz sign (pinpoint bleeding) and can provoke disease spread (Koebner phenomenon).',
+      'Accurate dermoscopic scalp examination prevents months of failed treatment with commercial cosmetic shampoos.'
+    ],
+    sections: [
+      {
+        title: 'The Spectrum of Flaking Scalp Disorders',
+        body:
+          'Patients presenting with persistent scalp itching and white flakes often assume they have "stubborn dandruff" and cycle through dozens of OTC shampoos. However, clinical trichoscopy reveals that scalp scaling spans three distinct entities: pityriasis capitis (simple dandruff), seborrheic dermatitis (Malassezia yeast-driven inflammation), and scalp psoriasis (an immune-mediated hyperproliferative disorder).'
+      },
+      {
+        title: 'Diagnostic Hallmarks: Scale Texture and Margin Location',
+        body:
+          'In seborrheic dermatitis, scales are greasy, yellow, and adhere to erythema patches in sebum-rich areas (vertex, retroauricular folds, and eyebrows). In scalp psoriasis, keratinocyte turnover accelerates tenfold, forming dense, compact, silvery micaceous plaques with sharply defined borders. Unlike seborrheic dermatitis, psoriatic plaques often spill past the frontal hairline and may accompany nail pitting or joint discomfort.'
+      },
+      {
+        title: 'Targeted Medical Management by Dr. Sujay M',
+        body:
+          'Treatment depends strictly on the definitive diagnosis. Seborrheic dermatitis responds to medical ketoconazole, zinc pyrithione, and ciclopirox olamine combinations that regulate yeast colonization. Scalp psoriasis requires keratolytics (salicylic acid) to debulk thick plaques, followed by topical corticosteroid-calcipotriol formulations or systemic immunomodulators in recalcitrant cases. Avoid oiling an actively inflamed scalp, as heavy oils feed Malassezia yeasts.'
+      }
+    ],
+    references: [
+      {
+        title: 'British Journal of Dermatology — Differential Diagnosis of Scalp Scaling Disorders'
+      },
+      {
+        title: 'Indian Journal of Dermatology, Venereology and Leprology — Management of Scalp Psoriasis'
+      }
+    ]
+  },
+  {
+    slug: 'pre-bridal-dermatology-timeline-bengaluru',
+    title: 'Pre-Bridal Dermatology Timelines in Bengaluru: 3-Month, 1-Month & 1-Week Clinical Prep',
+    summary:
+      'When to schedule peels, laser toning, and acne scar treatments before your wedding festivities without risking redness, peeling, or downtime.',
+    category: 'Aesthetic Dermatology',
+    readingTime: '6 min read',
+    author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
+    published: '2026-11-16',
+    reviewed: '2026-11-16',
+    approved: true,
+    image: '/images/bridal_beauty_radiance.jpg',
+    imageAlt: 'Pre-Bridal Clinical Dermatology Timeline in Bengaluru',
+    keyTakeaways: [
+      'Initiate intensive collagen remodeling (MNRF, subcision, deeper peels) 3 to 6 months before the wedding to allow complete healing.',
+      'Laser hair reduction and Q-switched laser toning should be completed 3 to 4 weeks prior to festivities.',
+      'Never attempt unfamiliar active chemical peels or experimental salon facials within 10 days of wedding ceremonies.',
+      'The final 7-day window should focus exclusively on barrier hydration: medical HydraFacial, sheet masks, and gentle ceramide protection.'
+    ],
+    sections: [
+      {
+        title: 'Month 3 to 6: Structural Correction & Scar Remodeling',
+        body:
+          'Brides and grooms hoping to improve pitted acne scars, deep hyperpigmentation, or hair density must start early. Collagen synthesis triggered by microneedling radiofrequency (MNRF) or subcision takes 60 to 90 days to mature fully. Similarly, full-body or facial laser hair reduction requires multiple sessions spaced four weeks apart to disable follicles across consecutive growth phases.'
+      },
+      {
+        title: 'Month 1: Pigment Stabilization & Pore Refinement',
+        body:
+          'At the four-week mark, aggressive procedures are discontinued to eliminate any risk of unexpected purpura or prolonged erythema. Gentle low-fluence Q-switched laser toning sessions shatter superficial melanin to brighten the complexion, while mild lactic or arginine peels smooth skin texture and improve makeup glide.'
+      },
+      {
+        title: 'The Final 7 Days: Pure Hydration with Zero Downtime',
+        body:
+          'During the final week before Sangeet or Muhurtham ceremonies, skin safety is paramount. Do not introduce new serums, retinoids, or harsh scrubs. A medical-grade HydraFacial performed 4 to 5 days before functions gently unclogs pores and infuses plumping hyaluronic acid, ensuring bridal makeup adheres seamlessly without flaking.'
+      }
+    ],
+    references: [
+      {
+        title: 'Journal of Aesthetic Dermatology — Pre-Event Facial Rejuvenation Planning'
+      }
+    ]
+  },
+  {
     slug: 'chemical-peels-for-pigmentation',
     title: 'Chemical Peels for Pigmentation: Superficial vs. Medium Depth for Indian Phototypes',
     summary:
@@ -275,9 +421,11 @@ export const articles: Article[] = [
     category: 'Skin Renewal',
     readingTime: '6 min read',
     author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
-    published: '2026-11-12',
-    reviewed: '2026-11-12',
+    published: '2026-11-16',
+    reviewed: '2026-11-16',
     approved:false, // Editorial draft for clinical test validation & approval tracking
+    image: '/images/medical_peel_glow.jpg',
+    imageAlt: 'Chemical Peels for Melasma and Post-Acne Pigmentation',
     keyTakeaways: [
       'Superficial peels exfoliate the epidermis safely, whereas deep peels carry significant risk of scarring in Indian skin.',
       'Glycolic acid requires exact chemical neutralization with sodium bicarbonate; salicylic acid is self-neutralizing.',
