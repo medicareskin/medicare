@@ -27,87 +27,87 @@ interface HeroSlide {
 
 const HERO_SLIDES: HeroSlide[] = [
   {
-    id: 'radiant-flagship',
-    image: '/images/bridal_beauty_radiance.jpg',
-    alt: 'Dermatologist-Led Skin, Hair and Laser Care - Medicare Skin and Cosmetic Clinic South Bengaluru',
-    titleLead: 'Dermatologist-Led Care,',
-    titleAccent: 'South Bengaluru.',
-    titleNavy: 'Dermatologist-Led Care,',
-    titleBerry: 'South Bengaluru.',
-    objectPosition: 'center 26%',
+    id: 'clinical-skin-health',
+    image: '/images/hero_flagship_radiant_model.jpg',
+    alt: 'Advanced Clinical Skin Health and Evidence-Based Dermatology - Medicare Skin',
+    titleLead: 'Radiant Skin Health,',
+    titleAccent: 'Evidence-Based Care.',
+    titleNavy: 'Radiant Skin Health,',
+    titleBerry: 'Evidence-Based Care.',
+    objectPosition: 'right center',
     highlights: [
-      '18+ Years Dedicated Clinical Experience — Dr. (Mrs.) Sujay M (MBBS, DDVL)',
-      'Personalised Care for Acne, Melasma, Scars, Hair Loss & Laser',
-      'Convenient South Bengaluru Practice near Yelachenahalli Metro'
+      'Comprehensive Clinical Assessment for Melasma, Pigmentation & Tone',
+      'Personalised Medical Protocols Calibrated for South Indian Skin',
+      'Advanced Medical Therapies Focused on Long-Term Cellular Health'
     ],
     btnPrimary: {
-      text: 'Book Doctor Consultation',
-      href: '/book-appointment/'
+      text: 'Explore Skin Care Plans',
+      href: '/treatments?category=Skin'
     },
-    whatsappText: 'Hello Medicare Skin Clinic, I would like to book a dermatologist consultation with Dr. Sujay M.',
-    mobileHeadline: 'Dermatologist-Led Care · South Bengaluru',
-    mobileSub: 'Dr. (Mrs.) Sujay M, MBBS, DDVL · 18+ Yrs Exp · Near Yelachenahalli Metro',
-    tag: '✦ DERMATOLOGIST-LED CLINICAL EXCELLENCE · SOUTH BENGALURU'
+    whatsappText: 'Hello Medicare Skin Clinic, I would like to enquire about Clinical Skin Treatments.',
+    mobileHeadline: 'Radiant Skin Health & Care',
+    mobileSub: 'Evidence-Based Dermatology for Pigmentation, Melasma & Texture',
+    tag: '✦ ADVANCED MEDICAL DERMATOLOGY'
   },
   {
     id: 'hair-vitality',
-    image: '/images/radiant_hair_smile_woman.png',
+    image: '/images/hero_happy_patient_woman.jpg',
     alt: 'Clinical Hair Loss Assessment and Growth Factor Therapy - Medicare Skin Clinic',
     titleLead: 'Lustrous Hair,',
     titleAccent: 'Scalp Vitality.',
     titleNavy: 'Lustrous Hair,',
     titleBerry: 'Scalp Vitality.',
-    objectPosition: 'center 20%',
+    objectPosition: 'right center',
     highlights: [
-      'Clinical Trichoscopy & Microscopic Follicle Assessment',
-      'Autologous Growth Factor Therapy & Targeted Hair Regrowth',
+      'Digital Trichoscopy & Microscopic Follicle Evaluation',
+      'Autologous Growth Factor Therapy & Targeted Regrowth Activation',
       'Root-Cause Diagnosis for Hormonal & Nutritional Thinning'
     ],
     btnPrimary: {
-      text: 'Explore Hair Loss Care',
+      text: 'Explore Hair Care Plans',
       href: '/treatments/hair/hair-loss-treatment/'
     },
-    whatsappText: 'Hello Medicare Skin Clinic, I would like to consult Dr. Sujay M for Hair Fall and Thinning.',
+    whatsappText: 'Hello Medicare Skin Clinic, I would like to consult for Hair Fall and Scalp Care.',
     mobileHeadline: 'Lustrous Hair & Scalp Vitality',
-    mobileSub: 'Dermatologist Trichoscopy & Growth Factor Therapy',
-    tag: 'GROWTH FACTOR THERAPY & PRP'
+    mobileSub: 'Clinical Trichoscopy & Growth Factor Therapy',
+    tag: '✦ HAIR RESTORATION & GFT'
   },
   {
     id: 'clear-complexion-acne',
     image: '/images/hero_clear_skin_radiance.jpg',
     alt: 'Clear Complexion & Acne Scar Resurfacing - Medicare Clinic Yelachenahalli',
     titleLead: 'Clear Complexion,',
-    titleAccent: 'Confident You.',
+    titleAccent: 'Pure Confidence.',
     titleNavy: 'Clear Complexion,',
-    titleBerry: 'Confident You.',
-    objectPosition: '78% center',
+    titleBerry: 'Pure Confidence.',
+    objectPosition: 'right center',
     highlights: [
-      'Targeted Root-Cause Acne & Breakout Control',
-      'Subcision & MNRF Deep Scar Remodeling',
-      'Melanin-Safe Protocols Formulated for Indian Skin'
+      'Targeted Control of Active Pimples, Cystic Breakouts & Congestion',
+      'Subcision & MNRF Fractional Radiofrequency Scar Remodeling',
+      'Post-Acne Erythema & Deep Dark Mark Fading Protocols'
     ],
     btnPrimary: {
       text: 'Explore Acne & Scars',
       href: '/treatments/skin/acne-treatment/'
     },
-    whatsappText: 'Hello Medicare Skin Clinic, I would like to consult Dr. Sujay M for Acne and Scars.',
-    mobileHeadline: 'Clear Complexion, Confident You',
-    mobileSub: 'Targeted Root-Cause Acne & Scar Remodeling',
-    tag: 'ACNE & SCAR REMODELING'
+    whatsappText: 'Hello Medicare Skin Clinic, I would like to consult for Acne and Scar Resurfacing.',
+    mobileHeadline: 'Clear Complexion, Pure Confidence',
+    mobileSub: 'Targeted Active Acne Control & Scar Remodeling',
+    tag: '✦ ACNE & SCAR RESURFACING'
   },
   {
     id: 'glass-skin-hydrafacial',
     image: '/images/glass_skin_radiance.jpg',
     alt: 'Glass Skin Radiance and HydraFacial Infusion - Medicare Clinic',
     titleLead: 'Glass Skin Radiance,',
-    titleAccent: 'Pure Clarity.',
+    titleAccent: 'Luminous Glow.',
     titleNavy: 'Glass Skin Radiance,',
-    titleBerry: 'Pure Clarity.',
-    objectPosition: '72% center',
+    titleBerry: 'Luminous Glow.',
+    objectPosition: 'right center',
     highlights: [
-      'Medical-Grade 4-in-1 HydraFacial Vortex Infusion',
-      'Deep Pore Clarifying, Blackhead Extraction & Intense Hydration',
-      'Instant Luminous Glow with Zero Social Downtime'
+      'Medical-Grade 4-in-1 Vortex Vacuum Extraction & Infusion',
+      'Deep Pore Clarifying, Blackhead Removal & Intense Hydration',
+      'Instant Dewy Glow with Hyaluronic Acid & Zero Social Downtime'
     ],
     btnPrimary: {
       text: 'Explore HydraFacial',
@@ -115,31 +115,31 @@ const HERO_SLIDES: HeroSlide[] = [
     },
     whatsappText: 'Hello Medicare Skin Clinic, I would like to book a HydraFacial session.',
     mobileHeadline: 'Glass Skin Radiance & Glow',
-    mobileSub: 'Medical-Grade 4-in-1 HydraFacial Vortex Infusion',
-    tag: 'HYDRAFACIAL & ACTIVE GLOW'
+    mobileSub: 'Medical-Grade 4-in-1 Vortex Vacuum Infusion',
+    tag: '✦ HYDRAFACIAL & ACTIVE GLOW'
   },
   {
     id: 'clinical-laser-perfection',
     image: '/images/hero_laser_woman.jpg',
     alt: 'US-FDA Laser Reduction and Skin Toning - Medicare Clinic',
-    titleLead: 'Clinical Laser,',
-    titleAccent: 'Long-Term Smoothness.',
-    titleNavy: 'Clinical Laser,',
-    titleBerry: 'Long-Term Smoothness.',
-    objectPosition: '65% center',
+    titleLead: 'Clinical Laser Care,',
+    titleAccent: 'Smooth & Refined.',
+    titleNavy: 'Clinical Laser Care,',
+    titleBerry: 'Smooth & Refined.',
+    objectPosition: 'right center',
     highlights: [
-      'US-FDA Cleared Triple-Wavelength Laser Technology',
-      'Targeted Follicle Assessment & Deep Pigment Care',
-      'Dermatologist-Calibrated Parameters for Indian Skin (Fitzpatrick IV–VI)'
+      'US-FDA Cleared Triple-Wavelength Laser Reduction Technology',
+      'Q-Switched Laser Toning for Stubborn Tanning & Pigmentation',
+      'Calibrated Fluence & Pulse Width Specifically for Indian Skin'
     ],
     btnPrimary: {
       text: 'Discover Laser Treatments',
       href: '/treatments/laser/laser-hair-reduction/'
     },
-    whatsappText: 'Hello Medicare Skin Clinic, I would like to enquire about US-FDA Cleared Laser Reduction.',
-    mobileHeadline: 'US-FDA Cleared Laser Hair Reduction',
-    mobileSub: 'Dermatologist-Led Long-Term Hair Reduction',
-    tag: 'US-FDA CLEARED LASER DERMATOLOGY'
+    whatsappText: 'Hello Medicare Skin Clinic, I would like to enquire about US-FDA Cleared Laser Treatments.',
+    mobileHeadline: 'US-FDA Cleared Laser Dermatology',
+    mobileSub: 'Triple-Wavelength Laser Reduction & Toning',
+    tag: '✦ US-FDA CLEARED LASER DERMATOLOGY'
   }
 ];
 
@@ -254,19 +254,39 @@ export function BigHeroSlider() {
 
   return (
     <section
-      className="hero-reference-slider-section hero-classic-banner hero-architectural-edition"
-      aria-label="Medicare Skin & Cosmetic Clinic - Dermatologist-Led Care South Bengaluru"
+      className="hero-reference-slider-section hero-classic-banner hero-fullwidth-edition"
+      aria-label="Medicare Skin & Cosmetic Clinic - Clinical Skin and Hair Therapies"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* =========================================================================
-          DESKTOP VIEW: BESPOKE EDITORIAL ARCHITECTURAL CLINICAL HERO
-          Inspired by luxury editorial aesthetics (Architectural Arch + Editorial Serif)
+          DESKTOP VIEW: FULL-WIDTH LUXURY CLINICAL HERO BANNER
+          Widescreen edge-to-edge imagery with high-fashion editorial typography
           ========================================================================= */}
       <div className="hero-desktop-view-wrap">
-        <div className="container hero-architectural-container">
-          {/* Left Column: Editorial Typography, Clinical Highlights & Trust Badges */}
-          <div className="hero-editorial-left-col">
+        {/* Full-Width Background Multi-Image Layer with Smooth Cross-Fade */}
+        <div className="hero-fullscreen-bg-layer" aria-hidden="true">
+          {HERO_SLIDES.map((slide, idx) => (
+            <div
+              key={`desktop-bg-${slide.id}`}
+              className={`hero-fullscreen-slide ${idx === activeIndex ? 'active' : ''}`}
+            >
+              <img
+                src={slide.image}
+                alt={slide.alt}
+                className="hero-fullscreen-img"
+                style={{ objectPosition: slide.objectPosition || 'right center' }}
+                loading={idx === 0 ? 'eager' : 'lazy'}
+              />
+            </div>
+          ))}
+          {/* Subtle Warm Luxury Gradient: Keeps text crisp and legible on the left while photo shines on the right */}
+          <div className="hero-fullscreen-gradient-overlay" />
+        </div>
+
+        {/* Content Container: Aligned with header logo, floating luxury text */}
+        <div className="container hero-fullscreen-container">
+          <div className="hero-desktop-text-col">
             <div key={currentSlide.id} className="hero-editorial-animated-content">
               {/* Category Eyebrow Pill */}
               <div className="hero-editorial-eyebrow">
@@ -274,7 +294,7 @@ export function BigHeroSlider() {
                 <span>{currentSlide.tag}</span>
               </div>
 
-              {/* Masterpiece Editorial Headline */}
+              {/* Masterpiece Editorial Headline with Shimmer & Italic Accent */}
               <h1 className="hero-editorial-title">
                 <span className="title-lead-line">{currentSlide.titleLead}</span>
                 <span className="title-accent-line"><em>{currentSlide.titleAccent}</em></span>
@@ -311,27 +331,6 @@ export function BigHeroSlider() {
                   <WhatsAppIcon size={18} color="#25D366" />
                   <span>WhatsApp Enquiry</span>
                 </a>
-              </div>
-
-              {/* Doctor Credibility & Trust Strip */}
-              <div className="hero-editorial-trust-strip">
-                <div className="trust-strip-item">
-                  <span className="trust-star">★</span>
-                  <span className="trust-value">4.9</span>
-                  <span className="trust-sub">South Bengaluru</span>
-                </div>
-                <span className="trust-strip-divider" aria-hidden="true" />
-                <div className="trust-strip-item">
-                  <span className="trust-badge">✓</span>
-                  <span className="trust-value">18+ Yrs</span>
-                  <span className="trust-sub">Clinical Experience</span>
-                </div>
-                <span className="trust-strip-divider" aria-hidden="true" />
-                <div className="trust-strip-item">
-                  <span className="trust-badge-symbol">🏛</span>
-                  <span className="trust-value">KMC</span>
-                  <span className="trust-sub">Registered Specialist</span>
-                </div>
               </div>
             </div>
 
@@ -377,74 +376,22 @@ export function BigHeroSlider() {
               </span>
             </div>
           </div>
-
-          {/* Right Column: Architectural Archway Portal with Floating Credentials */}
-          <div className="hero-architectural-right-col">
-            <div className="hero-arch-stage">
-              {/* Ambient Decorative Architectural Rings & Warm Halo */}
-              <div className="arch-ambient-aura" aria-hidden="true" />
-              <div className="arch-decorative-ring" aria-hidden="true" />
-
-              {/* The Architectural Archway Portal */}
-              <div className="hero-arch-viewport">
-                {HERO_SLIDES.map((slide, idx) => (
-                  <div
-                    key={`arch-img-${slide.id}`}
-                    className={`arch-slide-layer ${idx === activeIndex ? 'active' : ''}`}
-                  >
-                    <img
-                      src={slide.image}
-                      alt={slide.alt}
-                      className="arch-slide-img"
-                      style={{ objectPosition: slide.objectPosition || 'center center' }}
-                      loading={idx === 0 ? 'eager' : 'lazy'}
-                    />
-                  </div>
-                ))}
-
-                {/* Soft Bottom-Edge Blend */}
-                <div className="arch-bottom-fade" aria-hidden="true" />
-              </div>
-
-              {/* Floating Trust Badge: Google Star Rating */}
-              <div className="arch-floating-pill arch-pill-top-right">
-                <span className="pill-star">★</span>
-                <span className="pill-bold">4.9</span>
-                <span className="pill-light">South Bengaluru</span>
-              </div>
-
-              {/* Floating Trust Badge: Doctor Identification */}
-              <div className="arch-floating-pill arch-pill-bottom-left">
-                <div className="pill-avatar-icon">👩‍⚕️</div>
-                <div className="pill-doc-info">
-                  <span className="pill-doc-name">Dr. Sujay M · MBBS, DDVL</span>
-                  <span className="pill-doc-meta">Senior Dermatologist · 18+ Yrs Exp</span>
-                </div>
-              </div>
-
-              {/* Floating Trust Badge: 100% Doctor-Led */}
-              <div className="arch-floating-pill arch-pill-bottom-right">
-                <span className="pill-shield-icon">🛡️</span>
-                <span className="pill-shield-text">100% Doctor-Led</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
       {/* =========================================================================
-          MOBILE VIEW: SYNCHRONIZED APP EXPERIENCE WITH ELEVATED ARCH PREVIEW
+          MOBILE VIEW: SYNCHRONIZED APP EXPERIENCE
           ========================================================================= */}
       <div className="hero-mobile-view-wrap">
         <div className="hero-mobile-container">
-          {/* Mobile Hero Feature Slide: Stacked Layout with Arched Top */}
+          {/* Mobile Hero Feature Slide: Stacked Layout */}
           <div
             className="hero-app-showcase-slide"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            {/* Top Clinical Image Viewport with Arched Aesthetic */}
+            {/* Top Clinical Image Viewport */}
             <div className="hero-app-image-viewport">
               {HERO_SLIDES.map((slide, idx) => (
                 <div
@@ -460,11 +407,6 @@ export function BigHeroSlider() {
                   />
                 </div>
               ))}
-
-              {/* Floating Star Pill on Mobile Image */}
-              <div className="mobile-arch-floating-rating">
-                <span>★ 4.9 · South Bengaluru</span>
-              </div>
             </div>
 
             {/* Bottom Caption Card (Synchronized with active slide) */}
@@ -559,12 +501,12 @@ export function BigHeroSlider() {
               href="/book-appointment/"
               className="hero-app-btn-consultation"
             >
-              <span>Book Doctor Consultation</span>
-              <span className="btn-icon-sub">Direct Dr. Sujay M</span>
+              <span>Book Consultation</span>
+              <span className="btn-icon-sub">Personal Care Plan</span>
             </Link>
 
             <a
-              href={waLink('Hello Medicare Skin Clinic, I would like to book a consultation with Dr. Sujay M.')}
+              href={waLink('Hello Medicare Skin Clinic, I would like to book a consultation.')}
               target="_blank"
               rel="noopener noreferrer"
               className="hero-app-btn-whatsapp"
