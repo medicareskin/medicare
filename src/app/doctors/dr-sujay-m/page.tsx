@@ -4,6 +4,7 @@ import { site, waLink, mapUrl, mapEmbedUrl } from '@/lib/site';
 import { meta, physicianEntity, jsonLd } from '@/lib/metadata';
 import { CTA } from '@/components/Elements';
 import { ClinicalTrustMetrics } from '@/components/ClinicalTrustMetrics';
+import { DoctorConsultingCard } from '@/components/DoctorConsultingCard';
 
 export const metadata: Metadata = meta(
   'Dr. (Mrs.) Sujay M – Consultant Dermatologist in South Bengaluru',
@@ -51,70 +52,71 @@ export default function DoctorPage() {
         }}
       />
 
-      {/* Hero Section */}
-      <section className="section soft">
-        <div className="container two-cols align-center" style={{ gap: '48px' }}>
-          <div className="authentic-photo-slot portrait">
+      {/* Exact UI/UX Doctor Hero Card matching reference design */}
+      <DoctorConsultingCard asH1={true} showMiniNav={true} />
+
+      {/* Relocated Clinical Trust & Performance Metrics Band */}
+      <ClinicalTrustMetrics />
+
+      {/* Doctor Detailed Biography & Verified Credentials */}
+      <section className="container section" id="credentials">
+        <div className="two-cols align-center" style={{ gap: '48px' }}>
+          <div className="authentic-photo-slot portrait" style={{ maxWidth: '420px', margin: '0 auto' }}>
             <img
-              src="/images/dr_sujaya.jpeg"
-              alt="Dr. (Mrs.) Sujay M MBBS DDVL Consultant Dermatologist in South Bengaluru"
+              src="/images/dr_sujay_m_official.jpg"
+              alt="Dr. (Mrs.) Sujay M MBBS DDVL in clinic at Medicare Skin South Bengaluru"
               className="authentic-photo-img"
+              style={{ borderRadius: '20px', width: '100%', height: 'auto', objectFit: 'cover' }}
             />
             <div className="authentic-photo-caption">
-              <span className="caption-badge">Direct Doctor Care</span>
-              <span className="caption-title">Dr. (Mrs.) Sujay M · 18+ Years Dedicated Clinical Practice</span>
+              <span className="caption-badge">Verified Registration</span>
+              <span className="caption-title">Karnataka Medical Council Registered &bull; 18+ Years</span>
             </div>
           </div>
 
           <div>
-            <span className="eyebrow-pill">YOUR CONSULTING DERMATOLOGIST</span>
-            <h1 style={{ fontSize: 'clamp(2.2rem, 3.5vw, 3rem)', color: 'var(--purple)', margin: '12px 0 6px' }}>
-              Dr. (Mrs.) Sujay M
-            </h1>
-            <p style={{ fontWeight: 750, color: 'var(--magenta)', fontSize: '1.25rem', marginBottom: '20px' }}>
-              MBBS, DDVL · Consultant Dermatologist &amp; Dermatosurgeon
+            <span className="eyebrow-pill">CLINICAL REGISTRATION &amp; BACKGROUND</span>
+            <h2 style={{ fontSize: '2.1rem', margin: '12px 0 16px' }}>
+              Academic Training &amp; Dermatology Background
+            </h2>
+            <p style={{ lineHeight: 1.65, color: 'var(--ink)', marginBottom: '14px' }}>
+              Dr. (Mrs.) Sujay M completed her undergraduate medical degree (MBBS) followed by postgraduate specialization in Dermatology, Venereology, and Leprosy (DDVL) from prestigious government medical institutions.
             </p>
-            <p style={{ fontSize: '1.05rem', lineHeight: 1.6, color: 'var(--ink)', marginBottom: '14px' }}>
-              With over 18 years of clinical experience across South Bengaluru, Dr. Sujay M specializes in root-cause acne management, scar remodeling, resistant pigmentation, and female/male hair thinning.
-            </p>
-            <p style={{ fontSize: '0.98rem', lineHeight: 1.6, color: '#4A3A32', marginBottom: '22px' }}>
-              At Medicare Skin Clinic, you are never handed off to non-medical staff for diagnosis. Dr. Sujay personally reviews your medical history, hormonal panels, and lifestyle factors to craft an ethical, evidence-based care plan.
+            <p style={{ lineHeight: 1.65, color: '#4A3A32', marginBottom: '22px' }}>
+              Over the last 18+ years, she has served thousands of patients across South Bengaluru, treating complex chronic dermatoses, difficult hormonal acne, recalcitrant melasma, and pattern hair loss. Her clinical ethos centers on honest patient counseling, avoiding exaggerated cosmetic claims, and prescribing root-cause therapies calibrated for Indian skin types.
             </p>
 
             <div className="credentials-pills-row" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '26px' }}>
               <span className="pill-badge" style={{ background: '#FFFFFF', border: '1px solid var(--line)', padding: '6px 14px', borderRadius: '9999px', fontSize: '0.82rem', fontWeight: 700, color: 'var(--purple)' }}>
-                • MBBS, DDVL Qualified
+                • MBBS Qualified Physician
               </span>
               <span className="pill-badge" style={{ background: '#FFFFFF', border: '1px solid var(--line)', padding: '6px 14px', borderRadius: '9999px', fontSize: '0.82rem', fontWeight: 700, color: 'var(--purple)' }}>
-                • 18+ Years Clinical Practice
+                • DDVL Post Graduate Specialist
+              </span>
+              <span className="pill-badge" style={{ background: '#FFFFFF', border: '1px solid var(--line)', padding: '6px 14px', borderRadius: '9999px', fontSize: '0.82rem', fontWeight: 700, color: 'var(--purple)' }}>
+                • 18+ Years Dedicated Clinical Practice
               </span>
               <span className="pill-badge" style={{ background: '#FFFFFF', border: '1px solid var(--line)', padding: '6px 14px', borderRadius: '9999px', fontSize: '0.82rem', fontWeight: 700, color: 'var(--purple)' }}>
                 • Karnataka Medical Council Registered
-              </span>
-              <span className="pill-badge" style={{ background: '#FFFFFF', border: '1px solid var(--line)', padding: '6px 14px', borderRadius: '9999px', fontSize: '0.82rem', fontWeight: 700, color: 'var(--purple)' }}>
-                • Direct In-Person Diagnosis
               </span>
             </div>
 
             <div className="buttons">
               <Link href="/book-appointment/" className="btn primary">
-                Book Consultation With Dr. Sujay →
+                Schedule Consultation With Dr. Sujay →
               </Link>
               <a
-                href={waLink('Hello Dr. Sujay, I would like to schedule a dermatology consultation at Medicare Skin Clinic.')}
+                href={waLink('Hello Dr. Sujay M, I would like to schedule a consultation at Medicare Skin Clinic.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn outline"
               >
-                Chat on WhatsApp (+91 92428 55707) →
+                Inquire on WhatsApp →
               </a>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Relocated Clinical Trust & Performance Metrics Band */}
-      <ClinicalTrustMetrics />
 
       {/* Clinical Philosophy & Patient Commitment */}
       <section className="container section">

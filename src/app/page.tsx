@@ -13,6 +13,7 @@ import { TransformationReveal } from '@/components/TransformationReveal';
 import { PatientExperiences } from '@/components/PatientExperiences';
 import { InteractiveConcernNavigator } from '@/components/InteractiveConcernNavigator';
 import { TreatmentCostPlanner } from '@/components/TreatmentCostPlanner';
+import { DoctorConsultingCard } from '@/components/DoctorConsultingCard';
 import { LocationSection } from '@/components/LocationSection';
 import { FAQSection } from '@/components/FAQSection';
 
@@ -41,58 +42,9 @@ export default function Home() {
       <HeroFeatureSlides />
 
       {/* 3rd Slide: YOUR CONSULTING DERMATOLOGIST Dr. (Mrs.) Sujay M */}
-      <section className="doctor-feature-section" id="consulting-dermatologist">
-        <div className="container">
-          <div className="doctor-feature-card">
-            <div className="authentic-photo-slot portrait">
-              <img
-                src="/images/dr_sujaya.jpeg"
-                alt="Dr. (Mrs.) Sujay M MBBS DDVL Consultant Dermatologist in South Bengaluru"
-                className="authentic-photo-img"
-              />
-              <div className="authentic-photo-caption">
-                <span className="caption-badge">Direct Doctor Care</span>
-                <span className="caption-title">Dr. (Mrs.) Sujay M · 18+ Years Dedicated Clinical Practice</span>
-              </div>
-            </div>
-            <div className="doctor-feature-content">
-              <span className="eyebrow-pill">YOUR CONSULTING DERMATOLOGIST</span>
-              <h2 className="doctor-name-heading">Dr. (Mrs.) Sujay M</h2>
-              <p className="doctor-degrees-text">
-                MBBS, DDVL · Consultant Dermatologist &amp; Dermatosurgeon
-              </p>
-              <p className="doctor-lead-desc">
-                With over 18 years of clinical experience across South Bengaluru, Dr. Sujay M specializes in root-cause acne management, scar remodeling, resistant pigmentation, and female/male hair thinning.
-              </p>
-              <p className="doctor-body-desc">
-                At Medicare Skin Clinic, you are never handed off to non-medical staff for diagnosis. Dr. Sujay personally reviews your medical history, hormonal panels, and lifestyle factors to craft an ethical, evidence-based care plan.
-              </p>
-              <div className="doctor-trust-points">
-                <div className="trust-point-item">
-                  <span className="point-bullet">•</span>
-                  <span><strong>Direct Diagnosis:</strong> Every consultation and follow-up is conducted directly by Dr. Sujay M.</span>
-                </div>
-                <div className="trust-point-item">
-                  <span className="point-bullet">•</span>
-                  <span><strong>South Bengaluru Practice:</strong> 18+ years treating complex Indian skin and hair phototypes.</span>
-                </div>
-                <div className="trust-point-item">
-                  <span className="point-bullet">•</span>
-                  <span><strong>Ethical Formulations:</strong> Root-cause medical dermatological therapies, zero unverified salon fads.</span>
-                </div>
-              </div>
-              <div className="buttons space-top">
-                <Link className="btn primary" href="/doctors/dr-sujay-m/">
-                  Read Doctor Biography &amp; Credentials →
-                </Link>
-                <Link className="btn outline" href="/book-appointment/">
-                  Book Consultation With Dr. Sujay →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div id="consulting-dermatologist">
+        <DoctorConsultingCard asH1={false} showMiniNav={false} />
+      </div>
 
       {/* Consultation Booking Form - Top of Health & Skin Conditions */}
       <section className="homepage-booking-section" id="book-consultation">
