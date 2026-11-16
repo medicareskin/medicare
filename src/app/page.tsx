@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { site, mapUrl, mapEmbedUrl, waLink } from '@/lib/site';
-import { clinicEntity, jsonLd, meta } from '@/lib/metadata';
+import { clinicEntity, physicianEntity, jsonLd, meta } from '@/lib/metadata';
 import { categories, treatments, treatmentPath } from '@/lib/treatments';
 import { CTA, SectionHeading } from '@/components/Elements';
 import { BigHeroSlider } from '@/components/BigHeroSlider';
@@ -56,11 +56,81 @@ export default function Home() {
     ['acne-treatment', 'acne-scar-treatment', 'melasma-treatment', 'pigmentation-treatment', 'hair-loss-treatment', 'chemical-peels'].includes(x.slug)
   );
 
+  const homepageSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      clinicEntity,
+      physicianEntity,
+      {
+        '@type': 'WebSite',
+        '@id': `${site.url}/#website`,
+        url: site.url,
+        name: site.name,
+        description: 'Dermatologist-led skin, hair and aesthetic consultations in South Bengaluru near Yelachenahalli Metro Station.',
+        publisher: { '@id': `${site.url}/#clinic` }
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${site.url}/#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Can Q-Switched laser safely treat melasma and dark spots on Indian skin?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, when performed with low-fluence Nd:YAG protocols. Indian skin tones (Fitzpatrick IV–VI) have higher melanin content and can experience rebound darkening if treated with high heat. Dr. Sujay M utilizes calibrated sub-thermolytic energy parameters to gently shatter melanin clusters without heat buildup, backed by strict photoprotection protocols.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What is HydraFacial and how does it differ from a regular beauty parlour facial?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'HydraFacial is a medical device treatment combining vortex vacuum suction, gentle chemical exfoliation, painless extraction, and concentrated antioxidant-peptide infusion. Unlike salon facials that involve manual steaming and physical pinching that can cause micro-tears or broken capillaries, HydraFacial uses calibrated fluidics to purify pores and restore dewy hydration with zero downtime.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Is Laser Hair Reduction permanent and safe for Indian skin tones?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Laser hair reduction achieves significant long-term reduction (typically 70% to 90% over a recommended series of 6 to 8 sessions). Our clinic utilizes US-FDA cleared Diode Laser technology operating at 808nm with integrated sapphire contact cooling, specifically calibrated to protect Indian skin phototypes (Fitzpatrick III to V) while targeting melanin in actively growing follicles.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the expected recovery time after Acne Scar Subcision?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Subcision combined with fractional microneedling RF may cause mild swelling or pinpoint redness for 24-48 hours. Most patients resume regular work and daily activities the very next day with broad-spectrum sunscreen and doctor-prescribed barrier recovery creams.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How does Growth Factor Therapy (GFT) treat severe hair fall?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GFT concentrates natural autologous growth factors from your own blood plasma and micro-infuses them into dormant hair follicles, halting shedding and triggering thick hair shaft regrowth within 3 to 4 clinical sessions.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Do I need a prior appointment before visiting Medicare Skin Clinic?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'While walk-ins are accommodated based on doctor availability, prior booking via our website or WhatsApp (+91 92428 55707) is strongly recommended to eliminate waiting times and guarantee your dedicated consultation slot with Dr. Sujay M.'
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: jsonLd(clinicEntity) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(homepageSchema) }}
       />
 
       {/* 1st Section: Editorial Hero Slider */}

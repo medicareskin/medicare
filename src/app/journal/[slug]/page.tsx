@@ -31,32 +31,85 @@ export default async function ArticlePage({
     notFound();
   }
 
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'MedicalWebPage',
-    headline: article.title,
-    description: article.summary,
-    url: `${site.url}/journal/${slug}/`,
-    datePublished: article.published || '2026-11-16',
-    dateModified: article.reviewed || '2026-11-16',
-    author: {
-      '@type': 'Person',
-      name: article.author || 'Dr. (Mrs.) Sujay M',
-      jobTitle: 'Consultant Dermatologist',
-      worksFor: {
+  const structuredGraph: Record<string, unknown>[] = [
+    {
+      '@type': 'MedicalWebPage',
+      '@id': `${site.url}/journal/${slug}/#webpage`,
+      headline: article.title,
+      description: article.summary,
+      url: `${site.url}/journal/${slug}/`,
+      datePublished: article.published || '2026-11-16',
+      dateModified: article.reviewed || '2026-11-16',
+      inLanguage: 'en-IN',
+      author: {
+        '@type': 'Person',
+        name: article.author || 'Dr. (Mrs.) Sujay M',
+        jobTitle: 'Consultant Dermatologist & Dermatosurgeon',
+        worksFor: {
+          '@type': 'MedicalClinic',
+          name: site.name
+        }
+      },
+      reviewedBy: {
+        '@type': 'Physician',
+        name: 'Dr. (Mrs.) Sujay M',
+        medicalSpecialty: 'Dermatology',
+        hasCredential: [
+          { '@type': 'EducationalOccupationalCredential', name: 'MBBS' },
+          { '@type': 'EducationalOccupationalCredential', name: 'DDVL' }
+        ]
+      },
+      publisher: {
         '@type': 'MedicalClinic',
-        name: site.name
+        name: site.name,
+        url: site.url,
+        logo: `${site.url}/images/imageye___-_imgi_1_cropped-Medicare-Logo.webp`
       }
     },
-    reviewedBy: {
-      '@type': 'Physician',
-      name: 'Dr. (Mrs.) Sujay M',
-      medicalSpecialty: 'Dermatology',
-      hasCredential: [
-        { '@type': 'EducationalOccupationalCredential', name: 'MBBS' },
-        { '@type': 'EducationalOccupationalCredential', name: 'DDVL' }
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${site.url}/journal/${slug}/#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: `${site.url}/`
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Clinical Journal',
+          item: `${site.url}/journal/`
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: article.title,
+          item: `${site.url}/journal/${slug}/`
+        }
       ]
     }
+  ];
+
+  if (article.faqs && article.faqs.length > 0) {
+    structuredGraph.push({
+      '@type': 'FAQPage',
+      '@id': `${site.url}/journal/${slug}/#faq`,
+      mainEntity: article.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    });
+  }
+
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': structuredGraph
   };
 
   return (
@@ -158,7 +211,7 @@ export default async function ArticlePage({
         )}
       </header>
 
-      {/* Key Takeaways Box */}
+      {/* Key Takeaways Box (AEO & LLM Highlight Box) */}
       {article.keyTakeaways && article.keyTakeaways.length > 0 && (
         <section
           style={{
@@ -169,8 +222,8 @@ export default async function ArticlePage({
             borderRadius: '0 12px 12px 0'
           }}
         >
-          <h2 style={{ fontSize: '1.1rem', marginTop: 0, marginBottom: '12px', color: 'var(--brand-primary, #153F39)' }}>
-            Clinical Key Takeaways
+          <h2 style={{ fontSize: '1.15rem', marginTop: 0, marginBottom: '12px', color: 'var(--brand-primary, #153F39)' }}>
+            Clinical Key Takeaways (AEO Summary)
           </h2>
           <ul style={{ margin: 0, paddingLeft: '20px', lineHeight: '1.7', color: '#374151' }}>
             {article.keyTakeaways.map((item, idx) => (
@@ -187,16 +240,46 @@ export default async function ArticlePage({
             <h2 style={{ fontSize: '1.5rem', marginBottom: '0.75rem', color: '#111827' }}>
               {section.title}
             </h2>
-            <p style={{ lineHeight: '1.75', color: '#374151', fontSize: '1.05rem' }}>
+            <p style={{ lineHeight: '1.75', color: '#374151', fontSize: '1.05rem', whiteSpace: 'pre-line' }}>
               {section.body}
             </p>
           </section>
         ))}
       </div>
 
+      {/* Frequently Asked Questions (AEO Section) */}
+      {article.faqs && article.faqs.length > 0 && (
+        <section style={{ margin: '3rem 0 2rem', padding: '24px', background: '#FAF9F6', borderRadius: '16px', border: '1px solid #E5E7EB' }}>
+          <h2 style={{ fontSize: '1.35rem', marginTop: 0, marginBottom: '16px', color: '#1A244D' }}>
+            Frequently Asked Questions
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            {article.faqs.map((faq, idx) => (
+              <details
+                key={idx}
+                style={{
+                  padding: '14px 16px',
+                  background: '#FFFFFF',
+                  borderRadius: '10px',
+                  border: '1px solid #E5E7EB',
+                  cursor: 'pointer'
+                }}
+              >
+                <summary style={{ fontWeight: 650, color: '#1A244D', fontSize: '0.98rem' }}>
+                  {faq.question}
+                </summary>
+                <p style={{ margin: '10px 0 0', color: '#4B5563', fontSize: '0.92rem', lineHeight: '1.6' }}>
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* References */}
       {article.references && article.references.length > 0 && (
-        <footer style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid #E5E7EB' }}>
+        <footer style={{ marginTop: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid #E5E7EB' }}>
           <h3 style={{ fontSize: '1rem', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
             Medical &amp; Clinical References
           </h3>
@@ -231,7 +314,7 @@ export default async function ArticlePage({
           Have Questions About Your Skin or Hair Concern?
         </h3>
         <p style={{ color: 'rgba(255, 255, 255, 0.9)', maxWidth: '600px', margin: '0 auto 20px', fontSize: '0.98rem' }}>
-          Schedule an in-person clinical assessment with <strong>Dr. (Mrs.) Sujay M (MBBS, DDVL)</strong> at Medicare Skin &amp; Cosmetic Clinic near Yelachenahalli Metro Station.
+          Schedule an in-person clinical assessment with <strong>Dr. (Mrs.) Sujay M (MBBS, DDVL)</strong> at Medicare Skin &amp; Cosmetic Clinic near Yelachenahalli Metro Station, South Bengaluru.
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '14px', flexWrap: 'wrap' }}>
           <Link
