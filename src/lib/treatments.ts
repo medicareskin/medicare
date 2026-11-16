@@ -625,9 +625,9 @@ export function getTreatment(categorySlug: string, slug: string): Treatment | un
 }
 
 export const categories = [
-  { name: 'Skin', icon: '•', caption: 'Acne, scars, pigmentation and skin health' },
-  { name: 'Hair', icon: '•', caption: 'Hair fall and scalp conditions' },
-  { name: 'Laser', icon: '•', caption: 'Procedure options and safety' },
-  { name: 'Aesthetics', icon: '•', caption: 'Texture, radiance and anti-ageing' },
-  { name: 'Medical Dermatology', icon: '•', caption: 'Eczema, psoriasis, infections and more' },
+  { name: 'Skin', icon: '•', caption: 'Acne, scars, pigmentation and skin health', image: '/images/cat_skin_care.jpg' },
+  { name: 'Hair', icon: '•', caption: 'Hair fall and scalp conditions', image: '/images/cat_hair_care.jpg' },
+  { name: 'Laser', icon: '•', caption: 'Procedure options and safety', image: '/images/cat_laser_care.jpg' },
+  { name: 'Aesthetics', icon: '•', caption: 'Texture, radiance and anti-ageing', image: '/images/glass_skin_radiance.jpg' },
+  { name: 'Medical Dermatology', icon: '•', caption: 'Eczema, psoriasis, infections and more', image: '/images/cat_medical_dermatology.jpg' },
 ] as const;

@@ -14,6 +14,7 @@ import { PatientExperiences } from '@/components/PatientExperiences';
 import { InteractiveConcernNavigator } from '@/components/InteractiveConcernNavigator';
 import { TreatmentCostPlanner } from '@/components/TreatmentCostPlanner';
 import { DoctorConsultingCard } from '@/components/DoctorConsultingCard';
+import { FacilityGallerySlider } from '@/components/FacilityGallerySlider';
 import { LocationSection } from '@/components/LocationSection';
 import { FAQSection } from '@/components/FAQSection';
 
@@ -22,6 +23,33 @@ export const metadata: Metadata = meta(
   'Personalised dermatology consultations for acne, pigmentation, hair loss, melasma, scars and laser care near Yelachenahalli Metro Station, South Bengaluru. Guided by Dr. (Mrs.) Sujay M (MBBS, DDVL).',
   '/'
 );
+
+const treatmentImages: Record<string, { image: string; alt: string }> = {
+  'acne-treatment': {
+    image: '/images/card_acne_pimples.jpg',
+    alt: 'Clinical Acne Treatment and Active Breakout Assessment at Medicare Skin',
+  },
+  'acne-scar-treatment': {
+    image: '/images/slide_scar_model_new.jpg',
+    alt: 'Acne Scar Treatment and Subcision MNRF Planning',
+  },
+  'melasma-treatment': {
+    image: '/images/slide_pigment_new.jpg',
+    alt: 'Melasma Treatment and Q-Switched Toning',
+  },
+  'pigmentation-treatment': {
+    image: '/images/q-switched-laser-pigmentation-treatment-bangalore.webp',
+    alt: 'Pigmentation and Dark Spot Treatment with Dermatologist Evaluation',
+  },
+  'chemical-peels': {
+    image: '/images/medical_peel_glow.jpg',
+    alt: 'Chemical Peels for Skin Texture and Congestion',
+  },
+  'hair-loss-treatment': {
+    image: '/images/card_hair_fall.jpg',
+    alt: 'Hair Loss and Thinning Assessment with Growth Factor Therapy',
+  },
+};
 
 export default function Home() {
   const featured = treatments.filter((x) =>
@@ -162,6 +190,22 @@ export default function Home() {
               className="category-card"
               href={`/treatments/?category=${encodeURIComponent(c.name)}`}
             >
+              <div
+                style={{
+                  borderRadius: '14px',
+                  overflow: 'hidden',
+                  height: '140px',
+                  marginBottom: '14px',
+                  position: 'relative',
+                  background: '#F3F4F6',
+                }}
+              >
+                <img
+                  src={c.image}
+                  alt={`${c.name} Care at Medicare Skin Clinic`}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
               <span className="category-icon" aria-hidden="true">
                 {c.icon}
               </span>
@@ -187,18 +231,38 @@ export default function Home() {
             description="Each procedure page outlines clinical indications, suitability, expected session timelines, and post-care guidance."
           />
           <div className="cards">
-            {featured.map((t) => (
-              <article className="card" key={t.slug}>
-                <span className="eyebrow-pill">{t.category}</span>
-                <h3>
-                  <Link href={treatmentPath(t)}>{t.title}</Link>
-                </h3>
-                <p>{t.summary}</p>
-                <Link className="card-link" href={treatmentPath(t)}>
-                  Read treatment guidance →
-                </Link>
-              </article>
-            ))}
+            {featured.map((t) => {
+              const imgInfo = treatmentImages[t.slug];
+              return (
+                <article className="card" key={t.slug}>
+                  {imgInfo && (
+                    <div
+                      style={{
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        marginBottom: '14px',
+                        height: '180px',
+                        background: '#F8F6F2',
+                      }}
+                    >
+                      <img
+                        src={imgInfo.image}
+                        alt={imgInfo.alt}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      />
+                    </div>
+                  )}
+                  <span className="eyebrow-pill">{t.category}</span>
+                  <h3>
+                    <Link href={treatmentPath(t)}>{t.title}</Link>
+                  </h3>
+                  <p>{t.summary}</p>
+                  <Link className="card-link" href={treatmentPath(t)}>
+                    Read treatment guidance →
+                  </Link>
+                </article>
+              );
+            })}
           </div>
           <div className="center space-top">
             <Link className="btn outline" href="/treatments/">
@@ -310,68 +374,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Physical Practice & Clinical Environment Showcase */}
-      <section className="section soft" id="clinic-facility">
-        <div className="container">
-          <SectionHeading
-            label="CLINICAL ENVIRONMENT"
-            title="Designed for Patient Comfort, Hygiene &amp; Confidentiality"
-            description="Directly located opposite Yelachenahalli Metro Station (Pillar 100). Step inside our modern, sanitized dermatology suites equipped with US-FDA cleared energy devices."
-          />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', marginTop: '28px' }}>
-            <div style={{ background: '#FFFFFF', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--border)', boxShadow: '0 4px 16px rgba(0,0,0,0.04)' }}>
-              <div style={{ height: '210px', overflow: 'hidden' }}>
-                <img
-                  src="/images/clinic_interior_reception.jpg"
-                  alt="Medicare Skin Consultation Suite &amp; Reception"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
-              <div style={{ padding: '20px' }}>
-                <span className="eyebrow-pill">RECEPTION &amp; WAITING</span>
-                <h3 style={{ fontSize: '1.15rem', marginTop: '8px', color: 'var(--ink)' }}>Private Consultation Suites</h3>
-                <p style={{ fontSize: '0.88rem', color: 'var(--muted)', marginTop: '6px', lineHeight: 1.5 }}>
-                  Spacious, air-conditioned patient waiting area with dedicated consultation rooms ensuring complete dermatological confidentiality.
-                </p>
-              </div>
-            </div>
-
-            <div style={{ background: '#FFFFFF', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--border)', boxShadow: '0 4px 16px rgba(0,0,0,0.04)' }}>
-              <div style={{ height: '210px', overflow: 'hidden' }}>
-                <img
-                  src="/images/laser_device_console.jpg"
-                  alt="Medicare Skin Laser &amp; Procedure Suite"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
-              <div style={{ padding: '20px' }}>
-                <span className="eyebrow-pill">PROCEDURE SUITE</span>
-                <h3 style={{ fontSize: '1.15rem', marginTop: '8px', color: 'var(--ink)' }}>Calibrated Laser Workstations</h3>
-                <p style={{ fontSize: '0.88rem', color: 'var(--muted)', marginTop: '6px', lineHeight: 1.5 }}>
-                  Hospital-grade sterile procedure room equipped with Q-switched Nd:YAG, MNRF, and chilled-contact diode hair reduction technologies.
-                </p>
-              </div>
-            </div>
-
-            <div style={{ background: '#FFFFFF', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--border)', boxShadow: '0 4px 16px rgba(0,0,0,0.04)' }}>
-              <div style={{ height: '210px', overflow: 'hidden' }}>
-                <img
-                  src="/images/clinic_location_facade.jpg"
-                  alt="Medicare Skin Clinic Landmark opposite Yelachenahalli Metro Pillar 100"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
-              <div style={{ padding: '20px' }}>
-                <span className="eyebrow-pill">LANDMARK &amp; TRANSIT</span>
-                <h3 style={{ fontSize: '1.15rem', marginTop: '8px', color: 'var(--ink)' }}>Opp. Yelachenahalli Metro (Pillar 100)</h3>
-                <p style={{ fontSize: '0.88rem', color: 'var(--muted)', marginTop: '6px', lineHeight: 1.5 }}>
-                  Easily accessible on 100 Feet Ring Road / Kanakapura Main Road with dedicated patient parking and barrier-free access.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Physical Practice & Clinical Environment Showcase Slider */}
+      <FacilityGallerySlider />
 
       {/* Location & Contact Section matching User Reference Image 3 */}
       <LocationSection />
