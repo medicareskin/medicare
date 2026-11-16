@@ -30,20 +30,20 @@ const treatmentImages: Record<string, { image: string; alt: string }> = {
     alt: 'Clinical Acne Treatment and Active Breakout Assessment at Medicare Skin',
   },
   'acne-scar-treatment': {
-    image: '/images/slide_scar_model_new.jpg',
-    alt: 'Acne Scar Treatment and Subcision MNRF Planning',
+    image: '/images/acne_scar_treatment_new.jpg',
+    alt: 'Fractional MNRF Microneedling Radiofrequency Acne Scar Remodeling',
   },
   'melasma-treatment': {
-    image: '/images/slide_pigment_new.jpg',
-    alt: 'Melasma Treatment and Q-Switched Toning',
+    image: '/images/melasma_consultation_new.jpg',
+    alt: 'Dermatologist Melasma Diagnosis and Dermoscopy Evaluation',
   },
   'pigmentation-treatment': {
     image: '/images/q-switched-laser-pigmentation-treatment-bangalore.webp',
-    alt: 'Pigmentation and Dark Spot Treatment with Dermatologist Evaluation',
+    alt: 'Q-Switched Nd:YAG Laser Pigmentation and Dark Spot Therapy',
   },
   'chemical-peels': {
     image: '/images/medical_peel_glow.jpg',
-    alt: 'Chemical Peels for Skin Texture and Congestion',
+    alt: 'Dermatological Chemical Peels for Skin Texture and Congestion',
   },
   'hair-loss-treatment': {
     image: '/images/card_hair_fall.jpg',
