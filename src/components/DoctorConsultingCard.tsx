@@ -48,9 +48,31 @@ export function DoctorConsultingCard({
             </div>
           )}
 
-          {/* Main Card Body: 2 Columns */}
+          {/* Main Card Body: 2 Columns - Image on Left, Text on Right */}
           <div className="doctor-card-grid">
-            {/* Left Column: Clinical Authority Content */}
+            {/* Left Column: Doctor Portrait with Floating Badges */}
+            <div className="doctor-visual-column">
+              <div className="doctor-photo-stage">
+                <img
+                  src="/images/dr_sujay_m_first.jpg"
+                  alt="Dr. (Mrs.) Sujay M MBBS DDVL Consultant Dermatologist in South Bengaluru"
+                  className="doctor-cutout-img"
+                  width={460}
+                  height={585}
+                  loading="eager"
+                />
+                <div className="floating-exp-badge">
+                  <span>18+ Years Exp</span>
+                </div>
+                <div className="floating-rating-badge">
+                  <span className="rating-star">★</span>
+                  <span>4.9</span>
+                  <span className="rating-sub">South Bengaluru</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Clinical Authority Content */}
             <div className="doctor-content-column">
               {/* Badges Row */}
               <div className="doctor-badges-row">
@@ -135,20 +157,6 @@ export function DoctorConsultingCard({
                 <span className="spec-chip">Hair Loss</span>
                 <span className="spec-chip">Dermatology</span>
                 <span className="spec-chip">Laser Aesthetics</span>
-              </div>
-            </div>
-
-            {/* Right Column: Doctor Portrait with Floating Badges */}
-            <div className="doctor-visual-column">
-              <div className="doctor-photo-stage">
-                <img
-                  src="/images/dr_sujay_portrait_cutout.png"
-                  alt="Dr. (Mrs.) Sujay M MBBS DDVL Consultant Dermatologist in South Bengaluru"
-                  className="doctor-cutout-img"
-                  width={460}
-                  height={585}
-                  loading="eager"
-                />
               </div>
             </div>
           </div>
@@ -270,11 +278,11 @@ export function DoctorConsultingCard({
           background: #F8FAFC;
         }
 
-        /* 2 Columns Grid */
+        /* 2 Columns Grid: Image on Left (0.9fr), Text on Right (1.1fr) */
         .doctor-card-grid {
           display: grid;
-          grid-template-columns: 1.15fr 0.85fr;
-          gap: 40px;
+          grid-template-columns: 0.92fr 1.08fr;
+          gap: 48px;
           align-items: center;
           position: relative;
           z-index: 2;
@@ -468,7 +476,7 @@ export function DoctorConsultingCard({
           font-weight: 600;
         }
 
-        /* Right Column: Portrait Stage */
+        /* Left Column: Portrait Stage */
         .doctor-visual-column {
           display: flex;
           align-items: center;
@@ -483,21 +491,67 @@ export function DoctorConsultingCard({
           display: flex;
           align-items: center;
           justify-content: center;
+          border-radius: 24px;
+          overflow: hidden;
+          box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+          background: #F3F4F6;
         }
 
         .doctor-cutout-img {
           width: 100%;
           height: auto;
           max-height: 560px;
-          object-fit: contain;
+          object-fit: cover;
           display: block;
-          filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.08));
+          border-radius: 24px;
+        }
+
+        .floating-exp-badge {
+          position: absolute;
+          bottom: 20px;
+          left: 18px;
+          background: rgba(255, 255, 255, 0.94);
+          backdrop-filter: blur(8px);
+          border: 1px solid rgba(229, 231, 235, 0.85);
+          padding: 6px 14px;
+          border-radius: 9999px;
+          font-size: 0.78rem;
+          font-weight: 700;
+          color: #1F2937;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        .floating-rating-badge {
+          position: absolute;
+          top: 20px;
+          right: 18px;
+          background: rgba(255, 255, 255, 0.94);
+          backdrop-filter: blur(8px);
+          border: 1px solid rgba(229, 231, 235, 0.85);
+          padding: 6px 14px;
+          border-radius: 9999px;
+          font-size: 0.78rem;
+          font-weight: 700;
+          color: #1F2937;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        .rating-star {
+          color: #F59E0B;
+        }
+
+        .rating-sub {
+          color: #6B7280;
+          font-weight: 500;
         }
 
         /* Responsive Breakpoints */
         @media (max-width: 1024px) {
           .doctor-mockup-card {
-            padding: 28px 28px 32px;
+            padding: 28px 24px 32px;
           }
           .card-top-accent {
             right: 40px;
@@ -507,10 +561,11 @@ export function DoctorConsultingCard({
             gap: 32px;
           }
           .doctor-visual-column {
-            order: -1;
+            order: 0;
           }
           .doctor-photo-stage {
-            max-width: 360px;
+            max-width: 380px;
+            margin: 0 auto;
           }
         }
 
