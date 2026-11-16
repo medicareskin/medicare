@@ -3561,103 +3561,68 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   border-bottom: 1px solid var(--line);
 }
 
-/* ── FLAGSHIP CLASSIC HERO BANNER (Desktop Full-Screen Clinical Hero) ── */
-.hero-classic-banner {
+/* ── FLAGSHIP BESPOKE ARCHITECTURAL CLINICAL HERO BANNER ── */
+.hero-classic-banner,
+.hero-architectural-edition {
   min-height: calc(100vh - 74px);
-  height: calc(100vh - 74px);
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
-  background-color: #FDFBF8;
+  background: radial-gradient(circle at 82% 35%, #F7EDE4 0%, #FAF5EF 50%, #FCF9F5 100%);
+  border-bottom: 1px solid rgba(144, 91, 53, 0.12);
 }
 
 .hero-desktop-view-wrap {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
   position: relative;
+  padding: 48px 0;
 }
 
-/* Full-Screen Multi-Image Layer */
-.hero-fullscreen-bg-layer {
-  position: absolute;
-  inset: 0;
+.hero-architectural-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 52px;
   width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.hero-fullscreen-slide {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 6s ease-out;
-  transform: scale(1);
-}
-
-.hero-fullscreen-slide.active {
-  opacity: 1;
-  transform: scale(1.02);
-  z-index: 2;
-}
-
-.hero-fullscreen-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: right center;
-  display: block;
-}
-
-/* Luxury Clean Gradient Overlay: Solid warm ivory on the left for crisp text readability, seamless fade into vibrant photo on the right */
-.hero-fullscreen-gradient-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(253, 251, 248, 0.98) 0%,
-    rgba(253, 251, 248, 0.94) 34%,
-    rgba(253, 251, 248, 0.72) 48%,
-    rgba(253, 251, 248, 0.22) 62%,
-    rgba(253, 251, 248, 0) 75%
-  );
-  z-index: 3;
-  pointer-events: none;
-}
-
-.hero-fullscreen-container {
   position: relative;
   z-index: 5;
-  width: 100%;
-  display: flex;
-  align-items: center;
 }
 
-/* Left Column: Typography & Actions (Aligned with navbar logo) */
-.hero-desktop-text-col {
+/* ── LEFT COLUMN: EDITORIAL TYPOGRAPHY & CLINICAL AUTHORITY ── */
+.hero-editorial-left-col {
   width: 100%;
-  max-width: 530px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 0;
 }
 
-.hero-desktop-eyebrow {
+.hero-editorial-animated-content {
+  animation: heroEditorialFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  width: 100%;
+}
+
+@keyframes heroEditorialFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-editorial-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 14px;
+  padding: 6px 16px;
   border-radius: 999px;
   background: rgba(140, 42, 100, 0.08);
-  border: 1px solid rgba(140, 42, 100, 0.15);
+  border: 1px solid rgba(140, 42, 100, 0.18);
   color: #8C2A64;
   font-size: 0.76rem;
   font-weight: 750;
@@ -3667,97 +3632,113 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   width: fit-content;
 }
 
-.eyebrow-pulse-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #8C2A64;
-  box-shadow: 0 0 6px rgba(140, 42, 100, 0.5);
+.eyebrow-sparkle {
+  color: #8C2A64;
+  font-size: 0.85rem;
 }
 
-.hero-classic-title {
-  font-family: Georgia, "Playfair Display", "Times New Roman", serif;
-  font-size: clamp(2.35rem, 3.2vw, 3.2rem);
+.hero-editorial-title {
+  font-family: var(--font-serif, "Fraunces", Georgia, serif);
+  font-size: clamp(2.4rem, 3.4vw, 3.5rem);
   font-weight: 750;
-  line-height: 1.16;
-  letter-spacing: -0.015em;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
   margin: 0 0 20px 0;
   display: flex;
   flex-direction: column;
 }
 
-.title-line-navy {
+.title-lead-line {
   color: #1A244D;
-  white-space: nowrap;
+  white-space: normal;
 }
 
-.title-line-berry {
+.title-accent-line {
   color: #8C2A64;
-  white-space: nowrap;
+  white-space: normal;
 }
 
-.hero-classic-highlights {
+.title-accent-line em {
+  font-style: italic;
+  font-family: var(--font-serif, "Fraunces", Georgia, serif);
+  font-weight: 750;
+}
+
+.hero-editorial-checklist {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-bottom: 28px;
 }
 
-.hero-highlight-item {
+.hero-checklist-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checklist-circle-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(18, 140, 126, 0.15);
+  color: #0F766E;
+  font-size: 0.82rem;
+  font-weight: 850;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checklist-text {
   font-size: 1.02rem;
   font-weight: 550;
   color: #2F241F;
   line-height: 1.45;
   margin: 0;
+}
+
+.hero-editorial-actions {
   display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.hero-editorial-btn-primary {
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-}
-
-.highlight-check {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: rgba(18, 140, 126, 0.15);
-  color: #0F766E;
-  font-size: 0.8rem;
-  font-weight: 800;
-  flex-shrink: 0;
-}
-
-.hero-classic-actions {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 6px;
-}
-
-.hero-classic-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   background: #1C234E;
   color: #FFFFFF !important;
   font-size: 1rem;
   font-weight: 650;
-  padding: 13px 28px;
+  padding: 14px 32px;
   border-radius: 999px;
   text-decoration: none;
-  box-shadow: 0 6px 20px rgba(28, 35, 78, 0.28);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(28, 35, 78, 0.28);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hero-classic-btn-primary:hover {
+.hero-editorial-btn-primary:hover {
   background: #111736;
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(28, 35, 78, 0.36);
+  box-shadow: 0 12px 28px rgba(28, 35, 78, 0.38);
 }
 
-.hero-classic-btn-whatsapp {
+.btn-arrow-icon {
+  font-size: 1.15rem;
+  transition: transform 0.2s ease;
+}
+
+.hero-editorial-btn-primary:hover .btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+.hero-editorial-btn-whatsapp {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -3766,40 +3747,76 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   border: 1.5px solid #25D366;
   font-size: 0.95rem;
   font-weight: 650;
-  padding: 11px 22px;
+  padding: 13px 26px;
   border-radius: 999px;
   text-decoration: none;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.14);
 }
 
-.hero-classic-btn-whatsapp:hover {
+.hero-editorial-btn-whatsapp:hover {
   background: #25D366;
   color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.26);
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.28);
 }
 
-/* Editorial Synchronized Text Transitions */
-.hero-classic-animated-content {
-  animation: heroTextFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  width: 100%;
+/* Doctor Credibility Strip */
+.hero-editorial-trust-strip {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(144, 91, 53, 0.14);
+  width: fit-content;
+  backdrop-filter: blur(8px);
+  margin-bottom: 22px;
 }
 
-@keyframes heroTextFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.trust-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-/* Desktop Slide Navigation Controls */
-.hero-classic-slide-nav {
-  margin-top: 24px;
+.trust-star {
+  color: #F59E0B;
+  font-size: 0.95rem;
+}
+
+.trust-badge {
+  color: #0F766E;
+  font-weight: 850;
+  font-size: 0.85rem;
+}
+
+.trust-badge-symbol {
+  font-size: 0.9rem;
+}
+
+.trust-value {
+  font-weight: 750;
+  color: #1A244D;
+  font-size: 0.9rem;
+}
+
+.trust-sub {
+  color: #6C5B52;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.trust-strip-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(144, 91, 53, 0.2);
+}
+
+/* Slide Navigation Controls */
+.hero-editorial-slide-nav {
+  margin-top: 10px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -3810,7 +3827,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   height: 36px;
   border-radius: 50%;
   border: 1.5px solid rgba(26, 36, 77, 0.22);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   color: #1A244D;
   font-size: 1.3rem;
   line-height: 1;
@@ -3883,6 +3900,194 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   margin: 0 2px;
 }
 
+/* ── RIGHT COLUMN: ARCHITECTURAL ARCHWAY PORTAL ── */
+.hero-architectural-right-col {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-arch-stage {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ambient Luxury Halo */
+.arch-ambient-aura {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(235, 218, 203, 0.65) 0%, rgba(250, 245, 240, 0) 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Decorative Arched Outline Ring */
+.arch-decorative-ring {
+  position: absolute;
+  width: 460px;
+  height: 560px;
+  border-top-left-radius: 260px;
+  border-top-right-radius: 260px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border: 1.5px dashed rgba(144, 91, 53, 0.28);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* The Architectural Archway Portal Viewport */
+.hero-arch-viewport {
+  position: relative;
+  width: 100%;
+  height: 530px;
+  border-top-left-radius: 240px;
+  border-top-right-radius: 240px;
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+  overflow: hidden;
+  background: #F3EAE0;
+  box-shadow: 0 24px 60px rgba(74, 59, 50, 0.16), 0 6px 18px rgba(74, 59, 50, 0.08);
+  z-index: 2;
+  border: 4px solid #FFFFFF;
+}
+
+.arch-slide-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 5s ease-out;
+  transform: scale(1);
+}
+
+.arch-slide-layer.active {
+  opacity: 1;
+  transform: scale(1.025);
+  z-index: 2;
+}
+
+.arch-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.arch-bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to top, rgba(26, 36, 77, 0.22) 0%, rgba(26, 36, 77, 0) 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Floating Credential Badges on Arch */
+.arch-floating-pill {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 24px rgba(43, 14, 76, 0.12);
+  border-radius: 999px;
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.arch-floating-pill:hover {
+  transform: translateY(-2px);
+}
+
+.arch-pill-top-right {
+  top: 24px;
+  right: -14px;
+  padding: 7px 16px;
+}
+
+.pill-star {
+  color: #F59E0B;
+  font-size: 0.95rem;
+}
+
+.pill-bold {
+  font-weight: 800;
+  color: #1A244D;
+  font-size: 0.88rem;
+}
+
+.pill-light {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6C5B52;
+}
+
+.arch-pill-bottom-left {
+  bottom: 24px;
+  left: -20px;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+.pill-avatar-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.pill-doc-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.pill-doc-name {
+  font-size: 0.84rem;
+  font-weight: 750;
+  color: #1A244D;
+  line-height: 1.2;
+}
+
+.pill-doc-meta {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #8C2A64;
+}
+
+.arch-pill-bottom-right {
+  bottom: 24px;
+  right: -12px;
+  padding: 7px 15px;
+}
+
+.pill-shield-icon {
+  font-size: 0.95rem;
+}
+
+.pill-shield-text {
+  font-size: 0.78rem;
+  font-weight: 750;
+  color: #0F766E;
+  letter-spacing: 0.02em;
+}
+
 /* Mobile animated card & meta */
 .hero-mobile-card-animated {
   animation: heroMobileCardFade 0.4s ease-out forwards;
@@ -3925,7 +4130,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
   position: relative;
 }
 
@@ -3935,6 +4139,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .mobile-bottom-dock {
   display: none;
+}
+
+/* Mobile floating rating pill on hero arch preview */
+.mobile-arch-floating-rating {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(6px);
+  color: #1A244D;
+  font-size: 0.74rem;
+  font-weight: 750;
+  padding: 4px 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 /* ── MOBILE UI / UX APP SYSTEM (< 900px) ── */
