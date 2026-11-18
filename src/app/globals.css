@@ -5074,13 +5074,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .btn-ai-assistant {
-  background: linear-gradient(135deg, #FF4D5A 0%, #E52E3D 100%);
+  background: linear-gradient(135deg, #2B0E4C 0%, #9C2278 100%);
   color: #FFFFFF;
-  box-shadow: 0 8px 22px rgba(229, 46, 61, 0.42);
+  box-shadow: 0 8px 22px rgba(156, 34, 120, 0.42);
 }
 
 .btn-ai-assistant:hover {
-  box-shadow: 0 12px 28px rgba(229, 46, 61, 0.58);
+  box-shadow: 0 12px 28px rgba(156, 34, 120, 0.58);
 }
 
 .ai-online-indicator {
