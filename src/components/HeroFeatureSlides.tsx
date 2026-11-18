@@ -195,30 +195,20 @@ export function HeroFeatureSlides({ asHero = true }: HeroFeatureSlidesProps) {
         <div className="feature-slides-topbar">
           <div className="feature-slides-search-wrap">
             <div className="feature-search-input-box">
-              <span className="search-icon-decor" aria-hidden="true">
+              <input
+                type="text"
+                className="feature-search-input"
+                placeholder='Search for "hair fall, acne scars, pigmentation, hydrafacial..."'
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label="Search skin and hair protocols"
+              />
+              <span className="search-icon-decor-right" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="11" cy="11" r="8"></circle>
                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
               </span>
-              <input
-                type="text"
-                className="feature-search-input"
-                placeholder='Search for "hair fall, acne, pigmentation, hydrafacial..."'
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                aria-label="Search skin and hair protocols"
-              />
-              {searchQuery && (
-                <button
-                  type="button"
-                  className="search-clear-btn"
-                  onClick={() => setSearchQuery('')}
-                  aria-label="Clear search"
-                >
-                  ✕
-                </button>
-              )}
             </div>
 
             {/* Quick Action Badges next to Search */}
@@ -228,31 +218,14 @@ export function HeroFeatureSlides({ asHero = true }: HeroFeatureSlidesProps) {
                 <span>All Treatments</span>
               </Link>
               <Link href="/book-appointment/" className="quick-pill-btn accent-pill">
-                <span className="quick-pill-icon" aria-hidden="true">🩺</span>
-                <span>Doctor Checkups</span>
+                <span className="quick-pill-icon" aria-hidden="true">🧰</span>
+                <span>Checkups</span>
               </Link>
             </div>
           </div>
 
-          {/* Accessible section heading for assistive technologies */}
+          {/* Accessible heading for assistive technologies */}
           <h2 className="sr-only">Specialised Dermatology Protocols &amp; Checkups</h2>
-
-          {/* Category Filter Pills Row */}
-          <div className="feature-category-pills-row" aria-label="Filter protocols by concern">
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                className={`feature-cat-pill ${activeCategory === cat ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveCategory(cat);
-                  setSearchQuery('');
-                }}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* Carousel Slider with Floating Circular Arrow Buttons */}
@@ -307,21 +280,15 @@ export function HeroFeatureSlides({ asHero = true }: HeroFeatureSlidesProps) {
                   )}
                 </div>
 
-                {/* 4. Bottom Frosted Glass Pill Card */}
+                {/* 4. Bottom Shelf matching reference UI/UX */}
                 <div
-                  className="card-bottom-glass-panel"
+                  className="card-bottom-shelf"
                   style={{ backgroundColor: slide.glassColor || 'rgba(24, 20, 32, 0.88)' }}
                 >
-                  <div className="glass-panel-content">
-                    <span className="glass-panel-title">{slide.pillTitle}</span>
-                    <strong className="glass-panel-price">{slide.pillPrice}</strong>
-                  </div>
-                  <div
-                    className="glass-panel-btn"
-                    style={{ backgroundColor: slide.accentBtnColor || '#280F33' }}
-                    aria-hidden="true"
-                  >
-                    →
+                  <span className="shelf-title">{slide.pillTitle}</span>
+                  <div className="shelf-price-btn">
+                    <span>{slide.pillPrice}</span>
+                    <span className="shelf-arrow" aria-hidden="true">&rarr;</span>
                   </div>
                 </div>
               </Link>
