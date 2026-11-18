@@ -78,6 +78,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .skip { position: absolute; left: -10000px; }
 .skip:focus { left: 1rem; top: 1rem; z-index: 999; background: #fff; padding: 1rem; }
 .container { width: min(1200px, calc(100% - 40px)); margin-inline: auto; }
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border-width: 0 !important;
+}
 .section { padding: 76px 0; }
 .section.soft { background: var(--bg-soft); }
 .center { text-align: center; }
@@ -1286,108 +1297,111 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   border-bottom: 1px solid #E5E7EB;
 }
 
-/* Top bar: Search + Quick Link pills matching Reference Image UI/UX */
+/* Top bar: Search + Quick Link Capsule matching Reference Image UI/UX */
 .feature-slides-topbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 24px;
 }
-.feature-slides-search-wrap {
-  display: flex;
+.search-capsule-container {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
+  gap: 10px;
+  background: #F1ECE6;
+  border-radius: 9999px;
+  padding: 6px 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  max-width: 100%;
 }
 .feature-search-input-box {
   background: #FFFFFF;
-  border: 1.5px solid #E2E8F0;
-  border-radius: 999px;
-  height: 52px;
+  border-radius: 9999px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px 0 24px;
-  width: 100%;
-  max-width: 520px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  padding: 0 16px 0 22px;
+  width: 500px;
+  max-width: calc(100vw - 190px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
   transition: all 0.2s ease;
 }
 .feature-search-input-box:focus-within {
-  border-color: #2B1B4D;
-  box-shadow: 0 4px 18px rgba(43, 27, 77, 0.1);
+  box-shadow: 0 2px 12px rgba(43, 27, 77, 0.08);
+}
+.search-for-prefix {
+  font-size: 0.95rem;
+  font-weight: 550;
+  color: #111827;
+  margin-right: 6px;
+  white-space: nowrap;
+  user-select: none;
 }
 .search-icon-decor-right {
-  color: #000000;
+  color: #111827;
   display: flex;
   align-items: center;
   padding: 4px;
+  flex-shrink: 0;
 }
 .feature-search-input {
   border: none;
   outline: none;
   font-size: 0.95rem;
-  color: #000000;
-  font-weight: 550;
+  color: #111827;
+  font-weight: 600;
   width: 100%;
   background: transparent;
+  padding: 0;
 }
 .feature-search-input::placeholder {
-  color: #4B5563;
-  font-weight: 500;
-}
-.search-clear-btn {
-  background: none;
-  border: none;
-  color: #4B5563;
-  font-size: 0.9rem;
-  cursor: pointer;
-  padding: 4px;
-  margin-right: 6px;
-  transition: color 0.15s;
-}
-.search-clear-btn:hover {
-  color: #000000;
-}
-
-.feature-quick-links {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  color: #E11D48;
+  font-weight: 600;
+  opacity: 0.95;
 }
 .quick-pill-btn {
   background: #FFFFFF;
-  border: 1.5px solid #E2E8F0;
-  border-radius: 999px;
-  height: 52px;
-  padding: 0 22px;
+  border-radius: 9999px;
+  height: 48px;
+  padding: 0 24px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 750;
   color: #000000;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
   transition: all 0.2s ease;
+  white-space: nowrap;
+  border: 1px solid rgba(0, 0, 0, 0.02);
 }
 .quick-pill-btn:hover {
-  background: #F8FAFC;
-  border-color: #CBD5E1;
-  color: #000000;
+  background: #FAF8F5;
   transform: translateY(-1px);
-}
-.quick-pill-btn.accent-pill {
-  border-color: #E2E8F0;
-  background: #FFFFFF;
-  color: #000000;
-}
-.quick-pill-btn.accent-pill:hover {
-  background: #F8FAFC;
-  border-color: #CBD5E1;
-  color: #000000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
 }
 .quick-pill-icon {
   font-size: 1.05rem;
+}
+@media (max-width: 680px) {
+  .search-capsule-container {
+    border-radius: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 8px;
+  }
+  .feature-search-input-box {
+    width: 100%;
+    max-width: 100%;
+  }
+  .quick-pill-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Carousel Outer Wrap with Floating Navigation Chevrons */

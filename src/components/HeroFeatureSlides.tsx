@@ -162,6 +162,7 @@ export function HeroFeatureSlides({ asHero = true }: HeroFeatureSlidesProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
 
   const filteredSlides = useMemo(() => {
     return FEATURE_SLIDES.filter((slide) => {
@@ -191,41 +192,35 @@ export function HeroFeatureSlides({ asHero = true }: HeroFeatureSlidesProps) {
       aria-label="Medicare Skin & Cosmetic Clinic - Featured clinical protocols"
     >
       <div className="container">
-        {/* Top Header & Search Bar matching reference UI/UX */}
+        {/* Top Header & Search Capsule matching Reference UI/UX */}
         <div className="feature-slides-topbar">
-          <div className="feature-slides-search-wrap">
+          <div className="search-capsule-container">
             <div className="feature-search-input-box">
+              <span className="search-for-prefix">Search for</span>
               <input
                 type="text"
                 className="feature-search-input"
-                placeholder='Search for "hair fall, acne scars, pigmentation, hydrafacial..."'
+                placeholder={isFocused ? '' : 'acne, hair fall, scars, melasma...'}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                aria-label="Search skin and hair protocols"
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+                aria-label="Search skin and hair treatments"
               />
               <span className="search-icon-decor-right" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="11" cy="11" r="8"></circle>
                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
               </span>
             </div>
 
-            {/* Quick Action Badges next to Search */}
-            <div className="feature-quick-links">
-              <Link href="/treatments/" className="quick-pill-btn">
-                <span className="quick-pill-icon" aria-hidden="true">🔬</span>
-                <span>All Treatments</span>
-              </Link>
-              <Link href="/book-appointment/" className="quick-pill-btn accent-pill">
-                <span className="quick-pill-icon" aria-hidden="true">🧰</span>
-                <span>Checkups</span>
-              </Link>
-            </div>
+            {/* All Treatments Pill Button inside Capsule */}
+            <Link href="/treatments/" className="quick-pill-btn" aria-label="View all treatments">
+              <span className="quick-pill-icon" aria-hidden="true">🔬</span>
+              <span>All Treatments</span>
+            </Link>
           </div>
-
-          {/* Accessible heading for assistive technologies */}
-          <h2 className="sr-only">Specialised Dermatology Protocols &amp; Checkups</h2>
         </div>
 
         {/* Carousel Slider with Floating Circular Arrow Buttons */}
