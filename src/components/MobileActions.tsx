@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export default function MobileActions() {
   const whatsapp =
@@ -12,7 +13,7 @@ export default function MobileActions() {
         <span>Call</span>
       </a>
       <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="mobile-action-link action-whatsapp">
-        <span aria-hidden="true">◉</span>
+        <WhatsAppIcon size={18} color="currentColor" />
         <span>WhatsApp</span>
       </a>
       <Link href="/book-appointment/" className="mobile-action-link action-book">
