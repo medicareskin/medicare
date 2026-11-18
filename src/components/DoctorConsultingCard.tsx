@@ -253,8 +253,8 @@ export function DoctorConsultingCard({
 
         .mini-brand-text {
           font-size: 1.15rem;
-          font-weight: 600;
-          color: #111827;
+          font-weight: 700;
+          color: #000000;
           letter-spacing: -0.02em;
         }
 
@@ -271,8 +271,8 @@ export function DoctorConsultingCard({
 
         .mini-nav-item {
           font-size: 0.9rem;
-          font-weight: 500;
-          color: #4B5563;
+          font-weight: 600;
+          color: #000000;
           text-decoration: none;
           transition: color 0.15s ease;
         }
@@ -280,7 +280,7 @@ export function DoctorConsultingCard({
         .mini-nav-item:hover,
         .mini-nav-item.active {
           color: #1D64F2;
-          font-weight: 600;
+          font-weight: 700;
         }
 
         .mini-book-pill {
@@ -290,8 +290,8 @@ export function DoctorConsultingCard({
           border-radius: 9999px;
           border: 1px solid #D1D5DB;
           font-size: 0.85rem;
-          font-weight: 600;
-          color: #374151;
+          font-weight: 700;
+          color: #000000;
           background: #FFFFFF;
           text-decoration: none;
           transition: all 0.15s ease;
@@ -336,14 +336,14 @@ export function DoctorConsultingCard({
           background: #F3F4F6;
           border: 1px solid #E5E7EB;
           font-size: 0.8rem;
-          font-weight: 600;
-          color: #374151;
+          font-weight: 700;
+          color: #000000;
         }
 
         .doc-pill-tag.dark {
-          font-weight: 700;
+          font-weight: 800;
           letter-spacing: 0.05em;
-          color: #1F2937;
+          color: #000000;
           font-size: 0.76rem;
         }
 
@@ -359,13 +359,13 @@ export function DoctorConsultingCard({
           width: 6px;
           height: 6px;
           border-radius: 50%;
-          background: #4B5563;
+          background: #000000;
         }
 
         .doctor-title-display {
           font-size: clamp(2.1rem, 3.4vw, 2.9rem);
           font-weight: 800;
-          color: #111827;
+          color: #000000;
           line-height: 1.15;
           letter-spacing: -0.03em;
           margin: 0 0 8px 0;
@@ -373,8 +373,8 @@ export function DoctorConsultingCard({
 
         .doctor-credentials-sub {
           font-size: 1.05rem;
-          font-weight: 600;
-          color: #4B5563;
+          font-weight: 700;
+          color: #000000;
           margin: 0 0 20px 0;
           line-height: 1.4;
         }
@@ -386,15 +386,15 @@ export function DoctorConsultingCard({
         .doc-paragraph-lead {
           font-size: 0.95rem;
           line-height: 1.62;
-          color: #1F2937;
+          color: #000000;
           margin: 0 0 10px 0;
-          font-weight: 450;
+          font-weight: 500;
         }
 
         .doc-paragraph-body {
           font-size: 0.93rem;
           line-height: 1.62;
-          color: #4B5563;
+          color: #000000;
           margin: 0;
         }
 
@@ -414,7 +414,7 @@ export function DoctorConsultingCard({
           gap: 12px;
           font-size: 0.92rem;
           line-height: 1.5;
-          color: #374151;
+          color: #000000;
         }
 
         .check-icon-circle {
@@ -430,7 +430,7 @@ export function DoctorConsultingCard({
         }
 
         .doctor-check-item strong {
-          color: #111827;
+          color: #000000;
         }
 
         /* Action Buttons */
@@ -468,9 +468,9 @@ export function DoctorConsultingCard({
           padding: 13px 22px;
           border-radius: 9999px;
           background: #F3F4F6;
-          color: #1F2937;
+          color: #000000;
           font-size: 0.92rem;
-          font-weight: 600;
+          font-weight: 700;
           text-decoration: none;
           border: 1px solid #E5E7EB;
           transition: all 0.2s ease;
@@ -478,7 +478,7 @@ export function DoctorConsultingCard({
 
         .btn-secondary-light-pill:hover {
           background: #E5E7EB;
-          color: #111827;
+          color: #000000;
           border-color: #D1D5DB;
         }
 
@@ -496,9 +496,9 @@ export function DoctorConsultingCard({
           padding: 6px 15px;
           border-radius: 9999px;
           background: #F3F4F6;
-          color: #4B5563;
+          color: #000000;
           font-size: 0.8rem;
-          font-weight: 600;
+          font-weight: 700;
         }
 
         /* Left Column: Portrait Stage */
@@ -541,8 +541,8 @@ export function DoctorConsultingCard({
           padding: 6px 14px;
           border-radius: 9999px;
           font-size: 0.78rem;
-          font-weight: 700;
-          color: #1F2937;
+          font-weight: 800;
+          color: #000000;
           box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
         }
 
@@ -556,8 +556,8 @@ export function DoctorConsultingCard({
           padding: 6px 14px;
           border-radius: 9999px;
           font-size: 0.78rem;
-          font-weight: 700;
-          color: #1F2937;
+          font-weight: 800;
+          color: #000000;
           display: flex;
           align-items: center;
           gap: 5px;
@@ -569,8 +569,8 @@ export function DoctorConsultingCard({
         }
 
         .rating-sub {
-          color: #6B7280;
-          font-weight: 500;
+          color: #000000;
+          font-weight: 600;
         }
 
         /* Responsive Breakpoints */
