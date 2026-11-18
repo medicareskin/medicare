@@ -22,3 +22,4 @@ export function VerifiedProcedureFacts({ slug }: { slug: string }) {
 }
 
 export default VerifiedProcedureFacts;
+

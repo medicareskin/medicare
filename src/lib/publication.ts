@@ -41,3 +41,4 @@ export const absoluteCanonical = (path: string) => new URL(path, SITE_ORIGIN).to
 export const isApprovedProductionHost = (host: string, env: NodeJS.ProcessEnv = process.env) =>
   host.toLowerCase().replace(/:\d+$/, '') === new URL(SITE_ORIGIN).hostname &&
   env.PUBLIC_LAUNCH_APPROVED === 'true';
+

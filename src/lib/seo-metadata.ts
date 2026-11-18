@@ -18,3 +18,4 @@ export function createPageMetadata(args: {
     robots: { index, follow: index },
   };
 }
+

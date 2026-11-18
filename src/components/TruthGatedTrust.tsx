@@ -23,3 +23,4 @@ export function TruthGatedTrust() {
 }
 
 export default TruthGatedTrust;
+

@@ -56,3 +56,4 @@ export function bookingWhatsapp(): string {
 export function googleMapsSearch(): string {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Medicare Skin Cosmetic Clinic Jyothi Layout Yelachenahalli Bengaluru')}`;
 }
+
