@@ -1,19 +1,21 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useMemo } from 'react';
 import Link from 'next/link';
+import { waLink } from '@/lib/site';
 
 interface SlideItem {
   id: string;
   category: string;
+  badge?: string;
+  badgeBg?: string;
   line1: string;
   line2: string;
   image: string;
   pillTitle: string;
   pillPrice: string;
   href: string;
-  bgGradient: string;
-  glassColor: string;
+  glassColor?: string;
   accentBtnColor?: string;
   objectPosition?: string;
 }
@@ -22,140 +24,122 @@ const FEATURE_SLIDES: SlideItem[] = [
   {
     id: 'hair-trigger',
     category: 'Hair Fall',
+    badge: 'ROOT CAUSE',
+    badgeBg: '#EA580C',
     line1: 'Stop treating the hair.',
     line2: 'Find the trigger.',
     image: '/images/slide_hair_new.jpg',
-    pillTitle: 'Hair Fall Checkups',
+    pillTitle: 'Hair Fall & Scalp Profile',
     pillPrice: 'Starts at ₹2399',
     href: '/treatments/hair/hair-loss-treatment/',
-    bgGradient: 'linear-gradient(180deg, #F9F1E7 0%, #EEDECF 100%)',
-    glassColor: 'rgba(40, 16, 36, 0.90)',
-    accentBtnColor: '#922370', // Vibrant berry magenta matching reference
-    objectPosition: 'center 14%'
+    glassColor: 'rgba(28, 20, 24, 0.88)',
+    accentBtnColor: '#922370',
+    objectPosition: 'center 12%'
   },
   {
     id: 'acne-root',
     category: 'Acne & Scars',
+    badge: 'CLINICAL',
+    badgeBg: '#0284C7',
     line1: 'Stop covering breakouts.',
     line2: 'Clear the root cause.',
     image: '/images/slide_acne_new.jpg',
     pillTitle: 'Acne & Scar Checkups',
     pillPrice: 'Starts at ₹1499',
     href: '/treatments/skin/acne-treatment/',
-    bgGradient: 'linear-gradient(180deg, #F7EFE8 0%, #EFE1D5 100%)',
-    glassColor: 'rgba(38, 14, 52, 0.90)',
-    accentBtnColor: '#280F33',
-    objectPosition: 'center 16%'
+    glassColor: 'rgba(22, 26, 38, 0.88)',
+    accentBtnColor: '#0284C7',
+    objectPosition: 'center 14%'
   },
   {
     id: 'pigmentation-melanin',
     category: 'Pigmentation',
+    badge: 'Q-SWITCHED Nd:YAG',
+    badgeBg: '#7C3AED',
     line1: 'Stop fading dark spots.',
     line2: 'Target deep melanin.',
     image: '/images/slide_pigment_new.jpg',
-    pillTitle: 'Pigmentation Protocol',
+    pillTitle: 'Pigmentation & Melasma Protocol',
     pillPrice: 'Starts at ₹2499',
     href: '/treatments/skin/pigmentation-treatment/',
-    bgGradient: 'linear-gradient(180deg, #F8EFEB 0%, #EFE3D8 100%)',
-    glassColor: 'rgba(42, 16, 46, 0.90)',
-    accentBtnColor: '#280F33',
-    objectPosition: 'center 22%'
+    glassColor: 'rgba(30, 18, 42, 0.88)',
+    accentBtnColor: '#7C3AED',
+    objectPosition: 'center 18%'
   },
   {
     id: 'hydrafacial-glow',
     category: 'HydraFacial Glow',
+    badge: 'VORTEX GLOW',
+    badgeBg: '#0D9488',
     line1: 'Dull & dehydrated skin?',
     line2: 'Unlock clinical glow.',
     image: '/images/slide_hydra_glow_new.jpg',
-    pillTitle: 'HydraFacial Medi-Facial',
+    pillTitle: 'HydraFacial Medi-Facial Infusion',
     pillPrice: 'Starts at ₹2499',
     href: '/treatments/aesthetics/hydrafacial/',
-    bgGradient: 'linear-gradient(180deg, #F6EEF8 0%, #EBDAF0 100%)',
-    glassColor: 'rgba(38, 14, 52, 0.90)',
-    accentBtnColor: '#280F33',
+    glassColor: 'rgba(18, 30, 36, 0.88)',
+    accentBtnColor: '#0D9488',
     objectPosition: 'center 8%'
   },
   {
     id: 'laser-hair',
     category: 'Laser Care',
+    badge: 'US-FDA DIODE',
+    badgeBg: '#4F46E5',
     line1: 'Stop waxing & shaving.',
-    line2: 'Permanent smooth skin.',
+    line2: 'Long-term smooth skin.',
     image: '/images/slide_laser_new.jpg',
     pillTitle: 'US-FDA Laser Reduction',
     pillPrice: 'Starts at ₹1999',
     href: '/treatments/laser/laser-hair-reduction/',
-    bgGradient: 'linear-gradient(180deg, #EBF1F7 0%, #DDE6F0 100%)',
-    glassColor: 'rgba(25, 34, 54, 0.90)',
-    accentBtnColor: '#1A2538',
+    glassColor: 'rgba(20, 24, 40, 0.88)',
+    accentBtnColor: '#4F46E5',
     objectPosition: 'center center'
   },
   {
     id: 'acne-scars',
     category: 'Acne & Scars',
-    line1: 'Stop living with scars.',
-    line2: 'Rebuild smooth texture.',
+    badge: 'FRACTIONAL RF',
+    badgeBg: '#C026D3',
+    line1: 'Pitted acne scars?',
+    line2: 'Rebuild dermal collagen.',
     image: '/images/slide_scar_model_new.jpg',
     pillTitle: 'Acne Scar Resurfacing',
     pillPrice: 'Starts at ₹2999',
     href: '/treatments/skin/acne-scar-treatment/',
-    bgGradient: 'linear-gradient(180deg, #EDE7F3 0%, #DDD3E7 100%)',
-    glassColor: 'rgba(38, 14, 52, 0.90)',
-    accentBtnColor: '#280F33',
-    objectPosition: 'center 14%'
+    glassColor: 'rgba(34, 18, 36, 0.88)',
+    accentBtnColor: '#C026D3',
+    objectPosition: 'center 12%'
   },
   {
     id: 'chemical-peels',
     category: 'Pigmentation',
+    badge: 'DERMATOLOGY PEEL',
+    badgeBg: '#D97706',
     line1: 'Uneven tone & dullness?',
     line2: 'Clinician peel renewal.',
     image: '/images/slide_peel_new.jpg',
     pillTitle: 'Medical Chemical Peels',
     pillPrice: 'Starts at ₹1800',
     href: '/treatments/aesthetics/chemical-peels/',
-    bgGradient: 'linear-gradient(180deg, #FDF4EB 0%, #F5E5D5 100%)',
-    glassColor: 'rgba(46, 22, 14, 0.90)',
-    accentBtnColor: '#361A10',
+    glassColor: 'rgba(38, 22, 16, 0.88)',
+    accentBtnColor: '#D97706',
     objectPosition: 'center top'
   },
   {
     id: 'skin-allergies',
     category: 'Medical Dermatology',
+    badge: 'SPECIALIST CARE',
+    badgeBg: '#E11D48',
     line1: 'Persistent itchy rashes?',
     line2: 'Doctor diagnosis.',
     image: '/images/cat_medical_dermatology.jpg',
-    pillTitle: 'Dermatology Checkups',
+    pillTitle: 'Medical Dermatology Checkup',
     pillPrice: 'Starts at ₹600',
     href: '/treatments/medical-dermatology/skin-allergies/',
-    bgGradient: 'linear-gradient(180deg, #F9F1EF 0%, #EBDEDB 100%)',
-    glassColor: 'rgba(50, 20, 26, 0.90)',
-    accentBtnColor: '#381418',
+    glassColor: 'rgba(36, 18, 24, 0.88)',
+    accentBtnColor: '#E11D48',
     objectPosition: 'center 18%'
-  },
-  {
-    id: 'vitiligo-care',
-    category: 'Medical Dermatology',
-    line1: 'White patches on skin?',
-    line2: 'Repigmentation care.',
-    image: '/images/imageye___-_imgi_21_Vitiligo.webp',
-    pillTitle: 'Vitiligo Medical Therapy',
-    pillPrice: 'Starts at ₹999',
-    href: '/treatments/medical-dermatology/vitiligo/',
-    bgGradient: 'linear-gradient(180deg, #ECE6F5 0%, #DBD0EB 100%)',
-    glassColor: 'rgba(38, 14, 52, 0.90)',
-    accentBtnColor: '#280F33'
-  },
-  {
-    id: 'anti-ageing',
-    category: 'Aesthetics',
-    line1: 'Fine lines & laxity?',
-    line2: 'Collagen remodeling.',
-    image: '/images/imageye___-_imgi_9_skin-tightening-01.webp',
-    pillTitle: 'Skin Tightening & HIFU',
-    pillPrice: 'Starts at ₹3499',
-    href: '/treatments/aesthetics/skin-tightening/',
-    bgGradient: 'linear-gradient(180deg, #F5EFF2 0%, #E7DDE2 100%)',
-    glassColor: 'rgba(46, 16, 36, 0.90)',
-    accentBtnColor: '#331024'
   }
 ];
 
@@ -176,11 +160,21 @@ interface HeroFeatureSlidesProps {
 export function HeroFeatureSlides({ asHero = true }: HeroFeatureSlidesProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeCategory, setActiveCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredSlides =
-    activeCategory === 'All'
-      ? FEATURE_SLIDES
-      : FEATURE_SLIDES.filter((s) => s.category === activeCategory);
+  const filteredSlides = useMemo(() => {
+    return FEATURE_SLIDES.filter((slide) => {
+      const matchesCategory =
+        activeCategory === 'All' || slide.category === activeCategory;
+      const matchesSearch =
+        searchQuery.trim() === '' ||
+        slide.pillTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        slide.line1.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        slide.line2.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        slide.category.toLowerCase().includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    });
+  }, [activeCategory, searchQuery]);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -196,110 +190,244 @@ export function HeroFeatureSlides({ asHero = true }: HeroFeatureSlidesProps) {
       aria-label="Medicare Skin & Cosmetic Clinic - Featured clinical protocols"
     >
       <div className="container">
-        {/* Flagship Hero Header */}
-        <div className="feature-slides-header">
-          <div className="feature-slides-header-text">
-            <div className="feature-slides-eyebrow-row">
-              <span className="eyebrow-pill">✦ EVIDENCE-BASED DERMATOLOGY · SOUTH BENGALURU</span>
+        {/* Top Header & Search Bar matching reference UI/UX */}
+        <div className="feature-slides-topbar">
+          <div className="feature-slides-search-wrap">
+            <div className="feature-search-input-box">
+              <span className="search-icon-decor" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </span>
+              <input
+                type="text"
+                className="feature-search-input"
+                placeholder='Search for "hair fall, acne, pigmentation, hydrafacial..."'
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label="Search skin and hair protocols"
+              />
+              {searchQuery && (
+                <button
+                  type="button"
+                  className="search-clear-btn"
+                  onClick={() => setSearchQuery('')}
+                  aria-label="Clear search"
+                >
+                  ✕
+                </button>
+              )}
             </div>
-            {asHero ? (
-              <h1 className="feature-slides-title">
-                Specialised Dermatology Protocols &amp; Checkups
-              </h1>
-            ) : (
-              <h2 className="feature-slides-title">
-                Specialised Dermatology Protocols &amp; Checkups
-              </h2>
-            )}
-            <p className="feature-slides-sub">
-              Root-cause diagnosis and evidence-based protocols calibrated for South Indian skin phototypes near Yelachenahalli Metro. Guided directly by Dr. (Mrs.) Sujay M (MBBS, DDVL).
-            </p>
+
+            {/* Quick Action Badges next to Search */}
+            <div className="feature-quick-links">
+              <Link href="/treatments/" className="quick-pill-btn">
+                <span className="quick-pill-icon" aria-hidden="true">🔬</span>
+                <span>All Treatments</span>
+              </Link>
+              <Link href="/book-appointment/" className="quick-pill-btn accent-pill">
+                <span className="quick-pill-icon" aria-hidden="true">🩺</span>
+                <span>Doctor Checkups</span>
+              </Link>
+            </div>
           </div>
 
-          <div className="carousel-nav-controls" aria-label="Slide controls">
-            <button
-              type="button"
-              className="carousel-arrow-btn"
-              onClick={() => scroll('left')}
-              aria-label="Previous slide"
-              title="Previous slide"
-            >
-              ‹
-            </button>
-            <button
-              type="button"
-              className="carousel-arrow-btn"
-              onClick={() => scroll('right')}
-              aria-label="Next slide"
-              title="Next slide"
-            >
-              ›
-            </button>
+          {/* Main Title & Context (Accessible H1) */}
+          <div className="feature-slides-title-row">
+            <div>
+              {asHero ? (
+                <h1 className="feature-slides-title">
+                  Specialised Dermatology Protocols &amp; Checkups
+                </h1>
+              ) : (
+                <h2 className="feature-slides-title">
+                  Specialised Dermatology Protocols &amp; Checkups
+                </h2>
+              )}
+              <p className="feature-slides-sub">
+                Root-cause diagnosis and evidence-based protocols calibrated for Indian skin phototypes near Yelachenahalli Metro. Guided directly by Dr. (Mrs.) Sujay M (MBBS, DDVL).
+              </p>
+            </div>
+          </div>
+
+          {/* Category Filter Pills Row */}
+          <div className="feature-category-pills-row" aria-label="Filter protocols by concern">
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                type="button"
+                className={`feature-cat-pill ${activeCategory === cat ? 'active' : ''}`}
+                onClick={() => {
+                  setActiveCategory(cat);
+                  setSearchQuery('');
+                }}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Category Pills Navigation */}
-        <div className="feature-category-pills-row" aria-label="Filter protocols by concern">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              type="button"
-              className={`feature-cat-pill ${activeCategory === cat ? 'active' : ''}`}
-              onClick={() => setActiveCategory(cat)}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+        {/* Carousel Slider with Floating Circular Arrow Buttons */}
+        <div className="feature-carousel-container">
+          {/* Floating Left Circular Arrow Button */}
+          <button
+            type="button"
+            className="carousel-floating-arrow carousel-arrow-left"
+            onClick={() => scroll('left')}
+            aria-label="Previous slide"
+            title="Previous slide"
+          >
+            ‹
+          </button>
 
-        {/* Horizontal Card Track: Matching user uploaded reference image */}
-        <div className="feature-slides-track" ref={scrollRef}>
-          {filteredSlides.map((slide) => (
-            <Link
-              key={slide.id}
-              href={slide.href}
-              className="feature-slide-card"
-              style={{ background: slide.bgGradient }}
-              title={`${slide.line1} ${slide.line2}`}
-            >
-              {/* Top Bold 2-Line Headline matching reference image */}
-              <div className="feature-card-header">
-                <h3 className="feature-card-headline">
-                  <span className="feature-card-line1">{slide.line1}</span>
-                  <span className="feature-card-line2">{slide.line2}</span>
-                </h3>
-              </div>
-
-              {/* Patient / Treatment Model Photo */}
-              <div className="feature-card-img-wrap">
+          {/* Horizontal Full-Bleed Card Track */}
+          <div className="feature-slides-track" ref={scrollRef}>
+            {filteredSlides.map((slide) => (
+              <Link
+                key={slide.id}
+                href={slide.href}
+                className="feature-slide-card full-bleed-card"
+                title={`${slide.line1} ${slide.line2}`}
+              >
+                {/* 1. Full-Bleed Background Image covering 100% of card */}
                 <img 
                   src={slide.image} 
                   alt={`${slide.line1} ${slide.line2}`} 
-                  className="feature-card-img"
+                  className="card-bg-full-image"
                   style={{ objectPosition: slide.objectPosition || 'center top' }}
                   loading="eager"
                 />
-              </div>
 
-              {/* Bottom Frosted Glass Pill matching reference image */}
-              <div
-                className="feature-card-glass-panel"
-                style={{ backgroundColor: slide.glassColor }}
-              >
-                <div className="glass-panel-content">
-                  <span className="glass-panel-title">{slide.pillTitle}</span>
-                  <strong className="glass-panel-price">{slide.pillPrice}</strong>
+                {/* 2. Top Scrim for crisp typography contrast */}
+                <div className="card-top-scrim" />
+
+                {/* 3. Top Headline & Badge overlaying image */}
+                <div className="card-top-content">
+                  <h3 className="card-headline-text">
+                    <span className="card-headline-l1">{slide.line1}</span>
+                    <span className="card-headline-l2">{slide.line2}</span>
+                  </h3>
+                  {slide.badge && (
+                    <div className="card-badge-wrap">
+                      <span 
+                        className="card-category-badge"
+                        style={{ backgroundColor: slide.badgeBg || '#EA580C' }}
+                      >
+                        {slide.badge}
+                      </span>
+                    </div>
+                  )}
                 </div>
+
+                {/* 4. Bottom Frosted Glass Pill Card */}
                 <div
-                  className="glass-panel-btn"
-                  style={{ backgroundColor: slide.accentBtnColor || '#280F33' }}
-                  aria-hidden="true"
+                  className="card-bottom-glass-panel"
+                  style={{ backgroundColor: slide.glassColor || 'rgba(24, 20, 32, 0.88)' }}
                 >
-                  →
+                  <div className="glass-panel-content">
+                    <span className="glass-panel-title">{slide.pillTitle}</span>
+                    <strong className="glass-panel-price">{slide.pillPrice}</strong>
+                  </div>
+                  <div
+                    className="glass-panel-btn"
+                    style={{ backgroundColor: slide.accentBtnColor || '#280F33' }}
+                    aria-hidden="true"
+                  >
+                    →
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
+
+          {/* Floating Right Circular Arrow Button */}
+          <button
+            type="button"
+            className="carousel-floating-arrow carousel-arrow-right"
+            onClick={() => scroll('right')}
+            aria-label="Next slide"
+            title="Next slide"
+          >
+            ›
+          </button>
+        </div>
+
+        {/* 4 Horizontal Quick Action Feature Cards matching Image 2 UI/UX */}
+        <div className="feature-quick-actions-grid">
+          {/* Tile 1: Book Consultation */}
+          <Link href="/book-appointment/" className="quick-action-tile">
+            <div className="action-tile-icon-box icon-blue">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <div className="action-tile-text">
+              <strong className="action-tile-title">Book Consultation</strong>
+              <span className="action-tile-sub">Choose your preferred slot</span>
+            </div>
+            <div className="action-tile-arrow arrow-blue" aria-hidden="true">
+              ›
+            </div>
+          </Link>
+
+          {/* Tile 2: 100% Doctor-Led Care */}
+          <Link href="/doctors/dr-sujay-m/" className="quick-action-tile">
+            <div className="action-tile-icon-box icon-green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div className="action-tile-text">
+              <strong className="action-tile-title">100% Doctor-Led</strong>
+              <span className="action-tile-sub">Evaluated by Dr. Sujay M</span>
+            </div>
+            <div className="action-tile-arrow arrow-green" aria-hidden="true">
+              ›
+            </div>
+          </Link>
+
+          {/* Tile 3: WhatsApp Enquiry */}
+          <a 
+            href={waLink('Hello Dr. Sujay M, I would like to enquire about consultation availability at Medicare Skin Clinic.')}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="quick-action-tile"
+          >
+            <div className="action-tile-icon-box icon-emerald">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </div>
+            <div className="action-tile-text">
+              <strong className="action-tile-title">Doctor Enquiry</strong>
+              <span className="action-tile-sub">Chat on WhatsApp</span>
+            </div>
+            <div className="action-tile-arrow arrow-emerald" aria-hidden="true">
+              ›
+            </div>
+          </a>
+
+          {/* Tile 4: South Bengaluru Clinic */}
+          <Link href="/locations/yelachenahalli/" className="quick-action-tile">
+            <div className="action-tile-icon-box icon-rose">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div className="action-tile-text">
+              <strong className="action-tile-title">South Bengaluru Clinic</strong>
+              <span className="action-tile-sub">Near Yelachenahalli Metro</span>
+            </div>
+            <div className="action-tile-arrow arrow-rose" aria-hidden="true">
+              ›
+            </div>
+          </Link>
         </div>
       </div>
     </section>
