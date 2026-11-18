@@ -1438,26 +1438,27 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   right: -20px;
 }
 
-/* Track of Full-Bleed Cards (4 Cards Side-by-Side matching reference) */
+/* Track of Full-Bleed Cards (Single Horizontal Row Carousel matching Reference) */
 .feature-slides-track {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 18px;
-  padding: 6px 0 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 6px 2px 14px;
 }
-@media (max-width: 1100px) {
-  .feature-slides-track {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 6px 4px 16px;
-  }
+.feature-slides-track::-webkit-scrollbar {
+  display: none;
 }
 
 /* FULL-BLEED CARD MATCHING REFERENCE UI/UX */
 .feature-slide-card.full-bleed-card {
-  width: 100%;
+  flex: 0 0 calc((100% - 54px) / 4);
+  min-width: 270px;
+  max-width: 295px;
   height: 450px;
   border-radius: 26px;
   position: relative;
@@ -1473,8 +1474,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 @media (max-width: 1100px) {
   .feature-slide-card.full-bleed-card {
-    flex: 0 0 285px;
-    width: 285px;
+    flex: 0 0 280px;
+    min-width: 280px;
+    max-width: 280px;
   }
 }
 .feature-slide-card.full-bleed-card:hover {
