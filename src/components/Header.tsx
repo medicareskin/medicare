@@ -150,24 +150,54 @@ export function Header() {
           aria-label="Main navigation" 
           className={`navbar-center-nav ${mobileOpen ? 'mobile-drawer-open' : ''}`}
         >
-          {/* Treatments Dropdown Trigger */}
+          {/* 1. Home */}
+          <Link 
+            href="/" 
+            className="navbar-nav-link"
+            onClick={() => setMobileOpen(false)}
+          >
+            Home
+          </Link>
+
+          {/* 2. About */}
+          <Link 
+            href="/about/" 
+            className="navbar-nav-link"
+            onClick={() => setMobileOpen(false)}
+          >
+            About
+          </Link>
+
+          {/* 3. Skin Care */}
+          <Link 
+            href="/treatments/?category=Skin" 
+            className="navbar-nav-link"
+            onClick={() => setMobileOpen(false)}
+          >
+            Skin Care
+          </Link>
+
+          {/* 4. Treatments with Dropdown */}
           <div 
             className="navbar-nav-item has-dropdown" 
             ref={treatmentsRef}
             onMouseEnter={() => setShowTreatmentsDropdown(true)}
             onMouseLeave={() => setShowTreatmentsDropdown(false)}
           >
-            <button
-              type="button"
+            <Link
+              href="/treatments/"
               className="navbar-nav-link dropdown-toggle"
-              onClick={() => setShowTreatmentsDropdown(!showTreatmentsDropdown)}
+              onClick={() => {
+                setShowTreatmentsDropdown(!showTreatmentsDropdown);
+                setMobileOpen(false);
+              }}
               aria-expanded={showTreatmentsDropdown}
             >
               Treatments{' '}
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ marginLeft: 4 }}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ marginLeft: 3 }}>
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-            </button>
+            </Link>
 
             {showTreatmentsDropdown && (
               <div className="treatments-mega-dropdown" role="menu">
@@ -204,38 +234,25 @@ export function Header() {
             )}
           </div>
 
+          {/* 5. Hair Care */}
+          <Link 
+            href="/treatments/?category=Hair" 
+            className="navbar-nav-link"
+            onClick={() => setMobileOpen(false)}
+          >
+            Hair Care
+          </Link>
+
+          {/* 6. Meet Dr. Sujay */}
           <Link 
             href="/doctors/dr-sujay-m/" 
             className="navbar-nav-link"
             onClick={() => setMobileOpen(false)}
           >
-            Our Doctor
+            Meet Dr. Sujay
           </Link>
 
-          <Link 
-            href="/concerns/" 
-            className="navbar-nav-link"
-            onClick={() => setMobileOpen(false)}
-          >
-            Conditions
-          </Link>
-
-          <Link 
-            href="/results/" 
-            className="navbar-nav-link"
-            onClick={() => setMobileOpen(false)}
-          >
-            Results
-          </Link>
-
-          <Link 
-            href="/technology/" 
-            className="navbar-nav-link"
-            onClick={() => setMobileOpen(false)}
-          >
-            Technology
-          </Link>
-
+          {/* 7. Blog */}
           <Link 
             href="/blog/" 
             className="navbar-nav-link"
@@ -244,12 +261,13 @@ export function Header() {
             Blog
           </Link>
 
+          {/* 8. Reviews */}
           <Link 
-            href="/contact/" 
+            href="/#reviews" 
             className="navbar-nav-link"
             onClick={() => setMobileOpen(false)}
           >
-            Contact
+            Reviews
           </Link>
 
           {/* Mobile Drawer Specific Actions */}

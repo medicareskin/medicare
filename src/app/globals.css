@@ -2238,15 +2238,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   }
 }
 
-/* FOOTER */
+/* FOOTER - PURE BLACK THEME */
 .site-footer {
-  background: var(--purple-dark);
-  color: #EAE3F2;
+  background: #000000 !important;
+  color: #E5E7EB;
   padding: 72px 0 110px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #1F2937;
 }
-.site-footer a { color: #EAE3F2; }
-.site-footer a:hover { color: #F8D3EF; }
+.site-footer a { color: #9CA3AF; }
+.site-footer a:hover { color: #FFFFFF; }
 .footer-columns {
   display: grid;
   grid-template-columns: 1.4fr 0.8fr 0.8fr 1.3fr;
@@ -2321,19 +2321,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   line-height: 1.45;
 }
 .footer-bottom-bar {
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 1px solid #1F2937;
   padding-top: 26px;
   margin-top: 48px;
   font-size: 0.85rem;
-  color: #E2D7EE;
+  color: #9CA3AF;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
 }
-.footer-bottom-bar p { color: #E2D7EE; margin: 0; font-size: 0.85rem; }
-.disclaimer-note { font-size: 0.78rem; margin-top: 6px; color: #D6C8E6; }
+.footer-bottom-bar p { color: #9CA3AF; margin: 0; font-size: 0.85rem; }
+.disclaimer-note { font-size: 0.78rem; margin-top: 6px; color: #6B7280; }
 
 /* MOBILE ACTIONS BOTTOM BAR */
 .mobile-actions-bar {
@@ -6046,7 +6046,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .footer-nav-list a {
   font-size: 0.88rem;
-  color: #E6DCF0;
+  color: #9CA3AF;
   text-decoration: none;
   line-height: 1.45;
   transition: all 0.2s ease;
@@ -6054,7 +6054,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .footer-nav-list a:hover {
-  color: #FFBCE6;
+  color: #FFFFFF;
   transform: translateX(3px);
   text-decoration: underline;
 }
@@ -6070,28 +6070,28 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   align-items: flex-start;
   gap: 10px;
   font-size: 0.88rem;
-  color: #E6DCF0;
+  color: #D1D5DB;
   line-height: 1.55;
 }
 
 .footer-contact-line span {
-  color: #E6DCF0;
+  color: #D1D5DB;
 }
 
 .footer-contact-line a {
-  color: #FFFFFF;
+  color: #F3F4F6;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer-contact-line a:hover {
-  color: #FFBCE6;
+  color: #FFFFFF;
   text-decoration: underline;
 }
 
 .footer-icon {
-  color: #FFAEE2;
+  color: #D49A3D;
   flex-shrink: 0;
   margin-top: 3px;
 }
@@ -6144,7 +6144,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .footer-policy-links a {
   font-size: 0.84rem;
-  color: #D6C8E6;
+  color: #9CA3AF;
   text-decoration: none;
   transition: color 0.2s ease;
 }
