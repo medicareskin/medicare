@@ -678,5 +678,213 @@ export const articles: Article[] = [
         title: 'Journal of Cutaneous and Aesthetic Surgery — Chemical Peels in Melanin-Rich Skin'
       }
     ]
+  },
+  {
+    slug: 'science-of-glass-skin-radiance',
+    title: 'The Science of Glass Skin Radiance: Dermatologist Beauty Secrets for Indian Complexions',
+    summary:
+      'How multi-molecular hyaluronic acid layering, non-stripping AHA exfoliation, antioxidant serums, and medical HydraFacial fluidics create a natural, dewy luminescence without harsh salon bleaching.',
+    category: 'Beauty & Skin Radiance',
+    readingTime: '6 min read',
+    author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
+    published: '2026-11-18',
+    reviewed: '2026-11-18',
+    approved: true,
+    image: '/images/glass_skin_radiance.jpg',
+    imageAlt: 'Luminous Glass Skin Radiance and Skin Hydration',
+    keyTakeaways: [
+      'True glass skin is the optical reflection of a compact, well-hydrated stratum corneum, not heavy cosmetics or bleaching.',
+      'Dermatologists recommend multi-molecular hyaluronic acid layered on damp skin and locked in with lipid-rich ceramides.',
+      'Medical HydraFacial vortex suction purifies congested pores and infuses antioxidant peptides with zero downtime.'
+    ],
+    sections: [
+      {
+        title: 'What Glass Skin Truly Means in Clinical Dermatology',
+        body:
+          'In dermatological science, skin radiance is governed by optical reflectance. When the stratum corneum—the skin outermost protective barrier—is smooth, hydrated, and free from dead cellular debris, ambient light reflects evenly, giving the appearance of poreless, translucent glass. When dehydrated or clogged with oxidized sebum, light scatters irregularly, resulting in a dull, tired tone. True skin beauty is the visible manifestation of cellular barrier health.'
+      },
+      {
+        title: 'Hydration Layering: Multi-Molecular Hyaluronic Acid & Ceramides',
+        body:
+          'Drinking water alone cannot replenish the stratum corneum if intercellular lipids are depleted by harsh foaming face washes. Dermatologists recommend topical layering: applying multi-molecular weight hyaluronic acid to damp skin to pull water into multiple skin strata, immediately sealed with ceramide-dominant moisturizers to stop transepidermal water loss (TEWL).'
+      },
+      {
+        title: 'Antioxidant Defense Against Urban Environmental Stress',
+        body:
+          'Urban traffic particulate matter and tropical UV light create free radicals that oxidize surface oils, degrade collagen fibers, and trigger uneven dark spots. Incorporating a stabilized morning serum with 10–15% L-Ascorbic Acid or ethylated Vitamin C, boosted with Ferulic acid and Niacinamide, shields the complexion and illuminates surface clarity over 6 to 8 weeks.'
+      },
+      {
+        title: 'In-Clinic Radiance Boosters: Medical HydraFacial & Milk Peels',
+        body:
+          'When home serums hit a plateau, device-assisted hydrodermabrasion (HydraFacial) uses calibrated vortex vacuum fluidics to gently dissolve blackheads and infuse active peptide serums. Combined with gentle lactic acid or arginine peels, it delivers instant party-ready radiance with zero social downtime.'
+      }
+    ],
+    references: [
+      {
+        title: 'Journal of Cosmetic Dermatology — Hydrodermabrasion with Infusion Formulations for Facial Rejuvenation'
+      },
+      {
+        title: 'Indian Journal of Dermatology — Barrier Restoration in Tropical Urban Environments'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Can oily or acne-prone skin achieve glass skin?',
+        answer: 'Yes. Glass skin is about hydration, not oiliness. Lightweight water-gel moisturizers with hyaluronic acid and niacinamide hydrate the epidermis without clogging pores, balancing sebum production naturally.'
+      },
+      {
+        question: 'How often should I get a medical HydraFacial for maintenance?',
+        answer: 'For sustained radiance and clean pores, dermatologists recommend a HydraFacial session once every 4 to 6 weeks, synchronized with your skin natural cell renewal cycle.'
+      }
+    ]
+  },
+  {
+    slug: 'bridal-pre-event-beauty-countdown',
+    title: 'Pre-Bridal & Festive Beauty Countdown: Month-by-Month Dermatologist Timeline for Camera-Ready Skin',
+    summary:
+      'Planning for a wedding or festive celebration in Bengaluru? A structured dermatological roadmap from laser toning at 6 months to barrier hydration 48 hours prior—without risking last-minute purging.',
+    category: 'Beauty & Skin Radiance',
+    readingTime: '7 min read',
+    author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
+    published: '2026-11-18',
+    reviewed: '2026-11-18',
+    approved: true,
+    image: '/images/hero_editorial_passion_arch.jpg',
+    imageAlt: 'Pre-Bridal Clinical Dermatology Beauty Countdown in Bengaluru',
+    keyTakeaways: [
+      'Begin corrective treatments (acne scar remodeling, deep melasma toning) 6 months ahead to allow natural collagen remodeling.',
+      'Diode laser hair reduction started 3 to 4 months prior creates a velvet canvas for high-definition photography.',
+      'Never attempt new prescription actives or harsh salon extractions within 7 days of your wedding or event.'
+    ],
+    sections: [
+      {
+        title: '6 Months Out: Structural Remodeling & Melanin Toning',
+        body:
+          'Deep concerns such as stubborn hormonal melasma, post-acne dark marks, and pitted scars require multiple epidermal turnover cycles (28 to 40 days each). Six months prior is the optimal window to initiate low-fluence Q-switched laser toning, subcision, or gentle peels. This ensures maximum collagen synthesis without rushing healing times.'
+      },
+      {
+        title: '3 Months Out: Hair Reduction & Pore Texture Smoothing',
+        body:
+          'If unwanted facial peach fuzz or body hair interferes with smooth makeup application, start diode laser hair reduction now. Monthly sessions thin out follicle density, eliminate razor irritation, and create a silky smooth base for pre-wedding events.'
+      },
+      {
+        title: '1 Month Out: Medical Hydration & Surface Refinement',
+        body:
+          'Four weeks prior, pause introducing any new active chemicals. Instead, opt for gentle device-assisted HydraFacials or ultra-mild lactic milk peels. This cleanses clogged pores and floods the skin with intense moisture without redness or flaking.'
+      },
+      {
+        title: 'The 48-Hour Pre-Event Golden Rule',
+        body:
+          'Never permit salon steaming, facial waxing, or DIY kitchen scrubs 48 hours before your wedding or reception. Prioritize barrier calm: gentle ceramide creams, 8 hours of sleep, and strict mineral sunscreen during outdoor shopping.'
+      }
+    ],
+    references: [
+      {
+        title: 'Journal of Aesthetic Dermatology — Pre-Event Facial Rejuvenation Planning Protocols'
+      }
+    ],
+    faqs: [
+      {
+        question: 'What should I do if a pimple appears 2 days before my wedding?',
+        answer: 'Do not squeeze it. Consult your dermatologist immediately for a painless intralesional micro-injection or targeted hydrocolloid soothing patch that calms inflammation within 12 to 24 hours.'
+      }
+    ]
+  },
+  {
+    slug: 'chemical-peels-vs-salon-bleaching',
+    title: 'Chemical Peels vs. Salon Bleach: Why Medical Exfoliation Delivers Lasting Radiance Without Rebound Darkening',
+    summary:
+      'Why beauty parlour bleach powders cause chemical burns and rebound hyperpigmentation in melanin-rich skin, and how clinician-selected fruit acid peels safely restore radiant epidermal clarity.',
+    category: 'Beauty & Skin Radiance',
+    readingTime: '5 min read',
+    author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
+    published: '2026-11-18',
+    reviewed: '2026-11-18',
+    approved: true,
+    image: '/images/medical_peel_glow.jpg',
+    imageAlt: 'Medical Chemical Peels vs Salon Bleach for Radiant Skin',
+    keyTakeaways: [
+      'Salon bleaches use high concentrations of alkaline hydrogen peroxide that oxidize vellus hair and burn epidermal melanocytes.',
+      'Post-bleach inflammation frequently triggers severe rebound darkening (PIH) and chronic facial sensitivity.',
+      'Clinical chemical peels use biocompatible AHA/BHA acids with exact pH neutralization to gently exfoliate melanin clusters.'
+    ],
+    sections: [
+      {
+        title: 'The Hidden Hazard of Beauty Parlour Bleaches',
+        body:
+          'Commercial salon bleaching kits rely on caustic alkaline hydrogen peroxide and ammonium persulfate. While they temporarily bleach dark facial peach fuzz to create an optical illusion of fairness, the high pH strips the natural acid mantle, damages cellular keratin, and causes sub-clinical thermal burns. In South Indian skin, melanocytes react defensively by producing excess melanin—leading to darker, patchy skin just weeks later.'
+      },
+      {
+        title: 'How Medical Chemical Peels Differ Fundamentally',
+        body:
+          'In contrast, medical chemical peels use naturally derived alpha- and beta-hydroxy acids (such as mandelic, glycolic, lactic, and salicylic acids) buffered to safe therapeutic pH levels. Rather than attacking hair, they dissolve intercellular desmosome bonds, allowing dull dead cells to slough away smoothly and revealing radiant, healthy new skin cells beneath.'
+      },
+      {
+        title: 'Long-Term Beauty: Collagen Synthesis & Tone Correction',
+        body:
+          'Regular dermatologist-guided superficial peels stimulate fibroblast activity in the upper dermis, boosting hyaluronic acid and collagen synthesis. This refines dilated pores, softens early fine lines, and clears post-inflammatory erythema without barrier impairment.'
+      }
+    ],
+    references: [
+      {
+        title: 'Indian Journal of Dermatology — Adverse Cutaneous Reactions to Over-The-Counter Facial Bleaches'
+      },
+      {
+        title: 'Dermatologic Surgery — Safety and Efficacy of Superficial Chemical Peeling in Darker Skin Phototypes'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Will my face peel noticeably after a medical chemical peel?',
+        answer: 'Superficial party-glow peels (like lactic or arginine peels) produce zero visible shedding—only microscopic flaking that washes off with cleansing, leaving immediate radiance.'
+      }
+    ]
+  },
+  {
+    slug: 'scalp-glaze-hair-hydration-growth-factors',
+    title: 'Scalp Hydration & Hair Glaze: How Autologous Growth Factors & Peptides Restore Gloss, Density & Scalp Vitality',
+    summary:
+      'Combat Bengaluru hard water dryness and thinning with clinical trichology: how Growth Factor Concentrate (GFC) and biomimetic peptide micro-infusion revive dormant follicles and smooth frizzy hair shafts.',
+    category: 'Beauty & Hair Health',
+    readingTime: '6 min read',
+    author: 'Dr. (Mrs.) Sujay M, MBBS, DDVL',
+    published: '2026-11-18',
+    reviewed: '2026-11-18',
+    approved: true,
+    image: '/images/radiant_hair_smile_woman.png',
+    imageAlt: 'Scalp Hydration, Hair Glaze and Growth Factor Therapy in South Bengaluru',
+    keyTakeaways: [
+      'Bengaluru hard borewell water coats hair shafts with calcium-magnesium salts, causing chronic roughness and breakage.',
+      'Scalp hydration and pH balancing are the true foundations of voluminous, shiny hair growth.',
+      'Autologous Growth Factor Therapy (GFT) delivers high concentrations of VEGF and PDGF directly to dormant dermal papilla cells.'
+    ],
+    sections: [
+      {
+        title: 'The Scalp-Hair Connection: The Living Soil of Hair Beauty',
+        body:
+          'Just as glowing skin depends on barrier health, lustrous, thick hair begins in the scalp. When the scalp microbiome is imbalanced by sebum congestion, hard water mineral deposits, and harsh sulfates, follicular blood supply constricts. The hair shaft emerges weakened, leading to premature shedding, frizzy dryness, and loss of natural glossy bounce.'
+      },
+      {
+        title: 'How Growth Factor Concentrate (GFC) Restores Follicle Vitality',
+        body:
+          'Growth Factor Concentrate is an advanced, cell-free regenerative therapy derived from your own blood platelets. By isolating pure vascular endothelial growth factor (VEGF), epidermal growth factor (EGF), and platelet-derived growth factor (PDGF), GFC micro-infusions wake up sleeping follicles in the anagen (growth) phase and enhance nutrient capillary flow by over 40%.'
+      },
+      {
+        title: 'Combating Bengaluru Hard Water Mineral Coating',
+        body:
+          'Borewell and tanker water in South Bengaluru has elevated total dissolved solids (TDS) and mineral salts that crystallize on the hair cuticle, preventing conditioner absorption. Dermatologists recommend a clarifying weekly chelating shampoo followed by peptide-infused scalp tonics to preserve hair elasticity and luminous shine.'
+      }
+    ],
+    references: [
+      {
+        title: 'International Journal of Trichology — Comparative Efficacy of Growth Factors in Hair Shaft Caliber'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Is GFC therapy painful?',
+        answer: 'No. Scalp GFC is performed under local cold air cooling or topical numbing spray using ultra-fine micro-needles, making it comfortable with zero post-session soreness.'
+      }
+    ]
   }
 ];

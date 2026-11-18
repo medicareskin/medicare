@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/doctors/dr-sujay-m/',
     '/locations/yelachenahalli/',
     '/journal/',
+    '/blog/',
     '/book-appointment/',
     '/patient-information/',
     '/medical-disclaimer/',
@@ -30,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .map((t) => `/treatments/${categoryToSlug(t.category)}/${t.slug}/`);
   const articleUrls = articles
     .filter((a) => a.approved)
-    .map((a) => `/journal/${a.slug}/`);
+    .flatMap((a) => [`/journal/${a.slug}/`, `/blog/${a.slug}/`]);
   const filtered = [...paths, ...treatmentUrls, ...articleUrls];
   return filtered.map((p) => ({
     url: `${site.url}${p}`,

@@ -237,6 +237,14 @@ export function Header() {
           </Link>
 
           <Link 
+            href="/blog/" 
+            className="navbar-nav-link"
+            onClick={() => setMobileOpen(false)}
+          >
+            Blog
+          </Link>
+
+          <Link 
             href="/contact/" 
             className="navbar-nav-link"
             onClick={() => setMobileOpen(false)}

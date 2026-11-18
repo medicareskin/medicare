@@ -17,7 +17,7 @@ export const corePaths = [
   '/', '/treatments/', '/concerns/', '/doctors/dr-sujay-m/',
   '/book-appointment/', '/locations/yelachenahalli/',
   '/editorial-policy/', '/privacy-policy/',
-  '/contact/', '/faqs/', '/journal/',
+  '/contact/', '/faqs/', '/journal/', '/blog/',
 ];
 
 const csvSet = (value: string | undefined) =>
