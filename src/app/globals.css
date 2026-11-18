@@ -1274,22 +1274,79 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   }
 }
 
-/* FEATURE SLIDES SECTION (matching User Reference Image 4) */
+/* FEATURE SLIDES SECTION (matching User Reference Image) */
 .feature-slides-section {
-  padding: 56px 0 64px;
+  padding: 44px 0 56px;
   background: #FFFFFF;
   border-bottom: 1px solid var(--line);
+}
+.feature-slides-section.feature-slides-as-hero {
+  padding: 36px 0 64px;
+  background: linear-gradient(180deg, #FDFCFB 0%, #FAF6FA 50%, #FFFFFF 100%);
+  border-bottom: 1px solid rgba(43, 14, 76, 0.08);
 }
 .feature-slides-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 32px;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.feature-slides-eyebrow-row {
+  margin-bottom: 12px;
 }
 .feature-slides-title {
-  font-size: clamp(1.8rem, 2.7vw, 2.4rem);
-  max-width: 680px;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-family: var(--font-serif, "Fraunces", Georgia, serif);
+  font-weight: 750;
+  color: #1F1128;
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+  max-width: 760px;
+  margin: 0 0 10px;
 }
+.feature-slides-sub {
+  font-size: 1.02rem;
+  color: #5C5268;
+  max-width: 720px;
+  line-height: 1.55;
+  margin: 0;
+}
+/* Category Filter Pills */
+.feature-category-pills-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 18px;
+  margin-bottom: 12px;
+}
+.feature-category-pills-row::-webkit-scrollbar { display: none; }
+
+.feature-cat-pill {
+  flex-shrink: 0;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: 1px solid #E4D8DF;
+  background: #FFFFFF;
+  color: #4A3A52;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.feature-cat-pill:hover {
+  background: #FAF0F6;
+  border-color: #922370;
+  color: #922370;
+}
+.feature-cat-pill.active {
+  background: #250F30;
+  border-color: #250F30;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(37, 15, 48, 0.2);
+}
+
 .carousel-nav-controls {
   display: flex;
   gap: 10px;
@@ -1307,6 +1364,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   place-items: center;
   box-shadow: var(--shadow-sm);
   transition: all 0.18s ease;
+  cursor: pointer;
 }
 .carousel-arrow-btn:hover {
   background: var(--purple);
@@ -1316,19 +1374,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .feature-slides-track {
   display: flex;
-  gap: 24px;
+  gap: 22px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  padding-bottom: 12px;
+  padding-bottom: 16px;
+  padding-top: 6px;
 }
 .feature-slides-track::-webkit-scrollbar { display: none; }
 
 .feature-slide-card {
-  flex: 0 0 310px;
-  width: 310px;
-  height: 450px;
-  border-radius: 32px;
+  flex: 0 0 318px;
+  width: 318px;
+  height: 465px;
+  border-radius: 28px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1336,28 +1395,27 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   justify-content: space-between;
   text-decoration: none;
   scroll-snap-align: start;
-  box-shadow: 0 10px 28px rgba(43, 14, 76, 0.08);
-  border: 1px solid rgba(43, 14, 76, 0.06);
+  box-shadow: 0 12px 32px rgba(43, 14, 76, 0.08);
+  border: 1px solid rgba(43, 14, 76, 0.08);
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .feature-slide-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 44px rgba(43, 14, 76, 0.16);
+  box-shadow: 0 20px 48px rgba(43, 14, 76, 0.16);
 }
 
 /* Top Bold 2-Line Headline sitting cleanly on solid/pastel background */
 .feature-card-header {
   position: relative;
   z-index: 3;
-  padding: 26px 22px 12px;
-  min-height: 108px;
+  padding: 24px 22px 10px;
+  min-height: 104px;
   display: flex;
   flex-direction: column;
 }
 .feature-card-headline {
-  color: #1F1108;
-  font-size: 1.35rem;
-  line-height: 1.22;
+  font-size: 1.42rem;
+  line-height: 1.2;
   font-weight: 850;
   letter-spacing: -0.025em;
   font-family: inherit;
@@ -1367,9 +1425,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   word-break: normal;
   hyphens: none;
 }
+.feature-card-line1 {
+  color: #1C120B;
+}
 .feature-card-line2 {
-  color: var(--purple);
-  font-weight: 800;
+  color: #3B124C;
+  font-weight: 850;
 }
 
 /* Center Model / Patient Photo anchored below the text header */
@@ -1378,15 +1439,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   left: 0;
   right: 0;
   bottom: 0;
-  top: 104px;
-  height: 346px;
+  top: 100px;
+  height: 365px;
   z-index: 1;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 6%, black 18%, black 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 6%, black 18%, black 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.35) 8%, black 20%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.35) 8%, black 20%, black 100%);
 }
 .feature-card-img {
   width: 100%;
@@ -1405,8 +1466,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   position: relative;
   z-index: 3;
   margin: 0 16px 16px;
-  border-radius: 20px;
-  padding: 13px 18px;
+  border-radius: 22px;
+  padding: 12px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1414,11 +1475,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  transition: all 0.2s ease;
 }
 .feature-slide-card:hover .feature-card-glass-panel {
-  border-color: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 .glass-panel-content {
   display: flex;
@@ -1426,39 +1487,37 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   gap: 2px;
 }
 .glass-panel-title {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #D8BDDE;
   letter-spacing: -0.01em;
   line-height: 1.25;
 }
 .glass-panel-price {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 850;
   color: #FFFFFF;
   letter-spacing: -0.01em;
   line-height: 1.25;
 }
 
-/* Pill / Capsule Arrow Button matching user reference image */
+/* Circle Arrow Button matching user reference image */
 .glass-panel-btn {
-  background: rgba(18, 10, 8, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 9999px;
-  width: 48px;
-  height: 34px;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
   display: grid;
   place-items: center;
   color: #FFFFFF;
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
   flex-shrink: 0;
 }
 .feature-slide-card:hover .glass-panel-btn {
-  background: var(--magenta);
-  transform: translateX(2px);
+  transform: scale(1.08) translateX(2px);
 }
 
 /* CONDITIONS CAROUSEL SECTION (matching User Reference Image 5) */

@@ -4,7 +4,6 @@ import { site, mapUrl, mapEmbedUrl, waLink } from '@/lib/site';
 import { clinicEntity, physicianEntity, jsonLd, meta } from '@/lib/metadata';
 import { categories, treatments, treatmentPath } from '@/lib/treatments';
 import { CTA, SectionHeading } from '@/components/Elements';
-import { BigHeroSlider } from '@/components/BigHeroSlider';
 import { HeroFeatureSlides } from '@/components/HeroFeatureSlides';
 import { BookingForm } from '@/components/BookingForm';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
@@ -133,11 +132,8 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: jsonLd(homepageSchema) }}
       />
 
-      {/* 1st Section: Editorial Hero Slider */}
-      <BigHeroSlider />
-
-      {/* 2nd Slide: Specialised Dermatology Protocols & Checkups */}
-      <HeroFeatureSlides />
+      {/* 1st Section: Specialised Dermatology Protocols & Checkups Hero Slide */}
+      <HeroFeatureSlides asHero={true} />
 
       {/* 3rd Slide: YOUR CONSULTING DERMATOLOGIST Dr. (Mrs.) Sujay M */}
       <div id="consulting-dermatologist">
