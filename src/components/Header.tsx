@@ -168,16 +168,7 @@ export function Header() {
             About
           </Link>
 
-          {/* 3. Skin Care */}
-          <Link 
-            href="/treatments/?category=Skin" 
-            className="navbar-nav-link"
-            onClick={() => setMobileOpen(false)}
-          >
-            Skin Care
-          </Link>
-
-          {/* 4. Treatments with Dropdown */}
+          {/* 3. Treatments with Dropdown */}
           <div 
             className="navbar-nav-item has-dropdown" 
             ref={treatmentsRef}
@@ -233,6 +224,15 @@ export function Header() {
               </div>
             )}
           </div>
+
+          {/* 4. Skin Care */}
+          <Link 
+            href="/treatments/?category=Skin" 
+            className="navbar-nav-link"
+            onClick={() => setMobileOpen(false)}
+          >
+            Skin Care
+          </Link>
 
           {/* 5. Hair Care */}
           <Link 
