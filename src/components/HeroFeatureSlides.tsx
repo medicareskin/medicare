@@ -191,52 +191,6 @@ export function HeroFeatureSlides({ asHero = true }: HeroFeatureSlidesProps) {
       aria-label="Medicare Skin & Cosmetic Clinic - Featured clinical protocols"
     >
       <div className="container">
-        {/* Top Doctor Authority Strip: Dr. (Mrs.) Sujay M */}
-        <div className="hero-top-doctor-strip">
-          <div className="top-doctor-profile">
-            <div className="top-doctor-avatar-box">
-              <img
-                src="/images/dr_sujaya.jpeg"
-                alt="Dr. (Mrs.) Sujay M MBBS DDVL Consultant Dermatologist"
-                className="top-doctor-avatar-img"
-                width={68}
-                height={68}
-              />
-              <span className="top-doctor-status-dot" title="Available for Consultation" aria-label="Available for Consultation" />
-            </div>
-
-            <div className="top-doctor-details">
-              <div className="top-doctor-badge-row">
-                <span className="top-doctor-eyebrow">CONSULTING DERMATOLOGIST &amp; TRICHOLOGIST</span>
-                <span className="top-doctor-exp-pill">18+ Yrs Clinical Mastery</span>
-              </div>
-              <h2 className="top-doctor-name">
-                Dr. (Mrs.) Sujay M <span className="top-doctor-degrees">MBBS, DDVL (BMCRI 2005)</span>
-              </h2>
-              <p className="top-doctor-lede">
-                Senior Dermatologist at Medicare Skin Clinic &bull; Evidence-based clinical &amp; aesthetic dermatology &bull; Kanakapura Road, near Yelachenahalli Metro, South Bengaluru
-              </p>
-            </div>
-          </div>
-
-          <div className="top-doctor-actions">
-            <Link href="/book-appointment/" className="top-doctor-consult-btn">
-              <span>Book Consultation</span>
-              <span aria-hidden="true">&rarr;</span>
-            </Link>
-            <a
-              href={waLink('Hello Dr. Sujay M, I would like to book a consultation at Medicare Skin Clinic.')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="top-doctor-wa-btn"
-              title="Chat with Dr. Sujay M on WhatsApp"
-            >
-              <WhatsAppIcon size={18} color="#25D366" />
-              <span>WhatsApp</span>
-            </a>
-          </div>
-        </div>
-
         {/* Top Header & Search Bar matching reference UI/UX */}
         <div className="feature-slides-topbar">
           <div className="feature-slides-search-wrap">
