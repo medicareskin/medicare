@@ -141,7 +141,12 @@ export default function Home() {
       {/* 2nd Section: India's Premier Skin & Cosmetic Clinic Banner */}
       <PremierHeroBanner isH1={true} />
 
-      {/* 3rd Section: Instant Consultation Booking & Doctor Assessment */}
+      {/* 3rd Section: Meet Your Dermatologist Dr. Sujay M */}
+      <div id="doctor">
+        <DoctorConsultingCard asH1={false} showMiniNav={false} />
+      </div>
+
+      {/* 4th Section: Instant Consultation Booking & Doctor Assessment */}
       <section className="homepage-booking-section" id="book-consultation">
         <div className="container">
           <div className="section-head center">
@@ -260,13 +265,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4th Section: Specialized Clinical Care (12 Advanced Treatments with Tabs) */}
+      {/* 5th Section: Specialized Clinical Care (12 Advanced Treatments with Tabs) */}
       <SpecializedClinicalCare />
-
-      {/* 5th Section: Meet Your Dermatologist Dr. Sujay M */}
-      <div id="doctor">
-        <DoctorConsultingCard asH1={false} showMiniNav={false} />
-      </div>
 
       {/* 6th Section: Seamless Care Pathway & The Medicare Advantage */}
       <MedicareAdvantage />
