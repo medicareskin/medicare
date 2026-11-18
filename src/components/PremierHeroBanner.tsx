@@ -2,7 +2,11 @@
 
 import Link from 'next/link';
 
-export function PremierHeroBanner() {
+interface PremierHeroBannerProps {
+  isH1?: boolean;
+}
+
+export function PremierHeroBanner({ isH1 = false }: PremierHeroBannerProps) {
   return (
     <section className="premier-hero-banner" id="premier-clinic">
       <div className="container">
@@ -16,11 +20,18 @@ export function PremierHeroBanner() {
           </span>
         </div>
 
-        {/* Main H1 Headline & Subtitle */}
-        <h1 className="premier-hero-title">
-          India&apos;s Premier Skin &amp; Cosmetic Clinic
-          <span className="premier-hero-subtitle">Clearer Skin, Healthier Hair</span>
-        </h1>
+        {/* Headline & Subtitle */}
+        {isH1 ? (
+          <h1 className="premier-hero-title">
+            India&apos;s Premier Skin &amp; Cosmetic Clinic
+            <span className="premier-hero-subtitle">Clearer Skin, Healthier Hair</span>
+          </h1>
+        ) : (
+          <h2 className="premier-hero-title">
+            India&apos;s Premier Skin &amp; Cosmetic Clinic
+            <span className="premier-hero-subtitle">Clearer Skin, Healthier Hair</span>
+          </h2>
+        )}
 
         {/* Descriptive Lede */}
         <p className="premier-hero-desc">

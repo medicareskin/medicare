@@ -135,11 +135,11 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: jsonLd(homepageSchema) }}
       />
 
-      {/* 1st Section: India's Premier Skin & Cosmetic Clinic Flagship Banner */}
-      <PremierHeroBanner />
+      {/* 1st Section: Specialised Dermatology Protocols & Checkups Hero Slide */}
+      <HeroFeatureSlides asHero={true} />
 
-      {/* 2nd Section: Specialised Dermatology Protocols & Checkups Hero Slide */}
-      <HeroFeatureSlides asHero={false} />
+      {/* 2nd Section: India's Premier Skin & Cosmetic Clinic Banner */}
+      <PremierHeroBanner isH1={false} />
 
       {/* 3rd Section: Instant Consultation Booking & Doctor Assessment */}
       <section className="homepage-booking-section" id="book-consultation">
