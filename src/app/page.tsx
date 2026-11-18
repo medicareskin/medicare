@@ -86,7 +86,7 @@ export default function Home() {
             name: 'What is HydraFacial and how does it differ from a regular beauty parlour facial?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'HydraFacial is a medical device treatment combining vortex vacuum suction, gentle chemical exfoliation, painless extraction, and concentrated antioxidant-peptide infusion. Unlike salon facials that involve manual steaming and physical pinching that can cause micro-tears or broken capillaries, HydraFacial uses calibrated fluidics to purify pores and restore dewy hydration with zero downtime.'
+              text: 'HydraFacial is a medical device treatment combining vortex vacuum suction, gentle chemical exfoliation, painless extraction, and concentrated antioxidant-peptide infusion. Unlike salon facials that involve manual steaming and physical pinching that can cause micro-tears or broken capillaries, HydraFacial uses calibrated fluidics to purify pores and restore dewy hydration with minimal social downtime.'
             }
           },
           {
@@ -189,7 +189,7 @@ export default function Home() {
                 <div className="clinic-location-mini">
                   <h4 className="schedule-box-title">Clinic Location &amp; Landmark</h4>
                   <p className="location-text">
-                    #14, 1st Floor, 100 Feet Ring Road, Jyothi Layout, Kanakapura Main Road
+                    Jyothi Kendriya Vidyalaya Back Gate, 2nd Main, 2nd Cross, Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Main Road, Bengaluru 560078
                   </p>
                   <p className="landmark-badge">
                     Directly Opp. Yelachenahalli Metro (Pillar 100)
@@ -396,7 +396,7 @@ export default function Home() {
               Dual wavelength (1064nm / 532nm) photoacoustic precision targeting dermal melanin without thermal tissue damage, safe for Indian complexions.
             </p>
             <div style={{ marginTop: '14px', fontSize: '0.78rem', fontWeight: 700, color: 'var(--magenta)' }}>
-              Melasma &amp; Freckles · Zero Downtime
+              Melasma &amp; Freckles · Minimal Downtime
             </div>
           </div>
 

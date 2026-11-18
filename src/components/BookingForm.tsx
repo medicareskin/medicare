@@ -50,7 +50,7 @@ export function BookingForm({ initialConcern, className = '' }: BookingFormProps
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [date, setDate] = useState('');
-  const [timeSlot, setTimeSlot] = useState(TIME_SLOTS[0]);
+  const [timeSlot, setTimeSlot] = useState('');
   const [selectedConcerns, setSelectedConcerns] = useState<string[]>(
     initialConcern ? [initialConcern] : ['Acne Scar Treatment']
   );
@@ -79,7 +79,8 @@ export function BookingForm({ initialConcern, className = '' }: BookingFormProps
     return match ? match.category : 'General dermatologist consultation';
   };
 
-  const getTimeWindow = (slot: string): 'Morning' | 'Afternoon' | 'Evening' => {
+  const getTimeWindow = (slot: string): 'Morning' | 'Afternoon' | 'Evening' | '' => {
+    if (!slot) return '';
     if (slot.includes('AM')) return 'Morning';
     if (slot.startsWith('12:') || slot.startsWith('01:') || slot.startsWith('02:') || slot.startsWith('03:')) {
       return 'Afternoon';
@@ -169,7 +170,7 @@ export function BookingForm({ initialConcern, className = '' }: BookingFormProps
 Name: ${name || 'Patient'}
 Phone: ${phone || 'Provided via WhatsApp'}
 Preferred Date: ${date || 'Earliest available'}
-Preferred Time: ${timeSlot}
+Preferred Time: ${timeSlot || 'Flexible / First Available Window'}
 Concerns: ${selectedConcerns.join(', ')}`;
 
   if (submitted) {
@@ -214,7 +215,7 @@ Concerns: ${selectedConcerns.join(', ')}`;
         </h2>
 
         <p style={{ fontSize: '0.96rem', color: '#5C5268', lineHeight: 1.6, maxWidth: '520px', margin: '0 auto 20px' }}>
-          Thank you, <strong>{name}</strong>. Your consultation request for <strong>{date} ({timeSlot})</strong> has been saved.
+          Thank you, <strong>{name}</strong>. Your consultation request for <strong>{date}{timeSlot ? ` (${timeSlot})` : ''}</strong> has been saved.
         </p>
 
         <div 
@@ -476,6 +477,7 @@ Concerns: ${selectedConcerns.join(', ')}`;
                 cursor: 'pointer',
               }}
             >
+              <option value="">Select preferred time window (optional)</option>
               {TIME_SLOTS.map((slot) => (
                 <option key={slot} value={slot}>
                   {slot}

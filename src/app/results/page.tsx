@@ -90,11 +90,11 @@ export default function ResultsPage() {
             <div className="results-stats-row">
               <div className="results-stat-box">
                 <div className="stat-avatar-group">
-                  <div className="stat-circle">25K+</div>
+                  <div className="stat-circle">KMC</div>
                 </div>
                 <div>
-                  <strong>25,000+</strong>
-                  <small>Patient Consultations</small>
+                  <strong>Registered Specialist</strong>
+                  <small>Karnataka Medical Council</small>
                 </div>
               </div>
 
@@ -360,30 +360,30 @@ export default function ResultsPage() {
             <div className="doc-spotlight-content-col">
               <div className="doc-spotlight-quote-box">
                 <p className="doc-quote-text">
-                  &ldquo;Over 25,000 patients have entrusted their skin to our care across South Bengaluru. We follow strict medical ethics: zero commission hand-offs, no unnecessary packages, and direct dermatologist supervision.&rdquo;
+                  &ldquo;For over 18 years, our clinical focus across South Bengaluru has remained strictly medical: zero commission hand-offs, no unnecessary packages, and direct dermatologist supervision.&rdquo;
                 </p>
               </div>
 
               <div className="doc-trust-pills-row">
                 <span className="trust-check-chip">&bull; Direct Doctor Consultation</span>
-                <span className="trust-check-chip">&bull; US-FDA Laser Calibrations</span>
+                <span className="trust-check-chip">&bull; US-FDA Cleared Tech</span>
                 <span className="trust-check-chip">&bull; Ethical Prescriptions</span>
               </div>
 
               <div className="doc-spotlight-metrics-row">
-                <div className="spotlight-metric">
-                  <strong>25K+</strong>
-                  <span>Patients Treated</span>
-                </div>
-                <div className="spotlight-metric-divider" />
                 <div className="spotlight-metric">
                   <strong>18+</strong>
                   <span>Years Experience</span>
                 </div>
                 <div className="spotlight-metric-divider" />
                 <div className="spotlight-metric">
-                  <strong>4.9 / 5</strong>
-                  <span>Patient Rating</span>
+                  <strong>100%</strong>
+                  <span>Doctor-Led Care</span>
+                </div>
+                <div className="spotlight-metric-divider" />
+                <div className="spotlight-metric">
+                  <strong>BMCRI 2005</strong>
+                  <span>PG Alumnus</span>
                 </div>
               </div>
 

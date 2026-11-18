@@ -26,7 +26,7 @@ const PRICING_DATA: ProcedurePricing[] = [
     range: '₹2,500 – ₹6,000',
     unit: 'per session',
     typicalSessions: '6 to 8 sessions',
-    downtime: 'Zero downtime (mild transient warmth)',
+    downtime: 'Minimal social downtime (mild transient warmth)',
     included: [
       'Comprehensive dermoscopic pigment depth check',
       'Low-fluence 1064nm Q-switched photoacoustic toning',
@@ -281,6 +281,10 @@ export function TreatmentCostPlanner() {
                     <li key={i}>{fac}</li>
                   ))}
                 </ul>
+              </div>
+              {/* Clinical Pricing Policy Note (MS-009) */}
+              <div style={{ background: '#F9FAFB', border: '1px solid #E5E7EB', borderRadius: '8px', padding: '12px 14px', fontSize: '0.82rem', color: '#6B7280', lineHeight: 1.5, marginBottom: '16px' }}>
+                <strong style={{ color: '#374151' }}>Clinical Tariff Guidance:</strong> Initial doctor consultation is ₹500 – ₹700. Quoted procedural ranges are transparent estimates for South Bengaluru. Exact treatment scope, session counts, and customized combinations are finalized only after direct clinical examination by Dr. (Mrs.) Sujay M.
               </div>
             </div>
 

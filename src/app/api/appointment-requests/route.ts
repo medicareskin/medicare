@@ -43,6 +43,8 @@ export async function POST(req:NextRequest){
  }catch{return fail('Service unavailable. Please call the clinic.',503);}
  // Optional minimal operational alert. Never email full medical concern details.
  if(process.env.RESEND_API_KEY&&process.env.OPERATIONS_EMAIL&&process.env.FROM_EMAIL){try{await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${process.env.RESEND_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({from:process.env.FROM_EMAIL,to:[process.env.OPERATIONS_EMAIL],subject:'Medicare Skin appointment request',text:`A new appointment request ${reference} was received. Review the secure admin database for details.`}),signal:AbortSignal.timeout(5000)});}catch{/* Request saved; alert failure should be monitored separately. */}}
+ // Optional CRM webhook notification (MS-013)
+ if(process.env.CLINIC_CRM_WEBHOOK_URL&&process.env.CLINIC_CRM_BEARER_TOKEN){try{await fetch(process.env.CLINIC_CRM_WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${process.env.CLINIC_CRM_BEARER_TOKEN}`},body:JSON.stringify({eventType:'APPOINTMENT_REQUEST_CREATED',clinic:'MEDICARE_SKIN_YELACHENAHALLI',data:record,timestamp:new Date().toISOString()}),signal:AbortSignal.timeout(5000)});}catch{/* CRM notification non-blocking */}}
  return NextResponse.json({status:'requested',reference,message:'Appointment request received. Staff confirmation is required.'},{status:201,headers:{'Cache-Control':'no-store'}});
 }
 export async function GET(){return fail('Method not allowed.',405);}

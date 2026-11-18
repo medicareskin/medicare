@@ -65,9 +65,9 @@ export function DoctorConsultingCard({
                   <span>18+ Years Exp</span>
                 </div>
                 <div className="floating-rating-badge">
-                  <span className="rating-star">★</span>
-                  <span>4.9</span>
-                  <span className="rating-sub">South Bengaluru</span>
+                  <span className="rating-star">🏛</span>
+                  <span>KMC Registered</span>
+                  <span className="rating-sub">Karnataka Medical Council</span>
                 </div>
               </div>
             </div>

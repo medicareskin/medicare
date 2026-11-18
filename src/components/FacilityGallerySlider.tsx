@@ -44,7 +44,7 @@ const FACILITY_SLIDES: FacilitySlide[] = [
     title: 'Prime Kanakapura Road Landmark',
     subtitle: 'Directly Opposite Yelachenahalli Metro',
     description:
-      'Conveniently positioned on 100 Feet Ring Road / Kanakapura Main Road with elevator access, sheltered patient drop-off, and dedicated clinic parking spaces.',
+      'Conveniently positioned on Kanakapura Main Road near Yelachenahalli Metro Station with elevator access, sheltered patient drop-off, and dedicated clinic parking spaces.',
     image: '/images/clinic_location_facade.jpg',
     alt: 'Medicare Skin Clinic Landmark opposite Yelachenahalli Metro Pillar 100',
     highlights: ['1-Min Walk from Metro Exit', 'Dedicated Patient Parking', 'Barrier-Free Elevator Access']

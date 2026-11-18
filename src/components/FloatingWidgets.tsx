@@ -111,7 +111,7 @@ export function FloatingWidgets() {
           { label: 'Clinic Location & Timings', query: 'Where is the clinic located?' }
         ];
       } else if (lower.includes('location') || lower.includes('address') || lower.includes('where') || lower.includes('metro')) {
-        replyText = `Medicare Skin & Cosmetic Clinic\n#14, 1st Floor, 100 Feet Ring Road, Jyothi Layout, Kanakapura Main Road, Bengaluru 560078.\nLandmark: Directly Opposite Yelachenahalli Metro Station (Pillar 100).\nPhone: ${site.phoneDisplay}\nHours: Mon-Sat 10:30 AM - 1:30 PM & 5:30 PM - 8:30 PM`;
+        replyText = `Medicare Skin & Cosmetic Clinic\nJyothi Kendriya Vidyalaya Back Gate, 2nd Main, 2nd Cross, Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Main Road, Bengaluru 560078.\nLandmark: Directly Opposite Yelachenahalli Metro Station (Pillar 100).\nPhone: ${site.phoneDisplay}\nConsultation Hours: Mon-Sat 10:30 AM - 1:30 PM & 5:30 PM - 8:30 PM`;
         replyChips = [{ label: 'Book Appointment Now', isCta: true }];
       } else {
         replyText =

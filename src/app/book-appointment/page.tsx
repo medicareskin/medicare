@@ -159,7 +159,7 @@ export default function BookingPage() {
             <div className="sidebar-card">
               <h3 className="sidebar-title">Clinic Address &amp; Directions</h3>
               <p className="sidebar-address">
-                #14, 1st Floor, 100 Feet Ring Road, Jyothi Layout, Yelachenahalli, Kanakapura Main Road, Bengaluru, Karnataka 560078
+                Jyothi Kendriya Vidyalaya Back Gate, 2nd Main, 2nd Cross, Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Main Road, Bengaluru 560078
               </p>
               <div className="sidebar-landmark">
                 <strong>Landmark:</strong> Directly opposite Yelachenahalli Metro Station (Pillar 100). Easy access from JP Nagar, Banashankari, and Kanakapura Road.

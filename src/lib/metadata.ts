@@ -60,7 +60,7 @@ export const clinicEntity = {
   medicalSpecialty: 'https://schema.org/Dermatologic',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '2nd Main, 2nd Cross, Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Main Road',
+    streetAddress: 'Jyothi Kendriya Vidyalaya Back Gate, 2nd Main, 2nd Cross, Jyothi Layout, near Yelachenahalli Metro Station, Kanakapura Main Road',
     addressLocality: 'Bengaluru',
     addressRegion: 'Karnataka',
     postalCode: '560078',
@@ -96,6 +96,12 @@ export const clinicEntity = {
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       opens: '17:30',
       closes: '20:30'
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Sunday'],
+      opens: '10:30',
+      closes: '13:00'
     }
   ],
   knowsAbout: [

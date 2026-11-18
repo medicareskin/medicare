@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
+import { mapUrl } from '@/lib/site';
 
 interface ReviewItem {
   id: string;
@@ -132,13 +133,16 @@ export function PatientExperiences() {
                 G
               </span>
               <div>
-                <strong className="google-badge-title">Verified Patient Experiences on Google</strong>
-                <div className="google-stars-row" aria-label="5 out of 5 stars">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="star-icon" aria-hidden="true">
-                      &#9733;
-                    </span>
-                  ))}
+                <strong className="google-badge-title">Public Google Reviews (South Bengaluru)</strong>
+                <div>
+                  <a
+                    href={mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: '0.76rem', color: '#6B7280', textDecoration: 'underline' }}
+                  >
+                    View &amp; Verify on Google Maps ↗
+                  </a>
                 </div>
               </div>
             </div>

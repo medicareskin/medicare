@@ -6,10 +6,10 @@ export interface ClinicalTrustMetricsProps {
 }
 
 const STATS_ITEMS = [
-  { value: '25,000+', label: 'Patients Consulted' },
   { value: '18+ Years', label: 'Dedicated Clinical Practice' },
   { value: '100%', label: 'Doctor-Led Care' },
-  { value: '4.9 / 5.0', label: 'Patient Satisfaction' },
+  { value: 'BMCRI 2005', label: 'Postgraduate Dermatology' },
+  { value: 'KMC Regd', label: 'Karnataka Medical Council' },
 ];
 
 const TRUST_POINTS = [
@@ -26,8 +26,8 @@ const TRUST_POINTS = [
     desc: 'Opp. Yelachenahalli Metro Station',
   },
   {
-    title: 'US FDA Lasers',
-    desc: 'Safe for Indian skin phototypes III-V',
+    title: 'US-FDA Cleared Tech',
+    desc: 'Calibrated for Indian phototypes III-V',
   },
 ];
 
