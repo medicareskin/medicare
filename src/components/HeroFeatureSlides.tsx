@@ -234,23 +234,8 @@ export function HeroFeatureSlides({ asHero = true }: HeroFeatureSlidesProps) {
             </div>
           </div>
 
-          {/* Main Title & Context (Accessible H1) */}
-          <div className="feature-slides-title-row">
-            <div>
-              {asHero ? (
-                <h1 className="feature-slides-title">
-                  Specialised Dermatology Protocols &amp; Checkups
-                </h1>
-              ) : (
-                <h2 className="feature-slides-title">
-                  Specialised Dermatology Protocols &amp; Checkups
-                </h2>
-              )}
-              <p className="feature-slides-sub">
-                Root-cause diagnosis and evidence-based protocols calibrated for Indian skin phototypes near Yelachenahalli Metro. Guided directly by Dr. (Mrs.) Sujay M (MBBS, DDVL).
-              </p>
-            </div>
-          </div>
+          {/* Accessible section heading for assistive technologies */}
+          <h2 className="sr-only">Specialised Dermatology Protocols &amp; Checkups</h2>
 
           {/* Category Filter Pills Row */}
           <div className="feature-category-pills-row" aria-label="Filter protocols by concern">

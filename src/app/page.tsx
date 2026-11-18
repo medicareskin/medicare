@@ -139,7 +139,7 @@ export default function Home() {
       <HeroFeatureSlides asHero={true} />
 
       {/* 2nd Section: India's Premier Skin & Cosmetic Clinic Banner */}
-      <PremierHeroBanner isH1={false} />
+      <PremierHeroBanner isH1={true} />
 
       {/* 3rd Section: Instant Consultation Booking & Doctor Assessment */}
       <section className="homepage-booking-section" id="book-consultation">
