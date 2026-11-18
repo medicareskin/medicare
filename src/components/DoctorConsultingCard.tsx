@@ -22,9 +22,6 @@ export function DoctorConsultingCard({
       <div className="container">
         {/* Modern Clinical UI Card matching reference mockup */}
         <div className="doctor-mockup-card">
-          {/* Subtle Abstract Top Accent Shape */}
-          <div className="card-top-accent" aria-hidden="true" />
-
           {/* Mini Card Header */}
           {showMiniNav && (
             <div className="card-mini-header">
@@ -50,7 +47,7 @@ export function DoctorConsultingCard({
 
           {/* Main Card Body: 2 Columns - Image on Left, Text on Right */}
           <div className="doctor-card-grid">
-            {/* Left Column: Doctor Portrait with Floating Badges */}
+            {/* Left Column: Doctor Portrait without overlays */}
             <div className="doctor-visual-column">
               <div className="doctor-photo-stage">
                 <img
@@ -61,31 +58,11 @@ export function DoctorConsultingCard({
                   height={585}
                   loading="eager"
                 />
-                <div className="floating-exp-badge">
-                  <span>18+ Years Exp</span>
-                </div>
-                <div className="floating-rating-badge">
-                  <span className="rating-star">🏛</span>
-                  <span>KMC Registered</span>
-                  <span className="rating-sub">Karnataka Medical Council</span>
-                </div>
               </div>
             </div>
 
             {/* Right Column: Clinical Authority Content */}
             <div className="doctor-content-column">
-              {/* Badges Row */}
-              <div className="doctor-badges-row">
-                <span className="doc-pill-tag">
-                  <span className="status-dot green" aria-hidden="true" />
-                  <span>Consult Available</span>
-                </span>
-                <span className="doc-pill-tag dark">
-                  <span className="status-dot dark-bullet" aria-hidden="true" />
-                  <span>YOUR CONSULTING DERMATOLOGIST</span>
-                </span>
-              </div>
-
               {/* Title & Degrees */}
               <TitleTag className="doctor-title-display">
                 Dr. Sujay M
@@ -204,20 +181,6 @@ export function DoctorConsultingCard({
           padding: 32px 40px 36px;
         }
 
-        /* Abstract Blue Top Accent */
-        .card-top-accent {
-          position: absolute;
-          top: 0;
-          right: 220px;
-          width: 80px;
-          height: 64px;
-          background: linear-gradient(135deg, #1D64F2 0%, #3B82F6 100%);
-          border-bottom-left-radius: 24px;
-          border-bottom-right-radius: 24px;
-          pointer-events: none;
-          z-index: 1;
-        }
-
         /* Mini Header */
         .card-mini-header {
           display: flex;
@@ -317,49 +280,6 @@ export function DoctorConsultingCard({
         .doctor-content-column {
           display: flex;
           flex-direction: column;
-        }
-
-        .doctor-badges-row {
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          gap: 10px;
-          margin-bottom: 14px;
-        }
-
-        .doc-pill-tag {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 5px 14px;
-          border-radius: 9999px;
-          background: #F3F4F6;
-          border: 1px solid #E5E7EB;
-          font-size: 0.8rem;
-          font-weight: 700;
-          color: #000000;
-        }
-
-        .doc-pill-tag.dark {
-          font-weight: 800;
-          letter-spacing: 0.05em;
-          color: #000000;
-          font-size: 0.76rem;
-        }
-
-        .status-dot.green {
-          width: 7px;
-          height: 7px;
-          border-radius: 50%;
-          background: #10B981;
-          box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
-        }
-
-        .status-dot.dark-bullet {
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: #000000;
         }
 
         .doctor-title-display {
@@ -531,55 +451,10 @@ export function DoctorConsultingCard({
           border-radius: 24px;
         }
 
-        .floating-exp-badge {
-          position: absolute;
-          bottom: 20px;
-          left: 18px;
-          background: rgba(255, 255, 255, 0.94);
-          backdrop-filter: blur(8px);
-          border: 1px solid rgba(229, 231, 235, 0.85);
-          padding: 6px 14px;
-          border-radius: 9999px;
-          font-size: 0.78rem;
-          font-weight: 800;
-          color: #000000;
-          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-        }
-
-        .floating-rating-badge {
-          position: absolute;
-          top: 20px;
-          right: 18px;
-          background: rgba(255, 255, 255, 0.94);
-          backdrop-filter: blur(8px);
-          border: 1px solid rgba(229, 231, 235, 0.85);
-          padding: 6px 14px;
-          border-radius: 9999px;
-          font-size: 0.78rem;
-          font-weight: 800;
-          color: #000000;
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-        }
-
-        .rating-star {
-          color: #F59E0B;
-        }
-
-        .rating-sub {
-          color: #000000;
-          font-weight: 600;
-        }
-
         /* Responsive Breakpoints */
         @media (max-width: 1024px) {
           .doctor-mockup-card {
             padding: 28px 24px 32px;
-          }
-          .card-top-accent {
-            right: 40px;
           }
           .doctor-card-grid {
             grid-template-columns: 1fr;
