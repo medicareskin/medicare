@@ -5,6 +5,9 @@ import { clinicEntity, physicianEntity, jsonLd, meta } from '@/lib/metadata';
 import { categories, treatments, treatmentPath } from '@/lib/treatments';
 import { CTA, SectionHeading } from '@/components/Elements';
 import { HeroFeatureSlides } from '@/components/HeroFeatureSlides';
+import { PremierHeroBanner } from '@/components/PremierHeroBanner';
+import { SpecializedClinicalCare } from '@/components/SpecializedClinicalCare';
+import { MedicareAdvantage } from '@/components/MedicareAdvantage';
 import { BookingForm } from '@/components/BookingForm';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import { ConditionsCarousel } from '@/components/ConditionsCarousel';
@@ -132,23 +135,53 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: jsonLd(homepageSchema) }}
       />
 
-      {/* 1st Section: Specialised Dermatology Protocols & Checkups Hero Slide */}
-      <HeroFeatureSlides asHero={true} />
+      {/* 1st Section: India's Premier Skin & Cosmetic Clinic Flagship Banner */}
+      <PremierHeroBanner />
 
-      {/* 3rd Slide: YOUR CONSULTING DERMATOLOGIST Dr. (Mrs.) Sujay M */}
-      <div id="consulting-dermatologist">
-        <DoctorConsultingCard asH1={false} showMiniNav={false} />
-      </div>
+      {/* 2nd Section: Specialised Dermatology Protocols & Checkups Hero Slide */}
+      <HeroFeatureSlides asHero={false} />
 
-      {/* Consultation Booking Form - Top of Health & Skin Conditions */}
+      {/* 3rd Section: Instant Consultation Booking & Doctor Assessment */}
       <section className="homepage-booking-section" id="book-consultation">
         <div className="container">
           <div className="section-head center">
-            <span className="eyebrow-pill">CONSULTATION BOOKING</span>
-            <h2 className="section-title">Schedule Your Consultation With Dr. Sujay M</h2>
+            <span className="eyebrow-pill">INSTANT CONSULTATION</span>
+            <h2 className="section-title">Doctor Assessment in 60 Secs</h2>
             <p className="hero-lede center-block">
-              In-person clinical evaluation for skin, hair, laser, and aesthetic care. Directly diagnosed and treated by Dr. (Mrs.) Sujay M.
+              Doctor-led medical and aesthetic dermatology by Dr. Sujay M (MBBS, DDVL) with 18+ years of clinical mastery. Personalized, US FDA-approved solutions for acne scars, laser hair removal, hair restoration &amp; anti-aging at Kanakapura Road, Bangalore.
             </p>
+          </div>
+
+          {/* 4 Trust Value Pillars */}
+          <div className="booking-trust-pillars-row" aria-label="Clinical Quality Standards">
+            <div className="booking-trust-pillar">
+              <span className="pillar-badge-icon" aria-hidden="true">🛡️</span>
+              <div>
+                <strong>US FDA Approved</strong>
+                <span>Gold-standard laser technologies</span>
+              </div>
+            </div>
+            <div className="booking-trust-pillar">
+              <span className="pillar-badge-icon" aria-hidden="true">👩‍⚕️</span>
+              <div>
+                <strong>Senior Dermatologist</strong>
+                <span>MBBS, DDVL (BMC 2005)</span>
+              </div>
+            </div>
+            <div className="booking-trust-pillar">
+              <span className="pillar-badge-icon" aria-hidden="true">🎯</span>
+              <div>
+                <strong>Custom Tailored Care</strong>
+                <span>Formulated for Indian skin</span>
+              </div>
+            </div>
+            <div className="booking-trust-pillar">
+              <span className="pillar-badge-icon" aria-hidden="true">⚡</span>
+              <div>
+                <strong>Minimal Downtime</strong>
+                <span>Painless, walk-in procedures</span>
+              </div>
+            </div>
           </div>
 
           <div className="homepage-booking-grid">
@@ -226,6 +259,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 4th Section: Specialized Clinical Care (12 Advanced Treatments with Tabs) */}
+      <SpecializedClinicalCare />
+
+      {/* 5th Section: Meet Your Dermatologist Dr. Sujay M */}
+      <div id="doctor">
+        <DoctorConsultingCard asH1={false} showMiniNav={false} />
+      </div>
+
+      {/* 6th Section: Seamless Care Pathway & The Medicare Advantage */}
+      <MedicareAdvantage />
 
       {/* Health Conditions Carousel matching User Reference Image 5 */}
       <ConditionsCarousel />

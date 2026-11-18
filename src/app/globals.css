@@ -8530,3 +8530,467 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 
 
+
+
+/* ==========================================================================
+   PREMIER CLINIC HERO & SPECIALIZED CARE (User Specification)
+   ========================================================================== */
+
+/* Premier Hero Banner */
+.premier-hero-banner {
+  padding: 40px 0 28px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9F7FA 100%);
+  border-bottom: 1px solid #ECE7EE;
+  text-align: center;
+}
+.premier-hero-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.premier-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(146, 35, 112, 0.08);
+  border: 1px solid rgba(146, 35, 112, 0.22);
+  color: #922370;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 6px 16px;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.premier-response-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  color: #15803D;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.premier-hero-title {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  font-weight: 750;
+  color: #1E1128;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 auto 16px;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.premier-hero-subtitle {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: #922370;
+  letter-spacing: -0.015em;
+}
+
+.premier-hero-desc {
+  font-size: 1.08rem;
+  color: #554860;
+  max-width: 820px;
+  line-height: 1.6;
+  margin: 0 auto 24px;
+}
+.premier-hero-desc strong {
+  color: #1E1128;
+  font-weight: 700;
+}
+
+.premier-hero-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.hero-nav-chip {
+  background: #FFFFFF;
+  border: 1.5px solid #E2D8E4;
+  color: #33203E;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+.hero-nav-chip:hover {
+  background: #FAF0F6;
+  border-color: #922370;
+  color: #922370;
+  transform: translateY(-1px);
+}
+.hero-nav-chip.accent-chip {
+  background: #2B1439;
+  border-color: #2B1439;
+  color: #FFFFFF;
+}
+.hero-nav-chip.accent-chip:hover {
+  background: #922370;
+  border-color: #922370;
+  color: #FFFFFF;
+}
+
+/* 4 Trust Metrics Grid */
+.premier-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.premier-metric-card {
+  background: #FFFFFF;
+  border: 1.5px solid #EAE3EB;
+  border-radius: 18px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 14px rgba(43, 14, 76, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.premier-metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(43, 14, 76, 0.08);
+  border-color: #D4BDCE;
+}
+.metric-number {
+  font-size: 1.55rem;
+  font-weight: 850;
+  color: #922370;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.metric-label {
+  font-size: 0.82rem;
+  font-weight: 650;
+  color: #64556C;
+  letter-spacing: -0.01em;
+}
+
+/* Booking Trust Pillars Row */
+.booking-trust-pillars-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.booking-trust-pillar {
+  background: #FFFFFF;
+  border: 1px solid #ECE7EE;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+.pillar-badge-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.booking-trust-pillar div {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.booking-trust-pillar strong {
+  font-size: 0.86rem;
+  font-weight: 750;
+  color: #1E1128;
+  line-height: 1.2;
+}
+.booking-trust-pillar span {
+  font-size: 0.74rem;
+  color: #64556C;
+}
+
+/* Specialized Clinical Care (12 treatments) */
+.specialized-care-section {
+  padding: 72px 0 80px;
+  background: #FAF7FA;
+  border-bottom: 1px solid #EBE4EC;
+}
+.specialized-care-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.care-tab-btn {
+  background: #FFFFFF;
+  border: 1.5px solid #E2D8E4;
+  color: #4A3A52;
+  font-size: 0.88rem;
+  font-weight: 650;
+  padding: 8px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.care-tab-btn:hover {
+  border-color: #922370;
+  color: #922370;
+}
+.care-tab-btn.active {
+  background: #250F30;
+  border-color: #250F30;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(37, 15, 48, 0.2);
+}
+
+.specialized-treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.specialized-card {
+  background: #FFFFFF;
+  border-radius: 22px;
+  border: 1px solid #E8DFE8;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(43, 14, 76, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.specialized-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(43, 14, 76, 0.12);
+  border-color: #D4BDCE;
+}
+.specialized-card-img-box {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  background: #F3EAF1;
+}
+.specialized-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.specialized-card:hover .specialized-card-img {
+  transform: scale(1.04);
+}
+.specialized-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.specialized-card-body {
+  padding: 24px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+.specialized-card-title {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 750;
+  color: #1E1128;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+.specialized-card-desc {
+  font-size: 0.9rem;
+  color: #554860;
+  line-height: 1.55;
+  margin: 0 0 16px;
+}
+.specialized-card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  background: #FAF6FA;
+  border-radius: 12px;
+  border: 1px solid #EFE6F0;
+}
+.feature-bullet {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 650;
+  color: #2F1B3B;
+}
+.bullet-check {
+  color: #15803D;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+.btn-book-treatment {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: #250F30;
+  color: #FFFFFF;
+  padding: 11px 18px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 750;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-book-treatment:hover {
+  background: #922370;
+  color: #FFFFFF;
+}
+
+/* Seamless Care Pathway (3 Steps) */
+.seamless-pathway-section {
+  padding: 68px 0 72px;
+  background: #FFFFFF;
+}
+.pathway-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.pathway-step-card {
+  background: #FAF7FA;
+  border: 1.5px solid #ECE7EE;
+  border-radius: 24px;
+  padding: 32px 26px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.pathway-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(43, 14, 76, 0.08);
+}
+.pathway-step-card.highlight {
+  border-color: #922370;
+  background: #FFFFFF;
+  box-shadow: 0 10px 28px rgba(146, 35, 112, 0.08);
+}
+.pathway-step-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #922370;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.pathway-step-title {
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: #1E1128;
+  margin: 0 0 10px;
+  font-family: var(--font-serif), Georgia, serif;
+}
+.pathway-step-desc {
+  font-size: 0.92rem;
+  color: #554860;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Medicare Advantage (6 Pillars) */
+.medicare-advantage-section {
+  padding: 72px 0 80px;
+}
+.advantage-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.advantage-pillar-card {
+  background: #FFFFFF;
+  border: 1px solid #ECE7EE;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 6px 20px rgba(43, 14, 76, 0.04);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.advantage-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(43, 14, 76, 0.1);
+  border-color: #D4BDCE;
+}
+.pillar-icon-box {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+.pillar-title {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: #1E1128;
+  margin: 0 0 8px;
+}
+.pillar-desc {
+  font-size: 0.9rem;
+  color: #554860;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 1080px) {
+  .specialized-treatments-grid,
+  .advantage-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pathway-steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .premier-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .booking-trust-pillars-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .specialized-treatments-grid,
+  .advantage-pillars-grid,
+  .premier-metrics-grid,
+  .booking-trust-pillars-row {
+    grid-template-columns: 1fr;
+  }
+  .premier-hero-title {
+    font-size: 2rem;
+  }
+  .premier-hero-subtitle {
+    font-size: 1.35rem;
+  }
+}

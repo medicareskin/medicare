@@ -12,13 +12,17 @@ export interface BookingFormProps {
 }
 
 const CONCERN_OPTIONS = [
-  { id: 'acne-scar', label: 'Acne Scar Treatment', category: 'Acne or acne scars' },
-  { id: 'laser-hair', label: 'Laser Hair Removal', category: 'Laser or aesthetic consultation' },
-  { id: 'chemical-peels', label: 'Chemical Peels', category: 'Laser or aesthetic consultation' },
-  { id: 'anti-wrinkle', label: 'Anti-wrinkle Injections', category: 'Laser or aesthetic consultation' },
-  { id: 'skin-tightening', label: 'Skin Tightening', category: 'Laser or aesthetic consultation' },
-  { id: 'vitiligo-surgery', label: 'Vitiligo Surgery', category: 'Eczema or other medical skin concern' },
-  { id: 'others', label: 'Others', category: 'General dermatologist consultation' },
+  { id: 'acne-breakouts', label: 'Acne & Active Breakouts', category: 'Acne or acne scars' },
+  { id: 'acne-scar', label: 'Acne Scars & Deep Pores', category: 'Acne or acne scars' },
+  { id: 'laser-hair', label: 'Laser Hair Removal (Face/Body)', category: 'Laser or aesthetic consultation' },
+  { id: 'chemical-peels', label: 'Chemical Peels & Glow Therapy', category: 'Laser or aesthetic consultation' },
+  { id: 'botox-fillers', label: 'Botox & Anti-Wrinkle Fillers', category: 'Laser or aesthetic consultation' },
+  { id: 'skin-tightening', label: 'Skin Tightening & HIFU Lift', category: 'Laser or aesthetic consultation' },
+  { id: 'vitiligo-surgery', label: 'Vitiligo Treatment & Surgery', category: 'Eczema or other medical skin concern' },
+  { id: 'pigmentation-spots', label: 'Pigmentation & Dark Spots', category: 'Melasma or dark spots' },
+  { id: 'infections-eczema', label: 'Bacterial/Fungal Infections & Eczema', category: 'Eczema or other medical skin concern' },
+  { id: 'hair-loss', label: 'Hair Loss & Thinning Assessment', category: 'Hair loss or scalp concern' },
+  { id: 'others', label: 'Other Dermatology Consultation', category: 'General dermatologist consultation' },
 ];
 
 const TIME_SLOTS = [

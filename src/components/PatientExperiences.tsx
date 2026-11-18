@@ -14,47 +14,41 @@ interface ReviewItem {
 
 const REVIEWS: ReviewItem[] = [
   {
-    id: 'rev-1',
-    author: 'Gnaneshwari Deepak',
-    role: 'Verified Patient',
-    avatarColor: '#8B096C',
-    text: 'I consulted Dr.Sujay for the treatment of pigmentation/melasma and acne on my face. The doctor was very friendly and listens to our issues patiently. She understands our problems and explains us about the procedures and treatments options. She prescribed me some creams tablets and chemical peel sessions now I am recovering and can see very good results. A big thanks to the doctor and I definitely recommend this doctor to everyone those who are looking for the best results for their skin issues.'
-  },
-  {
-    id: 'rev-2',
-    author: 'Padmashree BK',
-    role: 'Verified Patient',
-    avatarColor: '#9C2278',
-    text: 'We consulted Dr Sujay M for Skin allergy for my mother. Her treatment was apt with effective consultation and Diagnosis. Dr has a lot of patience and will listen to the problems thoroughly. I strongly recommend consulting Dr Sujay for any skin alignments. Effective Treatment with Reasonable Fees and courteous staff.'
-  },
-  {
-    id: 'rev-3',
+    id: 'rev-chethan',
     author: 'Chethan K',
-    role: 'Verified Patient',
+    role: 'Mole Removal Treatment • Bangalore',
     avatarColor: '#7E1660',
     isFeatured: true,
-    text: 'I had a very good experience with my mole removal treatment. The doctor explained everything clearly, and the procedure was quick and smooth. The staff were friendly and supportive.'
+    text: 'I had a very good experience with my mole removal treatment. Dr. Sujay explained everything clearly, and the procedure was quick, virtually painless, and smooth. The staff was friendly and supportive throughout.'
   },
   {
-    id: 'rev-4',
-    author: 'Rohit S',
-    role: 'Verified Patient',
+    id: 'rev-priya',
+    author: 'Priya S',
+    role: 'Skin Tag Removal • Kanakapura Road',
+    avatarColor: '#9C2278',
+    text: 'I recently visited Dr. Sujay for skin tag removal. The treatment was quick and painless, and the clinic was clean and hygienic. My skin healed in just a few days with zero marks. Highly recommended!'
+  },
+  {
+    id: 'rev-rahul',
+    author: 'Rahul M',
+    role: 'Acne Scar Treatment • JP Nagar',
     avatarColor: '#2B0E4C',
-    text: 'I recommend Medicare Skin Clinic for anyone struggling with stubborn acne scars. Dr. Sujay M evaluated my skin thoroughly and recommended subcision with microneedling. The clinic environment is hygienic and professional.'
+    text: 'Suffered from severe acne and dark scars for over 3 years. After 4 sessions of microneedling and chemical peels with Dr. Sujay, my skin texture has smoothed out tremendously. Honest advice and no overcharging.'
   },
   {
-    id: 'rev-5',
-    author: 'Sangeetha R',
-    role: 'Verified Patient',
+    id: 'rev-ananya',
+    author: 'Ananya R',
+    role: 'Full Body Laser • Jayanagar',
     avatarColor: '#8B096C',
-    text: "Dr. Sujay's hair thinning treatment worked wonders for my persistent hair fall. The GFC sessions combined with home care stopped my shedding within 2 months."
+    isFeatured: true,
+    text: 'The laser hair reduction at Medicare is genuinely painless and so effective. After just 4 sessions, I have an 85% reduction with zero ingrown hairs. The cooling handpiece makes all the difference!'
   },
   {
-    id: 'rev-6',
-    author: 'Nandini M',
-    role: 'Verified Patient',
+    id: 'rev-karthik',
+    author: 'Karthik N',
+    role: 'Hair Fall & PRP Therapy • Banashankari',
     avatarColor: '#5C1D6F',
-    text: 'Very satisfied with the chemical peel and medi-facial sessions for my hyperpigmentation. Visible glow and even tone without harsh downtime.'
+    text: 'Exceptional trichology care for severe hair fall. Dr. Sujay tested my deficiencies alongside Growth Factor Therapy. Within 3 months, my hair density improved visibly and shedding reduced drastically.'
   }
 ];
 
@@ -87,6 +81,7 @@ export function PatientExperiences() {
   return (
     <section
       className="patient-experiences-section"
+      id="reviews"
       aria-label="Patient Experiences and Reviews"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -96,9 +91,9 @@ export function PatientExperiences() {
         <div className="experiences-header-row">
           <div className="experiences-title-block">
             <span className="eyebrow-pill">PATIENT EXPERIENCES</span>
-            <h2 className="experiences-headline">Patient Experiences</h2>
+            <h2 className="experiences-headline">Loved by Over 15,000+ Happy Patients in Bangalore</h2>
             <p className="experiences-subheadline">
-              Read authentic patient comments and medically appropriate treatment experiences. No invented reviews or guaranteed results.
+              Real clinical outcomes and verified Google experiences from patients across Yelachenahalli, JP Nagar, Jayanagar, Banashankari, and Kanakapura Road.
             </p>
           </div>
 

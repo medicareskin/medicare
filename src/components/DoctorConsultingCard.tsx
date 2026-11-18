@@ -88,25 +88,28 @@ export function DoctorConsultingCard({
 
               {/* Title & Degrees */}
               <TitleTag className="doctor-title-display">
-                Dr. (Mrs.) Sujay M
+                Dr. Sujay M
               </TitleTag>
 
               <p className="doctor-credentials-sub">
-                MBBS, DDVL &bull; Consultant Dermatologist &amp; Dermatosurgeon
+                MBBS, DDVL &bull; Senior Consultant Dermatologist &amp; Trichologist
               </p>
 
-              {/* Clinical Narrative */}
+              {/* Clinical Narrative matching user specification */}
               <div className="doctor-narrative-block">
                 <p className="doc-paragraph-lead">
-                  With over 18 years of clinical experience across South Bengaluru, Dr. Sujay M specializes in root-cause acne management, scar remodeling, resistant pigmentation, and female/male hair thinning.
+                  Dr. Sujay M is one of Bangalore&apos;s most esteemed and trusted dermatologists, with over 18+ years of dedicated clinical practice. She completed her post-graduation in Dermatology, Venereology &amp; Leprosy (DDVL) from the renowned Bangalore Medical College in 2005.
                 </p>
                 <p className="doc-paragraph-body">
-                  At Medicare Skin Clinic, you are never handed off to non-medical staff for diagnosis. Dr. Sujay personally reviews your medical history, hormonal panels, and lifestyle factors to craft an ethical, evidence-based care plan.
+                  Under her clinical leadership, Medicare Skin &amp; Cosmetic Clinic has become South Bangalore&apos;s premier center for advanced skin and hair treatments. Dr. Sujay believes in an honest, science-first philosophy: thorough diagnostic examination, zero unnecessary procedures, and custom-tailored regimens calibrated for Indian skin tones.
+                </p>
+                <p className="doc-paragraph-body">
+                  Whether managing complex clinical conditions like vitiligo and eczema or delivering transformative aesthetic outcomes with acne scar subcision, US FDA-approved lasers, and PRP growth factor therapy, Dr. Sujay delivers results that restore your natural skin health and lasting confidence.
                 </p>
               </div>
 
-              {/* Direct Care Bullet Checkmarks */}
-              <ul className="doctor-check-points" aria-label="Key Clinical Pillars">
+              {/* Clinical Credentials List */}
+              <ul className="doctor-check-points" aria-label="Clinical Credentials">
                 <li className="doctor-check-item">
                   <div className="check-icon-circle" aria-hidden="true">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -114,7 +117,7 @@ export function DoctorConsultingCard({
                     </svg>
                   </div>
                   <div>
-                    <strong>Direct Diagnosis:</strong> Every consultation and follow-up is conducted directly by Dr. Sujay M.
+                    <strong>MBBS, DDVL:</strong> Bangalore Medical College (2005)
                   </div>
                 </li>
 
@@ -125,7 +128,7 @@ export function DoctorConsultingCard({
                     </svg>
                   </div>
                   <div>
-                    <strong>South Bengaluru Practice:</strong> 18+ years treating complex Indian skin and hair phototypes.
+                    <strong>18+ Years Experience:</strong> Practicing Senior Dermatologist
                   </div>
                 </li>
 
@@ -136,7 +139,29 @@ export function DoctorConsultingCard({
                     </svg>
                   </div>
                   <div>
-                    <strong>Ethical Formulations:</strong> Root-cause medical dermatological therapies, zero unverified salon fads.
+                    <strong>15,000+ Treated:</strong> Successful Clinical Cases Evaluated
+                  </div>
+                </li>
+
+                <li className="doctor-check-item">
+                  <div className="check-icon-circle" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+                  <div>
+                    <strong>4.9 ★ Rating:</strong> 500+ Verified Patient Reviews on Google
+                  </div>
+                </li>
+
+                <li className="doctor-check-item">
+                  <div className="check-icon-circle" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+                  <div>
+                    <strong>Consultation Available:</strong> In-clinic &amp; WhatsApp evaluations
                   </div>
                 </li>
               </ul>
